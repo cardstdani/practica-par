@@ -20,7 +20,7 @@
             if (matrix[coordinates[0]][coordinates[1]] != ".") {
                 if (actual === "w") {
                     matrix[coordinates[0]][coordinates[1]] = ".";
-                    bigFoots.splice(bigFoots.findIndex(k => k[0] === coordinates), 1);
+                    deleteBigFoot(coordinates);
                     updateActual();
                     updateUI();
                     return;
@@ -32,6 +32,12 @@
             updateActual();
             bigFoots = bigFoots.map(i => [i[0], i[1] + 1, i[2]]);
             updateUI();
+        }
+
+        function deleteBigFoot(coordinates) {
+            for (var i = 0; i < bigFoots.length; i++) {
+                if (bigFoots[i][0].every((element, index) => element === coordinates[index]) ) {bigFoots.splice(i, 1); break;}
+            }
         }
 
         function updateMatrix(coordinates) {
@@ -56,9 +62,7 @@
             }*/
             while (g[0].length > 2) {
                 for (let i = 0; i < g[0].length; i++) {
-                    if (matrix[g[0][i][0]][g[0][i][1]] === "2") {
-                        bigFoots.splice(bigFoots.findIndex(k => k[0] === g[0][i]), 1);
-                    }
+                    if (matrix[g[0][i][0]][g[0][i][1]] === "2") {deleteBigFoot(g[0][i]);}
                     matrix[g[0][i][0]][g[0][i][1]] = ".";
                 }
 
