@@ -182,11 +182,15 @@
 
         body {
             font-family: 'Product Sans', sans-serif;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
         .cell {
             font-weight: lighter;
             background-color: #F2784B;
+            color: #1f1f1f;
             text-align: center;
             display: inline-block;
             box-sizing: border-box;
@@ -197,6 +201,22 @@
             transition: all 0.8s;
             border: 0.15rem solid black;
             border-radius: 0.4rem;
+        }
+
+        .cell:hover {
+            font-weight: lighter;
+            background-color: #1f1f1f;
+            color: #ffffff;
+            text-align: center;
+            display: inline-block;
+            box-sizing: border-box;
+            width: 3.5rem;
+            height: 3.5rem;
+            padding: 1rem;
+            margin: 0.06rem;
+            transition: all 0.2s;
+            border: 0.15rem solid black;
+            border-radius: 34rem;
         }
 
         #actual {
