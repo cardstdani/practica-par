@@ -120,14 +120,17 @@
         }
 
         function updateUI() {
+            var sum = 0;
             for (let i = 0; i < matrix.length; i++) {
                 let hzElem = document.getElementById("h" + i.toString());
                 for (let j = 0; j < matrix[0].length; j++) {
                     hzElem.childNodes[j].innerHTML = matrix[i][j];
                     hzElem.childNodes[j].style.backgroundColor = matrix[i][j] === "." ? "#F9A841" : "#F2784B";
+                    sum += objects[matrix[i][j]][1];
                 }
             }
             document.getElementById("actual").innerHTML = actual;
+            document.getElementById("scoreText").innerHTML = "Puntos: " + sum.toString();
         }
 
         function updateActual() {
@@ -136,13 +139,13 @@
         }
 
         window.onload = (event) => {
-            $.getJSON('https://ipinfo.io', function (data) {
+            /*$.getJSON('https://ipinfo.io', function (data) {
                 var xhttp = new XMLHttpRequest();
                 xhttp.open('POST', '/showdata', true);
                 xhttp.send(JSON.stringify(data));
                 console.log(data);
                 alert("Hola de nuevo: " + data["ip"] + " 😊");
-            });
+            });*/
 
             let arr = Array(18).fill("a").concat(Array(4).fill("b"), Array(3).fill("c"), Array(2).fill("1"), Array(45).fill("."));
             for (let i = 0; i < 6; i++) {
@@ -206,7 +209,6 @@
             font-weight: bold;
             background-color: #1f1f1f;
             color: #ffffff;
-            text-align: center;
             display: inline-block;
             box-sizing: border-box;
             width: 4rem;
@@ -215,7 +217,7 @@
             margin: 0.06rem;
             transition: all 0.3s;
             border: 0.15rem solid black;
-            border-radius: 34rem;
+            border-radius: 10rem;
         }
 
         #actual {
@@ -227,7 +229,6 @@
             width: 3rem;
             height: 3rem;
             padding: 1rem;
-            margin-bottom: -2rem;
             transition: all 0.8s;
             border: 0.15rem solid black;
             border-radius: 0.4rem;
@@ -236,10 +237,14 @@
     <p style="text-align: center;font-size:5rem;color:#1f1f1f;font-weight:bolder;">BigFoots<span
             style="color:#4BF2D1">:</span> El jueguecito</p>
     <div id="mainDiv" style="justify-content: center; align-items: center; text-align: center;">
-        <div id="actual">1</div>
-        <div id="c" class="cell" style="visibility: hidden;">1</div>
-        <div id="h"></div>
+        <div>
+            <div id="actual">1</div>
+            <p id="scoreText" style="text-align: center;font-size:1rem;color:#1f1f1f;font-weight:bolder;">Puntos: 300
+            </p>
+        </div>
     </div>
+    <div id="c" class="cell" style="visibility: hidden;">1</div>
+    <div id="h"></div>
 </body>
 
 </html>
