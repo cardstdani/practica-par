@@ -16,6 +16,7 @@
         var bigFoots = [];
 
         function clicked(event) {
+            if(!matrix.some(x => x.includes("."))) {alert("Has perdido, lo lamento😔😔, por favor recarga la página"); return;}
             var coordinates = [parseInt(event.currentTarget.parentNode.id.substring(1)), parseInt(event.currentTarget.id.substring(1))];
             if (matrix[coordinates[0]][coordinates[1]] != ".") {
                 if (actual === "w") {
@@ -202,7 +203,8 @@
             margin: 0.06rem;
             transition: all 0.8s;
             border: 0.15rem solid black;
-            border-radius: 0.4rem;
+            border-radius: 14%;
+            line-height: 50%;
         }
 
         .cell:hover {
@@ -211,13 +213,14 @@
             color: #ffffff;
             display: inline-block;
             box-sizing: border-box;
-            width: 4rem;
-            height: 4rem;
+            width: 3rem;
+            height: 3rem;
+            line-height: 50%;
             padding: 1rem;
             margin: 0.06rem;
             transition: all 0.3s;
             border: 0.15rem solid black;
-            border-radius: 10rem;
+            border-radius: 100%;
         }
 
         #actual {
@@ -226,8 +229,10 @@
             background-color: #4BF2D1;
             text-align: center;
             box-sizing: border-box;
+            display: inline-block;
             width: 3rem;
             height: 3rem;
+            margin-bottom:1rem;
             padding: 1rem;
             transition: all 0.8s;
             border: 0.15rem solid black;
@@ -239,7 +244,7 @@
     <div id="mainDiv" style="justify-content: center; align-items: center; text-align: center;">
         <div>
             <div id="actual">1</div>
-            <p id="scoreText" style="text-align: center;font-size:1rem;color:#1f1f1f;font-weight:bolder;">Puntos: 300
+            <p id="scoreText" style="text-align: center;font-size:1rem;color:#1f1f1f;font-weight:bolder;display: inline-block;">Puntos: 300
             </p>
         </div>
     </div>
