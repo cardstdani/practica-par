@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>
     <title>PracticaParadigmas</title>
 </head>
 
@@ -12,11 +14,16 @@
     <script>
         var matrix = [];
         var actual;
+        var turn = 0;
+        var score = [];
         var objects = {".": [".", 0], "a": ["b", 1], "b": ["c", 5], "c": ["d", 25], "d": ["e", 125], "e": ["e", 625], "1": ["1", -25], "2": ["3", -5], "3": ["4", 50], "4": ["4", 500], "x": ["x", -50]};
         var bigFoots = [];
 
         function clicked(event) {
-            if(!matrix.some(x => x.includes("."))) {alert("Has perdido, lo lamento😔😔, por favor recarga la página"); return;}
+            if (!matrix.some(x => x.includes("."))) {
+                updateUI();
+                alert("Has perdido, lo lamento😔😔, por favor recarga la página"); return;
+            }
             var coordinates = [parseInt(event.currentTarget.parentNode.id.substring(1)), parseInt(event.currentTarget.id.substring(1))];
             if (matrix[coordinates[0]][coordinates[1]] != ".") {
                 if (actual === "w") {
@@ -32,6 +39,7 @@
             updateMatrix(coordinates);
             updateActual();
             bigFoots = bigFoots.map(i => [i[0], i[1] + 1, i[2]]);
+            turn += 1;
             updateUI();
         }
 
@@ -130,8 +138,48 @@
                     sum += objects[matrix[i][j]][1];
                 }
             }
+            score.push(sum);
             document.getElementById("actual").innerHTML = actual;
             document.getElementById("scoreText").innerHTML = "Puntos: " + sum.toString();
+
+            Plotly.newPlot(document.getElementById("imgExport"), [{x: Array.from(Array(turn + 1).keys()), y: score}], {
+                title: {
+                    text: 'Turnos vs Puntuación',
+                    font: {
+                        family: 'Gelion',
+                        size: 10
+                    },
+                    xref: 'paper',
+                    x: 0.05,
+                }, xaxis: {
+                    title: {
+                        text: 'Turnos',
+                        font: {
+                            family: 'Gelion',
+                            size: 18,
+                            color: '#7f7f7f'
+                        }
+                    },
+                },
+                yaxis: {
+                    title: {
+                        text: 'Puntuación',
+                        font: {
+                            family: 'Gelion',
+                            size: 18,
+                            color: '#7f7f7f'
+                        }
+                    }
+                }
+            }).then(
+                function (gd) {
+                    Plotly.toImage(gd, {height: 600, width: 600})
+                        .then(
+                            function (url) {
+                                document.getElementById("imgExport").src = url;
+                            }
+                        )
+                });
         }
 
         function updateActual() {
@@ -232,7 +280,7 @@
             display: inline-block;
             width: 3rem;
             height: 3rem;
-            margin-bottom:1rem;
+            margin-bottom: 1rem;
             padding: 1rem;
             transition: all 0.8s;
             border: 0.15rem solid black;
@@ -244,9 +292,14 @@
     <div id="mainDiv" style="justify-content: center; align-items: center; text-align: center;">
         <div>
             <div id="actual">1</div>
-            <p id="scoreText" style="text-align: center;font-size:1rem;color:#1f1f1f;font-weight:bolder;display: inline-block;">Puntos: 300
+            <p id="scoreText"
+                style="text-align: center;font-size:1rem;color:#1f1f1f;font-weight:bolder;display: inline-block;">
+                Puntos: 300
             </p>
         </div>
+    </div>
+    <div style="justify-content: center; align-items: center; text-align: center;">
+        <img id="imgExport" style="max-width:25rem;"></img>
     </div>
     <div id="c" class="cell" style="visibility: hidden;">1</div>
     <div id="h"></div>
