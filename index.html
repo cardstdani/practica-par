@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>
-    <title>PracticaParadigmas</title>
+    <meta property="og:image"
+        content="https://cdn.dribbble.com/userupload/2647263/file/original-951ae1a21393fb3ab8e51bdfb802b9fd.png?resize=1600x1200" />
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://cdn.dribbble.com/userupload/2647263/file/original-951ae1a21393fb3ab8e51bdfb802b9fd.png?resize=1600x1200" />
+    <title>BigFoots: El jueguecito</title>
 </head>
 
 <body class="markdown-google-sans">
@@ -16,15 +20,15 @@
         var actual;
         var turn = 0;
         var score = [];
-        var objects = {".": [".", 0], "a": ["b", 1], "b": ["c", 5], "c": ["d", 25], "d": ["e", 125], "e": ["e", 625], "1": ["1", -25], "2": ["3", -5], "3": ["4", 50], "4": ["4", 500], "x": ["x", -50]};
         var bigFoots = [];
+        var objects = {".": [".", 0], "a": ["b", 1], "b": ["c", 5], "c": ["d", 25], "d": ["e", 125], "e": ["e", 625], "1": ["1", -25], "2": ["3", -5], "3": ["4", 50], "4": ["4", 500], "x": ["x", -50]};
 
         function clicked(event) {
             if (!matrix.some(x => x.includes("."))) {
                 updateUI();
                 alert("Has perdido, lo lamento😔😔, por favor recarga la página"); return;
             }
-            var coordinates = [parseInt(event.currentTarget.parentNode.id.substring(1)), parseInt(event.currentTarget.id.substring(1))];
+            var coordinates = (event.currentTarget.id === "bot") ? hint() : [parseInt(event.currentTarget.parentNode.id.substring(1)), parseInt(event.currentTarget.id.substring(1))];
             if (matrix[coordinates[0]][coordinates[1]] != ".") {
                 if (actual === "w") {
                     matrix[coordinates[0]][coordinates[1]] = ".";
@@ -43,6 +47,46 @@
             updateUI();
         }
 
+        function hint() {
+            let tmpMatrix = JSON.parse(JSON.stringify(matrix));
+            let tmpTurn = turn;
+            let tmpScore = JSON.parse(JSON.stringify(score));
+            let tmpBigFoots = JSON.parse(JSON.stringify(bigFoots));
+
+            let prevObjs = 0;
+            for (let a of matrix) {
+                for (let b of a) {
+                    if (b !== ".") {
+                        prevObjs += 1;
+                    }
+                }
+            }
+
+            let tempValues = [-Infinity, [0, 0]];
+            //let debugValues = [...Array(this.matrix.length)].map(() => Array(this.matrix[0].length).fill(0));
+
+            for (let i = 0; i < matrix.length; i++) {
+                for (let j = 0; j < matrix[0].length; j++) {
+                    if ((matrix[i][j] === "." && actual != "w") || (matrix[i][j] != "." && actual === "w")) {
+                        updateMatrix([i, j]);
+
+                        let newScore = matrix.reduce((acc, row) => acc + row.reduce((acc2, val) => acc2 + (objects[val][1] - (val === "." ? 1 : 0)), 0), 0) + (prevObjs - 12 * minDistanceToElement([i, j], ["1", "2", matrix[i][j]]));
+                        if (newScore > tempValues[0]) {tempValues = [newScore, [i, j]];}
+
+                        matrix = JSON.parse(JSON.stringify(tmpMatrix));
+                        turn = tmpTurn;
+                        score = JSON.parse(JSON.stringify(tmpScore));
+                        bigFoots = JSON.parse(JSON.stringify(tmpBigFoots));
+                    }
+                }
+            }
+            return tempValues[1];
+        }
+
+        function minDistanceToElement(coordinates, elements) {
+            return 0;
+        }
+
         function deleteBigFoot(coordinates) {
             for (var i = 0; i < bigFoots.length; i++) {
                 if (bigFoots[i][0].every((element, index) => element === coordinates[index])) {bigFoots.splice(i, 1); break;}
@@ -50,6 +94,7 @@
         }
 
         function updateMatrix(coordinates) {
+            if (actual === "w") {matrix[coordinates[0]][coordinates[1]] = "."; deleteBigFoot(coordinates); return;}
             matrix[coordinates[0]][coordinates[1]] = actual;
             if (actual == "1") {bigFoots.push([coordinates, 0, false]); updateBigFoots(); return;}
 
@@ -183,7 +228,7 @@
         }
 
         function updateActual() {
-            let arr = Array(30).fill("a").concat(Array(5).fill("b"), Array(1).fill("c"), Array(2).fill("1"), Array(1).fill("w"));
+            let arr = Array(30).fill("a").concat(Array(5).fill("b"), Array(1).fill("c"), Array(2).fill("1"), Array(2).fill("w"));
             actual = arr[Math.floor(arr.length * Math.random())];
         }
 
@@ -210,6 +255,7 @@
             var hz = document.getElementById("h");
             var sq = document.getElementById("c");
             sq.addEventListener("click", clicked, false);
+            document.getElementById("bot").addEventListener("click", clicked, false);
 
             for (let i = 0; i < matrix.length; i++) {
                 let hzClone = hz.cloneNode(true);
@@ -266,9 +312,24 @@
             line-height: 50%;
             padding: 1rem;
             margin: 0.06rem;
-            transition: all 0.3s;
+            transition: all 0.5s;
             border: 0.15rem solid black;
             border-radius: 100%;
+        }
+
+        #bot {
+            font-weight: bold;
+            margin: auto;
+            background-color: #4BF2D1;
+            text-align: center;
+            display: inline-block;
+            width: 3rem;
+            height: 0.8rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            transition: all 0.8s;
+            border: 0.15rem solid black;
+            border-radius: 0.4rem;
         }
 
         #actual {
@@ -287,10 +348,13 @@
             border-radius: 0.4rem;
         }
     </style>
-    <p style="text-align: center;font-size:5rem;color:#1f1f1f;font-weight:bolder;">BigFoots<span
-            style="color:#4BF2D1">:</span> El jueguecito</p>
+    <a href="https://github.com/cardstdani/practica-par" target=”_blank” style="text-decoration:none">
+        <p style="text-align: center;font-size:5rem;color:#1f1f1f;font-weight:bolder;">BigFoots<span
+                style="color:#4BF2D1">:</span> El jueguecito</p>
+    </a>
     <div id="mainDiv" style="justify-content: center; align-items: center; text-align: center;">
         <div>
+            <div id="bot">BOT</div>
             <div id="actual">1</div>
             <p id="scoreText"
                 style="text-align: center;font-size:1rem;color:#1f1f1f;font-weight:bolder;display: inline-block;">
