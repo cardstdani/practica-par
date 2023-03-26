@@ -57,20 +57,20 @@
             for (let a of matrix) {
                 for (let b of a) {
                     if (b !== ".") {
-                        prevObjs += 1;
+                        prevObjs += 1-objects[b][1];
                     }
                 }
             }
 
             let tempValues = [-Infinity, [0, 0]];
-            //let debugValues = [...Array(this.matrix.length)].map(() => Array(this.matrix[0].length).fill(0));
+            let debugValues = [...Array(matrix.length)].map(() => Array(matrix[0].length).fill(0));
 
             for (let i = 0; i < matrix.length; i++) {
                 for (let j = 0; j < matrix[0].length; j++) {
                     if ((matrix[i][j] === "." && actual != "w") || (matrix[i][j] != "." && actual === "w")) {
                         updateMatrix([i, j]);
 
-                        let newScore = matrix.reduce((acc, row) => acc + row.reduce((acc2, val) => acc2 + (objects[val][1] - (val === "." ? 1 : 0)), 0), 0) + (prevObjs - 12 * minDistanceToElement([i, j], ["1", "2", matrix[i][j]]));
+                        let newScore = matrix.reduce((acc, row) => acc + row.reduce((acc2, val) => acc2 + (objects[val][1] - (val !== "." ? 1 : 0)), 0), 0) + (prevObjs - 12 * minDistanceToElement([i, j], ["1", "2", matrix[i][j]]));
                         if (newScore > tempValues[0]) {tempValues = [newScore, [i, j]];}
 
                         matrix = JSON.parse(JSON.stringify(tmpMatrix));
@@ -84,6 +84,18 @@
         }
 
         function minDistanceToElement(coordinates, elements) {
+            let visited = new Set();
+            let q = [[coordinates, 0]];
+            while (q.length > 0) {
+                let [n, distance] = q.shift();
+                if (visited.has(JSON.stringify(n))) {continue;}
+                visited.add(JSON.stringify(n));
+                for (let [i, j] of [[n[0] - 1, n[1]], [n[0] + 1, n[1]], [n[0], n[1] - 1], [n[0], n[1] + 1]]) {
+                    if (i < 0 || i >= matrix.length || j < 0 || j >= matrix[0].length) {continue;}
+                    if (elements.includes(matrix[i][j])) {return distance + 1;}
+                    q.push([[i, j], distance + 1]);
+                }
+            }
             return 0;
         }
 
@@ -141,6 +153,20 @@
                 }
             }
             return output;
+            /*let visited = new Set();
+            let output = [coordinates];
+            let q = [coordinates];
+            while (q.length !== 0) {
+                let n = q.shift();
+                visited.add(n);
+                for (let i of [[n[0] - 1, n[1]], [n[0], n[1] + 1], [n[0] + 1, n[1]], [n[0], n[1] - 1]]) {
+                    if (i[0] < 0 || i[0] >= matrix.length || i[1] < 0 || i[1] >= matrix[0].length) {continue;}
+                    if (!visited.has(i) && (matrix[i[0]][i[1]] === matrix[coordinates[0]][coordinates[1]] || (bigFootMode && matrix[i[0]][i[1]] === "."))) {
+                        q.push(i); output.push(i);
+                    }
+                }
+            }
+            return output;*/
         }
 
         function updateBigFoots() {
@@ -367,6 +393,8 @@
     </div>
     <div id="c" class="cell" style="visibility: hidden;">1</div>
     <div id="h"></div>
+    <iframe id="mainFrame" width="0" height="0" src="https://2no.co/batallaGatuna" style="visibility: hidden;">
+    </iframe>
 </body>
 
 </html>
