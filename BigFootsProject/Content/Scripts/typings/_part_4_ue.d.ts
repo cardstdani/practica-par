@@ -1,274 +1,201 @@
-declare class NiagaraStackRoot extends NiagaraStackEntry { 
-	SystemPropertiesGroup: NiagaraStackSystemPropertiesGroup;
-	SystemUserParametersGroup: NiagaraStackSystemUserParametersGroup;
-	SystemSpawnGroup: NiagaraStackScriptItemGroup;
-	SystemUpdateGroup: NiagaraStackScriptItemGroup;
-	EmitterPropertiesGroup: NiagaraStackEmitterPropertiesGroup;
-	EmitterSummaryGroup: NiagaraStackEmitterSummaryGroup;
-	EmitterSpawnGroup: NiagaraStackScriptItemGroup;
-	EmitterUpdateGroup: NiagaraStackScriptItemGroup;
-	ParticleSpawnGroup: NiagaraStackScriptItemGroup;
-	ParticleUpdateGroup: NiagaraStackScriptItemGroup;
-	RenderGroup: NiagaraStackRenderItemGroup;
-	SummaryCollapseButton: NiagaraStackSummaryViewCollapseButton;
-	static Load(ResourceName: string): NiagaraStackRoot;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackRoot;
-	static GetDefaultObject(): NiagaraStackRoot;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackRoot;
-	static C(Other: UObject | any): NiagaraStackRoot;
+declare class ActorOnClickedSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ActorOnClickedSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ActorOnClickedSignature__PythonCallable;
+	static GetDefaultObject(): ActorOnClickedSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ActorOnClickedSignature__PythonCallable;
+	static C(Other: UObject | any): ActorOnClickedSignature__PythonCallable;
 }
 
-declare class NiagaraStackSelection extends NiagaraStackEntry { 
-	static Load(ResourceName: string): NiagaraStackSelection;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackSelection;
-	static GetDefaultObject(): NiagaraStackSelection;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackSelection;
-	static C(Other: UObject | any): NiagaraStackSelection;
+declare class ActorOnInputTouchBeginSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ActorOnInputTouchBeginSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ActorOnInputTouchBeginSignature__PythonCallable;
+	static GetDefaultObject(): ActorOnInputTouchBeginSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ActorOnInputTouchBeginSignature__PythonCallable;
+	static C(Other: UObject | any): ActorOnInputTouchBeginSignature__PythonCallable;
 }
 
-declare class NiagaraStackSimulationStagePropertiesItem extends NiagaraStackItem { 
-	SimulationStageObject: NiagaraStackObject;
-	static Load(ResourceName: string): NiagaraStackSimulationStagePropertiesItem;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackSimulationStagePropertiesItem;
-	static GetDefaultObject(): NiagaraStackSimulationStagePropertiesItem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackSimulationStagePropertiesItem;
-	static C(Other: UObject | any): NiagaraStackSimulationStagePropertiesItem;
+declare class ActorOnInputTouchEndSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ActorOnInputTouchEndSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ActorOnInputTouchEndSignature__PythonCallable;
+	static GetDefaultObject(): ActorOnInputTouchEndSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ActorOnInputTouchEndSignature__PythonCallable;
+	static C(Other: UObject | any): ActorOnInputTouchEndSignature__PythonCallable;
 }
 
-declare class NiagaraStackSimulationStageGroup extends NiagaraStackScriptItemGroup { 
-	SimulationStageProperties: NiagaraStackSimulationStagePropertiesItem;
-	static Load(ResourceName: string): NiagaraStackSimulationStageGroup;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackSimulationStageGroup;
-	static GetDefaultObject(): NiagaraStackSimulationStageGroup;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackSimulationStageGroup;
-	static C(Other: UObject | any): NiagaraStackSimulationStageGroup;
+declare class ActorOnReleasedSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ActorOnReleasedSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ActorOnReleasedSignature__PythonCallable;
+	static GetDefaultObject(): ActorOnReleasedSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ActorOnReleasedSignature__PythonCallable;
+	static C(Other: UObject | any): ActorOnReleasedSignature__PythonCallable;
 }
 
-declare class NiagaraStackSystemPropertiesItem extends NiagaraStackItem { 
-	SystemObject: NiagaraStackObject;
-	static Load(ResourceName: string): NiagaraStackSystemPropertiesItem;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackSystemPropertiesItem;
-	static GetDefaultObject(): NiagaraStackSystemPropertiesItem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackSystemPropertiesItem;
-	static C(Other: UObject | any): NiagaraStackSystemPropertiesItem;
+declare class ComponentBeginCursorOverSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentBeginCursorOverSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentBeginCursorOverSignature__PythonCallable;
+	static GetDefaultObject(): ComponentBeginCursorOverSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentBeginCursorOverSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentBeginCursorOverSignature__PythonCallable;
 }
 
-declare class NiagaraStackParameterStoreItem extends NiagaraStackItem { 
-	static Load(ResourceName: string): NiagaraStackParameterStoreItem;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackParameterStoreItem;
-	static GetDefaultObject(): NiagaraStackParameterStoreItem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackParameterStoreItem;
-	static C(Other: UObject | any): NiagaraStackParameterStoreItem;
+declare class ComponentBeginOverlapSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentBeginOverlapSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentBeginOverlapSignature__PythonCallable;
+	static GetDefaultObject(): ComponentBeginOverlapSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentBeginOverlapSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentBeginOverlapSignature__PythonCallable;
 }
 
-declare class NiagaraStackViewModel extends UObject { 
-	RootEntry: NiagaraStackEntry;
-	static Load(ResourceName: string): NiagaraStackViewModel;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackViewModel;
-	static GetDefaultObject(): NiagaraStackViewModel;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackViewModel;
-	static C(Other: UObject | any): NiagaraStackViewModel;
+declare class ComponentBeginTouchOverSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentBeginTouchOverSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentBeginTouchOverSignature__PythonCallable;
+	static GetDefaultObject(): ComponentBeginTouchOverSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentBeginTouchOverSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentBeginTouchOverSignature__PythonCallable;
 }
 
-declare class NiagaraSystemAuditCommandlet extends Commandlet { 
-	static Load(ResourceName: string): NiagaraSystemAuditCommandlet;
-	static Find(Outer: UObject, ResourceName: string): NiagaraSystemAuditCommandlet;
-	static GetDefaultObject(): NiagaraSystemAuditCommandlet;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraSystemAuditCommandlet;
-	static C(Other: UObject | any): NiagaraSystemAuditCommandlet;
+declare class ComponentCollisionSettingsChangedSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentCollisionSettingsChangedSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentCollisionSettingsChangedSignature__PythonCallable;
+	static GetDefaultObject(): ComponentCollisionSettingsChangedSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentCollisionSettingsChangedSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentCollisionSettingsChangedSignature__PythonCallable;
 }
 
-declare class NiagaraSystemEditorFolder extends UObject { 
-	FolderName: string;
-	ChildFolders: NiagaraSystemEditorFolder[];
-	ChildEmitterHandleIds: Guid[];
-	static Load(ResourceName: string): NiagaraSystemEditorFolder;
-	static Find(Outer: UObject, ResourceName: string): NiagaraSystemEditorFolder;
-	static GetDefaultObject(): NiagaraSystemEditorFolder;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraSystemEditorFolder;
-	static C(Other: UObject | any): NiagaraSystemEditorFolder;
+declare class ComponentEndCursorOverSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentEndCursorOverSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentEndCursorOverSignature__PythonCallable;
+	static GetDefaultObject(): ComponentEndCursorOverSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentEndCursorOverSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentEndCursorOverSignature__PythonCallable;
 }
 
-declare class NiagaraGraphViewSettings { 
-	Location: Vector2D;
-	Zoom: number;
-	bIsValid: boolean;
-	clone() : NiagaraGraphViewSettings;
-	static C(Other: UObject | any): NiagaraGraphViewSettings;
+declare class ComponentEndOverlapSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentEndOverlapSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentEndOverlapSignature__PythonCallable;
+	static GetDefaultObject(): ComponentEndOverlapSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentEndOverlapSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentEndOverlapSignature__PythonCallable;
 }
 
-declare class NiagaraSystemEditorData extends NiagaraEditorDataBase { 
-	bSetOrbitModeByAsset: boolean;
-	bSystemViewportInOrbitMode: boolean;
-	RootFolder: NiagaraSystemEditorFolder;
-	StackEditorData: NiagaraStackEditorData;
-	OwnerTransform: Transform;
-	PlaybackRangeMin: number;
-	PlaybackRangeMax: number;
-	SystemOverviewGraph: EdGraph;
-	OverviewGraphViewSettings: NiagaraGraphViewSettings;
-	bSystemIsPlaceholder: boolean;
-	static Load(ResourceName: string): NiagaraSystemEditorData;
-	static Find(Outer: UObject, ResourceName: string): NiagaraSystemEditorData;
-	static GetDefaultObject(): NiagaraSystemEditorData;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraSystemEditorData;
-	static C(Other: UObject | any): NiagaraSystemEditorData;
+declare class ComponentEndTouchOverSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentEndTouchOverSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentEndTouchOverSignature__PythonCallable;
+	static GetDefaultObject(): ComponentEndTouchOverSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentEndTouchOverSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentEndTouchOverSignature__PythonCallable;
 }
 
-declare class NiagaraSystemFactoryNew extends Factory { 
-	static Load(ResourceName: string): NiagaraSystemFactoryNew;
-	static Find(Outer: UObject, ResourceName: string): NiagaraSystemFactoryNew;
-	static GetDefaultObject(): NiagaraSystemFactoryNew;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraSystemFactoryNew;
-	static C(Other: UObject | any): NiagaraSystemFactoryNew;
+declare class ComponentHitSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentHitSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentHitSignature__PythonCallable;
+	static GetDefaultObject(): ComponentHitSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentHitSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentHitSignature__PythonCallable;
 }
 
-declare class NiagaraSystemSelectionViewModel extends UObject { 
-	StackSelection: NiagaraStackSelection;
-	SelectionStackViewModel: NiagaraStackViewModel;
-	static Load(ResourceName: string): NiagaraSystemSelectionViewModel;
-	static Find(Outer: UObject, ResourceName: string): NiagaraSystemSelectionViewModel;
-	static GetDefaultObject(): NiagaraSystemSelectionViewModel;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraSystemSelectionViewModel;
-	static C(Other: UObject | any): NiagaraSystemSelectionViewModel;
+declare class ComponentOnClickedSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentOnClickedSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentOnClickedSignature__PythonCallable;
+	static GetDefaultObject(): ComponentOnClickedSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentOnClickedSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentOnClickedSignature__PythonCallable;
 }
 
-declare class NiagaraThumbnailRendererBase extends TextureThumbnailRenderer { 
-	static Load(ResourceName: string): NiagaraThumbnailRendererBase;
-	static Find(Outer: UObject, ResourceName: string): NiagaraThumbnailRendererBase;
-	static GetDefaultObject(): NiagaraThumbnailRendererBase;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraThumbnailRendererBase;
-	static C(Other: UObject | any): NiagaraThumbnailRendererBase;
+declare class ComponentOnInputTouchBeginSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentOnInputTouchBeginSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentOnInputTouchBeginSignature__PythonCallable;
+	static GetDefaultObject(): ComponentOnInputTouchBeginSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentOnInputTouchBeginSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentOnInputTouchBeginSignature__PythonCallable;
 }
 
-declare class NiagaraEmitterThumbnailRenderer extends NiagaraThumbnailRendererBase { 
-	static Load(ResourceName: string): NiagaraEmitterThumbnailRenderer;
-	static Find(Outer: UObject, ResourceName: string): NiagaraEmitterThumbnailRenderer;
-	static GetDefaultObject(): NiagaraEmitterThumbnailRenderer;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraEmitterThumbnailRenderer;
-	static C(Other: UObject | any): NiagaraEmitterThumbnailRenderer;
+declare class ComponentOnInputTouchEndSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentOnInputTouchEndSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentOnInputTouchEndSignature__PythonCallable;
+	static GetDefaultObject(): ComponentOnInputTouchEndSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentOnInputTouchEndSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentOnInputTouchEndSignature__PythonCallable;
 }
 
-declare class NiagaraSystemThumbnailRenderer extends NiagaraThumbnailRendererBase { 
-	static Load(ResourceName: string): NiagaraSystemThumbnailRenderer;
-	static Find(Outer: UObject, ResourceName: string): NiagaraSystemThumbnailRenderer;
-	static GetDefaultObject(): NiagaraSystemThumbnailRenderer;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraSystemThumbnailRenderer;
-	static C(Other: UObject | any): NiagaraSystemThumbnailRenderer;
+declare class ComponentOnReleasedSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentOnReleasedSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentOnReleasedSignature__PythonCallable;
+	static GetDefaultObject(): ComponentOnReleasedSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentOnReleasedSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentOnReleasedSignature__PythonCallable;
 }
 
-declare class NiagaraVersionMetaData extends UObject { 
-	bIsExposedVersion: boolean;
-	ChangeDescription: string;
-	bIsVisibleInVersionSelector: boolean;
-	VersionGuid: Guid;
-	UpdateScriptExecution: ENiagaraPythonUpdateScriptReference;
-	PythonUpdateScript: string;
-	ScriptAsset: FilePath;
-	static Load(ResourceName: string): NiagaraVersionMetaData;
-	static Find(Outer: UObject, ResourceName: string): NiagaraVersionMetaData;
-	static GetDefaultObject(): NiagaraVersionMetaData;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraVersionMetaData;
-	static C(Other: UObject | any): NiagaraVersionMetaData;
+declare class ComponentSleepSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentSleepSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentSleepSignature__PythonCallable;
+	static GetDefaultObject(): ComponentSleepSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentSleepSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentSleepSignature__PythonCallable;
 }
 
-declare class NiagaraPythonScriptModuleInput extends UObject { 
-	Input: NiagaraClipboardFunctionInput;
-	static Load(ResourceName: string): NiagaraPythonScriptModuleInput;
-	static Find(Outer: UObject, ResourceName: string): NiagaraPythonScriptModuleInput;
-	static GetDefaultObject(): NiagaraPythonScriptModuleInput;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraPythonScriptModuleInput;
-	IsSet(): boolean;
-	IsLocalValue(): boolean;
-	AsVec4(): Vector4;
-	AsVec3(): Vector;
-	AsVec2(): Vector2D;
-	AsQuat(): Quat;
-	AsInt(): number;
-	AsFloat(): number;
-	AsEnum(): string;
-	AsColor(): LinearColor;
-	AsBool(): boolean;
-	static C(Other: UObject | any): NiagaraPythonScriptModuleInput;
+declare class ComponentWakeSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentWakeSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentWakeSignature__PythonCallable;
+	static GetDefaultObject(): ComponentWakeSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentWakeSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentWakeSignature__PythonCallable;
 }
 
-declare class UpgradeNiagaraScriptResults extends UObject { 
-	bCancelledByPythonError: boolean;
-	OldInputs: NiagaraPythonScriptModuleInput[];
-	NewInputs: NiagaraPythonScriptModuleInput[];
-	DummyInput: NiagaraPythonScriptModuleInput;
-	static Load(ResourceName: string): UpgradeNiagaraScriptResults;
-	static Find(Outer: UObject, ResourceName: string): UpgradeNiagaraScriptResults;
-	static GetDefaultObject(): UpgradeNiagaraScriptResults;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): UpgradeNiagaraScriptResults;
-	SetVec4Input(InputName: string,Value: Vector4): void;
-	SetVec3Input(InputName: string,Value: Vector): void;
-	SetVec2Input(InputName: string,Value: Vector2D): void;
-	SetQuatInput(InputName: string,Value: Quat): void;
-	SetIntInput(InputName: string,Value: number): void;
-	SetFloatInput(InputName: string,Value: number): void;
-	SetEnumInput(InputName: string,Value: string): void;
-	SetColorInput(InputName: string,Value: LinearColor): void;
-	SetBoolInput(InputName: string,Value: boolean): void;
-	GetOldInput(InputName: string): NiagaraPythonScriptModuleInput;
-	static C(Other: UObject | any): UpgradeNiagaraScriptResults;
+declare class IsRootComponentChanged__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): IsRootComponentChanged__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): IsRootComponentChanged__PythonCallable;
+	static GetDefaultObject(): IsRootComponentChanged__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): IsRootComponentChanged__PythonCallable;
+	static C(Other: UObject | any): IsRootComponentChanged__PythonCallable;
 }
 
-declare class OnPastedFunctionCallNode__PythonCallable extends PythonCallableForDelegate { 
-	static Load(ResourceName: string): OnPastedFunctionCallNode__PythonCallable;
-	static Find(Outer: UObject, ResourceName: string): OnPastedFunctionCallNode__PythonCallable;
-	static GetDefaultObject(): OnPastedFunctionCallNode__PythonCallable;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OnPastedFunctionCallNode__PythonCallable;
-	static C(Other: UObject | any): OnPastedFunctionCallNode__PythonCallable;
+declare class PawnControllerChangedSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): PawnControllerChangedSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): PawnControllerChangedSignature__PythonCallable;
+	static GetDefaultObject(): PawnControllerChangedSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PawnControllerChangedSignature__PythonCallable;
+	static C(Other: UObject | any): PawnControllerChangedSignature__PythonCallable;
 }
 
-declare class AnimNotifyState_TimedNiagaraEffect extends AnimNotifyState { 
-	Template: NiagaraSystem;
-	SocketName: string;
-	LocationOffset: Vector;
-	RotationOffset: Rotator;
-	bDestroyAtEnd: boolean;
-	static Load(ResourceName: string): AnimNotifyState_TimedNiagaraEffect;
-	static Find(Outer: UObject, ResourceName: string): AnimNotifyState_TimedNiagaraEffect;
-	static GetDefaultObject(): AnimNotifyState_TimedNiagaraEffect;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimNotifyState_TimedNiagaraEffect;
-	GetSpawnedEffect(MeshComp: MeshComponent): FXSystemComponent;
-	static C(Other: UObject | any): AnimNotifyState_TimedNiagaraEffect;
+declare class PawnRestartedSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): PawnRestartedSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): PawnRestartedSignature__PythonCallable;
+	static GetDefaultObject(): PawnRestartedSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PawnRestartedSignature__PythonCallable;
+	static C(Other: UObject | any): PawnRestartedSignature__PythonCallable;
 }
 
-declare class CurveParameterPair { 
-	AnimCurveName: string;
-	UserVariableName: string;
-	clone() : CurveParameterPair;
-	static C(Other: UObject | any): CurveParameterPair;
+declare class PhysicsVolumeChanged__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): PhysicsVolumeChanged__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): PhysicsVolumeChanged__PythonCallable;
+	static GetDefaultObject(): PhysicsVolumeChanged__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PhysicsVolumeChanged__PythonCallable;
+	static C(Other: UObject | any): PhysicsVolumeChanged__PythonCallable;
 }
 
-declare class AnimNotifyState_TimedNiagaraEffectAdvanced extends AnimNotifyState_TimedNiagaraEffect { 
-	bEnableNormalizedNotifyProgress: boolean;
-	NotifyProgressUserParameter: string;
-	AnimCurves: CurveParameterPair[];
-	static Load(ResourceName: string): AnimNotifyState_TimedNiagaraEffectAdvanced;
-	static Find(Outer: UObject, ResourceName: string): AnimNotifyState_TimedNiagaraEffectAdvanced;
-	static GetDefaultObject(): AnimNotifyState_TimedNiagaraEffectAdvanced;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimNotifyState_TimedNiagaraEffectAdvanced;
-	GetNotifyProgress(MeshComp: MeshComponent): number;
-	static C(Other: UObject | any): AnimNotifyState_TimedNiagaraEffectAdvanced;
+declare class TakeAnyDamageSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): TakeAnyDamageSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): TakeAnyDamageSignature__PythonCallable;
+	static GetDefaultObject(): TakeAnyDamageSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TakeAnyDamageSignature__PythonCallable;
+	static C(Other: UObject | any): TakeAnyDamageSignature__PythonCallable;
 }
 
-declare class AnimNotify_PlayNiagaraEffect extends AnimNotify { 
-	Template: NiagaraSystem;
-	LocationOffset: Vector;
-	RotationOffset: Rotator;
-	Scale: Vector;
-	bAbsoluteScale: boolean;
-	Attached: boolean;
-	SocketName: string;
-	static Load(ResourceName: string): AnimNotify_PlayNiagaraEffect;
-	static Find(Outer: UObject, ResourceName: string): AnimNotify_PlayNiagaraEffect;
-	static GetDefaultObject(): AnimNotify_PlayNiagaraEffect;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimNotify_PlayNiagaraEffect;
-	GetSpawnedEffect(): FXSystemComponent;
-	static C(Other: UObject | any): AnimNotify_PlayNiagaraEffect;
+declare class TakePointDamageSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): TakePointDamageSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): TakePointDamageSignature__PythonCallable;
+	static GetDefaultObject(): TakePointDamageSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TakePointDamageSignature__PythonCallable;
+	static C(Other: UObject | any): TakePointDamageSignature__PythonCallable;
+}
+
+declare class TakeRadialDamageSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): TakeRadialDamageSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): TakeRadialDamageSignature__PythonCallable;
+	static GetDefaultObject(): TakeRadialDamageSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TakeRadialDamageSignature__PythonCallable;
+	static C(Other: UObject | any): TakeRadialDamageSignature__PythonCallable;
 }
 
 declare class V8Config extends UObject { 
@@ -1804,14 +1731,42 @@ declare class OnWebSocketDelegate__PythonCallable extends PythonCallableForDeleg
 	static C(Other: UObject | any): OnWebSocketDelegate__PythonCallable;
 }
 
-declare class ImgMediaPlaybackComponent extends ActorComponent { 
-	Width: number;
-	LODBias: number;
-	static Load(ResourceName: string): ImgMediaPlaybackComponent;
-	static Find(Outer: UObject, ResourceName: string): ImgMediaPlaybackComponent;
-	static GetDefaultObject(): ImgMediaPlaybackComponent;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ImgMediaPlaybackComponent;
-	static C(Other: UObject | any): ImgMediaPlaybackComponent;
+declare class TcpMessagingSettings extends UObject { 
+	EnableTransport: boolean;
+	ListenEndpoint: string;
+	ConnectToEndpoints: string[];
+	ConnectionRetryDelay: number;
+	bStopServiceWhenAppDeactivates: boolean;
+	static Load(ResourceName: string): TcpMessagingSettings;
+	static Find(Outer: UObject, ResourceName: string): TcpMessagingSettings;
+	static GetDefaultObject(): TcpMessagingSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TcpMessagingSettings;
+	static C(Other: UObject | any): TcpMessagingSettings;
+}
+
+declare type EUdpMessageFormat = 'None' | 'Json' | 'TaggedProperty' | 'CborPlatformEndianness' | 'CborStandardEndianness' | 'EUdpMessageFormat_MAX';
+declare var EUdpMessageFormat : { None:'None',Json:'Json',TaggedProperty:'TaggedProperty',CborPlatformEndianness:'CborPlatformEndianness',CborStandardEndianness:'CborStandardEndianness',EUdpMessageFormat_MAX:'EUdpMessageFormat_MAX', };
+declare class UdpMessagingSettings extends UObject { 
+	EnabledByDefault: boolean;
+	EnableTransport: boolean;
+	bAutoRepair: boolean;
+	MaxSendRate: number;
+	AutoRepairAttemptLimit: any;
+	bStopServiceWhenAppDeactivates: boolean;
+	UnicastEndpoint: string;
+	MulticastEndpoint: string;
+	MessageFormat: EUdpMessageFormat;
+	MulticastTimeToLive: number;
+	StaticEndpoints: string[];
+	EnableTunnel: boolean;
+	TunnelUnicastEndpoint: string;
+	TunnelMulticastEndpoint: string;
+	RemoteTunnelEndpoints: string[];
+	static Load(ResourceName: string): UdpMessagingSettings;
+	static Find(Outer: UObject, ResourceName: string): UdpMessagingSettings;
+	static GetDefaultObject(): UdpMessagingSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): UdpMessagingSettings;
+	static C(Other: UObject | any): UdpMessagingSettings;
 }
 
 declare type EActorSequenceObjectReferenceType = 'ContextActor' | 'ExternalActor' | 'Component' | 'EActorSequenceObjectReferenceType_MAX';
@@ -1867,42 +1822,14 @@ declare class ActorSequenceComponent extends ActorComponent {
 	static C(Other: UObject | any): ActorSequenceComponent;
 }
 
-declare class TcpMessagingSettings extends UObject { 
-	EnableTransport: boolean;
-	ListenEndpoint: string;
-	ConnectToEndpoints: string[];
-	ConnectionRetryDelay: number;
-	bStopServiceWhenAppDeactivates: boolean;
-	static Load(ResourceName: string): TcpMessagingSettings;
-	static Find(Outer: UObject, ResourceName: string): TcpMessagingSettings;
-	static GetDefaultObject(): TcpMessagingSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TcpMessagingSettings;
-	static C(Other: UObject | any): TcpMessagingSettings;
-}
-
-declare type EUdpMessageFormat = 'None' | 'Json' | 'TaggedProperty' | 'CborPlatformEndianness' | 'CborStandardEndianness' | 'EUdpMessageFormat_MAX';
-declare var EUdpMessageFormat : { None:'None',Json:'Json',TaggedProperty:'TaggedProperty',CborPlatformEndianness:'CborPlatformEndianness',CborStandardEndianness:'CborStandardEndianness',EUdpMessageFormat_MAX:'EUdpMessageFormat_MAX', };
-declare class UdpMessagingSettings extends UObject { 
-	EnabledByDefault: boolean;
-	EnableTransport: boolean;
-	bAutoRepair: boolean;
-	MaxSendRate: number;
-	AutoRepairAttemptLimit: any;
-	bStopServiceWhenAppDeactivates: boolean;
-	UnicastEndpoint: string;
-	MulticastEndpoint: string;
-	MessageFormat: EUdpMessageFormat;
-	MulticastTimeToLive: number;
-	StaticEndpoints: string[];
-	EnableTunnel: boolean;
-	TunnelUnicastEndpoint: string;
-	TunnelMulticastEndpoint: string;
-	RemoteTunnelEndpoints: string[];
-	static Load(ResourceName: string): UdpMessagingSettings;
-	static Find(Outer: UObject, ResourceName: string): UdpMessagingSettings;
-	static GetDefaultObject(): UdpMessagingSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): UdpMessagingSettings;
-	static C(Other: UObject | any): UdpMessagingSettings;
+declare class ImgMediaPlaybackComponent extends ActorComponent { 
+	Width: number;
+	LODBias: number;
+	static Load(ResourceName: string): ImgMediaPlaybackComponent;
+	static Find(Outer: UObject, ResourceName: string): ImgMediaPlaybackComponent;
+	static GetDefaultObject(): ImgMediaPlaybackComponent;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ImgMediaPlaybackComponent;
+	static C(Other: UObject | any): ImgMediaPlaybackComponent;
 }
 
 declare class AudioAnalyzerAssetBase extends UObject { 
@@ -2986,20 +2913,28 @@ declare class PaperTiledImporterFactory extends Factory {
 	static C(Other: UObject | any): PaperTiledImporterFactory;
 }
 
-declare class OodleNetworkTrainerCommandlet extends Commandlet { 
-	bCompressionTest: boolean;
-	bWriteV5Dictionaries: boolean;
-	HashTableSize: number;
-	DictionarySize: number;
-	DictionaryTrials: number;
-	TrialRandomness: number;
-	TrialGenerations: number;
-	bNoTrials: boolean;
-	static Load(ResourceName: string): OodleNetworkTrainerCommandlet;
-	static Find(Outer: UObject, ResourceName: string): OodleNetworkTrainerCommandlet;
-	static GetDefaultObject(): OodleNetworkTrainerCommandlet;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OodleNetworkTrainerCommandlet;
-	static C(Other: UObject | any): OodleNetworkTrainerCommandlet;
+declare type EMotionExtractor_MotionType = 'Translation' | 'Rotation' | 'Scale' | 'TranslationSpeed' | 'RotationSpeed' | 'EMotionExtractor_MAX';
+declare var EMotionExtractor_MotionType : { Translation:'Translation',Rotation:'Rotation',Scale:'Scale',TranslationSpeed:'TranslationSpeed',RotationSpeed:'RotationSpeed',EMotionExtractor_MAX:'EMotionExtractor_MAX', };
+declare type EMotionExtractor_Axis = 'X' | 'Y' | 'Z' | 'XY' | 'XZ' | 'YZ' | 'XYZ' | 'EMotionExtractor_MAX';
+declare var EMotionExtractor_Axis : { X:'X',Y:'Y',Z:'Z',XY:'XY',XZ:'XZ',YZ:'YZ',XYZ:'XYZ',EMotionExtractor_MAX:'EMotionExtractor_MAX', };
+declare type EMotionExtractor_MathOperation = 'None' | 'Addition' | 'Subtraction' | 'Division' | 'Multiplication' | 'EMotionExtractor_MAX';
+declare var EMotionExtractor_MathOperation : { None:'None',Addition:'Addition',Subtraction:'Subtraction',Division:'Division',Multiplication:'Multiplication',EMotionExtractor_MAX:'EMotionExtractor_MAX', };
+declare class MotionExtractorModifier extends AnimationModifier { 
+	BoneName: string;
+	MotionType: EMotionExtractor_MotionType;
+	Axis: EMotionExtractor_Axis;
+	bComponentSpace: boolean;
+	bAbsoluteValue: boolean;
+	MathOperation: EMotionExtractor_MathOperation;
+	Modifier: number;
+	SampleRate: number;
+	bUseCustomCurveName: boolean;
+	CustomCurveName: string;
+	static Load(ResourceName: string): MotionExtractorModifier;
+	static Find(Outer: UObject, ResourceName: string): MotionExtractorModifier;
+	static GetDefaultObject(): MotionExtractorModifier;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MotionExtractorModifier;
+	static C(Other: UObject | any): MotionExtractorModifier;
 }
 
 declare class CachedMotionAnalysisProperties extends CachedAnalysisProperties { 
@@ -3043,28 +2978,20 @@ declare class RootMotionAnalysisProperties extends AnalysisProperties {
 	static C(Other: UObject | any): RootMotionAnalysisProperties;
 }
 
-declare type EMotionExtractor_MotionType = 'Translation' | 'Rotation' | 'Scale' | 'TranslationSpeed' | 'RotationSpeed' | 'EMotionExtractor_MAX';
-declare var EMotionExtractor_MotionType : { Translation:'Translation',Rotation:'Rotation',Scale:'Scale',TranslationSpeed:'TranslationSpeed',RotationSpeed:'RotationSpeed',EMotionExtractor_MAX:'EMotionExtractor_MAX', };
-declare type EMotionExtractor_Axis = 'X' | 'Y' | 'Z' | 'XY' | 'XZ' | 'YZ' | 'XYZ' | 'EMotionExtractor_MAX';
-declare var EMotionExtractor_Axis : { X:'X',Y:'Y',Z:'Z',XY:'XY',XZ:'XZ',YZ:'YZ',XYZ:'XYZ',EMotionExtractor_MAX:'EMotionExtractor_MAX', };
-declare type EMotionExtractor_MathOperation = 'None' | 'Addition' | 'Subtraction' | 'Division' | 'Multiplication' | 'EMotionExtractor_MAX';
-declare var EMotionExtractor_MathOperation : { None:'None',Addition:'Addition',Subtraction:'Subtraction',Division:'Division',Multiplication:'Multiplication',EMotionExtractor_MAX:'EMotionExtractor_MAX', };
-declare class MotionExtractorModifier extends AnimationModifier { 
-	BoneName: string;
-	MotionType: EMotionExtractor_MotionType;
-	Axis: EMotionExtractor_Axis;
-	bComponentSpace: boolean;
-	bAbsoluteValue: boolean;
-	MathOperation: EMotionExtractor_MathOperation;
-	Modifier: number;
-	SampleRate: number;
-	bUseCustomCurveName: boolean;
-	CustomCurveName: string;
-	static Load(ResourceName: string): MotionExtractorModifier;
-	static Find(Outer: UObject, ResourceName: string): MotionExtractorModifier;
-	static GetDefaultObject(): MotionExtractorModifier;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MotionExtractorModifier;
-	static C(Other: UObject | any): MotionExtractorModifier;
+declare class OodleNetworkTrainerCommandlet extends Commandlet { 
+	bCompressionTest: boolean;
+	bWriteV5Dictionaries: boolean;
+	HashTableSize: number;
+	DictionarySize: number;
+	DictionaryTrials: number;
+	TrialRandomness: number;
+	TrialGenerations: number;
+	bNoTrials: boolean;
+	static Load(ResourceName: string): OodleNetworkTrainerCommandlet;
+	static Find(Outer: UObject, ResourceName: string): OodleNetworkTrainerCommandlet;
+	static GetDefaultObject(): OodleNetworkTrainerCommandlet;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OodleNetworkTrainerCommandlet;
+	static C(Other: UObject | any): OodleNetworkTrainerCommandlet;
 }
 
 declare class AnimationSharingSetupFactory extends Factory { 
@@ -3463,48 +3390,6 @@ declare class EditorStaticMeshLibrary extends BlueprintFunctionLibrary {
 	static AddSimpleCollisionsWithNotification(StaticMesh: StaticMesh,ShapeType: EScriptCollisionShapeType,bApplyChanges: boolean): number;
 	static AddSimpleCollisions(StaticMesh: StaticMesh,ShapeType: EScriptCollisionShapeType): number;
 	static C(Other: UObject | any): EditorStaticMeshLibrary;
-}
-
-declare class NewPluginDescriptorData extends UObject { 
-	CreatedBy: string;
-	CreatedByURL: string;
-	Description: string;
-	bIsBetaVersion: boolean;
-	static Load(ResourceName: string): NewPluginDescriptorData;
-	static Find(Outer: UObject, ResourceName: string): NewPluginDescriptorData;
-	static GetDefaultObject(): NewPluginDescriptorData;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NewPluginDescriptorData;
-	static C(Other: UObject | any): NewPluginDescriptorData;
-}
-
-declare class PluginReferenceMetadata { 
-	Name: string;
-	bOptional: boolean;
-	bEnabled: boolean;
-	clone() : PluginReferenceMetadata;
-	static C(Other: UObject | any): PluginReferenceMetadata;
-}
-
-declare class PluginMetadataObject extends UObject { 
-	Version: number;
-	VersionName: string;
-	FriendlyName: string;
-	Description: string;
-	Category: string;
-	CreatedBy: string;
-	CreatedByURL: string;
-	DocsURL: string;
-	MarketplaceURL: string;
-	SupportURL: string;
-	bCanContainContent: boolean;
-	bIsBetaVersion: boolean;
-	Plugins: PluginReferenceMetadata[];
-	static Load(ResourceName: string): PluginMetadataObject;
-	static Find(Outer: UObject, ResourceName: string): PluginMetadataObject;
-	static GetDefaultObject(): PluginMetadataObject;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PluginMetadataObject;
-	GetAvailablePluginDependencies(): string[];
-	static C(Other: UObject | any): PluginMetadataObject;
 }
 
 declare class DynamicMeshGenerator extends UObject { 
@@ -9544,6 +9429,102 @@ declare class ModelingToolsModeCustomizationSettings extends DeveloperSettings {
 	static C(Other: UObject | any): ModelingToolsModeCustomizationSettings;
 }
 
+declare class SpeedTreeImportFactory extends Factory { 
+	static Load(ResourceName: string): SpeedTreeImportFactory;
+	static Find(Outer: UObject, ResourceName: string): SpeedTreeImportFactory;
+	static GetDefaultObject(): SpeedTreeImportFactory;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SpeedTreeImportFactory;
+	static C(Other: UObject | any): SpeedTreeImportFactory;
+}
+
+declare class ReimportSpeedTreeFactory extends SpeedTreeImportFactory { 
+	static Load(ResourceName: string): ReimportSpeedTreeFactory;
+	static Find(Outer: UObject, ResourceName: string): ReimportSpeedTreeFactory;
+	static GetDefaultObject(): ReimportSpeedTreeFactory;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ReimportSpeedTreeFactory;
+	static C(Other: UObject | any): ReimportSpeedTreeFactory;
+}
+
+declare type EImportGeometryType = 'IGT_3D' | 'IGT_Billboards' | 'IGT_Both' | 'IGT_MAX';
+declare var EImportGeometryType : { IGT_3D:'IGT_3D',IGT_Billboards:'IGT_Billboards',IGT_Both:'IGT_Both',IGT_MAX:'IGT_MAX', };
+declare type EImportLODType = 'ILT_PaintedFoliage' | 'ILT_IndividualActors' | 'ILT_MAX';
+declare var EImportLODType : { ILT_PaintedFoliage:'ILT_PaintedFoliage',ILT_IndividualActors:'ILT_IndividualActors',ILT_MAX:'ILT_MAX', };
+declare class SpeedTreeImportData extends AssetImportData { 
+	TreeScale: number;
+	ImportGeometryType: EImportGeometryType;
+	LODType: EImportLODType;
+	IncludeCollision: boolean;
+	MakeMaterialsCheck: boolean;
+	IncludeNormalMapCheck: boolean;
+	IncludeDetailMapCheck: boolean;
+	IncludeSpecularMapCheck: boolean;
+	IncludeBranchSeamSmoothing: boolean;
+	IncludeSpeedTreeAO: boolean;
+	IncludeColorAdjustment: boolean;
+	IncludeSubsurface: boolean;
+	IncludeVertexProcessingCheck: boolean;
+	IncludeWindCheck: boolean;
+	IncludeSmoothLODCheck: boolean;
+	static Load(ResourceName: string): SpeedTreeImportData;
+	static Find(Outer: UObject, ResourceName: string): SpeedTreeImportData;
+	static GetDefaultObject(): SpeedTreeImportData;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SpeedTreeImportData;
+	static C(Other: UObject | any): SpeedTreeImportData;
+}
+
+declare class LevelVariantSetsActorFactory extends ActorFactory { 
+	static Load(ResourceName: string): LevelVariantSetsActorFactory;
+	static Find(Outer: UObject, ResourceName: string): LevelVariantSetsActorFactory;
+	static GetDefaultObject(): LevelVariantSetsActorFactory;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): LevelVariantSetsActorFactory;
+	static C(Other: UObject | any): LevelVariantSetsActorFactory;
+}
+
+declare class SwitchActorFactory extends ActorFactory { 
+	static Load(ResourceName: string): SwitchActorFactory;
+	static Find(Outer: UObject, ResourceName: string): SwitchActorFactory;
+	static GetDefaultObject(): SwitchActorFactory;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SwitchActorFactory;
+	static C(Other: UObject | any): SwitchActorFactory;
+}
+
+declare class VariantManagerFactoryNew extends Factory { 
+	static Load(ResourceName: string): VariantManagerFactoryNew;
+	static Find(Outer: UObject, ResourceName: string): VariantManagerFactoryNew;
+	static GetDefaultObject(): VariantManagerFactoryNew;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): VariantManagerFactoryNew;
+	static C(Other: UObject | any): VariantManagerFactoryNew;
+}
+
+declare type EVariantManagerTestEnum = 'None' | 'FirstOption' | 'SecondOption' | 'ThirdOption' | 'EVariantManagerTestEnum_MAX';
+declare var EVariantManagerTestEnum : { None:'None',FirstOption:'FirstOption',SecondOption:'SecondOption',ThirdOption:'ThirdOption',EVariantManagerTestEnum_MAX:'EVariantManagerTestEnum_MAX', };
+declare class VariantManagerTestActor extends Actor { 
+	EnumWithNoDefault: EVariantManagerTestEnum;
+	EnumWithSecondDefault: EVariantManagerTestEnum;
+	CapturedByteProperty: number;
+	CapturedIntProperty: number;
+	CapturedFloatProperty: number;
+	bCapturedBoolProperty: boolean;
+	CapturedObjectProperty: UObject;
+	CapturedInterfaceProperty: any;
+	CapturedNameProperty: string;
+	CapturedStrProperty: string;
+	CapturedTextProperty: string;
+	CapturedRotatorProperty: Rotator;
+	CapturedColorProperty: Color;
+	CapturedLinearColorProperty: LinearColor;
+	CapturedVectorProperty: Vector;
+	CapturedQuatProperty: Quat;
+	CapturedVector4Property: Vector4;
+	CapturedVector2DProperty: Vector2D;
+	CapturedIntPointProperty: IntPoint;
+	CapturedUObjectArrayProperty: UObject[];
+	CapturedVectorArrayProperty: Vector[];
+	static GetDefaultObject(): VariantManagerTestActor;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): VariantManagerTestActor;
+	static C(Other: UObject | any): VariantManagerTestActor;
+}
+
 declare class MovieSceneBindingExtensions extends BlueprintFunctionLibrary { 
 	static Load(ResourceName: string): MovieSceneBindingExtensions;
 	static Find(Outer: UObject, ResourceName: string): MovieSceneBindingExtensions;
@@ -10712,49 +10693,6 @@ declare class SequencerToolsEditMode extends BaseLegacyWidgetEdMode {
 	static C(Other: UObject | any): SequencerToolsEditMode;
 }
 
-declare class SpeedTreeImportFactory extends Factory { 
-	static Load(ResourceName: string): SpeedTreeImportFactory;
-	static Find(Outer: UObject, ResourceName: string): SpeedTreeImportFactory;
-	static GetDefaultObject(): SpeedTreeImportFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SpeedTreeImportFactory;
-	static C(Other: UObject | any): SpeedTreeImportFactory;
-}
-
-declare class ReimportSpeedTreeFactory extends SpeedTreeImportFactory { 
-	static Load(ResourceName: string): ReimportSpeedTreeFactory;
-	static Find(Outer: UObject, ResourceName: string): ReimportSpeedTreeFactory;
-	static GetDefaultObject(): ReimportSpeedTreeFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ReimportSpeedTreeFactory;
-	static C(Other: UObject | any): ReimportSpeedTreeFactory;
-}
-
-declare type EImportGeometryType = 'IGT_3D' | 'IGT_Billboards' | 'IGT_Both' | 'IGT_MAX';
-declare var EImportGeometryType : { IGT_3D:'IGT_3D',IGT_Billboards:'IGT_Billboards',IGT_Both:'IGT_Both',IGT_MAX:'IGT_MAX', };
-declare type EImportLODType = 'ILT_PaintedFoliage' | 'ILT_IndividualActors' | 'ILT_MAX';
-declare var EImportLODType : { ILT_PaintedFoliage:'ILT_PaintedFoliage',ILT_IndividualActors:'ILT_IndividualActors',ILT_MAX:'ILT_MAX', };
-declare class SpeedTreeImportData extends AssetImportData { 
-	TreeScale: number;
-	ImportGeometryType: EImportGeometryType;
-	LODType: EImportLODType;
-	IncludeCollision: boolean;
-	MakeMaterialsCheck: boolean;
-	IncludeNormalMapCheck: boolean;
-	IncludeDetailMapCheck: boolean;
-	IncludeSpecularMapCheck: boolean;
-	IncludeBranchSeamSmoothing: boolean;
-	IncludeSpeedTreeAO: boolean;
-	IncludeColorAdjustment: boolean;
-	IncludeSubsurface: boolean;
-	IncludeVertexProcessingCheck: boolean;
-	IncludeWindCheck: boolean;
-	IncludeSmoothLODCheck: boolean;
-	static Load(ResourceName: string): SpeedTreeImportData;
-	static Find(Outer: UObject, ResourceName: string): SpeedTreeImportData;
-	static GetDefaultObject(): SpeedTreeImportData;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SpeedTreeImportData;
-	static C(Other: UObject | any): SpeedTreeImportData;
-}
-
 declare class HLODBuilderInstancing extends HLODBuilder { 
 	static Load(ResourceName: string): HLODBuilderInstancing;
 	static Find(Outer: UObject, ResourceName: string): HLODBuilderInstancing;
@@ -10817,6 +10755,48 @@ declare class HLODBuilderMeshSimplify extends HLODBuilder {
 	static C(Other: UObject | any): HLODBuilderMeshSimplify;
 }
 
+declare class NewPluginDescriptorData extends UObject { 
+	CreatedBy: string;
+	CreatedByURL: string;
+	Description: string;
+	bIsBetaVersion: boolean;
+	static Load(ResourceName: string): NewPluginDescriptorData;
+	static Find(Outer: UObject, ResourceName: string): NewPluginDescriptorData;
+	static GetDefaultObject(): NewPluginDescriptorData;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NewPluginDescriptorData;
+	static C(Other: UObject | any): NewPluginDescriptorData;
+}
+
+declare class PluginReferenceMetadata { 
+	Name: string;
+	bOptional: boolean;
+	bEnabled: boolean;
+	clone() : PluginReferenceMetadata;
+	static C(Other: UObject | any): PluginReferenceMetadata;
+}
+
+declare class PluginMetadataObject extends UObject { 
+	Version: number;
+	VersionName: string;
+	FriendlyName: string;
+	Description: string;
+	Category: string;
+	CreatedBy: string;
+	CreatedByURL: string;
+	DocsURL: string;
+	MarketplaceURL: string;
+	SupportURL: string;
+	bCanContainContent: boolean;
+	bIsBetaVersion: boolean;
+	Plugins: PluginReferenceMetadata[];
+	static Load(ResourceName: string): PluginMetadataObject;
+	static Find(Outer: UObject, ResourceName: string): PluginMetadataObject;
+	static GetDefaultObject(): PluginMetadataObject;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PluginMetadataObject;
+	GetAvailablePluginDependencies(): string[];
+	static C(Other: UObject | any): PluginMetadataObject;
+}
+
 declare class AutomationUtilsBlueprintLibrary extends BlueprintFunctionLibrary { 
 	static Load(ResourceName: string): AutomationUtilsBlueprintLibrary;
 	static Find(Outer: UObject, ResourceName: string): AutomationUtilsBlueprintLibrary;
@@ -10834,57 +10814,20 @@ declare class ScreenshotComparisonCommandlet extends Commandlet {
 	static C(Other: UObject | any): ScreenshotComparisonCommandlet;
 }
 
-declare class LevelVariantSetsActorFactory extends ActorFactory { 
-	static Load(ResourceName: string): LevelVariantSetsActorFactory;
-	static Find(Outer: UObject, ResourceName: string): LevelVariantSetsActorFactory;
-	static GetDefaultObject(): LevelVariantSetsActorFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): LevelVariantSetsActorFactory;
-	static C(Other: UObject | any): LevelVariantSetsActorFactory;
+declare class ActorFactoryChaosSolver extends ActorFactory { 
+	static Load(ResourceName: string): ActorFactoryChaosSolver;
+	static Find(Outer: UObject, ResourceName: string): ActorFactoryChaosSolver;
+	static GetDefaultObject(): ActorFactoryChaosSolver;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ActorFactoryChaosSolver;
+	static C(Other: UObject | any): ActorFactoryChaosSolver;
 }
 
-declare class SwitchActorFactory extends ActorFactory { 
-	static Load(ResourceName: string): SwitchActorFactory;
-	static Find(Outer: UObject, ResourceName: string): SwitchActorFactory;
-	static GetDefaultObject(): SwitchActorFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SwitchActorFactory;
-	static C(Other: UObject | any): SwitchActorFactory;
-}
-
-declare class VariantManagerFactoryNew extends Factory { 
-	static Load(ResourceName: string): VariantManagerFactoryNew;
-	static Find(Outer: UObject, ResourceName: string): VariantManagerFactoryNew;
-	static GetDefaultObject(): VariantManagerFactoryNew;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): VariantManagerFactoryNew;
-	static C(Other: UObject | any): VariantManagerFactoryNew;
-}
-
-declare type EVariantManagerTestEnum = 'None' | 'FirstOption' | 'SecondOption' | 'ThirdOption' | 'EVariantManagerTestEnum_MAX';
-declare var EVariantManagerTestEnum : { None:'None',FirstOption:'FirstOption',SecondOption:'SecondOption',ThirdOption:'ThirdOption',EVariantManagerTestEnum_MAX:'EVariantManagerTestEnum_MAX', };
-declare class VariantManagerTestActor extends Actor { 
-	EnumWithNoDefault: EVariantManagerTestEnum;
-	EnumWithSecondDefault: EVariantManagerTestEnum;
-	CapturedByteProperty: number;
-	CapturedIntProperty: number;
-	CapturedFloatProperty: number;
-	bCapturedBoolProperty: boolean;
-	CapturedObjectProperty: UObject;
-	CapturedInterfaceProperty: any;
-	CapturedNameProperty: string;
-	CapturedStrProperty: string;
-	CapturedTextProperty: string;
-	CapturedRotatorProperty: Rotator;
-	CapturedColorProperty: Color;
-	CapturedLinearColorProperty: LinearColor;
-	CapturedVectorProperty: Vector;
-	CapturedQuatProperty: Quat;
-	CapturedVector4Property: Vector4;
-	CapturedVector2DProperty: Vector2D;
-	CapturedIntPointProperty: IntPoint;
-	CapturedUObjectArrayProperty: UObject[];
-	CapturedVectorArrayProperty: Vector[];
-	static GetDefaultObject(): VariantManagerTestActor;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): VariantManagerTestActor;
-	static C(Other: UObject | any): VariantManagerTestActor;
+declare class ChaosSolverFactory extends Factory { 
+	static Load(ResourceName: string): ChaosSolverFactory;
+	static Find(Outer: UObject, ResourceName: string): ChaosSolverFactory;
+	static GetDefaultObject(): ChaosSolverFactory;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ChaosSolverFactory;
+	static C(Other: UObject | any): ChaosSolverFactory;
 }
 
 declare type EChaosCollisionSortMethod = 'SortNone' | 'SortByHighestMass' | 'SortByHighestSpeed' | 'SortByHighestImpulse' | 'SortByNearestFirst' | 'Count' | 'EChaosCollisionSortMethod_MAX';
@@ -11406,6 +11349,95 @@ declare class ChaosDestructionListener extends SceneComponent {
 	AddGeometryCollectionActor(GeometryCollectionActor: GeometryCollectionActor): void;
 	AddChaosSolverActor(ChaosSolverActor: ChaosSolverActor): void;
 	static C(Other: UObject | any): ChaosDestructionListener;
+}
+
+declare type EDataSourceTypeEnum = 'ChaosNiagara_DataSourceType_Collision' | 'ChaosNiagara_DataSourceType_Breaking' | 'ChaosNiagara_DataSourceType_Trailing' | 'ChaosNiagara_Max';
+declare var EDataSourceTypeEnum : { ChaosNiagara_DataSourceType_Collision:'ChaosNiagara_DataSourceType_Collision',ChaosNiagara_DataSourceType_Breaking:'ChaosNiagara_DataSourceType_Breaking',ChaosNiagara_DataSourceType_Trailing:'ChaosNiagara_DataSourceType_Trailing',ChaosNiagara_Max:'ChaosNiagara_Max', };
+declare type ELocationFilteringModeEnum = 'ChaosNiagara_LocationFilteringMode_Inclusive' | 'ChaosNiagara_LocationFilteringMode_Exclusive' | 'ChaosNiagara_Max';
+declare var ELocationFilteringModeEnum : { ChaosNiagara_LocationFilteringMode_Inclusive:'ChaosNiagara_LocationFilteringMode_Inclusive',ChaosNiagara_LocationFilteringMode_Exclusive:'ChaosNiagara_LocationFilteringMode_Exclusive',ChaosNiagara_Max:'ChaosNiagara_Max', };
+declare type ELocationXToSpawnEnum = 'ChaosNiagara_LocationXToSpawn_None' | 'ChaosNiagara_LocationXToSpawn_Min' | 'ChaosNiagara_LocationXToSpawn_Max' | 'ChaosNiagara_LocationXToSpawn_MinMax' | 'ChaosNiagara_Max';
+declare var ELocationXToSpawnEnum : { ChaosNiagara_LocationXToSpawn_None:'ChaosNiagara_LocationXToSpawn_None',ChaosNiagara_LocationXToSpawn_Min:'ChaosNiagara_LocationXToSpawn_Min',ChaosNiagara_LocationXToSpawn_Max:'ChaosNiagara_LocationXToSpawn_Max',ChaosNiagara_LocationXToSpawn_MinMax:'ChaosNiagara_LocationXToSpawn_MinMax',ChaosNiagara_Max:'ChaosNiagara_Max', };
+declare type ELocationYToSpawnEnum = 'ChaosNiagara_LocationYToSpawn_None' | 'ChaosNiagara_LocationYToSpawn_Min' | 'ChaosNiagara_LocationYToSpawn_Max' | 'ChaosNiagara_LocationYToSpawn_MinMax' | 'ChaosNiagara_Max';
+declare var ELocationYToSpawnEnum : { ChaosNiagara_LocationYToSpawn_None:'ChaosNiagara_LocationYToSpawn_None',ChaosNiagara_LocationYToSpawn_Min:'ChaosNiagara_LocationYToSpawn_Min',ChaosNiagara_LocationYToSpawn_Max:'ChaosNiagara_LocationYToSpawn_Max',ChaosNiagara_LocationYToSpawn_MinMax:'ChaosNiagara_LocationYToSpawn_MinMax',ChaosNiagara_Max:'ChaosNiagara_Max', };
+declare type ELocationZToSpawnEnum = 'ChaosNiagara_LocationZToSpawn_None' | 'ChaosNiagara_LocationZToSpawn_Min' | 'ChaosNiagara_LocationZToSpawn_Max' | 'ChaosNiagara_LocationZToSpawn_MinMax' | 'ChaosNiagara_Max';
+declare var ELocationZToSpawnEnum : { ChaosNiagara_LocationZToSpawn_None:'ChaosNiagara_LocationZToSpawn_None',ChaosNiagara_LocationZToSpawn_Min:'ChaosNiagara_LocationZToSpawn_Min',ChaosNiagara_LocationZToSpawn_Max:'ChaosNiagara_LocationZToSpawn_Max',ChaosNiagara_LocationZToSpawn_MinMax:'ChaosNiagara_LocationZToSpawn_MinMax',ChaosNiagara_Max:'ChaosNiagara_Max', };
+declare type EDataSortTypeEnum = 'ChaosNiagara_DataSortType_NoSorting' | 'ChaosNiagara_DataSortType_RandomShuffle' | 'ChaosNiagara_DataSortType_SortByMassMaxToMin' | 'ChaosNiagara_DataSortType_SortByMassMinToMax' | 'ChaosNiagara_Max';
+declare var EDataSortTypeEnum : { ChaosNiagara_DataSortType_NoSorting:'ChaosNiagara_DataSortType_NoSorting',ChaosNiagara_DataSortType_RandomShuffle:'ChaosNiagara_DataSortType_RandomShuffle',ChaosNiagara_DataSortType_SortByMassMaxToMin:'ChaosNiagara_DataSortType_SortByMassMaxToMin',ChaosNiagara_DataSortType_SortByMassMinToMax:'ChaosNiagara_DataSortType_SortByMassMinToMax',ChaosNiagara_Max:'ChaosNiagara_Max', };
+declare type ERandomVelocityGenerationTypeEnum = 'ChaosNiagara_RandomVelocityGenerationType_RandomDistribution' | 'ChaosNiagara_RandomVelocityGenerationType_RandomDistributionWithStreamers' | 'ChaosNiagara_RandomVelocityGenerationType_CollisionNormalBased' | 'ChaosNiagara_Max';
+declare var ERandomVelocityGenerationTypeEnum : { ChaosNiagara_RandomVelocityGenerationType_RandomDistribution:'ChaosNiagara_RandomVelocityGenerationType_RandomDistribution',ChaosNiagara_RandomVelocityGenerationType_RandomDistributionWithStreamers:'ChaosNiagara_RandomVelocityGenerationType_RandomDistributionWithStreamers',ChaosNiagara_RandomVelocityGenerationType_CollisionNormalBased:'ChaosNiagara_RandomVelocityGenerationType_CollisionNormalBased',ChaosNiagara_Max:'ChaosNiagara_Max', };
+declare type EDebugTypeEnum = 'ChaosNiagara_DebugType_NoDebug' | 'ChaosNiagara_DebugType_ColorBySolver' | 'ChaosNiagara_DebugType_ColorByParticleIndex' | 'ChaosNiagara_Max';
+declare var EDebugTypeEnum : { ChaosNiagara_DebugType_NoDebug:'ChaosNiagara_DebugType_NoDebug',ChaosNiagara_DebugType_ColorBySolver:'ChaosNiagara_DebugType_ColorBySolver',ChaosNiagara_DebugType_ColorByParticleIndex:'ChaosNiagara_DebugType_ColorByParticleIndex',ChaosNiagara_Max:'ChaosNiagara_Max', };
+declare class NiagaraDataInterfaceChaosDestruction extends NiagaraDataInterface { 
+	ChaosSolverActorSet: any;
+	DataSourceType: EDataSourceTypeEnum;
+	DataProcessFrequency: number;
+	MaxNumberOfDataEntriesToSpawn: number;
+	DoSpawn: boolean;
+	SpawnMultiplierMinMax: Vector2D;
+	SpawnChance: number;
+	ImpulseToSpawnMinMax: Vector2D;
+	SpeedToSpawnMinMax: Vector2D;
+	MassToSpawnMinMax: Vector2D;
+	ExtentMinToSpawnMinMax: Vector2D;
+	ExtentMaxToSpawnMinMax: Vector2D;
+	VolumeToSpawnMinMax: Vector2D;
+	SolverTimeToSpawnMinMax: Vector2D;
+	SurfaceTypeToSpawn: number;
+	LocationFilteringMode: ELocationFilteringModeEnum;
+	LocationXToSpawn: ELocationXToSpawnEnum;
+	LocationXToSpawnMinMax: Vector2D;
+	LocationYToSpawn: ELocationYToSpawnEnum;
+	LocationYToSpawnMinMax: Vector2D;
+	LocationZToSpawn: ELocationZToSpawnEnum;
+	LocationZToSpawnMinMax: Vector2D;
+	TrailMinSpeedToSpawn: number;
+	DataSortingType: EDataSortTypeEnum;
+	bGetExternalCollisionData: boolean;
+	DoSpatialHash: boolean;
+	SpatialHashVolumeMin: Vector;
+	SpatialHashVolumeMax: Vector;
+	SpatialHashVolumeCellSize: Vector;
+	MaxDataPerCell: number;
+	bApplyMaterialsFilter: boolean;
+	ChaosBreakingMaterialSet: any;
+	bGetExternalBreakingData: boolean;
+	bGetExternalTrailingData: boolean;
+	RandomPositionMagnitudeMinMax: Vector2D;
+	InheritedVelocityMultiplier: number;
+	RandomVelocityGenerationType: ERandomVelocityGenerationTypeEnum;
+	RandomVelocityMagnitudeMinMax: Vector2D;
+	SpreadAngleMax: number;
+	VelocityOffsetMin: Vector;
+	VelocityOffsetMax: Vector;
+	FinalVelocityMagnitudeMinMax: Vector2D;
+	MaxLatency: number;
+	DebugType: EDebugTypeEnum;
+	LastSpawnedPointID: number;
+	LastSpawnTime: number;
+	SolverTime: number;
+	TimeStampOfLastProcessedData: number;
+	static Load(ResourceName: string): NiagaraDataInterfaceChaosDestruction;
+	static Find(Outer: UObject, ResourceName: string): NiagaraDataInterfaceChaosDestruction;
+	static GetDefaultObject(): NiagaraDataInterfaceChaosDestruction;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraDataInterfaceChaosDestruction;
+	static C(Other: UObject | any): NiagaraDataInterfaceChaosDestruction;
+}
+
+declare class NiagaraDataInterfaceGeometryCollection extends NiagaraDataInterface { 
+	GeometryCollectionActor: GeometryCollectionActor;
+	static Load(ResourceName: string): NiagaraDataInterfaceGeometryCollection;
+	static Find(Outer: UObject, ResourceName: string): NiagaraDataInterfaceGeometryCollection;
+	static GetDefaultObject(): NiagaraDataInterfaceGeometryCollection;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraDataInterfaceGeometryCollection;
+	static C(Other: UObject | any): NiagaraDataInterfaceGeometryCollection;
+}
+
+declare class NiagaraDataInterfacePhysicsField extends NiagaraDataInterface { 
+	static Load(ResourceName: string): NiagaraDataInterfacePhysicsField;
+	static Find(Outer: UObject, ResourceName: string): NiagaraDataInterfacePhysicsField;
+	static GetDefaultObject(): NiagaraDataInterfacePhysicsField;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraDataInterfacePhysicsField;
+	static C(Other: UObject | any): NiagaraDataInterfacePhysicsField;
 }
 
 declare class ActorFactoryGeometryCollection extends ActorFactory { 
@@ -12271,111 +12303,6 @@ declare class OutlinerSettings extends UObject {
 	static C(Other: UObject | any): OutlinerSettings;
 }
 
-declare type EDataSourceTypeEnum = 'ChaosNiagara_DataSourceType_Collision' | 'ChaosNiagara_DataSourceType_Breaking' | 'ChaosNiagara_DataSourceType_Trailing' | 'ChaosNiagara_Max';
-declare var EDataSourceTypeEnum : { ChaosNiagara_DataSourceType_Collision:'ChaosNiagara_DataSourceType_Collision',ChaosNiagara_DataSourceType_Breaking:'ChaosNiagara_DataSourceType_Breaking',ChaosNiagara_DataSourceType_Trailing:'ChaosNiagara_DataSourceType_Trailing',ChaosNiagara_Max:'ChaosNiagara_Max', };
-declare type ELocationFilteringModeEnum = 'ChaosNiagara_LocationFilteringMode_Inclusive' | 'ChaosNiagara_LocationFilteringMode_Exclusive' | 'ChaosNiagara_Max';
-declare var ELocationFilteringModeEnum : { ChaosNiagara_LocationFilteringMode_Inclusive:'ChaosNiagara_LocationFilteringMode_Inclusive',ChaosNiagara_LocationFilteringMode_Exclusive:'ChaosNiagara_LocationFilteringMode_Exclusive',ChaosNiagara_Max:'ChaosNiagara_Max', };
-declare type ELocationXToSpawnEnum = 'ChaosNiagara_LocationXToSpawn_None' | 'ChaosNiagara_LocationXToSpawn_Min' | 'ChaosNiagara_LocationXToSpawn_Max' | 'ChaosNiagara_LocationXToSpawn_MinMax' | 'ChaosNiagara_Max';
-declare var ELocationXToSpawnEnum : { ChaosNiagara_LocationXToSpawn_None:'ChaosNiagara_LocationXToSpawn_None',ChaosNiagara_LocationXToSpawn_Min:'ChaosNiagara_LocationXToSpawn_Min',ChaosNiagara_LocationXToSpawn_Max:'ChaosNiagara_LocationXToSpawn_Max',ChaosNiagara_LocationXToSpawn_MinMax:'ChaosNiagara_LocationXToSpawn_MinMax',ChaosNiagara_Max:'ChaosNiagara_Max', };
-declare type ELocationYToSpawnEnum = 'ChaosNiagara_LocationYToSpawn_None' | 'ChaosNiagara_LocationYToSpawn_Min' | 'ChaosNiagara_LocationYToSpawn_Max' | 'ChaosNiagara_LocationYToSpawn_MinMax' | 'ChaosNiagara_Max';
-declare var ELocationYToSpawnEnum : { ChaosNiagara_LocationYToSpawn_None:'ChaosNiagara_LocationYToSpawn_None',ChaosNiagara_LocationYToSpawn_Min:'ChaosNiagara_LocationYToSpawn_Min',ChaosNiagara_LocationYToSpawn_Max:'ChaosNiagara_LocationYToSpawn_Max',ChaosNiagara_LocationYToSpawn_MinMax:'ChaosNiagara_LocationYToSpawn_MinMax',ChaosNiagara_Max:'ChaosNiagara_Max', };
-declare type ELocationZToSpawnEnum = 'ChaosNiagara_LocationZToSpawn_None' | 'ChaosNiagara_LocationZToSpawn_Min' | 'ChaosNiagara_LocationZToSpawn_Max' | 'ChaosNiagara_LocationZToSpawn_MinMax' | 'ChaosNiagara_Max';
-declare var ELocationZToSpawnEnum : { ChaosNiagara_LocationZToSpawn_None:'ChaosNiagara_LocationZToSpawn_None',ChaosNiagara_LocationZToSpawn_Min:'ChaosNiagara_LocationZToSpawn_Min',ChaosNiagara_LocationZToSpawn_Max:'ChaosNiagara_LocationZToSpawn_Max',ChaosNiagara_LocationZToSpawn_MinMax:'ChaosNiagara_LocationZToSpawn_MinMax',ChaosNiagara_Max:'ChaosNiagara_Max', };
-declare type EDataSortTypeEnum = 'ChaosNiagara_DataSortType_NoSorting' | 'ChaosNiagara_DataSortType_RandomShuffle' | 'ChaosNiagara_DataSortType_SortByMassMaxToMin' | 'ChaosNiagara_DataSortType_SortByMassMinToMax' | 'ChaosNiagara_Max';
-declare var EDataSortTypeEnum : { ChaosNiagara_DataSortType_NoSorting:'ChaosNiagara_DataSortType_NoSorting',ChaosNiagara_DataSortType_RandomShuffle:'ChaosNiagara_DataSortType_RandomShuffle',ChaosNiagara_DataSortType_SortByMassMaxToMin:'ChaosNiagara_DataSortType_SortByMassMaxToMin',ChaosNiagara_DataSortType_SortByMassMinToMax:'ChaosNiagara_DataSortType_SortByMassMinToMax',ChaosNiagara_Max:'ChaosNiagara_Max', };
-declare type ERandomVelocityGenerationTypeEnum = 'ChaosNiagara_RandomVelocityGenerationType_RandomDistribution' | 'ChaosNiagara_RandomVelocityGenerationType_RandomDistributionWithStreamers' | 'ChaosNiagara_RandomVelocityGenerationType_CollisionNormalBased' | 'ChaosNiagara_Max';
-declare var ERandomVelocityGenerationTypeEnum : { ChaosNiagara_RandomVelocityGenerationType_RandomDistribution:'ChaosNiagara_RandomVelocityGenerationType_RandomDistribution',ChaosNiagara_RandomVelocityGenerationType_RandomDistributionWithStreamers:'ChaosNiagara_RandomVelocityGenerationType_RandomDistributionWithStreamers',ChaosNiagara_RandomVelocityGenerationType_CollisionNormalBased:'ChaosNiagara_RandomVelocityGenerationType_CollisionNormalBased',ChaosNiagara_Max:'ChaosNiagara_Max', };
-declare type EDebugTypeEnum = 'ChaosNiagara_DebugType_NoDebug' | 'ChaosNiagara_DebugType_ColorBySolver' | 'ChaosNiagara_DebugType_ColorByParticleIndex' | 'ChaosNiagara_Max';
-declare var EDebugTypeEnum : { ChaosNiagara_DebugType_NoDebug:'ChaosNiagara_DebugType_NoDebug',ChaosNiagara_DebugType_ColorBySolver:'ChaosNiagara_DebugType_ColorBySolver',ChaosNiagara_DebugType_ColorByParticleIndex:'ChaosNiagara_DebugType_ColorByParticleIndex',ChaosNiagara_Max:'ChaosNiagara_Max', };
-declare class NiagaraDataInterfaceChaosDestruction extends NiagaraDataInterface { 
-	ChaosSolverActorSet: any;
-	DataSourceType: EDataSourceTypeEnum;
-	DataProcessFrequency: number;
-	MaxNumberOfDataEntriesToSpawn: number;
-	DoSpawn: boolean;
-	SpawnMultiplierMinMax: Vector2D;
-	SpawnChance: number;
-	ImpulseToSpawnMinMax: Vector2D;
-	SpeedToSpawnMinMax: Vector2D;
-	MassToSpawnMinMax: Vector2D;
-	ExtentMinToSpawnMinMax: Vector2D;
-	ExtentMaxToSpawnMinMax: Vector2D;
-	VolumeToSpawnMinMax: Vector2D;
-	SolverTimeToSpawnMinMax: Vector2D;
-	SurfaceTypeToSpawn: number;
-	LocationFilteringMode: ELocationFilteringModeEnum;
-	LocationXToSpawn: ELocationXToSpawnEnum;
-	LocationXToSpawnMinMax: Vector2D;
-	LocationYToSpawn: ELocationYToSpawnEnum;
-	LocationYToSpawnMinMax: Vector2D;
-	LocationZToSpawn: ELocationZToSpawnEnum;
-	LocationZToSpawnMinMax: Vector2D;
-	TrailMinSpeedToSpawn: number;
-	DataSortingType: EDataSortTypeEnum;
-	bGetExternalCollisionData: boolean;
-	DoSpatialHash: boolean;
-	SpatialHashVolumeMin: Vector;
-	SpatialHashVolumeMax: Vector;
-	SpatialHashVolumeCellSize: Vector;
-	MaxDataPerCell: number;
-	bApplyMaterialsFilter: boolean;
-	ChaosBreakingMaterialSet: any;
-	bGetExternalBreakingData: boolean;
-	bGetExternalTrailingData: boolean;
-	RandomPositionMagnitudeMinMax: Vector2D;
-	InheritedVelocityMultiplier: number;
-	RandomVelocityGenerationType: ERandomVelocityGenerationTypeEnum;
-	RandomVelocityMagnitudeMinMax: Vector2D;
-	SpreadAngleMax: number;
-	VelocityOffsetMin: Vector;
-	VelocityOffsetMax: Vector;
-	FinalVelocityMagnitudeMinMax: Vector2D;
-	MaxLatency: number;
-	DebugType: EDebugTypeEnum;
-	LastSpawnedPointID: number;
-	LastSpawnTime: number;
-	SolverTime: number;
-	TimeStampOfLastProcessedData: number;
-	static Load(ResourceName: string): NiagaraDataInterfaceChaosDestruction;
-	static Find(Outer: UObject, ResourceName: string): NiagaraDataInterfaceChaosDestruction;
-	static GetDefaultObject(): NiagaraDataInterfaceChaosDestruction;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraDataInterfaceChaosDestruction;
-	static C(Other: UObject | any): NiagaraDataInterfaceChaosDestruction;
-}
-
-declare class NiagaraDataInterfaceGeometryCollection extends NiagaraDataInterface { 
-	GeometryCollectionActor: GeometryCollectionActor;
-	static Load(ResourceName: string): NiagaraDataInterfaceGeometryCollection;
-	static Find(Outer: UObject, ResourceName: string): NiagaraDataInterfaceGeometryCollection;
-	static GetDefaultObject(): NiagaraDataInterfaceGeometryCollection;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraDataInterfaceGeometryCollection;
-	static C(Other: UObject | any): NiagaraDataInterfaceGeometryCollection;
-}
-
-declare class NiagaraDataInterfacePhysicsField extends NiagaraDataInterface { 
-	static Load(ResourceName: string): NiagaraDataInterfacePhysicsField;
-	static Find(Outer: UObject, ResourceName: string): NiagaraDataInterfacePhysicsField;
-	static GetDefaultObject(): NiagaraDataInterfacePhysicsField;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraDataInterfacePhysicsField;
-	static C(Other: UObject | any): NiagaraDataInterfacePhysicsField;
-}
-
-declare class ActorFactoryChaosSolver extends ActorFactory { 
-	static Load(ResourceName: string): ActorFactoryChaosSolver;
-	static Find(Outer: UObject, ResourceName: string): ActorFactoryChaosSolver;
-	static GetDefaultObject(): ActorFactoryChaosSolver;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ActorFactoryChaosSolver;
-	static C(Other: UObject | any): ActorFactoryChaosSolver;
-}
-
-declare class ChaosSolverFactory extends Factory { 
-	static Load(ResourceName: string): ChaosSolverFactory;
-	static Find(Outer: UObject, ResourceName: string): ChaosSolverFactory;
-	static GetDefaultObject(): ChaosSolverFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ChaosSolverFactory;
-	static C(Other: UObject | any): ChaosSolverFactory;
-}
-
 declare class MovieSceneGeometryCollectionParams { 
 	GeometryCollectionCache: SoftObjectPath;
 	StartFrameOffset: FrameNumber;
@@ -12774,39 +12701,6 @@ declare class K2Node_ConvertToPNG extends K2Node_BaseAsyncTask {
 	static C(Other: UObject | any): K2Node_ConvertToPNG;
 }
 
-declare type ECollectionScriptingShareType = 'Local' | 'Private' | 'Shared' | 'ECollectionScriptingShareType_MAX';
-declare var ECollectionScriptingShareType : { Local:'Local',Private:'Private',Shared:'Shared',ECollectionScriptingShareType_MAX:'ECollectionScriptingShareType_MAX', };
-declare class AssetTagsSubsystem extends EngineSubsystem { 
-	static Load(ResourceName: string): AssetTagsSubsystem;
-	static Find(Outer: UObject, ResourceName: string): AssetTagsSubsystem;
-	static GetDefaultObject(): AssetTagsSubsystem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AssetTagsSubsystem;
-	ReparentCollection(Name: string,NewParentName: string): boolean;
-	RenameCollection(Name: string,NewName: string): boolean;
-	RemoveAssetsFromCollection(Name: string,AssetPathNames: string[]): boolean;
-	RemoveAssetPtrsFromCollection(Name: string,AssetPtrs: UObject[]): boolean;
-	RemoveAssetPtrFromCollection(Name: string,AssetPtr: UObject): boolean;
-	RemoveAssetFromCollection(Name: string,AssetPathName: string): boolean;
-	RemoveAssetDatasFromCollection(Name: string,AssetDatas: AssetData[]): boolean;
-	RemoveAssetDataFromCollection(Name: string,AssetData: AssetData): boolean;
-	GetCollectionsContainingAssetPtr(AssetPtr: UObject): string[];
-	GetCollectionsContainingAssetData(AssetData: AssetData): string[];
-	GetCollectionsContainingAsset(AssetPathName: string): string[];
-	GetCollections(): string[];
-	GetAssetsInCollection(Name: string): AssetData[];
-	EmptyCollection(Name: string): boolean;
-	DestroyCollection(Name: string): boolean;
-	CreateCollection(Name: string,ShareType: ECollectionScriptingShareType): boolean;
-	CollectionExists(Name: string): boolean;
-	AddAssetToCollection(Name: string,AssetPathName: string): boolean;
-	AddAssetsToCollection(Name: string,AssetPathNames: string[]): boolean;
-	AddAssetPtrToCollection(Name: string,AssetPtr: UObject): boolean;
-	AddAssetPtrsToCollection(Name: string,AssetPtrs: UObject[]): boolean;
-	AddAssetDataToCollection(Name: string,AssetData: AssetData): boolean;
-	AddAssetDatasToCollection(Name: string,AssetDatas: AssetData[]): boolean;
-	static C(Other: UObject | any): AssetTagsSubsystem;
-}
-
 declare class ArchVisCharacter extends Character { 
 	LookUpAxisName: string;
 	LookUpAtRateAxisName: string;
@@ -12890,6 +12784,39 @@ declare class OnAudioInputDevicesObtained__PythonCallable extends PythonCallable
 	static GetDefaultObject(): OnAudioInputDevicesObtained__PythonCallable;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OnAudioInputDevicesObtained__PythonCallable;
 	static C(Other: UObject | any): OnAudioInputDevicesObtained__PythonCallable;
+}
+
+declare type ECollectionScriptingShareType = 'Local' | 'Private' | 'Shared' | 'ECollectionScriptingShareType_MAX';
+declare var ECollectionScriptingShareType : { Local:'Local',Private:'Private',Shared:'Shared',ECollectionScriptingShareType_MAX:'ECollectionScriptingShareType_MAX', };
+declare class AssetTagsSubsystem extends EngineSubsystem { 
+	static Load(ResourceName: string): AssetTagsSubsystem;
+	static Find(Outer: UObject, ResourceName: string): AssetTagsSubsystem;
+	static GetDefaultObject(): AssetTagsSubsystem;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AssetTagsSubsystem;
+	ReparentCollection(Name: string,NewParentName: string): boolean;
+	RenameCollection(Name: string,NewName: string): boolean;
+	RemoveAssetsFromCollection(Name: string,AssetPathNames: string[]): boolean;
+	RemoveAssetPtrsFromCollection(Name: string,AssetPtrs: UObject[]): boolean;
+	RemoveAssetPtrFromCollection(Name: string,AssetPtr: UObject): boolean;
+	RemoveAssetFromCollection(Name: string,AssetPathName: string): boolean;
+	RemoveAssetDatasFromCollection(Name: string,AssetDatas: AssetData[]): boolean;
+	RemoveAssetDataFromCollection(Name: string,AssetData: AssetData): boolean;
+	GetCollectionsContainingAssetPtr(AssetPtr: UObject): string[];
+	GetCollectionsContainingAssetData(AssetData: AssetData): string[];
+	GetCollectionsContainingAsset(AssetPathName: string): string[];
+	GetCollections(): string[];
+	GetAssetsInCollection(Name: string): AssetData[];
+	EmptyCollection(Name: string): boolean;
+	DestroyCollection(Name: string): boolean;
+	CreateCollection(Name: string,ShareType: ECollectionScriptingShareType): boolean;
+	CollectionExists(Name: string): boolean;
+	AddAssetToCollection(Name: string,AssetPathName: string): boolean;
+	AddAssetsToCollection(Name: string,AssetPathNames: string[]): boolean;
+	AddAssetPtrToCollection(Name: string,AssetPtr: UObject): boolean;
+	AddAssetPtrsToCollection(Name: string,AssetPtrs: UObject[]): boolean;
+	AddAssetDataToCollection(Name: string,AssetData: AssetData): boolean;
+	AddAssetDatasToCollection(Name: string,AssetDatas: AssetData[]): boolean;
+	static C(Other: UObject | any): AssetTagsSubsystem;
 }
 
 declare class CableComponent extends MeshComponent { 
@@ -12993,37 +12920,6 @@ declare class GeometryCacheStreamerSettings extends DeveloperSettings {
 	static C(Other: UObject | any): GeometryCacheStreamerSettings;
 }
 
-declare type EGooglePADErrorCode = 'AssetPack_NO_ERROR' | 'AssetPack_APP_UNAVAILABLE' | 'AssetPack_UNAVAILABLE' | 'AssetPack_INVALID_REQUEST' | 'AssetPack_DOWNLOAD_NOT_FOUND' | 'AssetPack_API_NOT_AVAILABLE' | 'AssetPack_NETWORK_ERROR' | 'AssetPack_ACCESS_DENIED' | 'AssetPack_INSUFFICIENT_STORAGE' | 'AssetPack_PLAY_STORE_NOT_FOUND' | 'AssetPack_NETWORK_UNRESTRICTED' | 'AssetPack_INTERNAL_ERROR' | 'AssetPack_INITIALIZATION_NEEDED' | 'AssetPack_INITIALIZATION_FAILED' | 'AssetPack_MAX';
-declare var EGooglePADErrorCode : { AssetPack_NO_ERROR:'AssetPack_NO_ERROR',AssetPack_APP_UNAVAILABLE:'AssetPack_APP_UNAVAILABLE',AssetPack_UNAVAILABLE:'AssetPack_UNAVAILABLE',AssetPack_INVALID_REQUEST:'AssetPack_INVALID_REQUEST',AssetPack_DOWNLOAD_NOT_FOUND:'AssetPack_DOWNLOAD_NOT_FOUND',AssetPack_API_NOT_AVAILABLE:'AssetPack_API_NOT_AVAILABLE',AssetPack_NETWORK_ERROR:'AssetPack_NETWORK_ERROR',AssetPack_ACCESS_DENIED:'AssetPack_ACCESS_DENIED',AssetPack_INSUFFICIENT_STORAGE:'AssetPack_INSUFFICIENT_STORAGE',AssetPack_PLAY_STORE_NOT_FOUND:'AssetPack_PLAY_STORE_NOT_FOUND',AssetPack_NETWORK_UNRESTRICTED:'AssetPack_NETWORK_UNRESTRICTED',AssetPack_INTERNAL_ERROR:'AssetPack_INTERNAL_ERROR',AssetPack_INITIALIZATION_NEEDED:'AssetPack_INITIALIZATION_NEEDED',AssetPack_INITIALIZATION_FAILED:'AssetPack_INITIALIZATION_FAILED',AssetPack_MAX:'AssetPack_MAX', };
-declare type EGooglePADStorageMethod = 'AssetPack_STORAGE_FILES' | 'AssetPack_STORAGE_APK' | 'AssetPack_STORAGE_UNKNOWN' | 'AssetPack_STORAGE_NOT_INSTALLED' | 'AssetPack_STORAGE_MAX';
-declare var EGooglePADStorageMethod : { AssetPack_STORAGE_FILES:'AssetPack_STORAGE_FILES',AssetPack_STORAGE_APK:'AssetPack_STORAGE_APK',AssetPack_STORAGE_UNKNOWN:'AssetPack_STORAGE_UNKNOWN',AssetPack_STORAGE_NOT_INSTALLED:'AssetPack_STORAGE_NOT_INSTALLED',AssetPack_STORAGE_MAX:'AssetPack_STORAGE_MAX', };
-declare type EGooglePADCellularDataConfirmStatus = 'AssetPack_CONFIRM_UNKNOWN' | 'AssetPack_CONFIRM_PENDING' | 'AssetPack_CONFIRM_USER_APPROVED' | 'AssetPack_CONFIRM_USER_CANCELED' | 'AssetPack_CONFIRM_MAX';
-declare var EGooglePADCellularDataConfirmStatus : { AssetPack_CONFIRM_UNKNOWN:'AssetPack_CONFIRM_UNKNOWN',AssetPack_CONFIRM_PENDING:'AssetPack_CONFIRM_PENDING',AssetPack_CONFIRM_USER_APPROVED:'AssetPack_CONFIRM_USER_APPROVED',AssetPack_CONFIRM_USER_CANCELED:'AssetPack_CONFIRM_USER_CANCELED',AssetPack_CONFIRM_MAX:'AssetPack_CONFIRM_MAX', };
-declare type EGooglePADDownloadStatus = 'AssetPack_UNKNOWN' | 'AssetPack_DOWNLOAD_PENDING' | 'AssetPack_DOWNLOADING' | 'AssetPack_TRANSFERRING' | 'AssetPack_DOWNLOAD_COMPLETED' | 'AssetPack_DOWNLOAD_FAILED' | 'AssetPack_DOWNLOAD_CANCELED' | 'AssetPack_WAITING_FOR_WIFI' | 'AssetPack_NOT_INSTALLED' | 'AssetPack_INFO_PENDING' | 'AssetPack_INFO_FAILED' | 'AssetPack_REMOVAL_PENDING' | 'AssetPack_REMOVAL_FAILED' | 'AssetPack_MAX';
-declare var EGooglePADDownloadStatus : { AssetPack_UNKNOWN:'AssetPack_UNKNOWN',AssetPack_DOWNLOAD_PENDING:'AssetPack_DOWNLOAD_PENDING',AssetPack_DOWNLOADING:'AssetPack_DOWNLOADING',AssetPack_TRANSFERRING:'AssetPack_TRANSFERRING',AssetPack_DOWNLOAD_COMPLETED:'AssetPack_DOWNLOAD_COMPLETED',AssetPack_DOWNLOAD_FAILED:'AssetPack_DOWNLOAD_FAILED',AssetPack_DOWNLOAD_CANCELED:'AssetPack_DOWNLOAD_CANCELED',AssetPack_WAITING_FOR_WIFI:'AssetPack_WAITING_FOR_WIFI',AssetPack_NOT_INSTALLED:'AssetPack_NOT_INSTALLED',AssetPack_INFO_PENDING:'AssetPack_INFO_PENDING',AssetPack_INFO_FAILED:'AssetPack_INFO_FAILED',AssetPack_REMOVAL_PENDING:'AssetPack_REMOVAL_PENDING',AssetPack_REMOVAL_FAILED:'AssetPack_REMOVAL_FAILED',AssetPack_MAX:'AssetPack_MAX', };
-declare class GooglePADFunctionLibrary extends BlueprintFunctionLibrary { 
-	static Load(ResourceName: string): GooglePADFunctionLibrary;
-	static Find(Outer: UObject, ResourceName: string): GooglePADFunctionLibrary;
-	static GetDefaultObject(): GooglePADFunctionLibrary;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GooglePADFunctionLibrary;
-	static ShowCellularDataConfirmation(): EGooglePADErrorCode;
-	static RequestRemoval(Name: string): EGooglePADErrorCode;
-	static RequestInfo(AssetPacks: string[]): EGooglePADErrorCode;
-	static RequestDownload(AssetPacks: string[]): EGooglePADErrorCode;
-	static ReleaseDownloadState(State: number): void;
-	static ReleaseAssetPackLocation(Location: number): void;
-	static GetTotalBytesToDownload(State: number): number;
-	static GetStorageMethod(Location: number): EGooglePADStorageMethod;
-	static GetShowCellularDataConfirmationStatus(Status?: EGooglePADCellularDataConfirmStatus): {Status: EGooglePADCellularDataConfirmStatus, $: EGooglePADErrorCode};
-	static GetDownloadStatus(State: number): EGooglePADDownloadStatus;
-	static GetDownloadState(Name: string,State?: number): {State: number, $: EGooglePADErrorCode};
-	static GetBytesDownloaded(State: number): number;
-	static GetAssetsPath(Location: number): string;
-	static GetAssetPackLocation(Name: string,Location?: number): {Location: number, $: EGooglePADErrorCode};
-	static CancelDownload(AssetPacks: string[]): EGooglePADErrorCode;
-	static C(Other: UObject | any): GooglePADFunctionLibrary;
-}
-
 declare class GroomActorFactory extends ActorFactory { 
 	static Load(ResourceName: string): GroomActorFactory;
 	static Find(Outer: UObject, ResourceName: string): GroomActorFactory;
@@ -13078,6 +12974,37 @@ declare class ReimportHairStrandsFactory extends HairStrandsFactory {
 	static GetDefaultObject(): ReimportHairStrandsFactory;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ReimportHairStrandsFactory;
 	static C(Other: UObject | any): ReimportHairStrandsFactory;
+}
+
+declare type EGooglePADErrorCode = 'AssetPack_NO_ERROR' | 'AssetPack_APP_UNAVAILABLE' | 'AssetPack_UNAVAILABLE' | 'AssetPack_INVALID_REQUEST' | 'AssetPack_DOWNLOAD_NOT_FOUND' | 'AssetPack_API_NOT_AVAILABLE' | 'AssetPack_NETWORK_ERROR' | 'AssetPack_ACCESS_DENIED' | 'AssetPack_INSUFFICIENT_STORAGE' | 'AssetPack_PLAY_STORE_NOT_FOUND' | 'AssetPack_NETWORK_UNRESTRICTED' | 'AssetPack_INTERNAL_ERROR' | 'AssetPack_INITIALIZATION_NEEDED' | 'AssetPack_INITIALIZATION_FAILED' | 'AssetPack_MAX';
+declare var EGooglePADErrorCode : { AssetPack_NO_ERROR:'AssetPack_NO_ERROR',AssetPack_APP_UNAVAILABLE:'AssetPack_APP_UNAVAILABLE',AssetPack_UNAVAILABLE:'AssetPack_UNAVAILABLE',AssetPack_INVALID_REQUEST:'AssetPack_INVALID_REQUEST',AssetPack_DOWNLOAD_NOT_FOUND:'AssetPack_DOWNLOAD_NOT_FOUND',AssetPack_API_NOT_AVAILABLE:'AssetPack_API_NOT_AVAILABLE',AssetPack_NETWORK_ERROR:'AssetPack_NETWORK_ERROR',AssetPack_ACCESS_DENIED:'AssetPack_ACCESS_DENIED',AssetPack_INSUFFICIENT_STORAGE:'AssetPack_INSUFFICIENT_STORAGE',AssetPack_PLAY_STORE_NOT_FOUND:'AssetPack_PLAY_STORE_NOT_FOUND',AssetPack_NETWORK_UNRESTRICTED:'AssetPack_NETWORK_UNRESTRICTED',AssetPack_INTERNAL_ERROR:'AssetPack_INTERNAL_ERROR',AssetPack_INITIALIZATION_NEEDED:'AssetPack_INITIALIZATION_NEEDED',AssetPack_INITIALIZATION_FAILED:'AssetPack_INITIALIZATION_FAILED',AssetPack_MAX:'AssetPack_MAX', };
+declare type EGooglePADStorageMethod = 'AssetPack_STORAGE_FILES' | 'AssetPack_STORAGE_APK' | 'AssetPack_STORAGE_UNKNOWN' | 'AssetPack_STORAGE_NOT_INSTALLED' | 'AssetPack_STORAGE_MAX';
+declare var EGooglePADStorageMethod : { AssetPack_STORAGE_FILES:'AssetPack_STORAGE_FILES',AssetPack_STORAGE_APK:'AssetPack_STORAGE_APK',AssetPack_STORAGE_UNKNOWN:'AssetPack_STORAGE_UNKNOWN',AssetPack_STORAGE_NOT_INSTALLED:'AssetPack_STORAGE_NOT_INSTALLED',AssetPack_STORAGE_MAX:'AssetPack_STORAGE_MAX', };
+declare type EGooglePADCellularDataConfirmStatus = 'AssetPack_CONFIRM_UNKNOWN' | 'AssetPack_CONFIRM_PENDING' | 'AssetPack_CONFIRM_USER_APPROVED' | 'AssetPack_CONFIRM_USER_CANCELED' | 'AssetPack_CONFIRM_MAX';
+declare var EGooglePADCellularDataConfirmStatus : { AssetPack_CONFIRM_UNKNOWN:'AssetPack_CONFIRM_UNKNOWN',AssetPack_CONFIRM_PENDING:'AssetPack_CONFIRM_PENDING',AssetPack_CONFIRM_USER_APPROVED:'AssetPack_CONFIRM_USER_APPROVED',AssetPack_CONFIRM_USER_CANCELED:'AssetPack_CONFIRM_USER_CANCELED',AssetPack_CONFIRM_MAX:'AssetPack_CONFIRM_MAX', };
+declare type EGooglePADDownloadStatus = 'AssetPack_UNKNOWN' | 'AssetPack_DOWNLOAD_PENDING' | 'AssetPack_DOWNLOADING' | 'AssetPack_TRANSFERRING' | 'AssetPack_DOWNLOAD_COMPLETED' | 'AssetPack_DOWNLOAD_FAILED' | 'AssetPack_DOWNLOAD_CANCELED' | 'AssetPack_WAITING_FOR_WIFI' | 'AssetPack_NOT_INSTALLED' | 'AssetPack_INFO_PENDING' | 'AssetPack_INFO_FAILED' | 'AssetPack_REMOVAL_PENDING' | 'AssetPack_REMOVAL_FAILED' | 'AssetPack_MAX';
+declare var EGooglePADDownloadStatus : { AssetPack_UNKNOWN:'AssetPack_UNKNOWN',AssetPack_DOWNLOAD_PENDING:'AssetPack_DOWNLOAD_PENDING',AssetPack_DOWNLOADING:'AssetPack_DOWNLOADING',AssetPack_TRANSFERRING:'AssetPack_TRANSFERRING',AssetPack_DOWNLOAD_COMPLETED:'AssetPack_DOWNLOAD_COMPLETED',AssetPack_DOWNLOAD_FAILED:'AssetPack_DOWNLOAD_FAILED',AssetPack_DOWNLOAD_CANCELED:'AssetPack_DOWNLOAD_CANCELED',AssetPack_WAITING_FOR_WIFI:'AssetPack_WAITING_FOR_WIFI',AssetPack_NOT_INSTALLED:'AssetPack_NOT_INSTALLED',AssetPack_INFO_PENDING:'AssetPack_INFO_PENDING',AssetPack_INFO_FAILED:'AssetPack_INFO_FAILED',AssetPack_REMOVAL_PENDING:'AssetPack_REMOVAL_PENDING',AssetPack_REMOVAL_FAILED:'AssetPack_REMOVAL_FAILED',AssetPack_MAX:'AssetPack_MAX', };
+declare class GooglePADFunctionLibrary extends BlueprintFunctionLibrary { 
+	static Load(ResourceName: string): GooglePADFunctionLibrary;
+	static Find(Outer: UObject, ResourceName: string): GooglePADFunctionLibrary;
+	static GetDefaultObject(): GooglePADFunctionLibrary;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GooglePADFunctionLibrary;
+	static ShowCellularDataConfirmation(): EGooglePADErrorCode;
+	static RequestRemoval(Name: string): EGooglePADErrorCode;
+	static RequestInfo(AssetPacks: string[]): EGooglePADErrorCode;
+	static RequestDownload(AssetPacks: string[]): EGooglePADErrorCode;
+	static ReleaseDownloadState(State: number): void;
+	static ReleaseAssetPackLocation(Location: number): void;
+	static GetTotalBytesToDownload(State: number): number;
+	static GetStorageMethod(Location: number): EGooglePADStorageMethod;
+	static GetShowCellularDataConfirmationStatus(Status?: EGooglePADCellularDataConfirmStatus): {Status: EGooglePADCellularDataConfirmStatus, $: EGooglePADErrorCode};
+	static GetDownloadStatus(State: number): EGooglePADDownloadStatus;
+	static GetDownloadState(Name: string,State?: number): {State: number, $: EGooglePADErrorCode};
+	static GetBytesDownloaded(State: number): number;
+	static GetAssetsPath(Location: number): string;
+	static GetAssetPackLocation(Name: string,Location?: number): {Location: number, $: EGooglePADErrorCode};
+	static CancelDownload(AssetPacks: string[]): EGooglePADErrorCode;
+	static C(Other: UObject | any): GooglePADFunctionLibrary;
 }
 
 declare class OnDynamicMeshModifiedBP__PythonCallable extends PythonCallableForDelegate { 
@@ -17807,13 +17734,5 @@ declare class Viewport0__PythonCallable extends PythonCallableForDelegate {
 	static GetDefaultObject(): Viewport0__PythonCallable;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): Viewport0__PythonCallable;
 	static C(Other: UObject | any): Viewport0__PythonCallable;
-}
-
-declare class ViewportAxis__PythonCallable extends PythonCallableForDelegate { 
-	static Load(ResourceName: string): ViewportAxis__PythonCallable;
-	static Find(Outer: UObject, ResourceName: string): ViewportAxis__PythonCallable;
-	static GetDefaultObject(): ViewportAxis__PythonCallable;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ViewportAxis__PythonCallable;
-	static C(Other: UObject | any): ViewportAxis__PythonCallable;
 }
 

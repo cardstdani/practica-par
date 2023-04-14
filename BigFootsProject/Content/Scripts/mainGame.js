@@ -42,12 +42,13 @@ function SpawnActor(actor) {
     return new actor(GWorld);
 }
 
-function clicked(event) {
+function clicked(index) {
     if (!matrix.some(x => x.includes("."))) {
         updateUI();
         alert("Has perdido, lo lamento😔😔, por favor recarga la página"); return;
     }
-    var coordinates = (event.currentTarget.id === "bot") ? hint() : [parseInt(event.currentTarget.parentNode.id.substring(1)), parseInt(event.currentTarget.id.substring(1))];
+    var coordinates = [Math.floor(index/6), index - 6*Math.floor(index/6)];
+    console.log(index, coordinates)
     if (matrix[coordinates[0]][coordinates[1]] != ".") {
         if (actual === "w") {
             matrix[coordinates[0]][coordinates[1]] = ".";
@@ -152,7 +153,7 @@ function checkAndColapse(coordinates) {
         }
 
         matrix[coordinates[0]][coordinates[1]] = objects[g[1]][0];
-        g = [self.getGroup(coordinates), matrix[coordinates[0]][coordinates[1]]];
+        g = [getGroup(coordinates), matrix[coordinates[0]][coordinates[1]]];
     }
 }
 function getGroup(coordinates, bigFootMode = false) {
@@ -172,20 +173,6 @@ function getGroup(coordinates, bigFootMode = false) {
         }
     }
     return output;
-    /*let visited = new Set();
-    let output = [coordinates];
-    let q = [coordinates];
-    while (q.length !== 0) {
-        let n = q.shift();
-        visited.add(n);
-        for (let i of [[n[0] - 1, n[1]], [n[0], n[1] + 1], [n[0] + 1, n[1]], [n[0], n[1] - 1]]) {
-            if (i[0] < 0 || i[0] >= matrix.length || i[1] < 0 || i[1] >= matrix[0].length) {continue;}
-            if (!visited.has(i) && (matrix[i[0]][i[1]] === matrix[coordinates[0]][coordinates[1]] || (bigFootMode && matrix[i[0]][i[1]] === "."))) {
-                q.push(i); output.push(i);
-            }
-        }
-    }
-    return output;*/
 }
 
 function updateBigFoots() {
@@ -228,13 +215,17 @@ function updateUI() {
         for (let j = 0; j < matrix[0].length; j++) {
             y+=200;
             let pos = matrix[0].length*i+j;
-            objs[pos].DestroyActor();
+            objs[pos].K2_DestroyActor();
+            
             let newActor = SpawnActor(objects[matrix[i][j]][2]);
             var vector = new Vector();
             vector.X=x; vector.Y=y; vector.Z=0;            
             newActor.SetActorLocation(vector);            
             objs[pos]=newActor;
             sum += objects[matrix[i][j]][1];
+            objs[pos].OnTakeAnyDamage.Add(function(DamagedActor, DamageAmount, DamageType, InstigatedBy, DamageCauser){
+                clicked(objs.indexOf(DamagedActor));
+            });
         }
     }
     
@@ -242,6 +233,6 @@ function updateUI() {
 }
 
 function updateActual() {
-    let arr = Array(30).fill("a").concat(Array(5).fill("b"), Array(1).fill("c"), Array(2).fill("1"), Array(2).fill("w"));
+    let arr = Array(30).fill("a").concat(Array(5).fill("b"), Array(1).fill("c"), Array(2).fill("1"), Array(0).fill("w"));
     actual = arr[Math.floor(arr.length * Math.random())];
 }
