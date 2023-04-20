@@ -29,7 +29,7 @@ function main() {
             let newActor = SpawnActor(objects[matrix[i][j]][2]);
             var vector = new Vector();
             vector.X=x; vector.Y=y; vector.Z=0;
-            newActor.SetActorLocation(vector);
+            newActor.K2_SetActorLocation(vector);
             objs.push(newActor);
         }
     }
@@ -220,7 +220,7 @@ function updateUI() {
             let newActor = SpawnActor(objects[matrix[i][j]][2]);
             var vector = new Vector();
             vector.X=x; vector.Y=y; vector.Z=0;            
-            newActor.SetActorLocation(vector);            
+            newActor.K2_SetActorLocation(vector);            
             objs[pos]=newActor;
             sum += objects[matrix[i][j]][1];
             objs[pos].OnTakeAnyDamage.Add(function(DamagedActor, DamageAmount, DamageType, InstigatedBy, DamageCauser){
