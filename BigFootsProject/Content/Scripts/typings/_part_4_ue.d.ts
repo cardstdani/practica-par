@@ -1,274 +1,201 @@
-declare class NiagaraStackRoot extends NiagaraStackEntry { 
-	SystemPropertiesGroup: NiagaraStackSystemPropertiesGroup;
-	SystemUserParametersGroup: NiagaraStackSystemUserParametersGroup;
-	SystemSpawnGroup: NiagaraStackScriptItemGroup;
-	SystemUpdateGroup: NiagaraStackScriptItemGroup;
-	EmitterPropertiesGroup: NiagaraStackEmitterPropertiesGroup;
-	EmitterSummaryGroup: NiagaraStackEmitterSummaryGroup;
-	EmitterSpawnGroup: NiagaraStackScriptItemGroup;
-	EmitterUpdateGroup: NiagaraStackScriptItemGroup;
-	ParticleSpawnGroup: NiagaraStackScriptItemGroup;
-	ParticleUpdateGroup: NiagaraStackScriptItemGroup;
-	RenderGroup: NiagaraStackRenderItemGroup;
-	SummaryCollapseButton: NiagaraStackSummaryViewCollapseButton;
-	static Load(ResourceName: string): NiagaraStackRoot;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackRoot;
-	static GetDefaultObject(): NiagaraStackRoot;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackRoot;
-	static C(Other: UObject | any): NiagaraStackRoot;
+declare class ActorOnClickedSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ActorOnClickedSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ActorOnClickedSignature__PythonCallable;
+	static GetDefaultObject(): ActorOnClickedSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ActorOnClickedSignature__PythonCallable;
+	static C(Other: UObject | any): ActorOnClickedSignature__PythonCallable;
 }
 
-declare class NiagaraStackSelection extends NiagaraStackEntry { 
-	static Load(ResourceName: string): NiagaraStackSelection;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackSelection;
-	static GetDefaultObject(): NiagaraStackSelection;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackSelection;
-	static C(Other: UObject | any): NiagaraStackSelection;
+declare class ActorOnInputTouchBeginSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ActorOnInputTouchBeginSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ActorOnInputTouchBeginSignature__PythonCallable;
+	static GetDefaultObject(): ActorOnInputTouchBeginSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ActorOnInputTouchBeginSignature__PythonCallable;
+	static C(Other: UObject | any): ActorOnInputTouchBeginSignature__PythonCallable;
 }
 
-declare class NiagaraStackSimulationStagePropertiesItem extends NiagaraStackItem { 
-	SimulationStageObject: NiagaraStackObject;
-	static Load(ResourceName: string): NiagaraStackSimulationStagePropertiesItem;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackSimulationStagePropertiesItem;
-	static GetDefaultObject(): NiagaraStackSimulationStagePropertiesItem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackSimulationStagePropertiesItem;
-	static C(Other: UObject | any): NiagaraStackSimulationStagePropertiesItem;
+declare class ActorOnInputTouchEndSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ActorOnInputTouchEndSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ActorOnInputTouchEndSignature__PythonCallable;
+	static GetDefaultObject(): ActorOnInputTouchEndSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ActorOnInputTouchEndSignature__PythonCallable;
+	static C(Other: UObject | any): ActorOnInputTouchEndSignature__PythonCallable;
 }
 
-declare class NiagaraStackSimulationStageGroup extends NiagaraStackScriptItemGroup { 
-	SimulationStageProperties: NiagaraStackSimulationStagePropertiesItem;
-	static Load(ResourceName: string): NiagaraStackSimulationStageGroup;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackSimulationStageGroup;
-	static GetDefaultObject(): NiagaraStackSimulationStageGroup;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackSimulationStageGroup;
-	static C(Other: UObject | any): NiagaraStackSimulationStageGroup;
+declare class ActorOnReleasedSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ActorOnReleasedSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ActorOnReleasedSignature__PythonCallable;
+	static GetDefaultObject(): ActorOnReleasedSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ActorOnReleasedSignature__PythonCallable;
+	static C(Other: UObject | any): ActorOnReleasedSignature__PythonCallable;
 }
 
-declare class NiagaraStackSystemPropertiesItem extends NiagaraStackItem { 
-	SystemObject: NiagaraStackObject;
-	static Load(ResourceName: string): NiagaraStackSystemPropertiesItem;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackSystemPropertiesItem;
-	static GetDefaultObject(): NiagaraStackSystemPropertiesItem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackSystemPropertiesItem;
-	static C(Other: UObject | any): NiagaraStackSystemPropertiesItem;
+declare class ComponentBeginCursorOverSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentBeginCursorOverSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentBeginCursorOverSignature__PythonCallable;
+	static GetDefaultObject(): ComponentBeginCursorOverSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentBeginCursorOverSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentBeginCursorOverSignature__PythonCallable;
 }
 
-declare class NiagaraStackParameterStoreItem extends NiagaraStackItem { 
-	static Load(ResourceName: string): NiagaraStackParameterStoreItem;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackParameterStoreItem;
-	static GetDefaultObject(): NiagaraStackParameterStoreItem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackParameterStoreItem;
-	static C(Other: UObject | any): NiagaraStackParameterStoreItem;
+declare class ComponentBeginOverlapSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentBeginOverlapSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentBeginOverlapSignature__PythonCallable;
+	static GetDefaultObject(): ComponentBeginOverlapSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentBeginOverlapSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentBeginOverlapSignature__PythonCallable;
 }
 
-declare class NiagaraStackViewModel extends UObject { 
-	RootEntry: NiagaraStackEntry;
-	static Load(ResourceName: string): NiagaraStackViewModel;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackViewModel;
-	static GetDefaultObject(): NiagaraStackViewModel;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackViewModel;
-	static C(Other: UObject | any): NiagaraStackViewModel;
+declare class ComponentBeginTouchOverSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentBeginTouchOverSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentBeginTouchOverSignature__PythonCallable;
+	static GetDefaultObject(): ComponentBeginTouchOverSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentBeginTouchOverSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentBeginTouchOverSignature__PythonCallable;
 }
 
-declare class NiagaraSystemAuditCommandlet extends Commandlet { 
-	static Load(ResourceName: string): NiagaraSystemAuditCommandlet;
-	static Find(Outer: UObject, ResourceName: string): NiagaraSystemAuditCommandlet;
-	static GetDefaultObject(): NiagaraSystemAuditCommandlet;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraSystemAuditCommandlet;
-	static C(Other: UObject | any): NiagaraSystemAuditCommandlet;
+declare class ComponentCollisionSettingsChangedSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentCollisionSettingsChangedSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentCollisionSettingsChangedSignature__PythonCallable;
+	static GetDefaultObject(): ComponentCollisionSettingsChangedSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentCollisionSettingsChangedSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentCollisionSettingsChangedSignature__PythonCallable;
 }
 
-declare class NiagaraSystemEditorFolder extends UObject { 
-	FolderName: string;
-	ChildFolders: NiagaraSystemEditorFolder[];
-	ChildEmitterHandleIds: Guid[];
-	static Load(ResourceName: string): NiagaraSystemEditorFolder;
-	static Find(Outer: UObject, ResourceName: string): NiagaraSystemEditorFolder;
-	static GetDefaultObject(): NiagaraSystemEditorFolder;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraSystemEditorFolder;
-	static C(Other: UObject | any): NiagaraSystemEditorFolder;
+declare class ComponentEndCursorOverSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentEndCursorOverSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentEndCursorOverSignature__PythonCallable;
+	static GetDefaultObject(): ComponentEndCursorOverSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentEndCursorOverSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentEndCursorOverSignature__PythonCallable;
 }
 
-declare class NiagaraGraphViewSettings { 
-	Location: Vector2D;
-	Zoom: number;
-	bIsValid: boolean;
-	clone() : NiagaraGraphViewSettings;
-	static C(Other: UObject | any): NiagaraGraphViewSettings;
+declare class ComponentEndOverlapSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentEndOverlapSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentEndOverlapSignature__PythonCallable;
+	static GetDefaultObject(): ComponentEndOverlapSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentEndOverlapSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentEndOverlapSignature__PythonCallable;
 }
 
-declare class NiagaraSystemEditorData extends NiagaraEditorDataBase { 
-	bSetOrbitModeByAsset: boolean;
-	bSystemViewportInOrbitMode: boolean;
-	RootFolder: NiagaraSystemEditorFolder;
-	StackEditorData: NiagaraStackEditorData;
-	OwnerTransform: Transform;
-	PlaybackRangeMin: number;
-	PlaybackRangeMax: number;
-	SystemOverviewGraph: EdGraph;
-	OverviewGraphViewSettings: NiagaraGraphViewSettings;
-	bSystemIsPlaceholder: boolean;
-	static Load(ResourceName: string): NiagaraSystemEditorData;
-	static Find(Outer: UObject, ResourceName: string): NiagaraSystemEditorData;
-	static GetDefaultObject(): NiagaraSystemEditorData;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraSystemEditorData;
-	static C(Other: UObject | any): NiagaraSystemEditorData;
+declare class ComponentEndTouchOverSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentEndTouchOverSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentEndTouchOverSignature__PythonCallable;
+	static GetDefaultObject(): ComponentEndTouchOverSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentEndTouchOverSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentEndTouchOverSignature__PythonCallable;
 }
 
-declare class NiagaraSystemFactoryNew extends Factory { 
-	static Load(ResourceName: string): NiagaraSystemFactoryNew;
-	static Find(Outer: UObject, ResourceName: string): NiagaraSystemFactoryNew;
-	static GetDefaultObject(): NiagaraSystemFactoryNew;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraSystemFactoryNew;
-	static C(Other: UObject | any): NiagaraSystemFactoryNew;
+declare class ComponentHitSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentHitSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentHitSignature__PythonCallable;
+	static GetDefaultObject(): ComponentHitSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentHitSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentHitSignature__PythonCallable;
 }
 
-declare class NiagaraSystemSelectionViewModel extends UObject { 
-	StackSelection: NiagaraStackSelection;
-	SelectionStackViewModel: NiagaraStackViewModel;
-	static Load(ResourceName: string): NiagaraSystemSelectionViewModel;
-	static Find(Outer: UObject, ResourceName: string): NiagaraSystemSelectionViewModel;
-	static GetDefaultObject(): NiagaraSystemSelectionViewModel;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraSystemSelectionViewModel;
-	static C(Other: UObject | any): NiagaraSystemSelectionViewModel;
+declare class ComponentOnClickedSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentOnClickedSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentOnClickedSignature__PythonCallable;
+	static GetDefaultObject(): ComponentOnClickedSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentOnClickedSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentOnClickedSignature__PythonCallable;
 }
 
-declare class NiagaraThumbnailRendererBase extends TextureThumbnailRenderer { 
-	static Load(ResourceName: string): NiagaraThumbnailRendererBase;
-	static Find(Outer: UObject, ResourceName: string): NiagaraThumbnailRendererBase;
-	static GetDefaultObject(): NiagaraThumbnailRendererBase;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraThumbnailRendererBase;
-	static C(Other: UObject | any): NiagaraThumbnailRendererBase;
+declare class ComponentOnInputTouchBeginSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentOnInputTouchBeginSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentOnInputTouchBeginSignature__PythonCallable;
+	static GetDefaultObject(): ComponentOnInputTouchBeginSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentOnInputTouchBeginSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentOnInputTouchBeginSignature__PythonCallable;
 }
 
-declare class NiagaraEmitterThumbnailRenderer extends NiagaraThumbnailRendererBase { 
-	static Load(ResourceName: string): NiagaraEmitterThumbnailRenderer;
-	static Find(Outer: UObject, ResourceName: string): NiagaraEmitterThumbnailRenderer;
-	static GetDefaultObject(): NiagaraEmitterThumbnailRenderer;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraEmitterThumbnailRenderer;
-	static C(Other: UObject | any): NiagaraEmitterThumbnailRenderer;
+declare class ComponentOnInputTouchEndSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentOnInputTouchEndSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentOnInputTouchEndSignature__PythonCallable;
+	static GetDefaultObject(): ComponentOnInputTouchEndSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentOnInputTouchEndSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentOnInputTouchEndSignature__PythonCallable;
 }
 
-declare class NiagaraSystemThumbnailRenderer extends NiagaraThumbnailRendererBase { 
-	static Load(ResourceName: string): NiagaraSystemThumbnailRenderer;
-	static Find(Outer: UObject, ResourceName: string): NiagaraSystemThumbnailRenderer;
-	static GetDefaultObject(): NiagaraSystemThumbnailRenderer;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraSystemThumbnailRenderer;
-	static C(Other: UObject | any): NiagaraSystemThumbnailRenderer;
+declare class ComponentOnReleasedSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentOnReleasedSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentOnReleasedSignature__PythonCallable;
+	static GetDefaultObject(): ComponentOnReleasedSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentOnReleasedSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentOnReleasedSignature__PythonCallable;
 }
 
-declare class NiagaraVersionMetaData extends UObject { 
-	bIsExposedVersion: boolean;
-	ChangeDescription: string;
-	bIsVisibleInVersionSelector: boolean;
-	VersionGuid: Guid;
-	UpdateScriptExecution: ENiagaraPythonUpdateScriptReference;
-	PythonUpdateScript: string;
-	ScriptAsset: FilePath;
-	static Load(ResourceName: string): NiagaraVersionMetaData;
-	static Find(Outer: UObject, ResourceName: string): NiagaraVersionMetaData;
-	static GetDefaultObject(): NiagaraVersionMetaData;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraVersionMetaData;
-	static C(Other: UObject | any): NiagaraVersionMetaData;
+declare class ComponentSleepSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentSleepSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentSleepSignature__PythonCallable;
+	static GetDefaultObject(): ComponentSleepSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentSleepSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentSleepSignature__PythonCallable;
 }
 
-declare class NiagaraPythonScriptModuleInput extends UObject { 
-	Input: NiagaraClipboardFunctionInput;
-	static Load(ResourceName: string): NiagaraPythonScriptModuleInput;
-	static Find(Outer: UObject, ResourceName: string): NiagaraPythonScriptModuleInput;
-	static GetDefaultObject(): NiagaraPythonScriptModuleInput;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraPythonScriptModuleInput;
-	IsSet(): boolean;
-	IsLocalValue(): boolean;
-	AsVec4(): Vector4;
-	AsVec3(): Vector;
-	AsVec2(): Vector2D;
-	AsQuat(): Quat;
-	AsInt(): number;
-	AsFloat(): number;
-	AsEnum(): string;
-	AsColor(): LinearColor;
-	AsBool(): boolean;
-	static C(Other: UObject | any): NiagaraPythonScriptModuleInput;
+declare class ComponentWakeSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ComponentWakeSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ComponentWakeSignature__PythonCallable;
+	static GetDefaultObject(): ComponentWakeSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ComponentWakeSignature__PythonCallable;
+	static C(Other: UObject | any): ComponentWakeSignature__PythonCallable;
 }
 
-declare class UpgradeNiagaraScriptResults extends UObject { 
-	bCancelledByPythonError: boolean;
-	OldInputs: NiagaraPythonScriptModuleInput[];
-	NewInputs: NiagaraPythonScriptModuleInput[];
-	DummyInput: NiagaraPythonScriptModuleInput;
-	static Load(ResourceName: string): UpgradeNiagaraScriptResults;
-	static Find(Outer: UObject, ResourceName: string): UpgradeNiagaraScriptResults;
-	static GetDefaultObject(): UpgradeNiagaraScriptResults;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): UpgradeNiagaraScriptResults;
-	SetVec4Input(InputName: string,Value: Vector4): void;
-	SetVec3Input(InputName: string,Value: Vector): void;
-	SetVec2Input(InputName: string,Value: Vector2D): void;
-	SetQuatInput(InputName: string,Value: Quat): void;
-	SetIntInput(InputName: string,Value: number): void;
-	SetFloatInput(InputName: string,Value: number): void;
-	SetEnumInput(InputName: string,Value: string): void;
-	SetColorInput(InputName: string,Value: LinearColor): void;
-	SetBoolInput(InputName: string,Value: boolean): void;
-	GetOldInput(InputName: string): NiagaraPythonScriptModuleInput;
-	static C(Other: UObject | any): UpgradeNiagaraScriptResults;
+declare class IsRootComponentChanged__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): IsRootComponentChanged__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): IsRootComponentChanged__PythonCallable;
+	static GetDefaultObject(): IsRootComponentChanged__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): IsRootComponentChanged__PythonCallable;
+	static C(Other: UObject | any): IsRootComponentChanged__PythonCallable;
 }
 
-declare class OnPastedFunctionCallNode__PythonCallable extends PythonCallableForDelegate { 
-	static Load(ResourceName: string): OnPastedFunctionCallNode__PythonCallable;
-	static Find(Outer: UObject, ResourceName: string): OnPastedFunctionCallNode__PythonCallable;
-	static GetDefaultObject(): OnPastedFunctionCallNode__PythonCallable;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OnPastedFunctionCallNode__PythonCallable;
-	static C(Other: UObject | any): OnPastedFunctionCallNode__PythonCallable;
+declare class PawnControllerChangedSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): PawnControllerChangedSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): PawnControllerChangedSignature__PythonCallable;
+	static GetDefaultObject(): PawnControllerChangedSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PawnControllerChangedSignature__PythonCallable;
+	static C(Other: UObject | any): PawnControllerChangedSignature__PythonCallable;
 }
 
-declare class AnimNotifyState_TimedNiagaraEffect extends AnimNotifyState { 
-	Template: NiagaraSystem;
-	SocketName: string;
-	LocationOffset: Vector;
-	RotationOffset: Rotator;
-	bDestroyAtEnd: boolean;
-	static Load(ResourceName: string): AnimNotifyState_TimedNiagaraEffect;
-	static Find(Outer: UObject, ResourceName: string): AnimNotifyState_TimedNiagaraEffect;
-	static GetDefaultObject(): AnimNotifyState_TimedNiagaraEffect;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimNotifyState_TimedNiagaraEffect;
-	GetSpawnedEffect(MeshComp: MeshComponent): FXSystemComponent;
-	static C(Other: UObject | any): AnimNotifyState_TimedNiagaraEffect;
+declare class PawnRestartedSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): PawnRestartedSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): PawnRestartedSignature__PythonCallable;
+	static GetDefaultObject(): PawnRestartedSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PawnRestartedSignature__PythonCallable;
+	static C(Other: UObject | any): PawnRestartedSignature__PythonCallable;
 }
 
-declare class CurveParameterPair { 
-	AnimCurveName: string;
-	UserVariableName: string;
-	clone() : CurveParameterPair;
-	static C(Other: UObject | any): CurveParameterPair;
+declare class PhysicsVolumeChanged__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): PhysicsVolumeChanged__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): PhysicsVolumeChanged__PythonCallable;
+	static GetDefaultObject(): PhysicsVolumeChanged__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PhysicsVolumeChanged__PythonCallable;
+	static C(Other: UObject | any): PhysicsVolumeChanged__PythonCallable;
 }
 
-declare class AnimNotifyState_TimedNiagaraEffectAdvanced extends AnimNotifyState_TimedNiagaraEffect { 
-	bEnableNormalizedNotifyProgress: boolean;
-	NotifyProgressUserParameter: string;
-	AnimCurves: CurveParameterPair[];
-	static Load(ResourceName: string): AnimNotifyState_TimedNiagaraEffectAdvanced;
-	static Find(Outer: UObject, ResourceName: string): AnimNotifyState_TimedNiagaraEffectAdvanced;
-	static GetDefaultObject(): AnimNotifyState_TimedNiagaraEffectAdvanced;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimNotifyState_TimedNiagaraEffectAdvanced;
-	GetNotifyProgress(MeshComp: MeshComponent): number;
-	static C(Other: UObject | any): AnimNotifyState_TimedNiagaraEffectAdvanced;
+declare class TakeAnyDamageSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): TakeAnyDamageSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): TakeAnyDamageSignature__PythonCallable;
+	static GetDefaultObject(): TakeAnyDamageSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TakeAnyDamageSignature__PythonCallable;
+	static C(Other: UObject | any): TakeAnyDamageSignature__PythonCallable;
 }
 
-declare class AnimNotify_PlayNiagaraEffect extends AnimNotify { 
-	Template: NiagaraSystem;
-	LocationOffset: Vector;
-	RotationOffset: Rotator;
-	Scale: Vector;
-	bAbsoluteScale: boolean;
-	Attached: boolean;
-	SocketName: string;
-	static Load(ResourceName: string): AnimNotify_PlayNiagaraEffect;
-	static Find(Outer: UObject, ResourceName: string): AnimNotify_PlayNiagaraEffect;
-	static GetDefaultObject(): AnimNotify_PlayNiagaraEffect;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimNotify_PlayNiagaraEffect;
-	GetSpawnedEffect(): FXSystemComponent;
-	static C(Other: UObject | any): AnimNotify_PlayNiagaraEffect;
+declare class TakePointDamageSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): TakePointDamageSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): TakePointDamageSignature__PythonCallable;
+	static GetDefaultObject(): TakePointDamageSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TakePointDamageSignature__PythonCallable;
+	static C(Other: UObject | any): TakePointDamageSignature__PythonCallable;
+}
+
+declare class TakeRadialDamageSignature__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): TakeRadialDamageSignature__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): TakeRadialDamageSignature__PythonCallable;
+	static GetDefaultObject(): TakeRadialDamageSignature__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TakeRadialDamageSignature__PythonCallable;
+	static C(Other: UObject | any): TakeRadialDamageSignature__PythonCallable;
 }
 
 declare class V8Config extends UObject { 
@@ -1814,31 +1741,6 @@ declare class ImgMediaPlaybackComponent extends ActorComponent {
 	static C(Other: UObject | any): ImgMediaPlaybackComponent;
 }
 
-declare type EUdpMessageFormat = 'None' | 'Json' | 'TaggedProperty' | 'CborPlatformEndianness' | 'CborStandardEndianness' | 'EUdpMessageFormat_MAX';
-declare var EUdpMessageFormat : { None:'None',Json:'Json',TaggedProperty:'TaggedProperty',CborPlatformEndianness:'CborPlatformEndianness',CborStandardEndianness:'CborStandardEndianness',EUdpMessageFormat_MAX:'EUdpMessageFormat_MAX', };
-declare class UdpMessagingSettings extends UObject { 
-	EnabledByDefault: boolean;
-	EnableTransport: boolean;
-	bAutoRepair: boolean;
-	MaxSendRate: number;
-	AutoRepairAttemptLimit: any;
-	bStopServiceWhenAppDeactivates: boolean;
-	UnicastEndpoint: string;
-	MulticastEndpoint: string;
-	MessageFormat: EUdpMessageFormat;
-	MulticastTimeToLive: number;
-	StaticEndpoints: string[];
-	EnableTunnel: boolean;
-	TunnelUnicastEndpoint: string;
-	TunnelMulticastEndpoint: string;
-	RemoteTunnelEndpoints: string[];
-	static Load(ResourceName: string): UdpMessagingSettings;
-	static Find(Outer: UObject, ResourceName: string): UdpMessagingSettings;
-	static GetDefaultObject(): UdpMessagingSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): UdpMessagingSettings;
-	static C(Other: UObject | any): UdpMessagingSettings;
-}
-
 declare class TcpMessagingSettings extends UObject { 
 	EnableTransport: boolean;
 	ListenEndpoint: string;
@@ -1903,6 +1805,31 @@ declare class ActorSequenceComponent extends ActorComponent {
 	static GetDefaultObject(): ActorSequenceComponent;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ActorSequenceComponent;
 	static C(Other: UObject | any): ActorSequenceComponent;
+}
+
+declare type EUdpMessageFormat = 'None' | 'Json' | 'TaggedProperty' | 'CborPlatformEndianness' | 'CborStandardEndianness' | 'EUdpMessageFormat_MAX';
+declare var EUdpMessageFormat : { None:'None',Json:'Json',TaggedProperty:'TaggedProperty',CborPlatformEndianness:'CborPlatformEndianness',CborStandardEndianness:'CborStandardEndianness',EUdpMessageFormat_MAX:'EUdpMessageFormat_MAX', };
+declare class UdpMessagingSettings extends UObject { 
+	EnabledByDefault: boolean;
+	EnableTransport: boolean;
+	bAutoRepair: boolean;
+	MaxSendRate: number;
+	AutoRepairAttemptLimit: any;
+	bStopServiceWhenAppDeactivates: boolean;
+	UnicastEndpoint: string;
+	MulticastEndpoint: string;
+	MessageFormat: EUdpMessageFormat;
+	MulticastTimeToLive: number;
+	StaticEndpoints: string[];
+	EnableTunnel: boolean;
+	TunnelUnicastEndpoint: string;
+	TunnelMulticastEndpoint: string;
+	RemoteTunnelEndpoints: string[];
+	static Load(ResourceName: string): UdpMessagingSettings;
+	static Find(Outer: UObject, ResourceName: string): UdpMessagingSettings;
+	static GetDefaultObject(): UdpMessagingSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): UdpMessagingSettings;
+	static C(Other: UObject | any): UdpMessagingSettings;
 }
 
 declare class AudioAnalyzerAssetBase extends UObject { 
@@ -2986,6 +2913,30 @@ declare class PaperTiledImporterFactory extends Factory {
 	static C(Other: UObject | any): PaperTiledImporterFactory;
 }
 
+declare class OodleNetworkTrainerCommandlet extends Commandlet { 
+	bCompressionTest: boolean;
+	bWriteV5Dictionaries: boolean;
+	HashTableSize: number;
+	DictionarySize: number;
+	DictionaryTrials: number;
+	TrialRandomness: number;
+	TrialGenerations: number;
+	bNoTrials: boolean;
+	static Load(ResourceName: string): OodleNetworkTrainerCommandlet;
+	static Find(Outer: UObject, ResourceName: string): OodleNetworkTrainerCommandlet;
+	static GetDefaultObject(): OodleNetworkTrainerCommandlet;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OodleNetworkTrainerCommandlet;
+	static C(Other: UObject | any): OodleNetworkTrainerCommandlet;
+}
+
+declare class AnimationSharingSetupFactory extends Factory { 
+	static Load(ResourceName: string): AnimationSharingSetupFactory;
+	static Find(Outer: UObject, ResourceName: string): AnimationSharingSetupFactory;
+	static GetDefaultObject(): AnimationSharingSetupFactory;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimationSharingSetupFactory;
+	static C(Other: UObject | any): AnimationSharingSetupFactory;
+}
+
 declare type EMotionExtractor_MotionType = 'Translation' | 'Rotation' | 'Scale' | 'TranslationSpeed' | 'RotationSpeed' | 'EMotionExtractor_MAX';
 declare var EMotionExtractor_MotionType : { Translation:'Translation',Rotation:'Rotation',Scale:'Scale',TranslationSpeed:'TranslationSpeed',RotationSpeed:'RotationSpeed',EMotionExtractor_MAX:'EMotionExtractor_MAX', };
 declare type EMotionExtractor_Axis = 'X' | 'Y' | 'Z' | 'XY' | 'XZ' | 'YZ' | 'XYZ' | 'EMotionExtractor_MAX';
@@ -3051,83 +3002,6 @@ declare class RootMotionAnalysisProperties extends AnalysisProperties {
 	static C(Other: UObject | any): RootMotionAnalysisProperties;
 }
 
-declare class OodleNetworkTrainerCommandlet extends Commandlet { 
-	bCompressionTest: boolean;
-	bWriteV5Dictionaries: boolean;
-	HashTableSize: number;
-	DictionarySize: number;
-	DictionaryTrials: number;
-	TrialRandomness: number;
-	TrialGenerations: number;
-	bNoTrials: boolean;
-	static Load(ResourceName: string): OodleNetworkTrainerCommandlet;
-	static Find(Outer: UObject, ResourceName: string): OodleNetworkTrainerCommandlet;
-	static GetDefaultObject(): OodleNetworkTrainerCommandlet;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OodleNetworkTrainerCommandlet;
-	static C(Other: UObject | any): OodleNetworkTrainerCommandlet;
-}
-
-declare class AnimationSharingSetupFactory extends Factory { 
-	static Load(ResourceName: string): AnimationSharingSetupFactory;
-	static Find(Outer: UObject, ResourceName: string): AnimationSharingSetupFactory;
-	static GetDefaultObject(): AnimationSharingSetupFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimationSharingSetupFactory;
-	static C(Other: UObject | any): AnimationSharingSetupFactory;
-}
-
-declare class LevelVariantSetsActorFactory extends ActorFactory { 
-	static Load(ResourceName: string): LevelVariantSetsActorFactory;
-	static Find(Outer: UObject, ResourceName: string): LevelVariantSetsActorFactory;
-	static GetDefaultObject(): LevelVariantSetsActorFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): LevelVariantSetsActorFactory;
-	static C(Other: UObject | any): LevelVariantSetsActorFactory;
-}
-
-declare class SwitchActorFactory extends ActorFactory { 
-	static Load(ResourceName: string): SwitchActorFactory;
-	static Find(Outer: UObject, ResourceName: string): SwitchActorFactory;
-	static GetDefaultObject(): SwitchActorFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SwitchActorFactory;
-	static C(Other: UObject | any): SwitchActorFactory;
-}
-
-declare class VariantManagerFactoryNew extends Factory { 
-	static Load(ResourceName: string): VariantManagerFactoryNew;
-	static Find(Outer: UObject, ResourceName: string): VariantManagerFactoryNew;
-	static GetDefaultObject(): VariantManagerFactoryNew;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): VariantManagerFactoryNew;
-	static C(Other: UObject | any): VariantManagerFactoryNew;
-}
-
-declare type EVariantManagerTestEnum = 'None' | 'FirstOption' | 'SecondOption' | 'ThirdOption' | 'EVariantManagerTestEnum_MAX';
-declare var EVariantManagerTestEnum : { None:'None',FirstOption:'FirstOption',SecondOption:'SecondOption',ThirdOption:'ThirdOption',EVariantManagerTestEnum_MAX:'EVariantManagerTestEnum_MAX', };
-declare class VariantManagerTestActor extends Actor { 
-	EnumWithNoDefault: EVariantManagerTestEnum;
-	EnumWithSecondDefault: EVariantManagerTestEnum;
-	CapturedByteProperty: number;
-	CapturedIntProperty: number;
-	CapturedFloatProperty: number;
-	bCapturedBoolProperty: boolean;
-	CapturedObjectProperty: UObject;
-	CapturedInterfaceProperty: any;
-	CapturedNameProperty: string;
-	CapturedStrProperty: string;
-	CapturedTextProperty: string;
-	CapturedRotatorProperty: Rotator;
-	CapturedColorProperty: Color;
-	CapturedLinearColorProperty: LinearColor;
-	CapturedVectorProperty: Vector;
-	CapturedQuatProperty: Quat;
-	CapturedVector4Property: Vector4;
-	CapturedVector2DProperty: Vector2D;
-	CapturedIntPointProperty: IntPoint;
-	CapturedUObjectArrayProperty: UObject[];
-	CapturedVectorArrayProperty: Vector[];
-	static GetDefaultObject(): VariantManagerTestActor;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): VariantManagerTestActor;
-	static C(Other: UObject | any): VariantManagerTestActor;
-}
-
 declare class MyPluginStruct { 
 	TestString: string;
 	clone() : MyPluginStruct;
@@ -3141,23 +3015,6 @@ declare class MyPluginObject extends UObject {
 	static GetDefaultObject(): MyPluginObject;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MyPluginObject;
 	static C(Other: UObject | any): MyPluginObject;
-}
-
-declare class AutomationUtilsBlueprintLibrary extends BlueprintFunctionLibrary { 
-	static Load(ResourceName: string): AutomationUtilsBlueprintLibrary;
-	static Find(Outer: UObject, ResourceName: string): AutomationUtilsBlueprintLibrary;
-	static GetDefaultObject(): AutomationUtilsBlueprintLibrary;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AutomationUtilsBlueprintLibrary;
-	static TakeGameplayAutomationScreenshot(ScreenShotName: string,MaxGlobalError: number,MaxLocalError: number,MapNameOverride: string): void;
-	static C(Other: UObject | any): AutomationUtilsBlueprintLibrary;
-}
-
-declare class ScreenshotComparisonCommandlet extends Commandlet { 
-	static Load(ResourceName: string): ScreenshotComparisonCommandlet;
-	static Find(Outer: UObject, ResourceName: string): ScreenshotComparisonCommandlet;
-	static GetDefaultObject(): ScreenshotComparisonCommandlet;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ScreenshotComparisonCommandlet;
-	static C(Other: UObject | any): ScreenshotComparisonCommandlet;
 }
 
 declare class CryptoKeysCommandlet extends Commandlet { 
@@ -3533,560 +3390,6 @@ declare class EditorStaticMeshLibrary extends BlueprintFunctionLibrary {
 	static AddSimpleCollisionsWithNotification(StaticMesh: StaticMesh,ShapeType: EScriptCollisionShapeType,bApplyChanges: boolean): number;
 	static AddSimpleCollisions(StaticMesh: StaticMesh,ShapeType: EScriptCollisionShapeType): number;
 	static C(Other: UObject | any): EditorStaticMeshLibrary;
-}
-
-declare type EChaosCollisionSortMethod = 'SortNone' | 'SortByHighestMass' | 'SortByHighestSpeed' | 'SortByHighestImpulse' | 'SortByNearestFirst' | 'Count' | 'EChaosCollisionSortMethod_MAX';
-declare var EChaosCollisionSortMethod : { SortNone:'SortNone',SortByHighestMass:'SortByHighestMass',SortByHighestSpeed:'SortByHighestSpeed',SortByHighestImpulse:'SortByHighestImpulse',SortByNearestFirst:'SortByNearestFirst',Count:'Count',EChaosCollisionSortMethod_MAX:'EChaosCollisionSortMethod_MAX', };
-declare class ChaosCollisionEventRequestSettings { 
-	MaxNumberResults: number;
-	MinMass: number;
-	MinSpeed: number;
-	MinImpulse: number;
-	MaxDistance: number;
-	SortMethod: EChaosCollisionSortMethod;
-	clone() : ChaosCollisionEventRequestSettings;
-	static C(Other: UObject | any): ChaosCollisionEventRequestSettings;
-}
-
-declare type EChaosBreakingSortMethod = 'SortNone' | 'SortByHighestMass' | 'SortByHighestSpeed' | 'SortByNearestFirst' | 'Count' | 'EChaosBreakingSortMethod_MAX';
-declare var EChaosBreakingSortMethod : { SortNone:'SortNone',SortByHighestMass:'SortByHighestMass',SortByHighestSpeed:'SortByHighestSpeed',SortByNearestFirst:'SortByNearestFirst',Count:'Count',EChaosBreakingSortMethod_MAX:'EChaosBreakingSortMethod_MAX', };
-declare class ChaosBreakingEventRequestSettings { 
-	MaxNumberOfResults: number;
-	MinRadius: number;
-	MinSpeed: number;
-	MinMass: number;
-	MaxDistance: number;
-	SortMethod: EChaosBreakingSortMethod;
-	clone() : ChaosBreakingEventRequestSettings;
-	static C(Other: UObject | any): ChaosBreakingEventRequestSettings;
-}
-
-declare type EChaosTrailingSortMethod = 'SortNone' | 'SortByHighestMass' | 'SortByHighestSpeed' | 'SortByNearestFirst' | 'Count' | 'EChaosTrailingSortMethod_MAX';
-declare var EChaosTrailingSortMethod : { SortNone:'SortNone',SortByHighestMass:'SortByHighestMass',SortByHighestSpeed:'SortByHighestSpeed',SortByNearestFirst:'SortByNearestFirst',Count:'Count',EChaosTrailingSortMethod_MAX:'EChaosTrailingSortMethod_MAX', };
-declare class ChaosTrailingEventRequestSettings { 
-	MaxNumberOfResults: number;
-	MinMass: number;
-	MinSpeed: number;
-	MinAngularSpeed: number;
-	MaxDistance: number;
-	SortMethod: EChaosTrailingSortMethod;
-	clone() : ChaosTrailingEventRequestSettings;
-	static C(Other: UObject | any): ChaosTrailingEventRequestSettings;
-}
-
-declare type EChaosRemovalSortMethod = 'SortNone' | 'SortByHighestMass' | 'SortByNearestFirst' | 'Count' | 'EChaosRemovalSortMethod_MAX';
-declare var EChaosRemovalSortMethod : { SortNone:'SortNone',SortByHighestMass:'SortByHighestMass',SortByNearestFirst:'SortByNearestFirst',Count:'Count',EChaosRemovalSortMethod_MAX:'EChaosRemovalSortMethod_MAX', };
-declare class ChaosRemovalEventRequestSettings { 
-	MaxNumberOfResults: number;
-	MinMass: number;
-	MaxDistance: number;
-	SortMethod: EChaosRemovalSortMethod;
-	clone() : ChaosRemovalEventRequestSettings;
-	static C(Other: UObject | any): ChaosRemovalEventRequestSettings;
-}
-
-declare class ChaosCollisionEventData { 
-	Location: Vector;
-	Normal: Vector;
-	Velocity1: Vector;
-	Velocity2: Vector;
-	Mass1: number;
-	Mass2: number;
-	Impulse: Vector;
-	clone() : ChaosCollisionEventData;
-	static C(Other: UObject | any): ChaosCollisionEventData;
-}
-
-declare class ChaosBreakingEventData { 
-	Location: Vector;
-	Velocity: Vector;
-	Mass: number;
-	clone() : ChaosBreakingEventData;
-	static C(Other: UObject | any): ChaosBreakingEventData;
-}
-
-declare class ChaosTrailingEventData { 
-	Location: Vector;
-	Velocity: Vector;
-	AngularVelocity: Vector;
-	Mass: number;
-	ParticleIndex: number;
-	clone() : ChaosTrailingEventData;
-	static C(Other: UObject | any): ChaosTrailingEventData;
-}
-
-declare class ChaosRemovalEventData { 
-	Location: Vector;
-	Mass: number;
-	ParticleIndex: number;
-	clone() : ChaosRemovalEventData;
-	static C(Other: UObject | any): ChaosRemovalEventData;
-}
-
-declare class GeometryCollectionSource { 
-	SourceGeometryObject: SoftObjectPath;
-	LocalTransform: Transform;
-	SourceMaterial: MaterialInterface[];
-	clone() : GeometryCollectionSource;
-	static C(Other: UObject | any): GeometryCollectionSource;
-}
-
-declare class GeometryCollectionEmbeddedExemplar { 
-	StaticMeshExemplar: SoftObjectPath;
-	StartCullDistance: number;
-	EndCullDistance: number;
-	InstanceCount: number;
-	clone() : GeometryCollectionEmbeddedExemplar;
-	static C(Other: UObject | any): GeometryCollectionEmbeddedExemplar;
-}
-
-declare type ECollisionTypeEnum = 'Chaos_Volumetric' | 'Chaos_Surface_Volumetric' | 'Chaos_Max';
-declare var ECollisionTypeEnum : { Chaos_Volumetric:'Chaos_Volumetric',Chaos_Surface_Volumetric:'Chaos_Surface_Volumetric',Chaos_Max:'Chaos_Max', };
-declare type EImplicitTypeEnum = 'Chaos_Implicit_Box' | 'Chaos_Implicit_Sphere' | 'Chaos_Implicit_Capsule' | 'Chaos_Implicit_LevelSet' | 'Chaos_Implicit_None' | 'Chaos_Implicit_Convex' | 'Chaos_Max';
-declare var EImplicitTypeEnum : { Chaos_Implicit_Box:'Chaos_Implicit_Box',Chaos_Implicit_Sphere:'Chaos_Implicit_Sphere',Chaos_Implicit_Capsule:'Chaos_Implicit_Capsule',Chaos_Implicit_LevelSet:'Chaos_Implicit_LevelSet',Chaos_Implicit_None:'Chaos_Implicit_None',Chaos_Implicit_Convex:'Chaos_Implicit_Convex',Chaos_Max:'Chaos_Max', };
-declare class GeometryCollectionLevelSetData { 
-	MinLevelSetResolution: number;
-	MaxLevelSetResolution: number;
-	MinClusterLevelSetResolution: number;
-	MaxClusterLevelSetResolution: number;
-	clone() : GeometryCollectionLevelSetData;
-	static C(Other: UObject | any): GeometryCollectionLevelSetData;
-}
-
-declare class GeometryCollectionCollisionParticleData { 
-	CollisionParticlesFraction: number;
-	MaximumCollisionParticles: number;
-	clone() : GeometryCollectionCollisionParticleData;
-	static C(Other: UObject | any): GeometryCollectionCollisionParticleData;
-}
-
-declare class GeometryCollectionCollisionTypeData { 
-	CollisionType: ECollisionTypeEnum;
-	ImplicitType: EImplicitTypeEnum;
-	LevelSet: GeometryCollectionLevelSetData;
-	CollisionParticles: GeometryCollectionCollisionParticleData;
-	CollisionObjectReductionPercentage: number;
-	CollisionMarginFraction: number;
-	clone() : GeometryCollectionCollisionTypeData;
-	static C(Other: UObject | any): GeometryCollectionCollisionTypeData;
-}
-
-declare class GeometryCollectionSizeSpecificData { 
-	MaxSize: number;
-	CollisionShapes: GeometryCollectionCollisionTypeData[];
-	CollisionType: ECollisionTypeEnum;
-	ImplicitType: EImplicitTypeEnum;
-	MinLevelSetResolution: number;
-	MaxLevelSetResolution: number;
-	MinClusterLevelSetResolution: number;
-	MaxClusterLevelSetResolution: number;
-	CollisionObjectReductionPercentage: number;
-	CollisionParticlesFraction: number;
-	MaximumCollisionParticles: number;
-	DamageThreshold: number;
-	clone() : GeometryCollectionSizeSpecificData;
-	static C(Other: UObject | any): GeometryCollectionSizeSpecificData;
-}
-
-declare class GeometryCollection extends UObject { 
-	EnableClustering: boolean;
-	ClusterGroupIndex: number;
-	MaxClusterLevel: number;
-	DamageThreshold: number[];
-	ClusterConnectionType: EClusterConnectionTypeEnum;
-	GeometrySource: GeometryCollectionSource[];
-	Materials: MaterialInterface[];
-	EmbeddedGeometryExemplar: GeometryCollectionEmbeddedExemplar[];
-	bUseFullPrecisionUVs: boolean;
-	bStripOnCook: boolean;
-	EnableNanite: boolean;
-	CollisionType: ECollisionTypeEnum;
-	ImplicitType: EImplicitTypeEnum;
-	MinLevelSetResolution: number;
-	MaxLevelSetResolution: number;
-	MinClusterLevelSetResolution: number;
-	MaxClusterLevelSetResolution: number;
-	CollisionObjectReductionPercentage: number;
-	bMassAsDensity: boolean;
-	Mass: number;
-	MinimumMassClamp: number;
-	CollisionParticlesFraction: number;
-	MaximumCollisionParticles: number;
-	bRemoveOnMaxSleep: boolean;
-	MaximumSleepTime: Vector2D;
-	RemovalDuration: Vector2D;
-	SizeSpecificData: GeometryCollectionSizeSpecificData[];
-	EnableRemovePiecesOnFracture: boolean;
-	RemoveOnFractureMaterials: MaterialInterface[];
-	ThumbnailInfo: ThumbnailInfo;
-	PersistentGuid: Guid;
-	StateGuid: Guid;
-	BoneSelectedMaterialIndex: number;
-	static Load(ResourceName: string): GeometryCollection;
-	static Find(Outer: UObject, ResourceName: string): GeometryCollection;
-	static GetDefaultObject(): GeometryCollection;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollection;
-	static C(Other: UObject | any): GeometryCollection;
-}
-
-declare type EObjectStateTypeEnum = 'Chaos_NONE' | 'Chaos_Object_Sleeping' | 'Chaos_Object_Kinematic' | 'Chaos_Object_Static' | 'Chaos_Object_Dynamic' | 'Chaos_Object_UserDefined' | 'Chaos_Max';
-declare var EObjectStateTypeEnum : { Chaos_NONE:'Chaos_NONE',Chaos_Object_Sleeping:'Chaos_Object_Sleeping',Chaos_Object_Kinematic:'Chaos_Object_Kinematic',Chaos_Object_Static:'Chaos_Object_Static',Chaos_Object_Dynamic:'Chaos_Object_Dynamic',Chaos_Object_UserDefined:'Chaos_Object_UserDefined',Chaos_Max:'Chaos_Max', };
-declare type EInitialVelocityTypeEnum = 'Chaos_Initial_Velocity_User_Defined' | 'Chaos_Initial_Velocity_None' | 'Chaos_Max';
-declare var EInitialVelocityTypeEnum : { Chaos_Initial_Velocity_User_Defined:'Chaos_Initial_Velocity_User_Defined',Chaos_Initial_Velocity_None:'Chaos_Initial_Velocity_None',Chaos_Max:'Chaos_Max', };
-declare type EGeometryCollectionCacheType = 'None' | 'Record' | 'Play' | 'RecordAndPlay' | 'EGeometryCollectionCacheType_MAX';
-declare var EGeometryCollectionCacheType : { None:'None',Record:'Record',Play:'Play',RecordAndPlay:'RecordAndPlay',EGeometryCollectionCacheType_MAX:'EGeometryCollectionCacheType_MAX', };
-declare class SolverCollisionData { 
-	Location: Vector;
-	AccumulatedImpulse: Vector;
-	Normal: Vector;
-	Velocity1: Vector;
-	Velocity2: Vector;
-	AngularVelocity1: Vector;
-	AngularVelocity2: Vector;
-	Mass1: number;
-	Mass2: number;
-	ParticleIndex: number;
-	LevelsetIndex: number;
-	ParticleIndexMesh: number;
-	LevelsetIndexMesh: number;
-	clone() : SolverCollisionData;
-	static C(Other: UObject | any): SolverCollisionData;
-}
-
-declare class SolverBreakingData { 
-	Location: Vector;
-	Velocity: Vector;
-	AngularVelocity: Vector;
-	Mass: number;
-	ParticleIndex: number;
-	ParticleIndexMesh: number;
-	clone() : SolverBreakingData;
-	static C(Other: UObject | any): SolverBreakingData;
-}
-
-declare class RecordedFrame { 
-	Transforms: Transform[];
-	TransformIndices: number[];
-	PreviousTransformIndices: number[];
-	DisabledFlags: boolean[];
-	Collisions: SolverCollisionData[];
-	Breakings: SolverBreakingData[];
-	Trailings: any;
-	Timestamp: number;
-	clone() : RecordedFrame;
-	static C(Other: UObject | any): RecordedFrame;
-}
-
-declare class RecordedTransformTrack { 
-	Records: RecordedFrame[];
-	clone() : RecordedTransformTrack;
-	static C(Other: UObject | any): RecordedTransformTrack;
-}
-
-declare class GeometryCollectionCache extends UObject { 
-	RecordedData: RecordedTransformTrack;
-	SupportedCollection: GeometryCollection;
-	CompatibleCollectionState: Guid;
-	static Load(ResourceName: string): GeometryCollectionCache;
-	static Find(Outer: UObject, ResourceName: string): GeometryCollectionCache;
-	static GetDefaultObject(): GeometryCollectionCache;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionCache;
-	static C(Other: UObject | any): GeometryCollectionCache;
-}
-
-declare class GeomComponentCacheParameters { 
-	CacheMode: EGeometryCollectionCacheType;
-	TargetCache: GeometryCollectionCache;
-	ReverseCacheBeginTime: number;
-	SaveCollisionData: boolean;
-	DoGenerateCollisionData: boolean;
-	CollisionDataSizeMax: number;
-	DoCollisionDataSpatialHash: boolean;
-	CollisionDataSpatialHashRadius: number;
-	MaxCollisionPerCell: number;
-	SaveBreakingData: boolean;
-	DoGenerateBreakingData: boolean;
-	BreakingDataSizeMax: number;
-	DoBreakingDataSpatialHash: boolean;
-	BreakingDataSpatialHashRadius: number;
-	MaxBreakingPerCell: number;
-	SaveTrailingData: boolean;
-	DoGenerateTrailingData: boolean;
-	TrailingDataSizeMax: number;
-	TrailingMinSpeedThreshold: number;
-	TrailingMinVolumeThreshold: number;
-	clone() : GeomComponentCacheParameters;
-	static C(Other: UObject | any): GeomComponentCacheParameters;
-}
-
-declare class ChaosBreakEvent { 
-	Component: PrimitiveComponent;
-	Location: Vector;
-	Velocity: Vector;
-	AngularVelocity: Vector;
-	Mass: number;
-	clone() : ChaosBreakEvent;
-	static C(Other: UObject | any): ChaosBreakEvent;
-}
-
-declare class ChaosRemovalEvent { 
-	Component: PrimitiveComponent;
-	Location: Vector;
-	Mass: number;
-	clone() : ChaosRemovalEvent;
-	static C(Other: UObject | any): ChaosRemovalEvent;
-}
-
-declare class GeometryCollectionRepData { 
-	clone() : GeometryCollectionRepData;
-	static C(Other: UObject | any): GeometryCollectionRepData;
-}
-
-declare type EGeometryCollectionPhysicsTypeEnum = 'Chaos_AngularVelocity' | 'Chaos_DynamicState' | 'Chaos_LinearVelocity' | 'Chaos_InitialAngularVelocity' | 'Chaos_InitialLinearVelocity' | 'Chaos_CollisionGroup' | 'Chaos_LinearForce' | 'Chaos_AngularTorque' | 'Chaos_DisableThreshold' | 'Chaos_SleepingThreshold' | 'Chaos_Max';
-declare var EGeometryCollectionPhysicsTypeEnum : { Chaos_AngularVelocity:'Chaos_AngularVelocity',Chaos_DynamicState:'Chaos_DynamicState',Chaos_LinearVelocity:'Chaos_LinearVelocity',Chaos_InitialAngularVelocity:'Chaos_InitialAngularVelocity',Chaos_InitialLinearVelocity:'Chaos_InitialLinearVelocity',Chaos_CollisionGroup:'Chaos_CollisionGroup',Chaos_LinearForce:'Chaos_LinearForce',Chaos_AngularTorque:'Chaos_AngularTorque',Chaos_DisableThreshold:'Chaos_DisableThreshold',Chaos_SleepingThreshold:'Chaos_SleepingThreshold',Chaos_Max:'Chaos_Max', };
-declare class GeometryCollectionComponent extends MeshComponent { 
-	ChaosSolverActor: ChaosSolverActor;
-	RestCollection: GeometryCollection;
-	InitializationFields: FieldSystemActor[];
-	Simulating: boolean;
-	ObjectType: EObjectStateTypeEnum;
-	bForceMotionBlur: boolean;
-	EnableClustering: boolean;
-	ClusterGroupIndex: number;
-	MaxClusterLevel: number;
-	DamageThreshold: number[];
-	bUseSizeSpecificDamageThreshold: boolean;
-	ClusterConnectionType: EClusterConnectionTypeEnum;
-	CollisionGroup: number;
-	CollisionSampleFraction: number;
-	LinearEtherDrag: number;
-	AngularEtherDrag: number;
-	PhysicalMaterial: ChaosPhysicalMaterial;
-	InitialVelocityType: EInitialVelocityTypeEnum;
-	InitialLinearVelocity: Vector;
-	InitialAngularVelocity: Vector;
-	PhysicalMaterialOverride: PhysicalMaterial;
-	CacheParameters: GeomComponentCacheParameters;
-	RestTransforms: Transform[];
-	NotifyGeometryCollectionPhysicsStateChange: UnrealEngineMulticastDelegate<(FracturedComponent: GeometryCollectionComponent) => void>;
-	NotifyGeometryCollectionPhysicsLoadingStateChange: UnrealEngineMulticastDelegate<(FracturedComponent: GeometryCollectionComponent) => void>;
-	OnChaosBreakEvent: UnrealEngineMulticastDelegate<(BreakEvent: ChaosBreakEvent) => void>;
-	OnChaosRemovalEvent: UnrealEngineMulticastDelegate<(RemovalEvent: ChaosRemovalEvent) => void>;
-	DesiredCacheTime: number;
-	CachePlayback: boolean;
-	OnChaosPhysicsCollision: UnrealEngineMulticastDelegate<(CollisionInfo: ChaosPhysicsCollisionInfo) => void>;
-	bNotifyBreaks: boolean;
-	bNotifyCollisions: boolean;
-	bNotifyTrailing: boolean;
-	bNotifyRemovals: boolean;
-	bStoreVelocities: boolean;
-	bShowBoneColors: boolean;
-	bEnableReplication: boolean;
-	bEnableAbandonAfterLevel: boolean;
-	ReplicationAbandonClusterLevel: number;
-	RepData: GeometryCollectionRepData;
-	SelectedBones: number[];
-	HighlightedBones: number[];
-	DummyBodySetup: BodySetup;
-	EditorActor: Actor;
-	EmbeddedGeometryComponents: InstancedStaticMeshComponent[];
-	static Load(ResourceName: string): GeometryCollectionComponent;
-	static Find(Outer: UObject, ResourceName: string): GeometryCollectionComponent;
-	static GetDefaultObject(): GeometryCollectionComponent;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionComponent;
-	SetNotifyRemovals(bNewNotifyRemovals: boolean): void;
-	SetNotifyBreaks(bNewNotifyBreaks: boolean): void;
-	ReceivePhysicsCollision(CollisionInfo: ChaosPhysicsCollisionInfo): void;
-	OnRep_RepData(OldData: GeometryCollectionRepData): void;
-	NetAbandonCluster(TransformIndex: number): void;
-	ApplyPhysicsField(Enabled: boolean,Target: EGeometryCollectionPhysicsTypeEnum,MetaData: FieldSystemMetaData,Field: FieldNodeBase): void;
-	ApplyKinematicField(Radius: number,position: Vector): void;
-	static C(Other: UObject | any): GeometryCollectionComponent;
-}
-
-declare class GeometryCollectionDebugDrawWarningMessage { 
-	clone() : GeometryCollectionDebugDrawWarningMessage;
-	static C(Other: UObject | any): GeometryCollectionDebugDrawWarningMessage;
-}
-
-declare class GeometryCollectionDebugDrawActorSelectedRigidBody { 
-	ID: number;
-	Solver: ChaosSolverActor;
-	GeometryCollection: GeometryCollectionActor;
-	clone() : GeometryCollectionDebugDrawActorSelectedRigidBody;
-	static C(Other: UObject | any): GeometryCollectionDebugDrawActorSelectedRigidBody;
-}
-
-declare type EGeometryCollectionDebugDrawActorHideGeometry = 'HideNone' | 'HideWithCollision' | 'HideSelected' | 'HideWholeCollection' | 'HideAll' | 'EGeometryCollectionDebugDrawActorHideGeometry_MAX';
-declare var EGeometryCollectionDebugDrawActorHideGeometry : { HideNone:'HideNone',HideWithCollision:'HideWithCollision',HideSelected:'HideSelected',HideWholeCollection:'HideWholeCollection',HideAll:'HideAll',EGeometryCollectionDebugDrawActorHideGeometry_MAX:'EGeometryCollectionDebugDrawActorHideGeometry_MAX', };
-declare class GeometryCollectionDebugDrawActor extends Actor { 
-	WarningMessage: GeometryCollectionDebugDrawWarningMessage;
-	SelectedRigidBody: GeometryCollectionDebugDrawActorSelectedRigidBody;
-	bDebugDrawWholeCollection: boolean;
-	bDebugDrawHierarchy: boolean;
-	bDebugDrawClustering: boolean;
-	HideGeometry: EGeometryCollectionDebugDrawActorHideGeometry;
-	bShowRigidBodyId: boolean;
-	bShowRigidBodyCollision: boolean;
-	bCollisionAtOrigin: boolean;
-	bShowRigidBodyTransform: boolean;
-	bShowRigidBodyInertia: boolean;
-	bShowRigidBodyVelocity: boolean;
-	bShowRigidBodyForce: boolean;
-	bShowRigidBodyInfos: boolean;
-	bShowTransformIndex: boolean;
-	bShowTransform: boolean;
-	bShowParent: boolean;
-	bShowLevel: boolean;
-	bShowConnectivityEdges: boolean;
-	bShowGeometryIndex: boolean;
-	bShowGeometryTransform: boolean;
-	bShowBoundingBox: boolean;
-	bShowFaces: boolean;
-	bShowFaceIndices: boolean;
-	bShowFaceNormals: boolean;
-	bShowSingleFace: boolean;
-	SingleFaceIndex: number;
-	bShowVertices: boolean;
-	bShowVertexIndices: boolean;
-	bShowVertexNormals: boolean;
-	bUseActiveVisualization: boolean;
-	PointThickness: number;
-	LineThickness: number;
-	bTextShadow: boolean;
-	TextScale: number;
-	NormalScale: number;
-	AxisScale: number;
-	ArrowScale: number;
-	RigidBodyIdColor: Color;
-	RigidBodyTransformScale: number;
-	RigidBodyCollisionColor: Color;
-	RigidBodyInertiaColor: Color;
-	RigidBodyVelocityColor: Color;
-	RigidBodyForceColor: Color;
-	RigidBodyInfoColor: Color;
-	TransformIndexColor: Color;
-	TransformScale: number;
-	LevelColor: Color;
-	ParentColor: Color;
-	ConnectivityEdgeThickness: number;
-	GeometryIndexColor: Color;
-	GeometryTransformScale: number;
-	BoundingBoxColor: Color;
-	FaceColor: Color;
-	FaceIndexColor: Color;
-	FaceNormalColor: Color;
-	SingleFaceColor: Color;
-	VertexColor: Color;
-	VertexIndexColor: Color;
-	VertexNormalColor: Color;
-	SpriteComponent: BillboardComponent;
-	static GetDefaultObject(): GeometryCollectionDebugDrawActor;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionDebugDrawActor;
-	static C(Other: UObject | any): GeometryCollectionDebugDrawActor;
-}
-
-declare class GeometryCollectionRenderLevelSetActor extends Actor { 
-	TargetVolumeTexture: VolumeTexture;
-	RayMarchMaterial: Material;
-	SurfaceTolerance: number;
-	Isovalue: number;
-	Enabled: boolean;
-	RenderVolumeBoundingBox: boolean;
-	static GetDefaultObject(): GeometryCollectionRenderLevelSetActor;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionRenderLevelSetActor;
-	static C(Other: UObject | any): GeometryCollectionRenderLevelSetActor;
-}
-
-declare class GeometryCollectionDebugDrawComponent extends ActorComponent { 
-	GeometryCollectionDebugDrawActor: GeometryCollectionDebugDrawActor;
-	GeometryCollectionRenderLevelSetActor: GeometryCollectionRenderLevelSetActor;
-	static Load(ResourceName: string): GeometryCollectionDebugDrawComponent;
-	static Find(Outer: UObject, ResourceName: string): GeometryCollectionDebugDrawComponent;
-	static GetDefaultObject(): GeometryCollectionDebugDrawComponent;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionDebugDrawComponent;
-	static C(Other: UObject | any): GeometryCollectionDebugDrawComponent;
-}
-
-declare class GeometryCollectionActor extends Actor { 
-	GeometryCollectionComponent: GeometryCollectionComponent;
-	GeometryCollectionDebugDrawComponent: GeometryCollectionDebugDrawComponent;
-	static GetDefaultObject(): GeometryCollectionActor;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionActor;
-	RaycastSingle(Start: Vector,End: Vector,OutHit?: HitResult): {OutHit: HitResult, $: boolean};
-	static C(Other: UObject | any): GeometryCollectionActor;
-}
-
-declare class ChaosDestructionListener extends SceneComponent { 
-	bIsCollisionEventListeningEnabled: boolean;
-	bIsBreakingEventListeningEnabled: boolean;
-	bIsTrailingEventListeningEnabled: boolean;
-	bIsRemovalEventListeningEnabled: boolean;
-	CollisionEventRequestSettings: ChaosCollisionEventRequestSettings;
-	BreakingEventRequestSettings: ChaosBreakingEventRequestSettings;
-	TrailingEventRequestSettings: ChaosTrailingEventRequestSettings;
-	RemovalEventRequestSettings: ChaosRemovalEventRequestSettings;
-	ChaosSolverActors: any;
-	GeometryCollectionActors: any;
-	OnCollisionEvents: UnrealEngineMulticastDelegate<(CollisionEvents: ChaosCollisionEventData[]) => void>;
-	OnBreakingEvents: UnrealEngineMulticastDelegate<(BreakingEvents: ChaosBreakingEventData[]) => void>;
-	OnTrailingEvents: UnrealEngineMulticastDelegate<(TrailingEvents: ChaosTrailingEventData[]) => void>;
-	OnRemovalEvents: UnrealEngineMulticastDelegate<(RemovalEvents: ChaosRemovalEventData[]) => void>;
-	static Load(ResourceName: string): ChaosDestructionListener;
-	static Find(Outer: UObject, ResourceName: string): ChaosDestructionListener;
-	static GetDefaultObject(): ChaosDestructionListener;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ChaosDestructionListener;
-	SortTrailingEvents(TrailingEvents?: ChaosTrailingEventData[],SortMethod?: EChaosTrailingSortMethod): {TrailingEvents: ChaosTrailingEventData[]};
-	SortRemovalEvents(RemovalEvents?: ChaosRemovalEventData[],SortMethod?: EChaosRemovalSortMethod): {RemovalEvents: ChaosRemovalEventData[]};
-	SortCollisionEvents(CollisionEvents?: ChaosCollisionEventData[],SortMethod?: EChaosCollisionSortMethod): {CollisionEvents: ChaosCollisionEventData[]};
-	SortBreakingEvents(BreakingEvents?: ChaosBreakingEventData[],SortMethod?: EChaosBreakingSortMethod): {BreakingEvents: ChaosBreakingEventData[]};
-	SetTrailingEventRequestSettings(InSettings: ChaosTrailingEventRequestSettings): void;
-	SetTrailingEventEnabled(bIsEnabled: boolean): void;
-	SetRemovalEventRequestSettings(InSettings: ChaosRemovalEventRequestSettings): void;
-	SetRemovalEventEnabled(bIsEnabled: boolean): void;
-	SetCollisionEventRequestSettings(InSettings: ChaosCollisionEventRequestSettings): void;
-	SetCollisionEventEnabled(bIsEnabled: boolean): void;
-	SetBreakingEventRequestSettings(InSettings: ChaosBreakingEventRequestSettings): void;
-	SetBreakingEventEnabled(bIsEnabled: boolean): void;
-	RemoveGeometryCollectionActor(GeometryCollectionActor: GeometryCollectionActor): void;
-	RemoveChaosSolverActor(ChaosSolverActor: ChaosSolverActor): void;
-	IsEventListening(): boolean;
-	AddGeometryCollectionActor(GeometryCollectionActor: GeometryCollectionActor): void;
-	AddChaosSolverActor(ChaosSolverActor: ChaosSolverActor): void;
-	static C(Other: UObject | any): ChaosDestructionListener;
-}
-
-declare class ActorFactoryGeometryCollection extends ActorFactory { 
-	static Load(ResourceName: string): ActorFactoryGeometryCollection;
-	static Find(Outer: UObject, ResourceName: string): ActorFactoryGeometryCollection;
-	static GetDefaultObject(): ActorFactoryGeometryCollection;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ActorFactoryGeometryCollection;
-	static C(Other: UObject | any): ActorFactoryGeometryCollection;
-}
-
-declare class GeometryCollectionCacheFactory extends Factory { 
-	TargetCollection: GeometryCollection;
-	static Load(ResourceName: string): GeometryCollectionCacheFactory;
-	static Find(Outer: UObject, ResourceName: string): GeometryCollectionCacheFactory;
-	static GetDefaultObject(): GeometryCollectionCacheFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionCacheFactory;
-	static C(Other: UObject | any): GeometryCollectionCacheFactory;
-}
-
-declare class GeometryCollectionFactory extends Factory { 
-	static Load(ResourceName: string): GeometryCollectionFactory;
-	static Find(Outer: UObject, ResourceName: string): GeometryCollectionFactory;
-	static GetDefaultObject(): GeometryCollectionFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionFactory;
-	static C(Other: UObject | any): GeometryCollectionFactory;
-}
-
-declare class GeometryCollectionThumbnailRenderer extends DefaultSizedThumbnailRenderer { 
-	static Load(ResourceName: string): GeometryCollectionThumbnailRenderer;
-	static Find(Outer: UObject, ResourceName: string): GeometryCollectionThumbnailRenderer;
-	static GetDefaultObject(): GeometryCollectionThumbnailRenderer;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionThumbnailRenderer;
-	static C(Other: UObject | any): GeometryCollectionThumbnailRenderer;
 }
 
 declare class DynamicMeshGenerator extends UObject { 
@@ -4944,941 +4247,6 @@ declare class WeightMapSetProperties extends InteractiveToolPropertySet {
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): WeightMapSetProperties;
 	GetWeightMapsFunc(): string[];
 	static C(Other: UObject | any): WeightMapSetProperties;
-}
-
-declare class FractureEditorMode extends BaseLegacyWidgetEdMode { 
-	static Load(ResourceName: string): FractureEditorMode;
-	static Find(Outer: UObject, ResourceName: string): FractureEditorMode;
-	static GetDefaultObject(): FractureEditorMode;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureEditorMode;
-	static C(Other: UObject | any): FractureEditorMode;
-}
-
-declare class FractureModeCustomSectionColor { 
-	SectionName: string;
-	Color: LinearColor;
-	clone() : FractureModeCustomSectionColor;
-	static C(Other: UObject | any): FractureModeCustomSectionColor;
-}
-
-declare class FractureModeCustomToolColor { 
-	ToolName: string;
-	Color: LinearColor;
-	clone() : FractureModeCustomToolColor;
-	static C(Other: UObject | any): FractureModeCustomToolColor;
-}
-
-declare class FractureModeCustomizationSettings extends DeveloperSettings { 
-	ToolSectionOrder: string[];
-	ToolFavorites: string[];
-	SectionColors: FractureModeCustomSectionColor[];
-	ToolColors: FractureModeCustomToolColor[];
-	static Load(ResourceName: string): FractureModeCustomizationSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureModeCustomizationSettings;
-	static GetDefaultObject(): FractureModeCustomizationSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureModeCustomizationSettings;
-	static C(Other: UObject | any): FractureModeCustomizationSettings;
-}
-
-declare class FractureSettings extends UObject { 
-	ExplodeAmount: number;
-	FractureLevel: number;
-	bHideUnselected: boolean;
-	static Load(ResourceName: string): FractureSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureSettings;
-	static GetDefaultObject(): FractureSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureSettings;
-	static C(Other: UObject | any): FractureSettings;
-}
-
-declare class FractureActionTool extends UObject { 
-	static Load(ResourceName: string): FractureActionTool;
-	static Find(Outer: UObject, ResourceName: string): FractureActionTool;
-	static GetDefaultObject(): FractureActionTool;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureActionTool;
-	static C(Other: UObject | any): FractureActionTool;
-}
-
-declare class FractureModalTool extends FractureActionTool { 
-	VisualizedCollections: GeometryCollectionComponent[];
-	static Load(ResourceName: string): FractureModalTool;
-	static Find(Outer: UObject, ResourceName: string): FractureModalTool;
-	static GetDefaultObject(): FractureModalTool;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureModalTool;
-	static C(Other: UObject | any): FractureModalTool;
-}
-
-declare class FractureToolSettings extends UObject { 
-	OwnerTool: FractureModalTool;
-	static Load(ResourceName: string): FractureToolSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureToolSettings;
-	static GetDefaultObject(): FractureToolSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSettings;
-	static C(Other: UObject | any): FractureToolSettings;
-}
-
-declare class FractureInteractiveTool extends FractureModalTool { 
-	static Load(ResourceName: string): FractureInteractiveTool;
-	static Find(Outer: UObject, ResourceName: string): FractureInteractiveTool;
-	static GetDefaultObject(): FractureInteractiveTool;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureInteractiveTool;
-	static C(Other: UObject | any): FractureInteractiveTool;
-}
-
-declare type EFractureAutoClusterMode = 'BoundingBox' | 'Proximity' | 'Distance' | 'Voronoi' | 'EFractureAutoClusterMode_MAX';
-declare var EFractureAutoClusterMode : { BoundingBox:'BoundingBox',Proximity:'Proximity',Distance:'Distance',Voronoi:'Voronoi',EFractureAutoClusterMode_MAX:'EFractureAutoClusterMode_MAX', };
-declare class FractureAutoClusterSettings extends FractureToolSettings { 
-	AutoClusterMode: EFractureAutoClusterMode;
-	SiteCount: any;
-	bEnforceConnectivity: boolean;
-	static Load(ResourceName: string): FractureAutoClusterSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureAutoClusterSettings;
-	static GetDefaultObject(): FractureAutoClusterSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureAutoClusterSettings;
-	static C(Other: UObject | any): FractureAutoClusterSettings;
-}
-
-declare class FractureToolAutoCluster extends FractureModalTool { 
-	AutoClusterSettings: FractureAutoClusterSettings;
-	static Load(ResourceName: string): FractureToolAutoCluster;
-	static Find(Outer: UObject, ResourceName: string): FractureToolAutoCluster;
-	static GetDefaultObject(): FractureToolAutoCluster;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolAutoCluster;
-	static C(Other: UObject | any): FractureToolAutoCluster;
-}
-
-declare type EFractureBrickBond = 'Stretcher' | 'Stack' | 'English' | 'Header' | 'Flemish' | 'EFractureBrickBond_MAX';
-declare var EFractureBrickBond : { Stretcher:'Stretcher',Stack:'Stack',English:'English',Header:'Header',Flemish:'Flemish',EFractureBrickBond_MAX:'EFractureBrickBond_MAX', };
-declare class FractureBrickSettings extends FractureToolSettings { 
-	Bond: EFractureBrickBond;
-	BrickLength: number;
-	BrickHeight: number;
-	BrickDepth: number;
-	static Load(ResourceName: string): FractureBrickSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureBrickSettings;
-	static GetDefaultObject(): FractureBrickSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureBrickSettings;
-	static C(Other: UObject | any): FractureBrickSettings;
-}
-
-declare class FractureCutterSettings extends FractureToolSettings { 
-	RandomSeed: number;
-	ChanceToFracture: number;
-	bGroupFracture: boolean;
-	bGroupFractureToggleEnabled: boolean;
-	bDrawSites: boolean;
-	bDrawSitesToggleEnabled: boolean;
-	bDrawDiagram: boolean;
-	Grout: number;
-	Amplitude: number;
-	Frequency: number;
-	Persistence: number;
-	Lacunarity: number;
-	OctaveNumber: number;
-	PointSpacing: number;
-	static Load(ResourceName: string): FractureCutterSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureCutterSettings;
-	static GetDefaultObject(): FractureCutterSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureCutterSettings;
-	static C(Other: UObject | any): FractureCutterSettings;
-}
-
-declare class FractureCollisionSettings extends FractureToolSettings { 
-	bAddSamplesForCollision: boolean;
-	PointSpacing: number;
-	static Load(ResourceName: string): FractureCollisionSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureCollisionSettings;
-	static GetDefaultObject(): FractureCollisionSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureCollisionSettings;
-	static C(Other: UObject | any): FractureCollisionSettings;
-}
-
-declare class FractureToolCutterBase extends FractureInteractiveTool { 
-	CutterSettings: FractureCutterSettings;
-	CollisionSettings: FractureCollisionSettings;
-	static Load(ResourceName: string): FractureToolCutterBase;
-	static Find(Outer: UObject, ResourceName: string): FractureToolCutterBase;
-	static GetDefaultObject(): FractureToolCutterBase;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolCutterBase;
-	static C(Other: UObject | any): FractureToolCutterBase;
-}
-
-declare class FractureToolBrick extends FractureToolCutterBase { 
-	BrickSettings: FractureBrickSettings;
-	static Load(ResourceName: string): FractureToolBrick;
-	static Find(Outer: UObject, ResourceName: string): FractureToolBrick;
-	static GetDefaultObject(): FractureToolBrick;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolBrick;
-	static C(Other: UObject | any): FractureToolBrick;
-}
-
-declare class FractureClusterCutterSettings extends FractureToolSettings { 
-	NumberClustersMin: number;
-	NumberClustersMax: number;
-	SitesPerClusterMin: number;
-	SitesPerClusterMax: number;
-	ClusterRadiusFractionMin: number;
-	ClusterRadiusFractionMax: number;
-	ClusterRadiusOffset: number;
-	static Load(ResourceName: string): FractureClusterCutterSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureClusterCutterSettings;
-	static GetDefaultObject(): FractureClusterCutterSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureClusterCutterSettings;
-	static C(Other: UObject | any): FractureClusterCutterSettings;
-}
-
-declare class FractureToolVoronoiCutterBase extends FractureToolCutterBase { 
-	VoronoiLineSets: LineSetComponent[];
-	static Load(ResourceName: string): FractureToolVoronoiCutterBase;
-	static Find(Outer: UObject, ResourceName: string): FractureToolVoronoiCutterBase;
-	static GetDefaultObject(): FractureToolVoronoiCutterBase;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolVoronoiCutterBase;
-	static C(Other: UObject | any): FractureToolVoronoiCutterBase;
-}
-
-declare class FractureToolClusterCutter extends FractureToolVoronoiCutterBase { 
-	ClusterSettings: FractureClusterCutterSettings;
-	static Load(ResourceName: string): FractureToolClusterCutter;
-	static Find(Outer: UObject, ResourceName: string): FractureToolClusterCutter;
-	static GetDefaultObject(): FractureToolClusterCutter;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolClusterCutter;
-	static C(Other: UObject | any): FractureToolClusterCutter;
-}
-
-declare class FractureToolFlattenAll extends FractureActionTool { 
-	static Load(ResourceName: string): FractureToolFlattenAll;
-	static Find(Outer: UObject, ResourceName: string): FractureToolFlattenAll;
-	static GetDefaultObject(): FractureToolFlattenAll;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolFlattenAll;
-	static C(Other: UObject | any): FractureToolFlattenAll;
-}
-
-declare class FractureToolCluster extends FractureActionTool { 
-	static Load(ResourceName: string): FractureToolCluster;
-	static Find(Outer: UObject, ResourceName: string): FractureToolCluster;
-	static GetDefaultObject(): FractureToolCluster;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolCluster;
-	static C(Other: UObject | any): FractureToolCluster;
-}
-
-declare class FractureToolUncluster extends FractureActionTool { 
-	static Load(ResourceName: string): FractureToolUncluster;
-	static Find(Outer: UObject, ResourceName: string): FractureToolUncluster;
-	static GetDefaultObject(): FractureToolUncluster;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolUncluster;
-	static C(Other: UObject | any): FractureToolUncluster;
-}
-
-declare class FractureToolMoveUp extends FractureActionTool { 
-	static Load(ResourceName: string): FractureToolMoveUp;
-	static Find(Outer: UObject, ResourceName: string): FractureToolMoveUp;
-	static GetDefaultObject(): FractureToolMoveUp;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolMoveUp;
-	static C(Other: UObject | any): FractureToolMoveUp;
-}
-
-declare class FractureToolClusterMerge extends FractureActionTool { 
-	static Load(ResourceName: string): FractureToolClusterMerge;
-	static Find(Outer: UObject, ResourceName: string): FractureToolClusterMerge;
-	static GetDefaultObject(): FractureToolClusterMerge;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolClusterMerge;
-	static C(Other: UObject | any): FractureToolClusterMerge;
-}
-
-declare class FractureClusterMagnetSettings extends FractureToolSettings { 
-	Iterations: any;
-	static Load(ResourceName: string): FractureClusterMagnetSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureClusterMagnetSettings;
-	static GetDefaultObject(): FractureClusterMagnetSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureClusterMagnetSettings;
-	static C(Other: UObject | any): FractureClusterMagnetSettings;
-}
-
-declare class FractureToolClusterMagnet extends FractureModalTool { 
-	ClusterMagnetSettings: FractureClusterMagnetSettings;
-	static Load(ResourceName: string): FractureToolClusterMagnet;
-	static Find(Outer: UObject, ResourceName: string): FractureToolClusterMagnet;
-	static GetDefaultObject(): FractureToolClusterMagnet;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolClusterMagnet;
-	static C(Other: UObject | any): FractureToolClusterMagnet;
-}
-
-declare class FractureConvertSettings extends FractureToolSettings { 
-	bPromptForBaseName: boolean;
-	bPerBone: boolean;
-	bCenterPivots: boolean;
-	bPlaceInWorld: boolean;
-	bSelectNewActors: boolean;
-	static Load(ResourceName: string): FractureConvertSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureConvertSettings;
-	static GetDefaultObject(): FractureConvertSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureConvertSettings;
-	static C(Other: UObject | any): FractureConvertSettings;
-}
-
-declare class FractureToolConvert extends FractureModalTool { 
-	ConvertSettings: FractureConvertSettings;
-	static Load(ResourceName: string): FractureToolConvert;
-	static Find(Outer: UObject, ResourceName: string): FractureToolConvert;
-	static GetDefaultObject(): FractureToolConvert;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolConvert;
-	static C(Other: UObject | any): FractureToolConvert;
-}
-
-declare class FractureConvexSettings extends FractureToolSettings { 
-	FractionAllowRemove: any;
-	CanExceedFraction: any;
-	SimplificationDistanceThreshold: any;
-	static Load(ResourceName: string): FractureConvexSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureConvexSettings;
-	static GetDefaultObject(): FractureConvexSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureConvexSettings;
-	DeleteFromSelected(): void;
-	ClearCustomConvex(): void;
-	static C(Other: UObject | any): FractureConvexSettings;
-}
-
-declare class FractureToolConvex extends FractureModalTool { 
-	ConvexSettings: FractureConvexSettings;
-	static Load(ResourceName: string): FractureToolConvex;
-	static Find(Outer: UObject, ResourceName: string): FractureToolConvex;
-	static GetDefaultObject(): FractureToolConvex;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolConvex;
-	static C(Other: UObject | any): FractureToolConvex;
-}
-
-declare type EVoronoiPattern = 'Centered' | 'Uniform' | 'Grid' | 'MeshVertices' | 'SelectedBones' | 'EVoronoiPattern_MAX';
-declare var EVoronoiPattern : { Centered:'Centered',Uniform:'Uniform',Grid:'Grid',MeshVertices:'MeshVertices',SelectedBones:'SelectedBones',EVoronoiPattern_MAX:'EVoronoiPattern_MAX', };
-declare type EDownsamplingMode = 'Random' | 'UniformSpacing' | 'KeepSharp' | 'EDownsamplingMode_MAX';
-declare var EDownsamplingMode : { Random:'Random',UniformSpacing:'UniformSpacing',KeepSharp:'KeepSharp',EDownsamplingMode_MAX:'EDownsamplingMode_MAX', };
-declare class FractureCustomVoronoiSettings extends FractureToolSettings { 
-	VoronoiPattern: EVoronoiPattern;
-	NormalOffset: number;
-	Variability: number;
-	SitesToAdd: number;
-	GridX: number;
-	GridY: number;
-	GridZ: number;
-	SkipFraction: number;
-	SkipMode: EDownsamplingMode;
-	ReferenceMesh: any;
-	bStartAtActor: boolean;
-	static Load(ResourceName: string): FractureCustomVoronoiSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureCustomVoronoiSettings;
-	static GetDefaultObject(): FractureCustomVoronoiSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureCustomVoronoiSettings;
-	UnfreezeSites(): void;
-	RegenerateLiveSites(): void;
-	FreezeLiveSites(): void;
-	ClearFrozenSites(): void;
-	static C(Other: UObject | any): FractureCustomVoronoiSettings;
-}
-
-declare class FractureTransformGizmoSettings extends FractureToolSettings { 
-	bUseGizmo: boolean;
-	bCenterOnSelection: boolean;
-	bShowUseGizmoOption: boolean;
-	TransformGizmo: CombinedTransformGizmo;
-	TransformProxy: TransformProxy;
-	AttachedCutter: FractureToolCutterBase;
-	UsedToolsContext: InteractiveToolsContext;
-	static Load(ResourceName: string): FractureTransformGizmoSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureTransformGizmoSettings;
-	static GetDefaultObject(): FractureTransformGizmoSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureTransformGizmoSettings;
-	static C(Other: UObject | any): FractureTransformGizmoSettings;
-}
-
-declare class FractureToolCustomVoronoi extends FractureToolVoronoiCutterBase { 
-	CustomVoronoiSettings: FractureCustomVoronoiSettings;
-	GizmoSettings: FractureTransformGizmoSettings;
-	static Load(ResourceName: string): FractureToolCustomVoronoi;
-	static Find(Outer: UObject, ResourceName: string): FractureToolCustomVoronoi;
-	static GetDefaultObject(): FractureToolCustomVoronoi;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolCustomVoronoi;
-	static C(Other: UObject | any): FractureToolCustomVoronoi;
-}
-
-declare class FractureToolDeleteBranch extends FractureActionTool { 
-	static Load(ResourceName: string): FractureToolDeleteBranch;
-	static Find(Outer: UObject, ResourceName: string): FractureToolDeleteBranch;
-	static GetDefaultObject(): FractureToolDeleteBranch;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolDeleteBranch;
-	static C(Other: UObject | any): FractureToolDeleteBranch;
-}
-
-declare class FractureToolHide extends FractureActionTool { 
-	static Load(ResourceName: string): FractureToolHide;
-	static Find(Outer: UObject, ResourceName: string): FractureToolHide;
-	static GetDefaultObject(): FractureToolHide;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolHide;
-	static C(Other: UObject | any): FractureToolHide;
-}
-
-declare class FractureToolUnhide extends FractureActionTool { 
-	static Load(ResourceName: string): FractureToolUnhide;
-	static Find(Outer: UObject, ResourceName: string): FractureToolUnhide;
-	static GetDefaultObject(): FractureToolUnhide;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolUnhide;
-	static C(Other: UObject | any): FractureToolUnhide;
-}
-
-declare class FractureToolValidate extends FractureActionTool { 
-	static Load(ResourceName: string): FractureToolValidate;
-	static Find(Outer: UObject, ResourceName: string): FractureToolValidate;
-	static GetDefaultObject(): FractureToolValidate;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolValidate;
-	static C(Other: UObject | any): FractureToolValidate;
-}
-
-declare class FractureToolAddEmbeddedGeometry extends FractureActionTool { 
-	static Load(ResourceName: string): FractureToolAddEmbeddedGeometry;
-	static Find(Outer: UObject, ResourceName: string): FractureToolAddEmbeddedGeometry;
-	static GetDefaultObject(): FractureToolAddEmbeddedGeometry;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolAddEmbeddedGeometry;
-	static C(Other: UObject | any): FractureToolAddEmbeddedGeometry;
-}
-
-declare class FractureToolAutoEmbedGeometry extends FractureActionTool { 
-	static Load(ResourceName: string): FractureToolAutoEmbedGeometry;
-	static Find(Outer: UObject, ResourceName: string): FractureToolAutoEmbedGeometry;
-	static GetDefaultObject(): FractureToolAutoEmbedGeometry;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolAutoEmbedGeometry;
-	static C(Other: UObject | any): FractureToolAutoEmbedGeometry;
-}
-
-declare class FractureToolFlushEmbeddedGeometrySettings extends FractureToolSettings { 
-	bExtractAsStaticMeshActors: boolean;
-	static Load(ResourceName: string): FractureToolFlushEmbeddedGeometrySettings;
-	static Find(Outer: UObject, ResourceName: string): FractureToolFlushEmbeddedGeometrySettings;
-	static GetDefaultObject(): FractureToolFlushEmbeddedGeometrySettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolFlushEmbeddedGeometrySettings;
-	static C(Other: UObject | any): FractureToolFlushEmbeddedGeometrySettings;
-}
-
-declare class FractureToolFlushEmbeddedGeometry extends FractureModalTool { 
-	FlushEmbeddedGeometrySettings: FractureToolFlushEmbeddedGeometrySettings;
-	static Load(ResourceName: string): FractureToolFlushEmbeddedGeometry;
-	static Find(Outer: UObject, ResourceName: string): FractureToolFlushEmbeddedGeometry;
-	static GetDefaultObject(): FractureToolFlushEmbeddedGeometry;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolFlushEmbeddedGeometry;
-	static C(Other: UObject | any): FractureToolFlushEmbeddedGeometry;
-}
-
-declare type ENeighborSelectionMethod = 'LargestNeighbor' | 'NearestCenter' | 'ENeighborSelectionMethod_MAX';
-declare var ENeighborSelectionMethod : { LargestNeighbor:'LargestNeighbor',NearestCenter:'NearestCenter',ENeighborSelectionMethod_MAX:'ENeighborSelectionMethod_MAX', };
-declare type EGeometrySelectionMethod = 'VolumeCubeRoot' | 'RelativeVolume' | 'EGeometrySelectionMethod_MAX';
-declare var EGeometrySelectionMethod : { VolumeCubeRoot:'VolumeCubeRoot',RelativeVolume:'RelativeVolume',EGeometrySelectionMethod_MAX:'EGeometrySelectionMethod_MAX', };
-declare class FractureTinyGeoSettings extends FractureToolSettings { 
-	NeighborSelection: ENeighborSelectionMethod;
-	bAlsoMergeSelected: boolean;
-	SelectionMethod: EGeometrySelectionMethod;
-	MinVolumeCubeRoot: any;
-	RelativeVolume: any;
-	static Load(ResourceName: string): FractureTinyGeoSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureTinyGeoSettings;
-	static GetDefaultObject(): FractureTinyGeoSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureTinyGeoSettings;
-	static C(Other: UObject | any): FractureTinyGeoSettings;
-}
-
-declare class FractureToolFixTinyGeo extends FractureToolCutterBase { 
-	TinyGeoSettings: FractureTinyGeoSettings;
-	static Load(ResourceName: string): FractureToolFixTinyGeo;
-	static Find(Outer: UObject, ResourceName: string): FractureToolFixTinyGeo;
-	static GetDefaultObject(): FractureToolFixTinyGeo;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolFixTinyGeo;
-	static C(Other: UObject | any): FractureToolFixTinyGeo;
-}
-
-declare class FractureToolGenerateAsset extends FractureActionTool { 
-	AssetPath: string;
-	static Load(ResourceName: string): FractureToolGenerateAsset;
-	static Find(Outer: UObject, ResourceName: string): FractureToolGenerateAsset;
-	static GetDefaultObject(): FractureToolGenerateAsset;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolGenerateAsset;
-	static C(Other: UObject | any): FractureToolGenerateAsset;
-}
-
-declare class FractureToolResetAsset extends FractureToolGenerateAsset { 
-	static Load(ResourceName: string): FractureToolResetAsset;
-	static Find(Outer: UObject, ResourceName: string): FractureToolResetAsset;
-	static GetDefaultObject(): FractureToolResetAsset;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolResetAsset;
-	static C(Other: UObject | any): FractureToolResetAsset;
-}
-
-declare type EMeshCutDistribution = 'SingleCut' | 'UniformRandom' | 'Grid' | 'EMeshCutDistribution_MAX';
-declare var EMeshCutDistribution : { SingleCut:'SingleCut',UniformRandom:'UniformRandom',Grid:'Grid',EMeshCutDistribution_MAX:'EMeshCutDistribution_MAX', };
-declare class FractureMeshCutSettings extends FractureToolSettings { 
-	CuttingActor: any;
-	CutDistribution: EMeshCutDistribution;
-	NumberToScatter: number;
-	GridX: number;
-	GridY: number;
-	GridZ: number;
-	Variability: number;
-	MinScaleFactor: number;
-	MaxScaleFactor: number;
-	bRandomOrientation: boolean;
-	RollRange: number;
-	PitchRange: number;
-	YawRange: number;
-	static Load(ResourceName: string): FractureMeshCutSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureMeshCutSettings;
-	static GetDefaultObject(): FractureMeshCutSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureMeshCutSettings;
-	static C(Other: UObject | any): FractureMeshCutSettings;
-}
-
-declare class FractureToolMeshCut extends FractureToolCutterBase { 
-	MeshCutSettings: FractureMeshCutSettings;
-	static Load(ResourceName: string): FractureToolMeshCut;
-	static Find(Outer: UObject, ResourceName: string): FractureToolMeshCut;
-	static GetDefaultObject(): FractureToolMeshCut;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolMeshCut;
-	static C(Other: UObject | any): FractureToolMeshCut;
-}
-
-declare class FracturePlaneCutSettings extends FractureToolSettings { 
-	NumberPlanarCuts: number;
-	bCanCutWithMultiplePlanes: boolean;
-	static Load(ResourceName: string): FracturePlaneCutSettings;
-	static Find(Outer: UObject, ResourceName: string): FracturePlaneCutSettings;
-	static GetDefaultObject(): FracturePlaneCutSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FracturePlaneCutSettings;
-	static C(Other: UObject | any): FracturePlaneCutSettings;
-}
-
-declare class FractureToolPlaneCut extends FractureToolCutterBase { 
-	PlaneCutSettings: FracturePlaneCutSettings;
-	GizmoSettings: FractureTransformGizmoSettings;
-	static Load(ResourceName: string): FractureToolPlaneCut;
-	static Find(Outer: UObject, ResourceName: string): FractureToolPlaneCut;
-	static GetDefaultObject(): FractureToolPlaneCut;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolPlaneCut;
-	static C(Other: UObject | any): FractureToolPlaneCut;
-}
-
-declare type EDynamicStateOverrideEnum = 'NoOverride' | 'Sleeping' | 'Kinematic' | 'Static' | 'EDynamicStateOverrideEnum_MAX';
-declare var EDynamicStateOverrideEnum : { NoOverride:'NoOverride',Sleeping:'Sleeping',Kinematic:'Kinematic',Static:'Static',EDynamicStateOverrideEnum_MAX:'EDynamicStateOverrideEnum_MAX', };
-declare class FractureInitialDynamicStateSettings extends FractureToolSettings { 
-	InitialDynamicState: EDynamicStateOverrideEnum;
-	static Load(ResourceName: string): FractureInitialDynamicStateSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureInitialDynamicStateSettings;
-	static GetDefaultObject(): FractureInitialDynamicStateSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureInitialDynamicStateSettings;
-	static C(Other: UObject | any): FractureInitialDynamicStateSettings;
-}
-
-declare class FractureToolSetInitialDynamicState extends FractureModalTool { 
-	StateSettings: FractureInitialDynamicStateSettings;
-	static Load(ResourceName: string): FractureToolSetInitialDynamicState;
-	static Find(Outer: UObject, ResourceName: string): FractureToolSetInitialDynamicState;
-	static GetDefaultObject(): FractureToolSetInitialDynamicState;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSetInitialDynamicState;
-	static C(Other: UObject | any): FractureToolSetInitialDynamicState;
-}
-
-declare class FractureRadialSettings extends FractureToolSettings { 
-	Center: Vector;
-	Normal: Vector;
-	bPositionedByGizmo: boolean;
-	Radius: number;
-	AngularSteps: number;
-	RadialSteps: number;
-	AngleOffset: number;
-	Variability: number;
-	static Load(ResourceName: string): FractureRadialSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureRadialSettings;
-	static GetDefaultObject(): FractureRadialSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureRadialSettings;
-	static C(Other: UObject | any): FractureRadialSettings;
-}
-
-declare class FractureToolRadial extends FractureToolVoronoiCutterBase { 
-	RadialSettings: FractureRadialSettings;
-	GizmoSettings: FractureTransformGizmoSettings;
-	static Load(ResourceName: string): FractureToolRadial;
-	static Find(Outer: UObject, ResourceName: string): FractureToolRadial;
-	static GetDefaultObject(): FractureToolRadial;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolRadial;
-	static C(Other: UObject | any): FractureToolRadial;
-}
-
-declare class FractureRecomputeNormalsSettings extends FractureToolSettings { 
-	bShowNormals: boolean;
-	bShowTangents: boolean;
-	Length: number;
-	bOnlyTangents: boolean;
-	bRecomputeSharpEdges: boolean;
-	SharpEdgeAngleThreshold: number;
-	bOnlyInternalSurfaces: boolean;
-	static Load(ResourceName: string): FractureRecomputeNormalsSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureRecomputeNormalsSettings;
-	static GetDefaultObject(): FractureRecomputeNormalsSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureRecomputeNormalsSettings;
-	static C(Other: UObject | any): FractureRecomputeNormalsSettings;
-}
-
-declare class FractureToolRecomputeNormals extends FractureToolCutterBase { 
-	NormalsSettings: FractureRecomputeNormalsSettings;
-	static Load(ResourceName: string): FractureToolRecomputeNormals;
-	static Find(Outer: UObject, ResourceName: string): FractureToolRecomputeNormals;
-	static GetDefaultObject(): FractureToolRecomputeNormals;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolRecomputeNormals;
-	static C(Other: UObject | any): FractureToolRecomputeNormals;
-}
-
-declare class FractureResampleSettings extends FractureToolSettings { 
-	bOnlyShowAddedPoints: boolean;
-	static Load(ResourceName: string): FractureResampleSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureResampleSettings;
-	static GetDefaultObject(): FractureResampleSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureResampleSettings;
-	static C(Other: UObject | any): FractureResampleSettings;
-}
-
-declare class FractureToolResample extends FractureToolCutterBase { 
-	ResampleSettings: FractureResampleSettings;
-	static Load(ResourceName: string): FractureToolResample;
-	static Find(Outer: UObject, ResourceName: string): FractureToolResample;
-	static GetDefaultObject(): FractureToolResample;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolResample;
-	static C(Other: UObject | any): FractureToolResample;
-}
-
-declare type EMouseSelectionMethod = 'RectSelect' | 'StandardSelect' | 'EMouseSelectionMethod_MAX';
-declare var EMouseSelectionMethod : { RectSelect:'RectSelect',StandardSelect:'StandardSelect',EMouseSelectionMethod_MAX:'EMouseSelectionMethod_MAX', };
-declare type EVolumeSelectionMethod = 'CubeRootOfVolume' | 'RelativeToWhole' | 'RelativeToLargest' | 'EVolumeSelectionMethod_MAX';
-declare var EVolumeSelectionMethod : { CubeRootOfVolume:'CubeRootOfVolume',RelativeToWhole:'RelativeToWhole',RelativeToLargest:'RelativeToLargest',EVolumeSelectionMethod_MAX:'EVolumeSelectionMethod_MAX', };
-declare type ESelectionOperation = 'Replace' | 'Add' | 'Remove' | 'ESelectionOperation_MAX';
-declare var ESelectionOperation : { Replace:'Replace',Add:'Add',Remove:'Remove',ESelectionOperation_MAX:'ESelectionOperation_MAX', };
-declare class FractureSelectionSettings extends FractureToolSettings { 
-	MouseSelectionMethod: EMouseSelectionMethod;
-	VolumeSelectionMethod: EVolumeSelectionMethod;
-	SelectionOperation: ESelectionOperation;
-	MinVolume: any;
-	MaxVolume: any;
-	MinVolumeFrac: any;
-	MaxVolumeFrac: any;
-	static Load(ResourceName: string): FractureSelectionSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureSelectionSettings;
-	static GetDefaultObject(): FractureSelectionSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureSelectionSettings;
-	static C(Other: UObject | any): FractureSelectionSettings;
-}
-
-declare class RectangleMarqueeManager extends UObject { 
-	bUseExternalClickDragBehavior: boolean;
-	OnDragRectangleChangedDeferredThreshold: any;
-	ClickDragBehavior: ClickDragInputBehavior;
-	static Load(ResourceName: string): RectangleMarqueeManager;
-	static Find(Outer: UObject, ResourceName: string): RectangleMarqueeManager;
-	static GetDefaultObject(): RectangleMarqueeManager;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): RectangleMarqueeManager;
-	static C(Other: UObject | any): RectangleMarqueeManager;
-}
-
-declare class FractureToolSelection extends FractureToolCutterBase { 
-	SelectionBehaviorSet: InputBehaviorSet;
-	SelectionBehaviorSource: LocalInputBehaviorSource;
-	RectangleMarqueeManager: RectangleMarqueeManager;
-	UsedToolsContext: InteractiveToolsContext;
-	SelectionSettings: FractureSelectionSettings;
-	static Load(ResourceName: string): FractureToolSelection;
-	static Find(Outer: UObject, ResourceName: string): FractureToolSelection;
-	static GetDefaultObject(): FractureToolSelection;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelection;
-	static C(Other: UObject | any): FractureToolSelection;
-}
-
-declare class FractureToolSelectAll extends FractureActionTool { 
-	static Load(ResourceName: string): FractureToolSelectAll;
-	static Find(Outer: UObject, ResourceName: string): FractureToolSelectAll;
-	static GetDefaultObject(): FractureToolSelectAll;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelectAll;
-	static C(Other: UObject | any): FractureToolSelectAll;
-}
-
-declare class FractureToolSelectNone extends FractureToolSelectAll { 
-	static Load(ResourceName: string): FractureToolSelectNone;
-	static Find(Outer: UObject, ResourceName: string): FractureToolSelectNone;
-	static GetDefaultObject(): FractureToolSelectNone;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelectNone;
-	static C(Other: UObject | any): FractureToolSelectNone;
-}
-
-declare class FractureToolSelectNeighbors extends FractureToolSelectAll { 
-	static Load(ResourceName: string): FractureToolSelectNeighbors;
-	static Find(Outer: UObject, ResourceName: string): FractureToolSelectNeighbors;
-	static GetDefaultObject(): FractureToolSelectNeighbors;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelectNeighbors;
-	static C(Other: UObject | any): FractureToolSelectNeighbors;
-}
-
-declare class FractureToolSelectParent extends FractureToolSelectAll { 
-	static Load(ResourceName: string): FractureToolSelectParent;
-	static Find(Outer: UObject, ResourceName: string): FractureToolSelectParent;
-	static GetDefaultObject(): FractureToolSelectParent;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelectParent;
-	static C(Other: UObject | any): FractureToolSelectParent;
-}
-
-declare class FractureToolSelectChildren extends FractureToolSelectAll { 
-	static Load(ResourceName: string): FractureToolSelectChildren;
-	static Find(Outer: UObject, ResourceName: string): FractureToolSelectChildren;
-	static GetDefaultObject(): FractureToolSelectChildren;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelectChildren;
-	static C(Other: UObject | any): FractureToolSelectChildren;
-}
-
-declare class FractureToolSelectSiblings extends FractureToolSelectAll { 
-	static Load(ResourceName: string): FractureToolSelectSiblings;
-	static Find(Outer: UObject, ResourceName: string): FractureToolSelectSiblings;
-	static GetDefaultObject(): FractureToolSelectSiblings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelectSiblings;
-	static C(Other: UObject | any): FractureToolSelectSiblings;
-}
-
-declare class FractureToolSelectAllInLevel extends FractureToolSelectAll { 
-	static Load(ResourceName: string): FractureToolSelectAllInLevel;
-	static Find(Outer: UObject, ResourceName: string): FractureToolSelectAllInLevel;
-	static GetDefaultObject(): FractureToolSelectAllInLevel;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelectAllInLevel;
-	static C(Other: UObject | any): FractureToolSelectAllInLevel;
-}
-
-declare class FractureToolSelectInvert extends FractureToolSelectAll { 
-	static Load(ResourceName: string): FractureToolSelectInvert;
-	static Find(Outer: UObject, ResourceName: string): FractureToolSelectInvert;
-	static GetDefaultObject(): FractureToolSelectInvert;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelectInvert;
-	static C(Other: UObject | any): FractureToolSelectInvert;
-}
-
-declare class FractureSliceSettings extends FractureToolSettings { 
-	SlicesX: number;
-	SlicesY: number;
-	SlicesZ: number;
-	SliceAngleVariation: number;
-	SliceOffsetVariation: number;
-	static Load(ResourceName: string): FractureSliceSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureSliceSettings;
-	static GetDefaultObject(): FractureSliceSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureSliceSettings;
-	static C(Other: UObject | any): FractureSliceSettings;
-}
-
-declare class FractureToolSlice extends FractureToolCutterBase { 
-	SliceSettings: FractureSliceSettings;
-	static Load(ResourceName: string): FractureToolSlice;
-	static Find(Outer: UObject, ResourceName: string): FractureToolSlice;
-	static GetDefaultObject(): FractureToolSlice;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSlice;
-	static C(Other: UObject | any): FractureToolSlice;
-}
-
-declare class FractureUniformSettings extends FractureToolSettings { 
-	NumberVoronoiSitesMin: number;
-	NumberVoronoiSitesMax: number;
-	static Load(ResourceName: string): FractureUniformSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureUniformSettings;
-	static GetDefaultObject(): FractureUniformSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureUniformSettings;
-	static C(Other: UObject | any): FractureUniformSettings;
-}
-
-declare class FractureToolUniform extends FractureToolVoronoiCutterBase { 
-	UniformSettings: FractureUniformSettings;
-	static Load(ResourceName: string): FractureToolUniform;
-	static Find(Outer: UObject, ResourceName: string): FractureToolUniform;
-	static GetDefaultObject(): FractureToolUniform;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolUniform;
-	static C(Other: UObject | any): FractureToolUniform;
-}
-
-declare type ETargetMaterialIDs = 'OddIDs' | 'OddAndSelectedIDs' | 'SelectedIDs' | 'AllIDs' | 'ETargetMaterialIDs_MAX';
-declare var ETargetMaterialIDs : { OddIDs:'OddIDs',OddAndSelectedIDs:'OddAndSelectedIDs',SelectedIDs:'SelectedIDs',AllIDs:'AllIDs',ETargetMaterialIDs_MAX:'ETargetMaterialIDs_MAX', };
-declare type EAutoUVTextureResolution = 'Resolution16' | 'Resolution32' | 'Resolution64' | 'Resolution128' | 'Resolution256' | 'Resolution512' | 'Resolution1024' | 'Resolution2048' | 'Resolution4096' | 'Resolution8192' | 'EAutoUVTextureResolution_MAX';
-declare var EAutoUVTextureResolution : { Resolution16:'Resolution16',Resolution32:'Resolution32',Resolution64:'Resolution64',Resolution128:'Resolution128',Resolution256:'Resolution256',Resolution512:'Resolution512',Resolution1024:'Resolution1024',Resolution2048:'Resolution2048',Resolution4096:'Resolution4096',Resolution8192:'Resolution8192',EAutoUVTextureResolution_MAX:'EAutoUVTextureResolution_MAX', };
-declare type ETextureType = 'ThicknessAndSurfaceAttributes' | 'SpatialGradients' | 'Normals' | 'ETextureType_MAX';
-declare var ETextureType : { ThicknessAndSurfaceAttributes:'ThicknessAndSurfaceAttributes',SpatialGradients:'SpatialGradients',Normals:'Normals',ETextureType_MAX:'ETextureType_MAX', };
-declare class FractureAutoUVSettings extends FractureToolSettings { 
-	UVChannel: string;
-	UVChannelNamesList: string[];
-	ProjectionScale: Vector;
-	TargetMaterialIDs: ETargetMaterialIDs;
-	MaterialIDs: number[];
-	Resolution: EAutoUVTextureResolution;
-	GutterSize: number;
-	Result: Texture2D;
-	bPromptToSave: boolean;
-	bReplaceExisting: boolean;
-	BakeTextureType: ETextureType;
-	bDistToOuter: boolean;
-	bAmbientOcclusion: boolean;
-	bSmoothedCurvature: boolean;
-	MaxDistance: any;
-	OcclusionRays: number;
-	OcclusionBlurRadius: any;
-	CurvatureBlurRadius: any;
-	VoxelResolution: number;
-	SmoothingIterations: number;
-	ThicknessFactor: any;
-	MaxCurvature: any;
-	static Load(ResourceName: string): FractureAutoUVSettings;
-	static Find(Outer: UObject, ResourceName: string): FractureAutoUVSettings;
-	static GetDefaultObject(): FractureAutoUVSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureAutoUVSettings;
-	LayoutUVs(): void;
-	GetUVChannelNamesFunc(): string[];
-	DisableBoneColors(): void;
-	DeleteUVChannel(): void;
-	BoxProjectUVs(): void;
-	BakeTexture(): void;
-	AddUVChannel(): void;
-	static C(Other: UObject | any): FractureAutoUVSettings;
-}
-
-declare class FractureToolAutoUV extends FractureModalTool { 
-	AutoUVSettings: FractureAutoUVSettings;
-	static Load(ResourceName: string): FractureToolAutoUV;
-	static Find(Outer: UObject, ResourceName: string): FractureToolAutoUV;
-	static GetDefaultObject(): FractureToolAutoUV;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolAutoUV;
-	static C(Other: UObject | any): FractureToolAutoUV;
-}
-
-declare type EInspectedAttributeEnum = 'Volume' | 'Level' | 'InitialDynamicState' | 'Size' | 'EInspectedAttributeEnum_MAX';
-declare var EInspectedAttributeEnum : { Volume:'Volume',Level:'Level',InitialDynamicState:'InitialDynamicState',Size:'Size',EInspectedAttributeEnum_MAX:'EInspectedAttributeEnum_MAX', };
-declare class HistogramSettings extends UObject { 
-	InspectedAttribute: EInspectedAttributeEnum;
-	bSorted: boolean;
-	bShowClusters: boolean;
-	bShowRigids: boolean;
-	bShowEmbedded: boolean;
-	static Load(ResourceName: string): HistogramSettings;
-	static Find(Outer: UObject, ResourceName: string): HistogramSettings;
-	static GetDefaultObject(): HistogramSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): HistogramSettings;
-	static C(Other: UObject | any): HistogramSettings;
-}
-
-declare type EOutlinerItemNameEnum = 'BoneName' | 'BoneIndex' | 'EOutlinerItemNameEnum_MAX';
-declare var EOutlinerItemNameEnum : { BoneName:'BoneName',BoneIndex:'BoneIndex',EOutlinerItemNameEnum_MAX:'EOutlinerItemNameEnum_MAX', };
-declare class OutlinerSettings extends UObject { 
-	ItemText: EOutlinerItemNameEnum;
-	static Load(ResourceName: string): OutlinerSettings;
-	static Find(Outer: UObject, ResourceName: string): OutlinerSettings;
-	static GetDefaultObject(): OutlinerSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OutlinerSettings;
-	static C(Other: UObject | any): OutlinerSettings;
-}
-
-declare type EDataSourceTypeEnum = 'ChaosNiagara_DataSourceType_Collision' | 'ChaosNiagara_DataSourceType_Breaking' | 'ChaosNiagara_DataSourceType_Trailing' | 'ChaosNiagara_Max';
-declare var EDataSourceTypeEnum : { ChaosNiagara_DataSourceType_Collision:'ChaosNiagara_DataSourceType_Collision',ChaosNiagara_DataSourceType_Breaking:'ChaosNiagara_DataSourceType_Breaking',ChaosNiagara_DataSourceType_Trailing:'ChaosNiagara_DataSourceType_Trailing',ChaosNiagara_Max:'ChaosNiagara_Max', };
-declare type ELocationFilteringModeEnum = 'ChaosNiagara_LocationFilteringMode_Inclusive' | 'ChaosNiagara_LocationFilteringMode_Exclusive' | 'ChaosNiagara_Max';
-declare var ELocationFilteringModeEnum : { ChaosNiagara_LocationFilteringMode_Inclusive:'ChaosNiagara_LocationFilteringMode_Inclusive',ChaosNiagara_LocationFilteringMode_Exclusive:'ChaosNiagara_LocationFilteringMode_Exclusive',ChaosNiagara_Max:'ChaosNiagara_Max', };
-declare type ELocationXToSpawnEnum = 'ChaosNiagara_LocationXToSpawn_None' | 'ChaosNiagara_LocationXToSpawn_Min' | 'ChaosNiagara_LocationXToSpawn_Max' | 'ChaosNiagara_LocationXToSpawn_MinMax' | 'ChaosNiagara_Max';
-declare var ELocationXToSpawnEnum : { ChaosNiagara_LocationXToSpawn_None:'ChaosNiagara_LocationXToSpawn_None',ChaosNiagara_LocationXToSpawn_Min:'ChaosNiagara_LocationXToSpawn_Min',ChaosNiagara_LocationXToSpawn_Max:'ChaosNiagara_LocationXToSpawn_Max',ChaosNiagara_LocationXToSpawn_MinMax:'ChaosNiagara_LocationXToSpawn_MinMax',ChaosNiagara_Max:'ChaosNiagara_Max', };
-declare type ELocationYToSpawnEnum = 'ChaosNiagara_LocationYToSpawn_None' | 'ChaosNiagara_LocationYToSpawn_Min' | 'ChaosNiagara_LocationYToSpawn_Max' | 'ChaosNiagara_LocationYToSpawn_MinMax' | 'ChaosNiagara_Max';
-declare var ELocationYToSpawnEnum : { ChaosNiagara_LocationYToSpawn_None:'ChaosNiagara_LocationYToSpawn_None',ChaosNiagara_LocationYToSpawn_Min:'ChaosNiagara_LocationYToSpawn_Min',ChaosNiagara_LocationYToSpawn_Max:'ChaosNiagara_LocationYToSpawn_Max',ChaosNiagara_LocationYToSpawn_MinMax:'ChaosNiagara_LocationYToSpawn_MinMax',ChaosNiagara_Max:'ChaosNiagara_Max', };
-declare type ELocationZToSpawnEnum = 'ChaosNiagara_LocationZToSpawn_None' | 'ChaosNiagara_LocationZToSpawn_Min' | 'ChaosNiagara_LocationZToSpawn_Max' | 'ChaosNiagara_LocationZToSpawn_MinMax' | 'ChaosNiagara_Max';
-declare var ELocationZToSpawnEnum : { ChaosNiagara_LocationZToSpawn_None:'ChaosNiagara_LocationZToSpawn_None',ChaosNiagara_LocationZToSpawn_Min:'ChaosNiagara_LocationZToSpawn_Min',ChaosNiagara_LocationZToSpawn_Max:'ChaosNiagara_LocationZToSpawn_Max',ChaosNiagara_LocationZToSpawn_MinMax:'ChaosNiagara_LocationZToSpawn_MinMax',ChaosNiagara_Max:'ChaosNiagara_Max', };
-declare type EDataSortTypeEnum = 'ChaosNiagara_DataSortType_NoSorting' | 'ChaosNiagara_DataSortType_RandomShuffle' | 'ChaosNiagara_DataSortType_SortByMassMaxToMin' | 'ChaosNiagara_DataSortType_SortByMassMinToMax' | 'ChaosNiagara_Max';
-declare var EDataSortTypeEnum : { ChaosNiagara_DataSortType_NoSorting:'ChaosNiagara_DataSortType_NoSorting',ChaosNiagara_DataSortType_RandomShuffle:'ChaosNiagara_DataSortType_RandomShuffle',ChaosNiagara_DataSortType_SortByMassMaxToMin:'ChaosNiagara_DataSortType_SortByMassMaxToMin',ChaosNiagara_DataSortType_SortByMassMinToMax:'ChaosNiagara_DataSortType_SortByMassMinToMax',ChaosNiagara_Max:'ChaosNiagara_Max', };
-declare type ERandomVelocityGenerationTypeEnum = 'ChaosNiagara_RandomVelocityGenerationType_RandomDistribution' | 'ChaosNiagara_RandomVelocityGenerationType_RandomDistributionWithStreamers' | 'ChaosNiagara_RandomVelocityGenerationType_CollisionNormalBased' | 'ChaosNiagara_Max';
-declare var ERandomVelocityGenerationTypeEnum : { ChaosNiagara_RandomVelocityGenerationType_RandomDistribution:'ChaosNiagara_RandomVelocityGenerationType_RandomDistribution',ChaosNiagara_RandomVelocityGenerationType_RandomDistributionWithStreamers:'ChaosNiagara_RandomVelocityGenerationType_RandomDistributionWithStreamers',ChaosNiagara_RandomVelocityGenerationType_CollisionNormalBased:'ChaosNiagara_RandomVelocityGenerationType_CollisionNormalBased',ChaosNiagara_Max:'ChaosNiagara_Max', };
-declare type EDebugTypeEnum = 'ChaosNiagara_DebugType_NoDebug' | 'ChaosNiagara_DebugType_ColorBySolver' | 'ChaosNiagara_DebugType_ColorByParticleIndex' | 'ChaosNiagara_Max';
-declare var EDebugTypeEnum : { ChaosNiagara_DebugType_NoDebug:'ChaosNiagara_DebugType_NoDebug',ChaosNiagara_DebugType_ColorBySolver:'ChaosNiagara_DebugType_ColorBySolver',ChaosNiagara_DebugType_ColorByParticleIndex:'ChaosNiagara_DebugType_ColorByParticleIndex',ChaosNiagara_Max:'ChaosNiagara_Max', };
-declare class NiagaraDataInterfaceChaosDestruction extends NiagaraDataInterface { 
-	ChaosSolverActorSet: any;
-	DataSourceType: EDataSourceTypeEnum;
-	DataProcessFrequency: number;
-	MaxNumberOfDataEntriesToSpawn: number;
-	DoSpawn: boolean;
-	SpawnMultiplierMinMax: Vector2D;
-	SpawnChance: number;
-	ImpulseToSpawnMinMax: Vector2D;
-	SpeedToSpawnMinMax: Vector2D;
-	MassToSpawnMinMax: Vector2D;
-	ExtentMinToSpawnMinMax: Vector2D;
-	ExtentMaxToSpawnMinMax: Vector2D;
-	VolumeToSpawnMinMax: Vector2D;
-	SolverTimeToSpawnMinMax: Vector2D;
-	SurfaceTypeToSpawn: number;
-	LocationFilteringMode: ELocationFilteringModeEnum;
-	LocationXToSpawn: ELocationXToSpawnEnum;
-	LocationXToSpawnMinMax: Vector2D;
-	LocationYToSpawn: ELocationYToSpawnEnum;
-	LocationYToSpawnMinMax: Vector2D;
-	LocationZToSpawn: ELocationZToSpawnEnum;
-	LocationZToSpawnMinMax: Vector2D;
-	TrailMinSpeedToSpawn: number;
-	DataSortingType: EDataSortTypeEnum;
-	bGetExternalCollisionData: boolean;
-	DoSpatialHash: boolean;
-	SpatialHashVolumeMin: Vector;
-	SpatialHashVolumeMax: Vector;
-	SpatialHashVolumeCellSize: Vector;
-	MaxDataPerCell: number;
-	bApplyMaterialsFilter: boolean;
-	ChaosBreakingMaterialSet: any;
-	bGetExternalBreakingData: boolean;
-	bGetExternalTrailingData: boolean;
-	RandomPositionMagnitudeMinMax: Vector2D;
-	InheritedVelocityMultiplier: number;
-	RandomVelocityGenerationType: ERandomVelocityGenerationTypeEnum;
-	RandomVelocityMagnitudeMinMax: Vector2D;
-	SpreadAngleMax: number;
-	VelocityOffsetMin: Vector;
-	VelocityOffsetMax: Vector;
-	FinalVelocityMagnitudeMinMax: Vector2D;
-	MaxLatency: number;
-	DebugType: EDebugTypeEnum;
-	LastSpawnedPointID: number;
-	LastSpawnTime: number;
-	SolverTime: number;
-	TimeStampOfLastProcessedData: number;
-	static Load(ResourceName: string): NiagaraDataInterfaceChaosDestruction;
-	static Find(Outer: UObject, ResourceName: string): NiagaraDataInterfaceChaosDestruction;
-	static GetDefaultObject(): NiagaraDataInterfaceChaosDestruction;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraDataInterfaceChaosDestruction;
-	static C(Other: UObject | any): NiagaraDataInterfaceChaosDestruction;
-}
-
-declare class NiagaraDataInterfaceGeometryCollection extends NiagaraDataInterface { 
-	GeometryCollectionActor: GeometryCollectionActor;
-	static Load(ResourceName: string): NiagaraDataInterfaceGeometryCollection;
-	static Find(Outer: UObject, ResourceName: string): NiagaraDataInterfaceGeometryCollection;
-	static GetDefaultObject(): NiagaraDataInterfaceGeometryCollection;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraDataInterfaceGeometryCollection;
-	static C(Other: UObject | any): NiagaraDataInterfaceGeometryCollection;
-}
-
-declare class NiagaraDataInterfacePhysicsField extends NiagaraDataInterface { 
-	static Load(ResourceName: string): NiagaraDataInterfacePhysicsField;
-	static Find(Outer: UObject, ResourceName: string): NiagaraDataInterfacePhysicsField;
-	static GetDefaultObject(): NiagaraDataInterfacePhysicsField;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraDataInterfacePhysicsField;
-	static C(Other: UObject | any): NiagaraDataInterfacePhysicsField;
-}
-
-declare class ActorFactoryChaosSolver extends ActorFactory { 
-	static Load(ResourceName: string): ActorFactoryChaosSolver;
-	static Find(Outer: UObject, ResourceName: string): ActorFactoryChaosSolver;
-	static GetDefaultObject(): ActorFactoryChaosSolver;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ActorFactoryChaosSolver;
-	static C(Other: UObject | any): ActorFactoryChaosSolver;
-}
-
-declare class ChaosSolverFactory extends Factory { 
-	static Load(ResourceName: string): ChaosSolverFactory;
-	static Find(Outer: UObject, ResourceName: string): ChaosSolverFactory;
-	static GetDefaultObject(): ChaosSolverFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ChaosSolverFactory;
-	static C(Other: UObject | any): ChaosSolverFactory;
 }
 
 declare class DynamicMeshComponentToolTarget extends PrimitiveComponentToolTarget { 
@@ -11061,48 +9429,6 @@ declare class ModelingToolsModeCustomizationSettings extends DeveloperSettings {
 	static C(Other: UObject | any): ModelingToolsModeCustomizationSettings;
 }
 
-declare class NewPluginDescriptorData extends UObject { 
-	CreatedBy: string;
-	CreatedByURL: string;
-	Description: string;
-	bIsBetaVersion: boolean;
-	static Load(ResourceName: string): NewPluginDescriptorData;
-	static Find(Outer: UObject, ResourceName: string): NewPluginDescriptorData;
-	static GetDefaultObject(): NewPluginDescriptorData;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NewPluginDescriptorData;
-	static C(Other: UObject | any): NewPluginDescriptorData;
-}
-
-declare class PluginReferenceMetadata { 
-	Name: string;
-	bOptional: boolean;
-	bEnabled: boolean;
-	clone() : PluginReferenceMetadata;
-	static C(Other: UObject | any): PluginReferenceMetadata;
-}
-
-declare class PluginMetadataObject extends UObject { 
-	Version: number;
-	VersionName: string;
-	FriendlyName: string;
-	Description: string;
-	Category: string;
-	CreatedBy: string;
-	CreatedByURL: string;
-	DocsURL: string;
-	MarketplaceURL: string;
-	SupportURL: string;
-	bCanContainContent: boolean;
-	bIsBetaVersion: boolean;
-	Plugins: PluginReferenceMetadata[];
-	static Load(ResourceName: string): PluginMetadataObject;
-	static Find(Outer: UObject, ResourceName: string): PluginMetadataObject;
-	static GetDefaultObject(): PluginMetadataObject;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PluginMetadataObject;
-	GetAvailablePluginDependencies(): string[];
-	static C(Other: UObject | any): PluginMetadataObject;
-}
-
 declare class MovieSceneBindingExtensions extends BlueprintFunctionLibrary { 
 	static Load(ResourceName: string): MovieSceneBindingExtensions;
 	static Find(Outer: UObject, ResourceName: string): MovieSceneBindingExtensions;
@@ -12271,49 +10597,6 @@ declare class SequencerToolsEditMode extends BaseLegacyWidgetEdMode {
 	static C(Other: UObject | any): SequencerToolsEditMode;
 }
 
-declare class SpeedTreeImportFactory extends Factory { 
-	static Load(ResourceName: string): SpeedTreeImportFactory;
-	static Find(Outer: UObject, ResourceName: string): SpeedTreeImportFactory;
-	static GetDefaultObject(): SpeedTreeImportFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SpeedTreeImportFactory;
-	static C(Other: UObject | any): SpeedTreeImportFactory;
-}
-
-declare class ReimportSpeedTreeFactory extends SpeedTreeImportFactory { 
-	static Load(ResourceName: string): ReimportSpeedTreeFactory;
-	static Find(Outer: UObject, ResourceName: string): ReimportSpeedTreeFactory;
-	static GetDefaultObject(): ReimportSpeedTreeFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ReimportSpeedTreeFactory;
-	static C(Other: UObject | any): ReimportSpeedTreeFactory;
-}
-
-declare type EImportGeometryType = 'IGT_3D' | 'IGT_Billboards' | 'IGT_Both' | 'IGT_MAX';
-declare var EImportGeometryType : { IGT_3D:'IGT_3D',IGT_Billboards:'IGT_Billboards',IGT_Both:'IGT_Both',IGT_MAX:'IGT_MAX', };
-declare type EImportLODType = 'ILT_PaintedFoliage' | 'ILT_IndividualActors' | 'ILT_MAX';
-declare var EImportLODType : { ILT_PaintedFoliage:'ILT_PaintedFoliage',ILT_IndividualActors:'ILT_IndividualActors',ILT_MAX:'ILT_MAX', };
-declare class SpeedTreeImportData extends AssetImportData { 
-	TreeScale: number;
-	ImportGeometryType: EImportGeometryType;
-	LODType: EImportLODType;
-	IncludeCollision: boolean;
-	MakeMaterialsCheck: boolean;
-	IncludeNormalMapCheck: boolean;
-	IncludeDetailMapCheck: boolean;
-	IncludeSpecularMapCheck: boolean;
-	IncludeBranchSeamSmoothing: boolean;
-	IncludeSpeedTreeAO: boolean;
-	IncludeColorAdjustment: boolean;
-	IncludeSubsurface: boolean;
-	IncludeVertexProcessingCheck: boolean;
-	IncludeWindCheck: boolean;
-	IncludeSmoothLODCheck: boolean;
-	static Load(ResourceName: string): SpeedTreeImportData;
-	static Find(Outer: UObject, ResourceName: string): SpeedTreeImportData;
-	static GetDefaultObject(): SpeedTreeImportData;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SpeedTreeImportData;
-	static C(Other: UObject | any): SpeedTreeImportData;
-}
-
 declare class HLODBuilderInstancing extends HLODBuilder { 
 	static Load(ResourceName: string): HLODBuilderInstancing;
 	static Find(Outer: UObject, ResourceName: string): HLODBuilderInstancing;
@@ -12374,6 +10657,1650 @@ declare class HLODBuilderMeshSimplify extends HLODBuilder {
 	static GetDefaultObject(): HLODBuilderMeshSimplify;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): HLODBuilderMeshSimplify;
 	static C(Other: UObject | any): HLODBuilderMeshSimplify;
+}
+
+declare class SpeedTreeImportFactory extends Factory { 
+	static Load(ResourceName: string): SpeedTreeImportFactory;
+	static Find(Outer: UObject, ResourceName: string): SpeedTreeImportFactory;
+	static GetDefaultObject(): SpeedTreeImportFactory;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SpeedTreeImportFactory;
+	static C(Other: UObject | any): SpeedTreeImportFactory;
+}
+
+declare class ReimportSpeedTreeFactory extends SpeedTreeImportFactory { 
+	static Load(ResourceName: string): ReimportSpeedTreeFactory;
+	static Find(Outer: UObject, ResourceName: string): ReimportSpeedTreeFactory;
+	static GetDefaultObject(): ReimportSpeedTreeFactory;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ReimportSpeedTreeFactory;
+	static C(Other: UObject | any): ReimportSpeedTreeFactory;
+}
+
+declare type EImportGeometryType = 'IGT_3D' | 'IGT_Billboards' | 'IGT_Both' | 'IGT_MAX';
+declare var EImportGeometryType : { IGT_3D:'IGT_3D',IGT_Billboards:'IGT_Billboards',IGT_Both:'IGT_Both',IGT_MAX:'IGT_MAX', };
+declare type EImportLODType = 'ILT_PaintedFoliage' | 'ILT_IndividualActors' | 'ILT_MAX';
+declare var EImportLODType : { ILT_PaintedFoliage:'ILT_PaintedFoliage',ILT_IndividualActors:'ILT_IndividualActors',ILT_MAX:'ILT_MAX', };
+declare class SpeedTreeImportData extends AssetImportData { 
+	TreeScale: number;
+	ImportGeometryType: EImportGeometryType;
+	LODType: EImportLODType;
+	IncludeCollision: boolean;
+	MakeMaterialsCheck: boolean;
+	IncludeNormalMapCheck: boolean;
+	IncludeDetailMapCheck: boolean;
+	IncludeSpecularMapCheck: boolean;
+	IncludeBranchSeamSmoothing: boolean;
+	IncludeSpeedTreeAO: boolean;
+	IncludeColorAdjustment: boolean;
+	IncludeSubsurface: boolean;
+	IncludeVertexProcessingCheck: boolean;
+	IncludeWindCheck: boolean;
+	IncludeSmoothLODCheck: boolean;
+	static Load(ResourceName: string): SpeedTreeImportData;
+	static Find(Outer: UObject, ResourceName: string): SpeedTreeImportData;
+	static GetDefaultObject(): SpeedTreeImportData;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SpeedTreeImportData;
+	static C(Other: UObject | any): SpeedTreeImportData;
+}
+
+declare class NewPluginDescriptorData extends UObject { 
+	CreatedBy: string;
+	CreatedByURL: string;
+	Description: string;
+	bIsBetaVersion: boolean;
+	static Load(ResourceName: string): NewPluginDescriptorData;
+	static Find(Outer: UObject, ResourceName: string): NewPluginDescriptorData;
+	static GetDefaultObject(): NewPluginDescriptorData;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NewPluginDescriptorData;
+	static C(Other: UObject | any): NewPluginDescriptorData;
+}
+
+declare class PluginReferenceMetadata { 
+	Name: string;
+	bOptional: boolean;
+	bEnabled: boolean;
+	clone() : PluginReferenceMetadata;
+	static C(Other: UObject | any): PluginReferenceMetadata;
+}
+
+declare class PluginMetadataObject extends UObject { 
+	Version: number;
+	VersionName: string;
+	FriendlyName: string;
+	Description: string;
+	Category: string;
+	CreatedBy: string;
+	CreatedByURL: string;
+	DocsURL: string;
+	MarketplaceURL: string;
+	SupportURL: string;
+	bCanContainContent: boolean;
+	bIsBetaVersion: boolean;
+	Plugins: PluginReferenceMetadata[];
+	static Load(ResourceName: string): PluginMetadataObject;
+	static Find(Outer: UObject, ResourceName: string): PluginMetadataObject;
+	static GetDefaultObject(): PluginMetadataObject;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PluginMetadataObject;
+	GetAvailablePluginDependencies(): string[];
+	static C(Other: UObject | any): PluginMetadataObject;
+}
+
+declare class LevelVariantSetsActorFactory extends ActorFactory { 
+	static Load(ResourceName: string): LevelVariantSetsActorFactory;
+	static Find(Outer: UObject, ResourceName: string): LevelVariantSetsActorFactory;
+	static GetDefaultObject(): LevelVariantSetsActorFactory;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): LevelVariantSetsActorFactory;
+	static C(Other: UObject | any): LevelVariantSetsActorFactory;
+}
+
+declare class SwitchActorFactory extends ActorFactory { 
+	static Load(ResourceName: string): SwitchActorFactory;
+	static Find(Outer: UObject, ResourceName: string): SwitchActorFactory;
+	static GetDefaultObject(): SwitchActorFactory;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SwitchActorFactory;
+	static C(Other: UObject | any): SwitchActorFactory;
+}
+
+declare class VariantManagerFactoryNew extends Factory { 
+	static Load(ResourceName: string): VariantManagerFactoryNew;
+	static Find(Outer: UObject, ResourceName: string): VariantManagerFactoryNew;
+	static GetDefaultObject(): VariantManagerFactoryNew;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): VariantManagerFactoryNew;
+	static C(Other: UObject | any): VariantManagerFactoryNew;
+}
+
+declare type EVariantManagerTestEnum = 'None' | 'FirstOption' | 'SecondOption' | 'ThirdOption' | 'EVariantManagerTestEnum_MAX';
+declare var EVariantManagerTestEnum : { None:'None',FirstOption:'FirstOption',SecondOption:'SecondOption',ThirdOption:'ThirdOption',EVariantManagerTestEnum_MAX:'EVariantManagerTestEnum_MAX', };
+declare class VariantManagerTestActor extends Actor { 
+	EnumWithNoDefault: EVariantManagerTestEnum;
+	EnumWithSecondDefault: EVariantManagerTestEnum;
+	CapturedByteProperty: number;
+	CapturedIntProperty: number;
+	CapturedFloatProperty: number;
+	bCapturedBoolProperty: boolean;
+	CapturedObjectProperty: UObject;
+	CapturedInterfaceProperty: any;
+	CapturedNameProperty: string;
+	CapturedStrProperty: string;
+	CapturedTextProperty: string;
+	CapturedRotatorProperty: Rotator;
+	CapturedColorProperty: Color;
+	CapturedLinearColorProperty: LinearColor;
+	CapturedVectorProperty: Vector;
+	CapturedQuatProperty: Quat;
+	CapturedVector4Property: Vector4;
+	CapturedVector2DProperty: Vector2D;
+	CapturedIntPointProperty: IntPoint;
+	CapturedUObjectArrayProperty: UObject[];
+	CapturedVectorArrayProperty: Vector[];
+	static GetDefaultObject(): VariantManagerTestActor;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): VariantManagerTestActor;
+	static C(Other: UObject | any): VariantManagerTestActor;
+}
+
+declare class AutomationUtilsBlueprintLibrary extends BlueprintFunctionLibrary { 
+	static Load(ResourceName: string): AutomationUtilsBlueprintLibrary;
+	static Find(Outer: UObject, ResourceName: string): AutomationUtilsBlueprintLibrary;
+	static GetDefaultObject(): AutomationUtilsBlueprintLibrary;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AutomationUtilsBlueprintLibrary;
+	static TakeGameplayAutomationScreenshot(ScreenShotName: string,MaxGlobalError: number,MaxLocalError: number,MapNameOverride: string): void;
+	static C(Other: UObject | any): AutomationUtilsBlueprintLibrary;
+}
+
+declare class ScreenshotComparisonCommandlet extends Commandlet { 
+	static Load(ResourceName: string): ScreenshotComparisonCommandlet;
+	static Find(Outer: UObject, ResourceName: string): ScreenshotComparisonCommandlet;
+	static GetDefaultObject(): ScreenshotComparisonCommandlet;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ScreenshotComparisonCommandlet;
+	static C(Other: UObject | any): ScreenshotComparisonCommandlet;
+}
+
+declare type EChaosCollisionSortMethod = 'SortNone' | 'SortByHighestMass' | 'SortByHighestSpeed' | 'SortByHighestImpulse' | 'SortByNearestFirst' | 'Count' | 'EChaosCollisionSortMethod_MAX';
+declare var EChaosCollisionSortMethod : { SortNone:'SortNone',SortByHighestMass:'SortByHighestMass',SortByHighestSpeed:'SortByHighestSpeed',SortByHighestImpulse:'SortByHighestImpulse',SortByNearestFirst:'SortByNearestFirst',Count:'Count',EChaosCollisionSortMethod_MAX:'EChaosCollisionSortMethod_MAX', };
+declare class ChaosCollisionEventRequestSettings { 
+	MaxNumberResults: number;
+	MinMass: number;
+	MinSpeed: number;
+	MinImpulse: number;
+	MaxDistance: number;
+	SortMethod: EChaosCollisionSortMethod;
+	clone() : ChaosCollisionEventRequestSettings;
+	static C(Other: UObject | any): ChaosCollisionEventRequestSettings;
+}
+
+declare type EChaosBreakingSortMethod = 'SortNone' | 'SortByHighestMass' | 'SortByHighestSpeed' | 'SortByNearestFirst' | 'Count' | 'EChaosBreakingSortMethod_MAX';
+declare var EChaosBreakingSortMethod : { SortNone:'SortNone',SortByHighestMass:'SortByHighestMass',SortByHighestSpeed:'SortByHighestSpeed',SortByNearestFirst:'SortByNearestFirst',Count:'Count',EChaosBreakingSortMethod_MAX:'EChaosBreakingSortMethod_MAX', };
+declare class ChaosBreakingEventRequestSettings { 
+	MaxNumberOfResults: number;
+	MinRadius: number;
+	MinSpeed: number;
+	MinMass: number;
+	MaxDistance: number;
+	SortMethod: EChaosBreakingSortMethod;
+	clone() : ChaosBreakingEventRequestSettings;
+	static C(Other: UObject | any): ChaosBreakingEventRequestSettings;
+}
+
+declare type EChaosTrailingSortMethod = 'SortNone' | 'SortByHighestMass' | 'SortByHighestSpeed' | 'SortByNearestFirst' | 'Count' | 'EChaosTrailingSortMethod_MAX';
+declare var EChaosTrailingSortMethod : { SortNone:'SortNone',SortByHighestMass:'SortByHighestMass',SortByHighestSpeed:'SortByHighestSpeed',SortByNearestFirst:'SortByNearestFirst',Count:'Count',EChaosTrailingSortMethod_MAX:'EChaosTrailingSortMethod_MAX', };
+declare class ChaosTrailingEventRequestSettings { 
+	MaxNumberOfResults: number;
+	MinMass: number;
+	MinSpeed: number;
+	MinAngularSpeed: number;
+	MaxDistance: number;
+	SortMethod: EChaosTrailingSortMethod;
+	clone() : ChaosTrailingEventRequestSettings;
+	static C(Other: UObject | any): ChaosTrailingEventRequestSettings;
+}
+
+declare type EChaosRemovalSortMethod = 'SortNone' | 'SortByHighestMass' | 'SortByNearestFirst' | 'Count' | 'EChaosRemovalSortMethod_MAX';
+declare var EChaosRemovalSortMethod : { SortNone:'SortNone',SortByHighestMass:'SortByHighestMass',SortByNearestFirst:'SortByNearestFirst',Count:'Count',EChaosRemovalSortMethod_MAX:'EChaosRemovalSortMethod_MAX', };
+declare class ChaosRemovalEventRequestSettings { 
+	MaxNumberOfResults: number;
+	MinMass: number;
+	MaxDistance: number;
+	SortMethod: EChaosRemovalSortMethod;
+	clone() : ChaosRemovalEventRequestSettings;
+	static C(Other: UObject | any): ChaosRemovalEventRequestSettings;
+}
+
+declare class ChaosCollisionEventData { 
+	Location: Vector;
+	Normal: Vector;
+	Velocity1: Vector;
+	Velocity2: Vector;
+	Mass1: number;
+	Mass2: number;
+	Impulse: Vector;
+	clone() : ChaosCollisionEventData;
+	static C(Other: UObject | any): ChaosCollisionEventData;
+}
+
+declare class ChaosBreakingEventData { 
+	Location: Vector;
+	Velocity: Vector;
+	Mass: number;
+	clone() : ChaosBreakingEventData;
+	static C(Other: UObject | any): ChaosBreakingEventData;
+}
+
+declare class ChaosTrailingEventData { 
+	Location: Vector;
+	Velocity: Vector;
+	AngularVelocity: Vector;
+	Mass: number;
+	ParticleIndex: number;
+	clone() : ChaosTrailingEventData;
+	static C(Other: UObject | any): ChaosTrailingEventData;
+}
+
+declare class ChaosRemovalEventData { 
+	Location: Vector;
+	Mass: number;
+	ParticleIndex: number;
+	clone() : ChaosRemovalEventData;
+	static C(Other: UObject | any): ChaosRemovalEventData;
+}
+
+declare class GeometryCollectionSource { 
+	SourceGeometryObject: SoftObjectPath;
+	LocalTransform: Transform;
+	SourceMaterial: MaterialInterface[];
+	clone() : GeometryCollectionSource;
+	static C(Other: UObject | any): GeometryCollectionSource;
+}
+
+declare class GeometryCollectionEmbeddedExemplar { 
+	StaticMeshExemplar: SoftObjectPath;
+	StartCullDistance: number;
+	EndCullDistance: number;
+	InstanceCount: number;
+	clone() : GeometryCollectionEmbeddedExemplar;
+	static C(Other: UObject | any): GeometryCollectionEmbeddedExemplar;
+}
+
+declare type ECollisionTypeEnum = 'Chaos_Volumetric' | 'Chaos_Surface_Volumetric' | 'Chaos_Max';
+declare var ECollisionTypeEnum : { Chaos_Volumetric:'Chaos_Volumetric',Chaos_Surface_Volumetric:'Chaos_Surface_Volumetric',Chaos_Max:'Chaos_Max', };
+declare type EImplicitTypeEnum = 'Chaos_Implicit_Box' | 'Chaos_Implicit_Sphere' | 'Chaos_Implicit_Capsule' | 'Chaos_Implicit_LevelSet' | 'Chaos_Implicit_None' | 'Chaos_Implicit_Convex' | 'Chaos_Max';
+declare var EImplicitTypeEnum : { Chaos_Implicit_Box:'Chaos_Implicit_Box',Chaos_Implicit_Sphere:'Chaos_Implicit_Sphere',Chaos_Implicit_Capsule:'Chaos_Implicit_Capsule',Chaos_Implicit_LevelSet:'Chaos_Implicit_LevelSet',Chaos_Implicit_None:'Chaos_Implicit_None',Chaos_Implicit_Convex:'Chaos_Implicit_Convex',Chaos_Max:'Chaos_Max', };
+declare class GeometryCollectionLevelSetData { 
+	MinLevelSetResolution: number;
+	MaxLevelSetResolution: number;
+	MinClusterLevelSetResolution: number;
+	MaxClusterLevelSetResolution: number;
+	clone() : GeometryCollectionLevelSetData;
+	static C(Other: UObject | any): GeometryCollectionLevelSetData;
+}
+
+declare class GeometryCollectionCollisionParticleData { 
+	CollisionParticlesFraction: number;
+	MaximumCollisionParticles: number;
+	clone() : GeometryCollectionCollisionParticleData;
+	static C(Other: UObject | any): GeometryCollectionCollisionParticleData;
+}
+
+declare class GeometryCollectionCollisionTypeData { 
+	CollisionType: ECollisionTypeEnum;
+	ImplicitType: EImplicitTypeEnum;
+	LevelSet: GeometryCollectionLevelSetData;
+	CollisionParticles: GeometryCollectionCollisionParticleData;
+	CollisionObjectReductionPercentage: number;
+	CollisionMarginFraction: number;
+	clone() : GeometryCollectionCollisionTypeData;
+	static C(Other: UObject | any): GeometryCollectionCollisionTypeData;
+}
+
+declare class GeometryCollectionSizeSpecificData { 
+	MaxSize: number;
+	CollisionShapes: GeometryCollectionCollisionTypeData[];
+	CollisionType: ECollisionTypeEnum;
+	ImplicitType: EImplicitTypeEnum;
+	MinLevelSetResolution: number;
+	MaxLevelSetResolution: number;
+	MinClusterLevelSetResolution: number;
+	MaxClusterLevelSetResolution: number;
+	CollisionObjectReductionPercentage: number;
+	CollisionParticlesFraction: number;
+	MaximumCollisionParticles: number;
+	DamageThreshold: number;
+	clone() : GeometryCollectionSizeSpecificData;
+	static C(Other: UObject | any): GeometryCollectionSizeSpecificData;
+}
+
+declare class GeometryCollection extends UObject { 
+	EnableClustering: boolean;
+	ClusterGroupIndex: number;
+	MaxClusterLevel: number;
+	DamageThreshold: number[];
+	ClusterConnectionType: EClusterConnectionTypeEnum;
+	GeometrySource: GeometryCollectionSource[];
+	Materials: MaterialInterface[];
+	EmbeddedGeometryExemplar: GeometryCollectionEmbeddedExemplar[];
+	bUseFullPrecisionUVs: boolean;
+	bStripOnCook: boolean;
+	EnableNanite: boolean;
+	CollisionType: ECollisionTypeEnum;
+	ImplicitType: EImplicitTypeEnum;
+	MinLevelSetResolution: number;
+	MaxLevelSetResolution: number;
+	MinClusterLevelSetResolution: number;
+	MaxClusterLevelSetResolution: number;
+	CollisionObjectReductionPercentage: number;
+	bMassAsDensity: boolean;
+	Mass: number;
+	MinimumMassClamp: number;
+	CollisionParticlesFraction: number;
+	MaximumCollisionParticles: number;
+	bRemoveOnMaxSleep: boolean;
+	MaximumSleepTime: Vector2D;
+	RemovalDuration: Vector2D;
+	SizeSpecificData: GeometryCollectionSizeSpecificData[];
+	EnableRemovePiecesOnFracture: boolean;
+	RemoveOnFractureMaterials: MaterialInterface[];
+	ThumbnailInfo: ThumbnailInfo;
+	PersistentGuid: Guid;
+	StateGuid: Guid;
+	BoneSelectedMaterialIndex: number;
+	static Load(ResourceName: string): GeometryCollection;
+	static Find(Outer: UObject, ResourceName: string): GeometryCollection;
+	static GetDefaultObject(): GeometryCollection;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollection;
+	static C(Other: UObject | any): GeometryCollection;
+}
+
+declare type EObjectStateTypeEnum = 'Chaos_NONE' | 'Chaos_Object_Sleeping' | 'Chaos_Object_Kinematic' | 'Chaos_Object_Static' | 'Chaos_Object_Dynamic' | 'Chaos_Object_UserDefined' | 'Chaos_Max';
+declare var EObjectStateTypeEnum : { Chaos_NONE:'Chaos_NONE',Chaos_Object_Sleeping:'Chaos_Object_Sleeping',Chaos_Object_Kinematic:'Chaos_Object_Kinematic',Chaos_Object_Static:'Chaos_Object_Static',Chaos_Object_Dynamic:'Chaos_Object_Dynamic',Chaos_Object_UserDefined:'Chaos_Object_UserDefined',Chaos_Max:'Chaos_Max', };
+declare type EInitialVelocityTypeEnum = 'Chaos_Initial_Velocity_User_Defined' | 'Chaos_Initial_Velocity_None' | 'Chaos_Max';
+declare var EInitialVelocityTypeEnum : { Chaos_Initial_Velocity_User_Defined:'Chaos_Initial_Velocity_User_Defined',Chaos_Initial_Velocity_None:'Chaos_Initial_Velocity_None',Chaos_Max:'Chaos_Max', };
+declare type EGeometryCollectionCacheType = 'None' | 'Record' | 'Play' | 'RecordAndPlay' | 'EGeometryCollectionCacheType_MAX';
+declare var EGeometryCollectionCacheType : { None:'None',Record:'Record',Play:'Play',RecordAndPlay:'RecordAndPlay',EGeometryCollectionCacheType_MAX:'EGeometryCollectionCacheType_MAX', };
+declare class SolverCollisionData { 
+	Location: Vector;
+	AccumulatedImpulse: Vector;
+	Normal: Vector;
+	Velocity1: Vector;
+	Velocity2: Vector;
+	AngularVelocity1: Vector;
+	AngularVelocity2: Vector;
+	Mass1: number;
+	Mass2: number;
+	ParticleIndex: number;
+	LevelsetIndex: number;
+	ParticleIndexMesh: number;
+	LevelsetIndexMesh: number;
+	clone() : SolverCollisionData;
+	static C(Other: UObject | any): SolverCollisionData;
+}
+
+declare class SolverBreakingData { 
+	Location: Vector;
+	Velocity: Vector;
+	AngularVelocity: Vector;
+	Mass: number;
+	ParticleIndex: number;
+	ParticleIndexMesh: number;
+	clone() : SolverBreakingData;
+	static C(Other: UObject | any): SolverBreakingData;
+}
+
+declare class RecordedFrame { 
+	Transforms: Transform[];
+	TransformIndices: number[];
+	PreviousTransformIndices: number[];
+	DisabledFlags: boolean[];
+	Collisions: SolverCollisionData[];
+	Breakings: SolverBreakingData[];
+	Trailings: any;
+	Timestamp: number;
+	clone() : RecordedFrame;
+	static C(Other: UObject | any): RecordedFrame;
+}
+
+declare class RecordedTransformTrack { 
+	Records: RecordedFrame[];
+	clone() : RecordedTransformTrack;
+	static C(Other: UObject | any): RecordedTransformTrack;
+}
+
+declare class GeometryCollectionCache extends UObject { 
+	RecordedData: RecordedTransformTrack;
+	SupportedCollection: GeometryCollection;
+	CompatibleCollectionState: Guid;
+	static Load(ResourceName: string): GeometryCollectionCache;
+	static Find(Outer: UObject, ResourceName: string): GeometryCollectionCache;
+	static GetDefaultObject(): GeometryCollectionCache;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionCache;
+	static C(Other: UObject | any): GeometryCollectionCache;
+}
+
+declare class GeomComponentCacheParameters { 
+	CacheMode: EGeometryCollectionCacheType;
+	TargetCache: GeometryCollectionCache;
+	ReverseCacheBeginTime: number;
+	SaveCollisionData: boolean;
+	DoGenerateCollisionData: boolean;
+	CollisionDataSizeMax: number;
+	DoCollisionDataSpatialHash: boolean;
+	CollisionDataSpatialHashRadius: number;
+	MaxCollisionPerCell: number;
+	SaveBreakingData: boolean;
+	DoGenerateBreakingData: boolean;
+	BreakingDataSizeMax: number;
+	DoBreakingDataSpatialHash: boolean;
+	BreakingDataSpatialHashRadius: number;
+	MaxBreakingPerCell: number;
+	SaveTrailingData: boolean;
+	DoGenerateTrailingData: boolean;
+	TrailingDataSizeMax: number;
+	TrailingMinSpeedThreshold: number;
+	TrailingMinVolumeThreshold: number;
+	clone() : GeomComponentCacheParameters;
+	static C(Other: UObject | any): GeomComponentCacheParameters;
+}
+
+declare class ChaosBreakEvent { 
+	Component: PrimitiveComponent;
+	Location: Vector;
+	Velocity: Vector;
+	AngularVelocity: Vector;
+	Mass: number;
+	clone() : ChaosBreakEvent;
+	static C(Other: UObject | any): ChaosBreakEvent;
+}
+
+declare class ChaosRemovalEvent { 
+	Component: PrimitiveComponent;
+	Location: Vector;
+	Mass: number;
+	clone() : ChaosRemovalEvent;
+	static C(Other: UObject | any): ChaosRemovalEvent;
+}
+
+declare class GeometryCollectionRepData { 
+	clone() : GeometryCollectionRepData;
+	static C(Other: UObject | any): GeometryCollectionRepData;
+}
+
+declare type EGeometryCollectionPhysicsTypeEnum = 'Chaos_AngularVelocity' | 'Chaos_DynamicState' | 'Chaos_LinearVelocity' | 'Chaos_InitialAngularVelocity' | 'Chaos_InitialLinearVelocity' | 'Chaos_CollisionGroup' | 'Chaos_LinearForce' | 'Chaos_AngularTorque' | 'Chaos_DisableThreshold' | 'Chaos_SleepingThreshold' | 'Chaos_Max';
+declare var EGeometryCollectionPhysicsTypeEnum : { Chaos_AngularVelocity:'Chaos_AngularVelocity',Chaos_DynamicState:'Chaos_DynamicState',Chaos_LinearVelocity:'Chaos_LinearVelocity',Chaos_InitialAngularVelocity:'Chaos_InitialAngularVelocity',Chaos_InitialLinearVelocity:'Chaos_InitialLinearVelocity',Chaos_CollisionGroup:'Chaos_CollisionGroup',Chaos_LinearForce:'Chaos_LinearForce',Chaos_AngularTorque:'Chaos_AngularTorque',Chaos_DisableThreshold:'Chaos_DisableThreshold',Chaos_SleepingThreshold:'Chaos_SleepingThreshold',Chaos_Max:'Chaos_Max', };
+declare class GeometryCollectionComponent extends MeshComponent { 
+	ChaosSolverActor: ChaosSolverActor;
+	RestCollection: GeometryCollection;
+	InitializationFields: FieldSystemActor[];
+	Simulating: boolean;
+	ObjectType: EObjectStateTypeEnum;
+	bForceMotionBlur: boolean;
+	EnableClustering: boolean;
+	ClusterGroupIndex: number;
+	MaxClusterLevel: number;
+	DamageThreshold: number[];
+	bUseSizeSpecificDamageThreshold: boolean;
+	ClusterConnectionType: EClusterConnectionTypeEnum;
+	CollisionGroup: number;
+	CollisionSampleFraction: number;
+	LinearEtherDrag: number;
+	AngularEtherDrag: number;
+	PhysicalMaterial: ChaosPhysicalMaterial;
+	InitialVelocityType: EInitialVelocityTypeEnum;
+	InitialLinearVelocity: Vector;
+	InitialAngularVelocity: Vector;
+	PhysicalMaterialOverride: PhysicalMaterial;
+	CacheParameters: GeomComponentCacheParameters;
+	RestTransforms: Transform[];
+	NotifyGeometryCollectionPhysicsStateChange: UnrealEngineMulticastDelegate<(FracturedComponent: GeometryCollectionComponent) => void>;
+	NotifyGeometryCollectionPhysicsLoadingStateChange: UnrealEngineMulticastDelegate<(FracturedComponent: GeometryCollectionComponent) => void>;
+	OnChaosBreakEvent: UnrealEngineMulticastDelegate<(BreakEvent: ChaosBreakEvent) => void>;
+	OnChaosRemovalEvent: UnrealEngineMulticastDelegate<(RemovalEvent: ChaosRemovalEvent) => void>;
+	DesiredCacheTime: number;
+	CachePlayback: boolean;
+	OnChaosPhysicsCollision: UnrealEngineMulticastDelegate<(CollisionInfo: ChaosPhysicsCollisionInfo) => void>;
+	bNotifyBreaks: boolean;
+	bNotifyCollisions: boolean;
+	bNotifyTrailing: boolean;
+	bNotifyRemovals: boolean;
+	bStoreVelocities: boolean;
+	bShowBoneColors: boolean;
+	bEnableReplication: boolean;
+	bEnableAbandonAfterLevel: boolean;
+	ReplicationAbandonClusterLevel: number;
+	RepData: GeometryCollectionRepData;
+	SelectedBones: number[];
+	HighlightedBones: number[];
+	DummyBodySetup: BodySetup;
+	EditorActor: Actor;
+	EmbeddedGeometryComponents: InstancedStaticMeshComponent[];
+	static Load(ResourceName: string): GeometryCollectionComponent;
+	static Find(Outer: UObject, ResourceName: string): GeometryCollectionComponent;
+	static GetDefaultObject(): GeometryCollectionComponent;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionComponent;
+	SetNotifyRemovals(bNewNotifyRemovals: boolean): void;
+	SetNotifyBreaks(bNewNotifyBreaks: boolean): void;
+	ReceivePhysicsCollision(CollisionInfo: ChaosPhysicsCollisionInfo): void;
+	OnRep_RepData(OldData: GeometryCollectionRepData): void;
+	NetAbandonCluster(TransformIndex: number): void;
+	ApplyPhysicsField(Enabled: boolean,Target: EGeometryCollectionPhysicsTypeEnum,MetaData: FieldSystemMetaData,Field: FieldNodeBase): void;
+	ApplyKinematicField(Radius: number,position: Vector): void;
+	static C(Other: UObject | any): GeometryCollectionComponent;
+}
+
+declare class GeometryCollectionDebugDrawWarningMessage { 
+	clone() : GeometryCollectionDebugDrawWarningMessage;
+	static C(Other: UObject | any): GeometryCollectionDebugDrawWarningMessage;
+}
+
+declare class GeometryCollectionDebugDrawActorSelectedRigidBody { 
+	ID: number;
+	Solver: ChaosSolverActor;
+	GeometryCollection: GeometryCollectionActor;
+	clone() : GeometryCollectionDebugDrawActorSelectedRigidBody;
+	static C(Other: UObject | any): GeometryCollectionDebugDrawActorSelectedRigidBody;
+}
+
+declare type EGeometryCollectionDebugDrawActorHideGeometry = 'HideNone' | 'HideWithCollision' | 'HideSelected' | 'HideWholeCollection' | 'HideAll' | 'EGeometryCollectionDebugDrawActorHideGeometry_MAX';
+declare var EGeometryCollectionDebugDrawActorHideGeometry : { HideNone:'HideNone',HideWithCollision:'HideWithCollision',HideSelected:'HideSelected',HideWholeCollection:'HideWholeCollection',HideAll:'HideAll',EGeometryCollectionDebugDrawActorHideGeometry_MAX:'EGeometryCollectionDebugDrawActorHideGeometry_MAX', };
+declare class GeometryCollectionDebugDrawActor extends Actor { 
+	WarningMessage: GeometryCollectionDebugDrawWarningMessage;
+	SelectedRigidBody: GeometryCollectionDebugDrawActorSelectedRigidBody;
+	bDebugDrawWholeCollection: boolean;
+	bDebugDrawHierarchy: boolean;
+	bDebugDrawClustering: boolean;
+	HideGeometry: EGeometryCollectionDebugDrawActorHideGeometry;
+	bShowRigidBodyId: boolean;
+	bShowRigidBodyCollision: boolean;
+	bCollisionAtOrigin: boolean;
+	bShowRigidBodyTransform: boolean;
+	bShowRigidBodyInertia: boolean;
+	bShowRigidBodyVelocity: boolean;
+	bShowRigidBodyForce: boolean;
+	bShowRigidBodyInfos: boolean;
+	bShowTransformIndex: boolean;
+	bShowTransform: boolean;
+	bShowParent: boolean;
+	bShowLevel: boolean;
+	bShowConnectivityEdges: boolean;
+	bShowGeometryIndex: boolean;
+	bShowGeometryTransform: boolean;
+	bShowBoundingBox: boolean;
+	bShowFaces: boolean;
+	bShowFaceIndices: boolean;
+	bShowFaceNormals: boolean;
+	bShowSingleFace: boolean;
+	SingleFaceIndex: number;
+	bShowVertices: boolean;
+	bShowVertexIndices: boolean;
+	bShowVertexNormals: boolean;
+	bUseActiveVisualization: boolean;
+	PointThickness: number;
+	LineThickness: number;
+	bTextShadow: boolean;
+	TextScale: number;
+	NormalScale: number;
+	AxisScale: number;
+	ArrowScale: number;
+	RigidBodyIdColor: Color;
+	RigidBodyTransformScale: number;
+	RigidBodyCollisionColor: Color;
+	RigidBodyInertiaColor: Color;
+	RigidBodyVelocityColor: Color;
+	RigidBodyForceColor: Color;
+	RigidBodyInfoColor: Color;
+	TransformIndexColor: Color;
+	TransformScale: number;
+	LevelColor: Color;
+	ParentColor: Color;
+	ConnectivityEdgeThickness: number;
+	GeometryIndexColor: Color;
+	GeometryTransformScale: number;
+	BoundingBoxColor: Color;
+	FaceColor: Color;
+	FaceIndexColor: Color;
+	FaceNormalColor: Color;
+	SingleFaceColor: Color;
+	VertexColor: Color;
+	VertexIndexColor: Color;
+	VertexNormalColor: Color;
+	SpriteComponent: BillboardComponent;
+	static GetDefaultObject(): GeometryCollectionDebugDrawActor;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionDebugDrawActor;
+	static C(Other: UObject | any): GeometryCollectionDebugDrawActor;
+}
+
+declare class GeometryCollectionRenderLevelSetActor extends Actor { 
+	TargetVolumeTexture: VolumeTexture;
+	RayMarchMaterial: Material;
+	SurfaceTolerance: number;
+	Isovalue: number;
+	Enabled: boolean;
+	RenderVolumeBoundingBox: boolean;
+	static GetDefaultObject(): GeometryCollectionRenderLevelSetActor;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionRenderLevelSetActor;
+	static C(Other: UObject | any): GeometryCollectionRenderLevelSetActor;
+}
+
+declare class GeometryCollectionDebugDrawComponent extends ActorComponent { 
+	GeometryCollectionDebugDrawActor: GeometryCollectionDebugDrawActor;
+	GeometryCollectionRenderLevelSetActor: GeometryCollectionRenderLevelSetActor;
+	static Load(ResourceName: string): GeometryCollectionDebugDrawComponent;
+	static Find(Outer: UObject, ResourceName: string): GeometryCollectionDebugDrawComponent;
+	static GetDefaultObject(): GeometryCollectionDebugDrawComponent;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionDebugDrawComponent;
+	static C(Other: UObject | any): GeometryCollectionDebugDrawComponent;
+}
+
+declare class GeometryCollectionActor extends Actor { 
+	GeometryCollectionComponent: GeometryCollectionComponent;
+	GeometryCollectionDebugDrawComponent: GeometryCollectionDebugDrawComponent;
+	static GetDefaultObject(): GeometryCollectionActor;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionActor;
+	RaycastSingle(Start: Vector,End: Vector,OutHit?: HitResult): {OutHit: HitResult, $: boolean};
+	static C(Other: UObject | any): GeometryCollectionActor;
+}
+
+declare class ChaosDestructionListener extends SceneComponent { 
+	bIsCollisionEventListeningEnabled: boolean;
+	bIsBreakingEventListeningEnabled: boolean;
+	bIsTrailingEventListeningEnabled: boolean;
+	bIsRemovalEventListeningEnabled: boolean;
+	CollisionEventRequestSettings: ChaosCollisionEventRequestSettings;
+	BreakingEventRequestSettings: ChaosBreakingEventRequestSettings;
+	TrailingEventRequestSettings: ChaosTrailingEventRequestSettings;
+	RemovalEventRequestSettings: ChaosRemovalEventRequestSettings;
+	ChaosSolverActors: any;
+	GeometryCollectionActors: any;
+	OnCollisionEvents: UnrealEngineMulticastDelegate<(CollisionEvents: ChaosCollisionEventData[]) => void>;
+	OnBreakingEvents: UnrealEngineMulticastDelegate<(BreakingEvents: ChaosBreakingEventData[]) => void>;
+	OnTrailingEvents: UnrealEngineMulticastDelegate<(TrailingEvents: ChaosTrailingEventData[]) => void>;
+	OnRemovalEvents: UnrealEngineMulticastDelegate<(RemovalEvents: ChaosRemovalEventData[]) => void>;
+	static Load(ResourceName: string): ChaosDestructionListener;
+	static Find(Outer: UObject, ResourceName: string): ChaosDestructionListener;
+	static GetDefaultObject(): ChaosDestructionListener;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ChaosDestructionListener;
+	SortTrailingEvents(TrailingEvents?: ChaosTrailingEventData[],SortMethod?: EChaosTrailingSortMethod): {TrailingEvents: ChaosTrailingEventData[]};
+	SortRemovalEvents(RemovalEvents?: ChaosRemovalEventData[],SortMethod?: EChaosRemovalSortMethod): {RemovalEvents: ChaosRemovalEventData[]};
+	SortCollisionEvents(CollisionEvents?: ChaosCollisionEventData[],SortMethod?: EChaosCollisionSortMethod): {CollisionEvents: ChaosCollisionEventData[]};
+	SortBreakingEvents(BreakingEvents?: ChaosBreakingEventData[],SortMethod?: EChaosBreakingSortMethod): {BreakingEvents: ChaosBreakingEventData[]};
+	SetTrailingEventRequestSettings(InSettings: ChaosTrailingEventRequestSettings): void;
+	SetTrailingEventEnabled(bIsEnabled: boolean): void;
+	SetRemovalEventRequestSettings(InSettings: ChaosRemovalEventRequestSettings): void;
+	SetRemovalEventEnabled(bIsEnabled: boolean): void;
+	SetCollisionEventRequestSettings(InSettings: ChaosCollisionEventRequestSettings): void;
+	SetCollisionEventEnabled(bIsEnabled: boolean): void;
+	SetBreakingEventRequestSettings(InSettings: ChaosBreakingEventRequestSettings): void;
+	SetBreakingEventEnabled(bIsEnabled: boolean): void;
+	RemoveGeometryCollectionActor(GeometryCollectionActor: GeometryCollectionActor): void;
+	RemoveChaosSolverActor(ChaosSolverActor: ChaosSolverActor): void;
+	IsEventListening(): boolean;
+	AddGeometryCollectionActor(GeometryCollectionActor: GeometryCollectionActor): void;
+	AddChaosSolverActor(ChaosSolverActor: ChaosSolverActor): void;
+	static C(Other: UObject | any): ChaosDestructionListener;
+}
+
+declare class ActorFactoryGeometryCollection extends ActorFactory { 
+	static Load(ResourceName: string): ActorFactoryGeometryCollection;
+	static Find(Outer: UObject, ResourceName: string): ActorFactoryGeometryCollection;
+	static GetDefaultObject(): ActorFactoryGeometryCollection;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ActorFactoryGeometryCollection;
+	static C(Other: UObject | any): ActorFactoryGeometryCollection;
+}
+
+declare class GeometryCollectionCacheFactory extends Factory { 
+	TargetCollection: GeometryCollection;
+	static Load(ResourceName: string): GeometryCollectionCacheFactory;
+	static Find(Outer: UObject, ResourceName: string): GeometryCollectionCacheFactory;
+	static GetDefaultObject(): GeometryCollectionCacheFactory;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionCacheFactory;
+	static C(Other: UObject | any): GeometryCollectionCacheFactory;
+}
+
+declare class GeometryCollectionFactory extends Factory { 
+	static Load(ResourceName: string): GeometryCollectionFactory;
+	static Find(Outer: UObject, ResourceName: string): GeometryCollectionFactory;
+	static GetDefaultObject(): GeometryCollectionFactory;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionFactory;
+	static C(Other: UObject | any): GeometryCollectionFactory;
+}
+
+declare class GeometryCollectionThumbnailRenderer extends DefaultSizedThumbnailRenderer { 
+	static Load(ResourceName: string): GeometryCollectionThumbnailRenderer;
+	static Find(Outer: UObject, ResourceName: string): GeometryCollectionThumbnailRenderer;
+	static GetDefaultObject(): GeometryCollectionThumbnailRenderer;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GeometryCollectionThumbnailRenderer;
+	static C(Other: UObject | any): GeometryCollectionThumbnailRenderer;
+}
+
+declare class FractureEditorMode extends BaseLegacyWidgetEdMode { 
+	static Load(ResourceName: string): FractureEditorMode;
+	static Find(Outer: UObject, ResourceName: string): FractureEditorMode;
+	static GetDefaultObject(): FractureEditorMode;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureEditorMode;
+	static C(Other: UObject | any): FractureEditorMode;
+}
+
+declare class FractureModeCustomSectionColor { 
+	SectionName: string;
+	Color: LinearColor;
+	clone() : FractureModeCustomSectionColor;
+	static C(Other: UObject | any): FractureModeCustomSectionColor;
+}
+
+declare class FractureModeCustomToolColor { 
+	ToolName: string;
+	Color: LinearColor;
+	clone() : FractureModeCustomToolColor;
+	static C(Other: UObject | any): FractureModeCustomToolColor;
+}
+
+declare class FractureModeCustomizationSettings extends DeveloperSettings { 
+	ToolSectionOrder: string[];
+	ToolFavorites: string[];
+	SectionColors: FractureModeCustomSectionColor[];
+	ToolColors: FractureModeCustomToolColor[];
+	static Load(ResourceName: string): FractureModeCustomizationSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureModeCustomizationSettings;
+	static GetDefaultObject(): FractureModeCustomizationSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureModeCustomizationSettings;
+	static C(Other: UObject | any): FractureModeCustomizationSettings;
+}
+
+declare class FractureSettings extends UObject { 
+	ExplodeAmount: number;
+	FractureLevel: number;
+	bHideUnselected: boolean;
+	static Load(ResourceName: string): FractureSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureSettings;
+	static GetDefaultObject(): FractureSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureSettings;
+	static C(Other: UObject | any): FractureSettings;
+}
+
+declare class FractureActionTool extends UObject { 
+	static Load(ResourceName: string): FractureActionTool;
+	static Find(Outer: UObject, ResourceName: string): FractureActionTool;
+	static GetDefaultObject(): FractureActionTool;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureActionTool;
+	static C(Other: UObject | any): FractureActionTool;
+}
+
+declare class FractureModalTool extends FractureActionTool { 
+	VisualizedCollections: GeometryCollectionComponent[];
+	static Load(ResourceName: string): FractureModalTool;
+	static Find(Outer: UObject, ResourceName: string): FractureModalTool;
+	static GetDefaultObject(): FractureModalTool;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureModalTool;
+	static C(Other: UObject | any): FractureModalTool;
+}
+
+declare class FractureToolSettings extends UObject { 
+	OwnerTool: FractureModalTool;
+	static Load(ResourceName: string): FractureToolSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureToolSettings;
+	static GetDefaultObject(): FractureToolSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSettings;
+	static C(Other: UObject | any): FractureToolSettings;
+}
+
+declare class FractureInteractiveTool extends FractureModalTool { 
+	static Load(ResourceName: string): FractureInteractiveTool;
+	static Find(Outer: UObject, ResourceName: string): FractureInteractiveTool;
+	static GetDefaultObject(): FractureInteractiveTool;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureInteractiveTool;
+	static C(Other: UObject | any): FractureInteractiveTool;
+}
+
+declare type EFractureAutoClusterMode = 'BoundingBox' | 'Proximity' | 'Distance' | 'Voronoi' | 'EFractureAutoClusterMode_MAX';
+declare var EFractureAutoClusterMode : { BoundingBox:'BoundingBox',Proximity:'Proximity',Distance:'Distance',Voronoi:'Voronoi',EFractureAutoClusterMode_MAX:'EFractureAutoClusterMode_MAX', };
+declare class FractureAutoClusterSettings extends FractureToolSettings { 
+	AutoClusterMode: EFractureAutoClusterMode;
+	SiteCount: any;
+	bEnforceConnectivity: boolean;
+	static Load(ResourceName: string): FractureAutoClusterSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureAutoClusterSettings;
+	static GetDefaultObject(): FractureAutoClusterSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureAutoClusterSettings;
+	static C(Other: UObject | any): FractureAutoClusterSettings;
+}
+
+declare class FractureToolAutoCluster extends FractureModalTool { 
+	AutoClusterSettings: FractureAutoClusterSettings;
+	static Load(ResourceName: string): FractureToolAutoCluster;
+	static Find(Outer: UObject, ResourceName: string): FractureToolAutoCluster;
+	static GetDefaultObject(): FractureToolAutoCluster;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolAutoCluster;
+	static C(Other: UObject | any): FractureToolAutoCluster;
+}
+
+declare type EFractureBrickBond = 'Stretcher' | 'Stack' | 'English' | 'Header' | 'Flemish' | 'EFractureBrickBond_MAX';
+declare var EFractureBrickBond : { Stretcher:'Stretcher',Stack:'Stack',English:'English',Header:'Header',Flemish:'Flemish',EFractureBrickBond_MAX:'EFractureBrickBond_MAX', };
+declare class FractureBrickSettings extends FractureToolSettings { 
+	Bond: EFractureBrickBond;
+	BrickLength: number;
+	BrickHeight: number;
+	BrickDepth: number;
+	static Load(ResourceName: string): FractureBrickSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureBrickSettings;
+	static GetDefaultObject(): FractureBrickSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureBrickSettings;
+	static C(Other: UObject | any): FractureBrickSettings;
+}
+
+declare class FractureCutterSettings extends FractureToolSettings { 
+	RandomSeed: number;
+	ChanceToFracture: number;
+	bGroupFracture: boolean;
+	bGroupFractureToggleEnabled: boolean;
+	bDrawSites: boolean;
+	bDrawSitesToggleEnabled: boolean;
+	bDrawDiagram: boolean;
+	Grout: number;
+	Amplitude: number;
+	Frequency: number;
+	Persistence: number;
+	Lacunarity: number;
+	OctaveNumber: number;
+	PointSpacing: number;
+	static Load(ResourceName: string): FractureCutterSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureCutterSettings;
+	static GetDefaultObject(): FractureCutterSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureCutterSettings;
+	static C(Other: UObject | any): FractureCutterSettings;
+}
+
+declare class FractureCollisionSettings extends FractureToolSettings { 
+	bAddSamplesForCollision: boolean;
+	PointSpacing: number;
+	static Load(ResourceName: string): FractureCollisionSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureCollisionSettings;
+	static GetDefaultObject(): FractureCollisionSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureCollisionSettings;
+	static C(Other: UObject | any): FractureCollisionSettings;
+}
+
+declare class FractureToolCutterBase extends FractureInteractiveTool { 
+	CutterSettings: FractureCutterSettings;
+	CollisionSettings: FractureCollisionSettings;
+	static Load(ResourceName: string): FractureToolCutterBase;
+	static Find(Outer: UObject, ResourceName: string): FractureToolCutterBase;
+	static GetDefaultObject(): FractureToolCutterBase;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolCutterBase;
+	static C(Other: UObject | any): FractureToolCutterBase;
+}
+
+declare class FractureToolBrick extends FractureToolCutterBase { 
+	BrickSettings: FractureBrickSettings;
+	static Load(ResourceName: string): FractureToolBrick;
+	static Find(Outer: UObject, ResourceName: string): FractureToolBrick;
+	static GetDefaultObject(): FractureToolBrick;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolBrick;
+	static C(Other: UObject | any): FractureToolBrick;
+}
+
+declare class FractureClusterCutterSettings extends FractureToolSettings { 
+	NumberClustersMin: number;
+	NumberClustersMax: number;
+	SitesPerClusterMin: number;
+	SitesPerClusterMax: number;
+	ClusterRadiusFractionMin: number;
+	ClusterRadiusFractionMax: number;
+	ClusterRadiusOffset: number;
+	static Load(ResourceName: string): FractureClusterCutterSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureClusterCutterSettings;
+	static GetDefaultObject(): FractureClusterCutterSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureClusterCutterSettings;
+	static C(Other: UObject | any): FractureClusterCutterSettings;
+}
+
+declare class FractureToolVoronoiCutterBase extends FractureToolCutterBase { 
+	VoronoiLineSets: LineSetComponent[];
+	static Load(ResourceName: string): FractureToolVoronoiCutterBase;
+	static Find(Outer: UObject, ResourceName: string): FractureToolVoronoiCutterBase;
+	static GetDefaultObject(): FractureToolVoronoiCutterBase;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolVoronoiCutterBase;
+	static C(Other: UObject | any): FractureToolVoronoiCutterBase;
+}
+
+declare class FractureToolClusterCutter extends FractureToolVoronoiCutterBase { 
+	ClusterSettings: FractureClusterCutterSettings;
+	static Load(ResourceName: string): FractureToolClusterCutter;
+	static Find(Outer: UObject, ResourceName: string): FractureToolClusterCutter;
+	static GetDefaultObject(): FractureToolClusterCutter;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolClusterCutter;
+	static C(Other: UObject | any): FractureToolClusterCutter;
+}
+
+declare class FractureToolFlattenAll extends FractureActionTool { 
+	static Load(ResourceName: string): FractureToolFlattenAll;
+	static Find(Outer: UObject, ResourceName: string): FractureToolFlattenAll;
+	static GetDefaultObject(): FractureToolFlattenAll;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolFlattenAll;
+	static C(Other: UObject | any): FractureToolFlattenAll;
+}
+
+declare class FractureToolCluster extends FractureActionTool { 
+	static Load(ResourceName: string): FractureToolCluster;
+	static Find(Outer: UObject, ResourceName: string): FractureToolCluster;
+	static GetDefaultObject(): FractureToolCluster;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolCluster;
+	static C(Other: UObject | any): FractureToolCluster;
+}
+
+declare class FractureToolUncluster extends FractureActionTool { 
+	static Load(ResourceName: string): FractureToolUncluster;
+	static Find(Outer: UObject, ResourceName: string): FractureToolUncluster;
+	static GetDefaultObject(): FractureToolUncluster;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolUncluster;
+	static C(Other: UObject | any): FractureToolUncluster;
+}
+
+declare class FractureToolMoveUp extends FractureActionTool { 
+	static Load(ResourceName: string): FractureToolMoveUp;
+	static Find(Outer: UObject, ResourceName: string): FractureToolMoveUp;
+	static GetDefaultObject(): FractureToolMoveUp;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolMoveUp;
+	static C(Other: UObject | any): FractureToolMoveUp;
+}
+
+declare class FractureToolClusterMerge extends FractureActionTool { 
+	static Load(ResourceName: string): FractureToolClusterMerge;
+	static Find(Outer: UObject, ResourceName: string): FractureToolClusterMerge;
+	static GetDefaultObject(): FractureToolClusterMerge;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolClusterMerge;
+	static C(Other: UObject | any): FractureToolClusterMerge;
+}
+
+declare class FractureClusterMagnetSettings extends FractureToolSettings { 
+	Iterations: any;
+	static Load(ResourceName: string): FractureClusterMagnetSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureClusterMagnetSettings;
+	static GetDefaultObject(): FractureClusterMagnetSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureClusterMagnetSettings;
+	static C(Other: UObject | any): FractureClusterMagnetSettings;
+}
+
+declare class FractureToolClusterMagnet extends FractureModalTool { 
+	ClusterMagnetSettings: FractureClusterMagnetSettings;
+	static Load(ResourceName: string): FractureToolClusterMagnet;
+	static Find(Outer: UObject, ResourceName: string): FractureToolClusterMagnet;
+	static GetDefaultObject(): FractureToolClusterMagnet;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolClusterMagnet;
+	static C(Other: UObject | any): FractureToolClusterMagnet;
+}
+
+declare class FractureConvertSettings extends FractureToolSettings { 
+	bPromptForBaseName: boolean;
+	bPerBone: boolean;
+	bCenterPivots: boolean;
+	bPlaceInWorld: boolean;
+	bSelectNewActors: boolean;
+	static Load(ResourceName: string): FractureConvertSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureConvertSettings;
+	static GetDefaultObject(): FractureConvertSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureConvertSettings;
+	static C(Other: UObject | any): FractureConvertSettings;
+}
+
+declare class FractureToolConvert extends FractureModalTool { 
+	ConvertSettings: FractureConvertSettings;
+	static Load(ResourceName: string): FractureToolConvert;
+	static Find(Outer: UObject, ResourceName: string): FractureToolConvert;
+	static GetDefaultObject(): FractureToolConvert;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolConvert;
+	static C(Other: UObject | any): FractureToolConvert;
+}
+
+declare class FractureConvexSettings extends FractureToolSettings { 
+	FractionAllowRemove: any;
+	CanExceedFraction: any;
+	SimplificationDistanceThreshold: any;
+	static Load(ResourceName: string): FractureConvexSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureConvexSettings;
+	static GetDefaultObject(): FractureConvexSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureConvexSettings;
+	DeleteFromSelected(): void;
+	ClearCustomConvex(): void;
+	static C(Other: UObject | any): FractureConvexSettings;
+}
+
+declare class FractureToolConvex extends FractureModalTool { 
+	ConvexSettings: FractureConvexSettings;
+	static Load(ResourceName: string): FractureToolConvex;
+	static Find(Outer: UObject, ResourceName: string): FractureToolConvex;
+	static GetDefaultObject(): FractureToolConvex;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolConvex;
+	static C(Other: UObject | any): FractureToolConvex;
+}
+
+declare type EVoronoiPattern = 'Centered' | 'Uniform' | 'Grid' | 'MeshVertices' | 'SelectedBones' | 'EVoronoiPattern_MAX';
+declare var EVoronoiPattern : { Centered:'Centered',Uniform:'Uniform',Grid:'Grid',MeshVertices:'MeshVertices',SelectedBones:'SelectedBones',EVoronoiPattern_MAX:'EVoronoiPattern_MAX', };
+declare type EDownsamplingMode = 'Random' | 'UniformSpacing' | 'KeepSharp' | 'EDownsamplingMode_MAX';
+declare var EDownsamplingMode : { Random:'Random',UniformSpacing:'UniformSpacing',KeepSharp:'KeepSharp',EDownsamplingMode_MAX:'EDownsamplingMode_MAX', };
+declare class FractureCustomVoronoiSettings extends FractureToolSettings { 
+	VoronoiPattern: EVoronoiPattern;
+	NormalOffset: number;
+	Variability: number;
+	SitesToAdd: number;
+	GridX: number;
+	GridY: number;
+	GridZ: number;
+	SkipFraction: number;
+	SkipMode: EDownsamplingMode;
+	ReferenceMesh: any;
+	bStartAtActor: boolean;
+	static Load(ResourceName: string): FractureCustomVoronoiSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureCustomVoronoiSettings;
+	static GetDefaultObject(): FractureCustomVoronoiSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureCustomVoronoiSettings;
+	UnfreezeSites(): void;
+	RegenerateLiveSites(): void;
+	FreezeLiveSites(): void;
+	ClearFrozenSites(): void;
+	static C(Other: UObject | any): FractureCustomVoronoiSettings;
+}
+
+declare class FractureTransformGizmoSettings extends FractureToolSettings { 
+	bUseGizmo: boolean;
+	bCenterOnSelection: boolean;
+	bShowUseGizmoOption: boolean;
+	TransformGizmo: CombinedTransformGizmo;
+	TransformProxy: TransformProxy;
+	AttachedCutter: FractureToolCutterBase;
+	UsedToolsContext: InteractiveToolsContext;
+	static Load(ResourceName: string): FractureTransformGizmoSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureTransformGizmoSettings;
+	static GetDefaultObject(): FractureTransformGizmoSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureTransformGizmoSettings;
+	static C(Other: UObject | any): FractureTransformGizmoSettings;
+}
+
+declare class FractureToolCustomVoronoi extends FractureToolVoronoiCutterBase { 
+	CustomVoronoiSettings: FractureCustomVoronoiSettings;
+	GizmoSettings: FractureTransformGizmoSettings;
+	static Load(ResourceName: string): FractureToolCustomVoronoi;
+	static Find(Outer: UObject, ResourceName: string): FractureToolCustomVoronoi;
+	static GetDefaultObject(): FractureToolCustomVoronoi;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolCustomVoronoi;
+	static C(Other: UObject | any): FractureToolCustomVoronoi;
+}
+
+declare class FractureToolDeleteBranch extends FractureActionTool { 
+	static Load(ResourceName: string): FractureToolDeleteBranch;
+	static Find(Outer: UObject, ResourceName: string): FractureToolDeleteBranch;
+	static GetDefaultObject(): FractureToolDeleteBranch;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolDeleteBranch;
+	static C(Other: UObject | any): FractureToolDeleteBranch;
+}
+
+declare class FractureToolHide extends FractureActionTool { 
+	static Load(ResourceName: string): FractureToolHide;
+	static Find(Outer: UObject, ResourceName: string): FractureToolHide;
+	static GetDefaultObject(): FractureToolHide;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolHide;
+	static C(Other: UObject | any): FractureToolHide;
+}
+
+declare class FractureToolUnhide extends FractureActionTool { 
+	static Load(ResourceName: string): FractureToolUnhide;
+	static Find(Outer: UObject, ResourceName: string): FractureToolUnhide;
+	static GetDefaultObject(): FractureToolUnhide;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolUnhide;
+	static C(Other: UObject | any): FractureToolUnhide;
+}
+
+declare class FractureToolValidate extends FractureActionTool { 
+	static Load(ResourceName: string): FractureToolValidate;
+	static Find(Outer: UObject, ResourceName: string): FractureToolValidate;
+	static GetDefaultObject(): FractureToolValidate;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolValidate;
+	static C(Other: UObject | any): FractureToolValidate;
+}
+
+declare class FractureToolAddEmbeddedGeometry extends FractureActionTool { 
+	static Load(ResourceName: string): FractureToolAddEmbeddedGeometry;
+	static Find(Outer: UObject, ResourceName: string): FractureToolAddEmbeddedGeometry;
+	static GetDefaultObject(): FractureToolAddEmbeddedGeometry;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolAddEmbeddedGeometry;
+	static C(Other: UObject | any): FractureToolAddEmbeddedGeometry;
+}
+
+declare class FractureToolAutoEmbedGeometry extends FractureActionTool { 
+	static Load(ResourceName: string): FractureToolAutoEmbedGeometry;
+	static Find(Outer: UObject, ResourceName: string): FractureToolAutoEmbedGeometry;
+	static GetDefaultObject(): FractureToolAutoEmbedGeometry;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolAutoEmbedGeometry;
+	static C(Other: UObject | any): FractureToolAutoEmbedGeometry;
+}
+
+declare class FractureToolFlushEmbeddedGeometrySettings extends FractureToolSettings { 
+	bExtractAsStaticMeshActors: boolean;
+	static Load(ResourceName: string): FractureToolFlushEmbeddedGeometrySettings;
+	static Find(Outer: UObject, ResourceName: string): FractureToolFlushEmbeddedGeometrySettings;
+	static GetDefaultObject(): FractureToolFlushEmbeddedGeometrySettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolFlushEmbeddedGeometrySettings;
+	static C(Other: UObject | any): FractureToolFlushEmbeddedGeometrySettings;
+}
+
+declare class FractureToolFlushEmbeddedGeometry extends FractureModalTool { 
+	FlushEmbeddedGeometrySettings: FractureToolFlushEmbeddedGeometrySettings;
+	static Load(ResourceName: string): FractureToolFlushEmbeddedGeometry;
+	static Find(Outer: UObject, ResourceName: string): FractureToolFlushEmbeddedGeometry;
+	static GetDefaultObject(): FractureToolFlushEmbeddedGeometry;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolFlushEmbeddedGeometry;
+	static C(Other: UObject | any): FractureToolFlushEmbeddedGeometry;
+}
+
+declare type ENeighborSelectionMethod = 'LargestNeighbor' | 'NearestCenter' | 'ENeighborSelectionMethod_MAX';
+declare var ENeighborSelectionMethod : { LargestNeighbor:'LargestNeighbor',NearestCenter:'NearestCenter',ENeighborSelectionMethod_MAX:'ENeighborSelectionMethod_MAX', };
+declare type EGeometrySelectionMethod = 'VolumeCubeRoot' | 'RelativeVolume' | 'EGeometrySelectionMethod_MAX';
+declare var EGeometrySelectionMethod : { VolumeCubeRoot:'VolumeCubeRoot',RelativeVolume:'RelativeVolume',EGeometrySelectionMethod_MAX:'EGeometrySelectionMethod_MAX', };
+declare class FractureTinyGeoSettings extends FractureToolSettings { 
+	NeighborSelection: ENeighborSelectionMethod;
+	bAlsoMergeSelected: boolean;
+	SelectionMethod: EGeometrySelectionMethod;
+	MinVolumeCubeRoot: any;
+	RelativeVolume: any;
+	static Load(ResourceName: string): FractureTinyGeoSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureTinyGeoSettings;
+	static GetDefaultObject(): FractureTinyGeoSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureTinyGeoSettings;
+	static C(Other: UObject | any): FractureTinyGeoSettings;
+}
+
+declare class FractureToolFixTinyGeo extends FractureToolCutterBase { 
+	TinyGeoSettings: FractureTinyGeoSettings;
+	static Load(ResourceName: string): FractureToolFixTinyGeo;
+	static Find(Outer: UObject, ResourceName: string): FractureToolFixTinyGeo;
+	static GetDefaultObject(): FractureToolFixTinyGeo;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolFixTinyGeo;
+	static C(Other: UObject | any): FractureToolFixTinyGeo;
+}
+
+declare class FractureToolGenerateAsset extends FractureActionTool { 
+	AssetPath: string;
+	static Load(ResourceName: string): FractureToolGenerateAsset;
+	static Find(Outer: UObject, ResourceName: string): FractureToolGenerateAsset;
+	static GetDefaultObject(): FractureToolGenerateAsset;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolGenerateAsset;
+	static C(Other: UObject | any): FractureToolGenerateAsset;
+}
+
+declare class FractureToolResetAsset extends FractureToolGenerateAsset { 
+	static Load(ResourceName: string): FractureToolResetAsset;
+	static Find(Outer: UObject, ResourceName: string): FractureToolResetAsset;
+	static GetDefaultObject(): FractureToolResetAsset;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolResetAsset;
+	static C(Other: UObject | any): FractureToolResetAsset;
+}
+
+declare type EMeshCutDistribution = 'SingleCut' | 'UniformRandom' | 'Grid' | 'EMeshCutDistribution_MAX';
+declare var EMeshCutDistribution : { SingleCut:'SingleCut',UniformRandom:'UniformRandom',Grid:'Grid',EMeshCutDistribution_MAX:'EMeshCutDistribution_MAX', };
+declare class FractureMeshCutSettings extends FractureToolSettings { 
+	CuttingActor: any;
+	CutDistribution: EMeshCutDistribution;
+	NumberToScatter: number;
+	GridX: number;
+	GridY: number;
+	GridZ: number;
+	Variability: number;
+	MinScaleFactor: number;
+	MaxScaleFactor: number;
+	bRandomOrientation: boolean;
+	RollRange: number;
+	PitchRange: number;
+	YawRange: number;
+	static Load(ResourceName: string): FractureMeshCutSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureMeshCutSettings;
+	static GetDefaultObject(): FractureMeshCutSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureMeshCutSettings;
+	static C(Other: UObject | any): FractureMeshCutSettings;
+}
+
+declare class FractureToolMeshCut extends FractureToolCutterBase { 
+	MeshCutSettings: FractureMeshCutSettings;
+	static Load(ResourceName: string): FractureToolMeshCut;
+	static Find(Outer: UObject, ResourceName: string): FractureToolMeshCut;
+	static GetDefaultObject(): FractureToolMeshCut;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolMeshCut;
+	static C(Other: UObject | any): FractureToolMeshCut;
+}
+
+declare class FracturePlaneCutSettings extends FractureToolSettings { 
+	NumberPlanarCuts: number;
+	bCanCutWithMultiplePlanes: boolean;
+	static Load(ResourceName: string): FracturePlaneCutSettings;
+	static Find(Outer: UObject, ResourceName: string): FracturePlaneCutSettings;
+	static GetDefaultObject(): FracturePlaneCutSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FracturePlaneCutSettings;
+	static C(Other: UObject | any): FracturePlaneCutSettings;
+}
+
+declare class FractureToolPlaneCut extends FractureToolCutterBase { 
+	PlaneCutSettings: FracturePlaneCutSettings;
+	GizmoSettings: FractureTransformGizmoSettings;
+	static Load(ResourceName: string): FractureToolPlaneCut;
+	static Find(Outer: UObject, ResourceName: string): FractureToolPlaneCut;
+	static GetDefaultObject(): FractureToolPlaneCut;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolPlaneCut;
+	static C(Other: UObject | any): FractureToolPlaneCut;
+}
+
+declare type EDynamicStateOverrideEnum = 'NoOverride' | 'Sleeping' | 'Kinematic' | 'Static' | 'EDynamicStateOverrideEnum_MAX';
+declare var EDynamicStateOverrideEnum : { NoOverride:'NoOverride',Sleeping:'Sleeping',Kinematic:'Kinematic',Static:'Static',EDynamicStateOverrideEnum_MAX:'EDynamicStateOverrideEnum_MAX', };
+declare class FractureInitialDynamicStateSettings extends FractureToolSettings { 
+	InitialDynamicState: EDynamicStateOverrideEnum;
+	static Load(ResourceName: string): FractureInitialDynamicStateSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureInitialDynamicStateSettings;
+	static GetDefaultObject(): FractureInitialDynamicStateSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureInitialDynamicStateSettings;
+	static C(Other: UObject | any): FractureInitialDynamicStateSettings;
+}
+
+declare class FractureToolSetInitialDynamicState extends FractureModalTool { 
+	StateSettings: FractureInitialDynamicStateSettings;
+	static Load(ResourceName: string): FractureToolSetInitialDynamicState;
+	static Find(Outer: UObject, ResourceName: string): FractureToolSetInitialDynamicState;
+	static GetDefaultObject(): FractureToolSetInitialDynamicState;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSetInitialDynamicState;
+	static C(Other: UObject | any): FractureToolSetInitialDynamicState;
+}
+
+declare class FractureRadialSettings extends FractureToolSettings { 
+	Center: Vector;
+	Normal: Vector;
+	bPositionedByGizmo: boolean;
+	Radius: number;
+	AngularSteps: number;
+	RadialSteps: number;
+	AngleOffset: number;
+	Variability: number;
+	static Load(ResourceName: string): FractureRadialSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureRadialSettings;
+	static GetDefaultObject(): FractureRadialSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureRadialSettings;
+	static C(Other: UObject | any): FractureRadialSettings;
+}
+
+declare class FractureToolRadial extends FractureToolVoronoiCutterBase { 
+	RadialSettings: FractureRadialSettings;
+	GizmoSettings: FractureTransformGizmoSettings;
+	static Load(ResourceName: string): FractureToolRadial;
+	static Find(Outer: UObject, ResourceName: string): FractureToolRadial;
+	static GetDefaultObject(): FractureToolRadial;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolRadial;
+	static C(Other: UObject | any): FractureToolRadial;
+}
+
+declare class FractureRecomputeNormalsSettings extends FractureToolSettings { 
+	bShowNormals: boolean;
+	bShowTangents: boolean;
+	Length: number;
+	bOnlyTangents: boolean;
+	bRecomputeSharpEdges: boolean;
+	SharpEdgeAngleThreshold: number;
+	bOnlyInternalSurfaces: boolean;
+	static Load(ResourceName: string): FractureRecomputeNormalsSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureRecomputeNormalsSettings;
+	static GetDefaultObject(): FractureRecomputeNormalsSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureRecomputeNormalsSettings;
+	static C(Other: UObject | any): FractureRecomputeNormalsSettings;
+}
+
+declare class FractureToolRecomputeNormals extends FractureToolCutterBase { 
+	NormalsSettings: FractureRecomputeNormalsSettings;
+	static Load(ResourceName: string): FractureToolRecomputeNormals;
+	static Find(Outer: UObject, ResourceName: string): FractureToolRecomputeNormals;
+	static GetDefaultObject(): FractureToolRecomputeNormals;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolRecomputeNormals;
+	static C(Other: UObject | any): FractureToolRecomputeNormals;
+}
+
+declare class FractureResampleSettings extends FractureToolSettings { 
+	bOnlyShowAddedPoints: boolean;
+	static Load(ResourceName: string): FractureResampleSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureResampleSettings;
+	static GetDefaultObject(): FractureResampleSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureResampleSettings;
+	static C(Other: UObject | any): FractureResampleSettings;
+}
+
+declare class FractureToolResample extends FractureToolCutterBase { 
+	ResampleSettings: FractureResampleSettings;
+	static Load(ResourceName: string): FractureToolResample;
+	static Find(Outer: UObject, ResourceName: string): FractureToolResample;
+	static GetDefaultObject(): FractureToolResample;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolResample;
+	static C(Other: UObject | any): FractureToolResample;
+}
+
+declare type EMouseSelectionMethod = 'RectSelect' | 'StandardSelect' | 'EMouseSelectionMethod_MAX';
+declare var EMouseSelectionMethod : { RectSelect:'RectSelect',StandardSelect:'StandardSelect',EMouseSelectionMethod_MAX:'EMouseSelectionMethod_MAX', };
+declare type EVolumeSelectionMethod = 'CubeRootOfVolume' | 'RelativeToWhole' | 'RelativeToLargest' | 'EVolumeSelectionMethod_MAX';
+declare var EVolumeSelectionMethod : { CubeRootOfVolume:'CubeRootOfVolume',RelativeToWhole:'RelativeToWhole',RelativeToLargest:'RelativeToLargest',EVolumeSelectionMethod_MAX:'EVolumeSelectionMethod_MAX', };
+declare type ESelectionOperation = 'Replace' | 'Add' | 'Remove' | 'ESelectionOperation_MAX';
+declare var ESelectionOperation : { Replace:'Replace',Add:'Add',Remove:'Remove',ESelectionOperation_MAX:'ESelectionOperation_MAX', };
+declare class FractureSelectionSettings extends FractureToolSettings { 
+	MouseSelectionMethod: EMouseSelectionMethod;
+	VolumeSelectionMethod: EVolumeSelectionMethod;
+	SelectionOperation: ESelectionOperation;
+	MinVolume: any;
+	MaxVolume: any;
+	MinVolumeFrac: any;
+	MaxVolumeFrac: any;
+	static Load(ResourceName: string): FractureSelectionSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureSelectionSettings;
+	static GetDefaultObject(): FractureSelectionSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureSelectionSettings;
+	static C(Other: UObject | any): FractureSelectionSettings;
+}
+
+declare class RectangleMarqueeManager extends UObject { 
+	bUseExternalClickDragBehavior: boolean;
+	OnDragRectangleChangedDeferredThreshold: any;
+	ClickDragBehavior: ClickDragInputBehavior;
+	static Load(ResourceName: string): RectangleMarqueeManager;
+	static Find(Outer: UObject, ResourceName: string): RectangleMarqueeManager;
+	static GetDefaultObject(): RectangleMarqueeManager;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): RectangleMarqueeManager;
+	static C(Other: UObject | any): RectangleMarqueeManager;
+}
+
+declare class FractureToolSelection extends FractureToolCutterBase { 
+	SelectionBehaviorSet: InputBehaviorSet;
+	SelectionBehaviorSource: LocalInputBehaviorSource;
+	RectangleMarqueeManager: RectangleMarqueeManager;
+	UsedToolsContext: InteractiveToolsContext;
+	SelectionSettings: FractureSelectionSettings;
+	static Load(ResourceName: string): FractureToolSelection;
+	static Find(Outer: UObject, ResourceName: string): FractureToolSelection;
+	static GetDefaultObject(): FractureToolSelection;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelection;
+	static C(Other: UObject | any): FractureToolSelection;
+}
+
+declare class FractureToolSelectAll extends FractureActionTool { 
+	static Load(ResourceName: string): FractureToolSelectAll;
+	static Find(Outer: UObject, ResourceName: string): FractureToolSelectAll;
+	static GetDefaultObject(): FractureToolSelectAll;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelectAll;
+	static C(Other: UObject | any): FractureToolSelectAll;
+}
+
+declare class FractureToolSelectNone extends FractureToolSelectAll { 
+	static Load(ResourceName: string): FractureToolSelectNone;
+	static Find(Outer: UObject, ResourceName: string): FractureToolSelectNone;
+	static GetDefaultObject(): FractureToolSelectNone;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelectNone;
+	static C(Other: UObject | any): FractureToolSelectNone;
+}
+
+declare class FractureToolSelectNeighbors extends FractureToolSelectAll { 
+	static Load(ResourceName: string): FractureToolSelectNeighbors;
+	static Find(Outer: UObject, ResourceName: string): FractureToolSelectNeighbors;
+	static GetDefaultObject(): FractureToolSelectNeighbors;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelectNeighbors;
+	static C(Other: UObject | any): FractureToolSelectNeighbors;
+}
+
+declare class FractureToolSelectParent extends FractureToolSelectAll { 
+	static Load(ResourceName: string): FractureToolSelectParent;
+	static Find(Outer: UObject, ResourceName: string): FractureToolSelectParent;
+	static GetDefaultObject(): FractureToolSelectParent;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelectParent;
+	static C(Other: UObject | any): FractureToolSelectParent;
+}
+
+declare class FractureToolSelectChildren extends FractureToolSelectAll { 
+	static Load(ResourceName: string): FractureToolSelectChildren;
+	static Find(Outer: UObject, ResourceName: string): FractureToolSelectChildren;
+	static GetDefaultObject(): FractureToolSelectChildren;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelectChildren;
+	static C(Other: UObject | any): FractureToolSelectChildren;
+}
+
+declare class FractureToolSelectSiblings extends FractureToolSelectAll { 
+	static Load(ResourceName: string): FractureToolSelectSiblings;
+	static Find(Outer: UObject, ResourceName: string): FractureToolSelectSiblings;
+	static GetDefaultObject(): FractureToolSelectSiblings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelectSiblings;
+	static C(Other: UObject | any): FractureToolSelectSiblings;
+}
+
+declare class FractureToolSelectAllInLevel extends FractureToolSelectAll { 
+	static Load(ResourceName: string): FractureToolSelectAllInLevel;
+	static Find(Outer: UObject, ResourceName: string): FractureToolSelectAllInLevel;
+	static GetDefaultObject(): FractureToolSelectAllInLevel;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelectAllInLevel;
+	static C(Other: UObject | any): FractureToolSelectAllInLevel;
+}
+
+declare class FractureToolSelectInvert extends FractureToolSelectAll { 
+	static Load(ResourceName: string): FractureToolSelectInvert;
+	static Find(Outer: UObject, ResourceName: string): FractureToolSelectInvert;
+	static GetDefaultObject(): FractureToolSelectInvert;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSelectInvert;
+	static C(Other: UObject | any): FractureToolSelectInvert;
+}
+
+declare class FractureSliceSettings extends FractureToolSettings { 
+	SlicesX: number;
+	SlicesY: number;
+	SlicesZ: number;
+	SliceAngleVariation: number;
+	SliceOffsetVariation: number;
+	static Load(ResourceName: string): FractureSliceSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureSliceSettings;
+	static GetDefaultObject(): FractureSliceSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureSliceSettings;
+	static C(Other: UObject | any): FractureSliceSettings;
+}
+
+declare class FractureToolSlice extends FractureToolCutterBase { 
+	SliceSettings: FractureSliceSettings;
+	static Load(ResourceName: string): FractureToolSlice;
+	static Find(Outer: UObject, ResourceName: string): FractureToolSlice;
+	static GetDefaultObject(): FractureToolSlice;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolSlice;
+	static C(Other: UObject | any): FractureToolSlice;
+}
+
+declare class FractureUniformSettings extends FractureToolSettings { 
+	NumberVoronoiSitesMin: number;
+	NumberVoronoiSitesMax: number;
+	static Load(ResourceName: string): FractureUniformSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureUniformSettings;
+	static GetDefaultObject(): FractureUniformSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureUniformSettings;
+	static C(Other: UObject | any): FractureUniformSettings;
+}
+
+declare class FractureToolUniform extends FractureToolVoronoiCutterBase { 
+	UniformSettings: FractureUniformSettings;
+	static Load(ResourceName: string): FractureToolUniform;
+	static Find(Outer: UObject, ResourceName: string): FractureToolUniform;
+	static GetDefaultObject(): FractureToolUniform;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolUniform;
+	static C(Other: UObject | any): FractureToolUniform;
+}
+
+declare type ETargetMaterialIDs = 'OddIDs' | 'OddAndSelectedIDs' | 'SelectedIDs' | 'AllIDs' | 'ETargetMaterialIDs_MAX';
+declare var ETargetMaterialIDs : { OddIDs:'OddIDs',OddAndSelectedIDs:'OddAndSelectedIDs',SelectedIDs:'SelectedIDs',AllIDs:'AllIDs',ETargetMaterialIDs_MAX:'ETargetMaterialIDs_MAX', };
+declare type EAutoUVTextureResolution = 'Resolution16' | 'Resolution32' | 'Resolution64' | 'Resolution128' | 'Resolution256' | 'Resolution512' | 'Resolution1024' | 'Resolution2048' | 'Resolution4096' | 'Resolution8192' | 'EAutoUVTextureResolution_MAX';
+declare var EAutoUVTextureResolution : { Resolution16:'Resolution16',Resolution32:'Resolution32',Resolution64:'Resolution64',Resolution128:'Resolution128',Resolution256:'Resolution256',Resolution512:'Resolution512',Resolution1024:'Resolution1024',Resolution2048:'Resolution2048',Resolution4096:'Resolution4096',Resolution8192:'Resolution8192',EAutoUVTextureResolution_MAX:'EAutoUVTextureResolution_MAX', };
+declare type ETextureType = 'ThicknessAndSurfaceAttributes' | 'SpatialGradients' | 'Normals' | 'ETextureType_MAX';
+declare var ETextureType : { ThicknessAndSurfaceAttributes:'ThicknessAndSurfaceAttributes',SpatialGradients:'SpatialGradients',Normals:'Normals',ETextureType_MAX:'ETextureType_MAX', };
+declare class FractureAutoUVSettings extends FractureToolSettings { 
+	UVChannel: string;
+	UVChannelNamesList: string[];
+	ProjectionScale: Vector;
+	TargetMaterialIDs: ETargetMaterialIDs;
+	MaterialIDs: number[];
+	Resolution: EAutoUVTextureResolution;
+	GutterSize: number;
+	Result: Texture2D;
+	bPromptToSave: boolean;
+	bReplaceExisting: boolean;
+	BakeTextureType: ETextureType;
+	bDistToOuter: boolean;
+	bAmbientOcclusion: boolean;
+	bSmoothedCurvature: boolean;
+	MaxDistance: any;
+	OcclusionRays: number;
+	OcclusionBlurRadius: any;
+	CurvatureBlurRadius: any;
+	VoxelResolution: number;
+	SmoothingIterations: number;
+	ThicknessFactor: any;
+	MaxCurvature: any;
+	static Load(ResourceName: string): FractureAutoUVSettings;
+	static Find(Outer: UObject, ResourceName: string): FractureAutoUVSettings;
+	static GetDefaultObject(): FractureAutoUVSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureAutoUVSettings;
+	LayoutUVs(): void;
+	GetUVChannelNamesFunc(): string[];
+	DisableBoneColors(): void;
+	DeleteUVChannel(): void;
+	BoxProjectUVs(): void;
+	BakeTexture(): void;
+	AddUVChannel(): void;
+	static C(Other: UObject | any): FractureAutoUVSettings;
+}
+
+declare class FractureToolAutoUV extends FractureModalTool { 
+	AutoUVSettings: FractureAutoUVSettings;
+	static Load(ResourceName: string): FractureToolAutoUV;
+	static Find(Outer: UObject, ResourceName: string): FractureToolAutoUV;
+	static GetDefaultObject(): FractureToolAutoUV;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FractureToolAutoUV;
+	static C(Other: UObject | any): FractureToolAutoUV;
+}
+
+declare type EInspectedAttributeEnum = 'Volume' | 'Level' | 'InitialDynamicState' | 'Size' | 'EInspectedAttributeEnum_MAX';
+declare var EInspectedAttributeEnum : { Volume:'Volume',Level:'Level',InitialDynamicState:'InitialDynamicState',Size:'Size',EInspectedAttributeEnum_MAX:'EInspectedAttributeEnum_MAX', };
+declare class HistogramSettings extends UObject { 
+	InspectedAttribute: EInspectedAttributeEnum;
+	bSorted: boolean;
+	bShowClusters: boolean;
+	bShowRigids: boolean;
+	bShowEmbedded: boolean;
+	static Load(ResourceName: string): HistogramSettings;
+	static Find(Outer: UObject, ResourceName: string): HistogramSettings;
+	static GetDefaultObject(): HistogramSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): HistogramSettings;
+	static C(Other: UObject | any): HistogramSettings;
+}
+
+declare type EOutlinerItemNameEnum = 'BoneName' | 'BoneIndex' | 'EOutlinerItemNameEnum_MAX';
+declare var EOutlinerItemNameEnum : { BoneName:'BoneName',BoneIndex:'BoneIndex',EOutlinerItemNameEnum_MAX:'EOutlinerItemNameEnum_MAX', };
+declare class OutlinerSettings extends UObject { 
+	ItemText: EOutlinerItemNameEnum;
+	static Load(ResourceName: string): OutlinerSettings;
+	static Find(Outer: UObject, ResourceName: string): OutlinerSettings;
+	static GetDefaultObject(): OutlinerSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OutlinerSettings;
+	static C(Other: UObject | any): OutlinerSettings;
+}
+
+declare class ActorFactoryChaosSolver extends ActorFactory { 
+	static Load(ResourceName: string): ActorFactoryChaosSolver;
+	static Find(Outer: UObject, ResourceName: string): ActorFactoryChaosSolver;
+	static GetDefaultObject(): ActorFactoryChaosSolver;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ActorFactoryChaosSolver;
+	static C(Other: UObject | any): ActorFactoryChaosSolver;
+}
+
+declare class ChaosSolverFactory extends Factory { 
+	static Load(ResourceName: string): ChaosSolverFactory;
+	static Find(Outer: UObject, ResourceName: string): ChaosSolverFactory;
+	static GetDefaultObject(): ChaosSolverFactory;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ChaosSolverFactory;
+	static C(Other: UObject | any): ChaosSolverFactory;
+}
+
+declare type EDataSourceTypeEnum = 'ChaosNiagara_DataSourceType_Collision' | 'ChaosNiagara_DataSourceType_Breaking' | 'ChaosNiagara_DataSourceType_Trailing' | 'ChaosNiagara_Max';
+declare var EDataSourceTypeEnum : { ChaosNiagara_DataSourceType_Collision:'ChaosNiagara_DataSourceType_Collision',ChaosNiagara_DataSourceType_Breaking:'ChaosNiagara_DataSourceType_Breaking',ChaosNiagara_DataSourceType_Trailing:'ChaosNiagara_DataSourceType_Trailing',ChaosNiagara_Max:'ChaosNiagara_Max', };
+declare type ELocationFilteringModeEnum = 'ChaosNiagara_LocationFilteringMode_Inclusive' | 'ChaosNiagara_LocationFilteringMode_Exclusive' | 'ChaosNiagara_Max';
+declare var ELocationFilteringModeEnum : { ChaosNiagara_LocationFilteringMode_Inclusive:'ChaosNiagara_LocationFilteringMode_Inclusive',ChaosNiagara_LocationFilteringMode_Exclusive:'ChaosNiagara_LocationFilteringMode_Exclusive',ChaosNiagara_Max:'ChaosNiagara_Max', };
+declare type ELocationXToSpawnEnum = 'ChaosNiagara_LocationXToSpawn_None' | 'ChaosNiagara_LocationXToSpawn_Min' | 'ChaosNiagara_LocationXToSpawn_Max' | 'ChaosNiagara_LocationXToSpawn_MinMax' | 'ChaosNiagara_Max';
+declare var ELocationXToSpawnEnum : { ChaosNiagara_LocationXToSpawn_None:'ChaosNiagara_LocationXToSpawn_None',ChaosNiagara_LocationXToSpawn_Min:'ChaosNiagara_LocationXToSpawn_Min',ChaosNiagara_LocationXToSpawn_Max:'ChaosNiagara_LocationXToSpawn_Max',ChaosNiagara_LocationXToSpawn_MinMax:'ChaosNiagara_LocationXToSpawn_MinMax',ChaosNiagara_Max:'ChaosNiagara_Max', };
+declare type ELocationYToSpawnEnum = 'ChaosNiagara_LocationYToSpawn_None' | 'ChaosNiagara_LocationYToSpawn_Min' | 'ChaosNiagara_LocationYToSpawn_Max' | 'ChaosNiagara_LocationYToSpawn_MinMax' | 'ChaosNiagara_Max';
+declare var ELocationYToSpawnEnum : { ChaosNiagara_LocationYToSpawn_None:'ChaosNiagara_LocationYToSpawn_None',ChaosNiagara_LocationYToSpawn_Min:'ChaosNiagara_LocationYToSpawn_Min',ChaosNiagara_LocationYToSpawn_Max:'ChaosNiagara_LocationYToSpawn_Max',ChaosNiagara_LocationYToSpawn_MinMax:'ChaosNiagara_LocationYToSpawn_MinMax',ChaosNiagara_Max:'ChaosNiagara_Max', };
+declare type ELocationZToSpawnEnum = 'ChaosNiagara_LocationZToSpawn_None' | 'ChaosNiagara_LocationZToSpawn_Min' | 'ChaosNiagara_LocationZToSpawn_Max' | 'ChaosNiagara_LocationZToSpawn_MinMax' | 'ChaosNiagara_Max';
+declare var ELocationZToSpawnEnum : { ChaosNiagara_LocationZToSpawn_None:'ChaosNiagara_LocationZToSpawn_None',ChaosNiagara_LocationZToSpawn_Min:'ChaosNiagara_LocationZToSpawn_Min',ChaosNiagara_LocationZToSpawn_Max:'ChaosNiagara_LocationZToSpawn_Max',ChaosNiagara_LocationZToSpawn_MinMax:'ChaosNiagara_LocationZToSpawn_MinMax',ChaosNiagara_Max:'ChaosNiagara_Max', };
+declare type EDataSortTypeEnum = 'ChaosNiagara_DataSortType_NoSorting' | 'ChaosNiagara_DataSortType_RandomShuffle' | 'ChaosNiagara_DataSortType_SortByMassMaxToMin' | 'ChaosNiagara_DataSortType_SortByMassMinToMax' | 'ChaosNiagara_Max';
+declare var EDataSortTypeEnum : { ChaosNiagara_DataSortType_NoSorting:'ChaosNiagara_DataSortType_NoSorting',ChaosNiagara_DataSortType_RandomShuffle:'ChaosNiagara_DataSortType_RandomShuffle',ChaosNiagara_DataSortType_SortByMassMaxToMin:'ChaosNiagara_DataSortType_SortByMassMaxToMin',ChaosNiagara_DataSortType_SortByMassMinToMax:'ChaosNiagara_DataSortType_SortByMassMinToMax',ChaosNiagara_Max:'ChaosNiagara_Max', };
+declare type ERandomVelocityGenerationTypeEnum = 'ChaosNiagara_RandomVelocityGenerationType_RandomDistribution' | 'ChaosNiagara_RandomVelocityGenerationType_RandomDistributionWithStreamers' | 'ChaosNiagara_RandomVelocityGenerationType_CollisionNormalBased' | 'ChaosNiagara_Max';
+declare var ERandomVelocityGenerationTypeEnum : { ChaosNiagara_RandomVelocityGenerationType_RandomDistribution:'ChaosNiagara_RandomVelocityGenerationType_RandomDistribution',ChaosNiagara_RandomVelocityGenerationType_RandomDistributionWithStreamers:'ChaosNiagara_RandomVelocityGenerationType_RandomDistributionWithStreamers',ChaosNiagara_RandomVelocityGenerationType_CollisionNormalBased:'ChaosNiagara_RandomVelocityGenerationType_CollisionNormalBased',ChaosNiagara_Max:'ChaosNiagara_Max', };
+declare type EDebugTypeEnum = 'ChaosNiagara_DebugType_NoDebug' | 'ChaosNiagara_DebugType_ColorBySolver' | 'ChaosNiagara_DebugType_ColorByParticleIndex' | 'ChaosNiagara_Max';
+declare var EDebugTypeEnum : { ChaosNiagara_DebugType_NoDebug:'ChaosNiagara_DebugType_NoDebug',ChaosNiagara_DebugType_ColorBySolver:'ChaosNiagara_DebugType_ColorBySolver',ChaosNiagara_DebugType_ColorByParticleIndex:'ChaosNiagara_DebugType_ColorByParticleIndex',ChaosNiagara_Max:'ChaosNiagara_Max', };
+declare class NiagaraDataInterfaceChaosDestruction extends NiagaraDataInterface { 
+	ChaosSolverActorSet: any;
+	DataSourceType: EDataSourceTypeEnum;
+	DataProcessFrequency: number;
+	MaxNumberOfDataEntriesToSpawn: number;
+	DoSpawn: boolean;
+	SpawnMultiplierMinMax: Vector2D;
+	SpawnChance: number;
+	ImpulseToSpawnMinMax: Vector2D;
+	SpeedToSpawnMinMax: Vector2D;
+	MassToSpawnMinMax: Vector2D;
+	ExtentMinToSpawnMinMax: Vector2D;
+	ExtentMaxToSpawnMinMax: Vector2D;
+	VolumeToSpawnMinMax: Vector2D;
+	SolverTimeToSpawnMinMax: Vector2D;
+	SurfaceTypeToSpawn: number;
+	LocationFilteringMode: ELocationFilteringModeEnum;
+	LocationXToSpawn: ELocationXToSpawnEnum;
+	LocationXToSpawnMinMax: Vector2D;
+	LocationYToSpawn: ELocationYToSpawnEnum;
+	LocationYToSpawnMinMax: Vector2D;
+	LocationZToSpawn: ELocationZToSpawnEnum;
+	LocationZToSpawnMinMax: Vector2D;
+	TrailMinSpeedToSpawn: number;
+	DataSortingType: EDataSortTypeEnum;
+	bGetExternalCollisionData: boolean;
+	DoSpatialHash: boolean;
+	SpatialHashVolumeMin: Vector;
+	SpatialHashVolumeMax: Vector;
+	SpatialHashVolumeCellSize: Vector;
+	MaxDataPerCell: number;
+	bApplyMaterialsFilter: boolean;
+	ChaosBreakingMaterialSet: any;
+	bGetExternalBreakingData: boolean;
+	bGetExternalTrailingData: boolean;
+	RandomPositionMagnitudeMinMax: Vector2D;
+	InheritedVelocityMultiplier: number;
+	RandomVelocityGenerationType: ERandomVelocityGenerationTypeEnum;
+	RandomVelocityMagnitudeMinMax: Vector2D;
+	SpreadAngleMax: number;
+	VelocityOffsetMin: Vector;
+	VelocityOffsetMax: Vector;
+	FinalVelocityMagnitudeMinMax: Vector2D;
+	MaxLatency: number;
+	DebugType: EDebugTypeEnum;
+	LastSpawnedPointID: number;
+	LastSpawnTime: number;
+	SolverTime: number;
+	TimeStampOfLastProcessedData: number;
+	static Load(ResourceName: string): NiagaraDataInterfaceChaosDestruction;
+	static Find(Outer: UObject, ResourceName: string): NiagaraDataInterfaceChaosDestruction;
+	static GetDefaultObject(): NiagaraDataInterfaceChaosDestruction;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraDataInterfaceChaosDestruction;
+	static C(Other: UObject | any): NiagaraDataInterfaceChaosDestruction;
+}
+
+declare class NiagaraDataInterfaceGeometryCollection extends NiagaraDataInterface { 
+	GeometryCollectionActor: GeometryCollectionActor;
+	static Load(ResourceName: string): NiagaraDataInterfaceGeometryCollection;
+	static Find(Outer: UObject, ResourceName: string): NiagaraDataInterfaceGeometryCollection;
+	static GetDefaultObject(): NiagaraDataInterfaceGeometryCollection;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraDataInterfaceGeometryCollection;
+	static C(Other: UObject | any): NiagaraDataInterfaceGeometryCollection;
+}
+
+declare class NiagaraDataInterfacePhysicsField extends NiagaraDataInterface { 
+	static Load(ResourceName: string): NiagaraDataInterfacePhysicsField;
+	static Find(Outer: UObject, ResourceName: string): NiagaraDataInterfacePhysicsField;
+	static GetDefaultObject(): NiagaraDataInterfacePhysicsField;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraDataInterfacePhysicsField;
+	static C(Other: UObject | any): NiagaraDataInterfacePhysicsField;
 }
 
 declare class MovieSceneGeometryCollectionParams { 
@@ -12774,36 +12701,6 @@ declare class K2Node_ConvertToPNG extends K2Node_BaseAsyncTask {
 	static C(Other: UObject | any): K2Node_ConvertToPNG;
 }
 
-declare class ArchVisCharacter extends Character { 
-	LookUpAxisName: string;
-	LookUpAtRateAxisName: string;
-	TurnAxisName: string;
-	TurnAtRateAxisName: string;
-	MoveForwardAxisName: string;
-	MoveRightAxisName: string;
-	MouseSensitivityScale_Pitch: number;
-	MouseSensitivityScale_Yaw: number;
-	static GetDefaultObject(): ArchVisCharacter;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ArchVisCharacter;
-	static C(Other: UObject | any): ArchVisCharacter;
-}
-
-declare class ArchVisCharMovementComponent extends CharacterMovementComponent { 
-	RotationalAcceleration: Rotator;
-	RotationalDeceleration: Rotator;
-	MaxRotationalVelocity: Rotator;
-	MinPitch: number;
-	MaxPitch: number;
-	WalkingFriction: number;
-	WalkingSpeed: number;
-	WalkingAcceleration: number;
-	static Load(ResourceName: string): ArchVisCharMovementComponent;
-	static Find(Outer: UObject, ResourceName: string): ArchVisCharMovementComponent;
-	static GetDefaultObject(): ArchVisCharMovementComponent;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ArchVisCharMovementComponent;
-	static C(Other: UObject | any): ArchVisCharMovementComponent;
-}
-
 declare type ECollectionScriptingShareType = 'Local' | 'Private' | 'Shared' | 'ECollectionScriptingShareType_MAX';
 declare var ECollectionScriptingShareType : { Local:'Local',Private:'Private',Shared:'Shared',ECollectionScriptingShareType_MAX:'ECollectionScriptingShareType_MAX', };
 declare class AssetTagsSubsystem extends EngineSubsystem { 
@@ -12835,6 +12732,36 @@ declare class AssetTagsSubsystem extends EngineSubsystem {
 	AddAssetDataToCollection(Name: string,AssetData: AssetData): boolean;
 	AddAssetDatasToCollection(Name: string,AssetDatas: AssetData[]): boolean;
 	static C(Other: UObject | any): AssetTagsSubsystem;
+}
+
+declare class ArchVisCharacter extends Character { 
+	LookUpAxisName: string;
+	LookUpAtRateAxisName: string;
+	TurnAxisName: string;
+	TurnAtRateAxisName: string;
+	MoveForwardAxisName: string;
+	MoveRightAxisName: string;
+	MouseSensitivityScale_Pitch: number;
+	MouseSensitivityScale_Yaw: number;
+	static GetDefaultObject(): ArchVisCharacter;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ArchVisCharacter;
+	static C(Other: UObject | any): ArchVisCharacter;
+}
+
+declare class ArchVisCharMovementComponent extends CharacterMovementComponent { 
+	RotationalAcceleration: Rotator;
+	RotationalDeceleration: Rotator;
+	MaxRotationalVelocity: Rotator;
+	MinPitch: number;
+	MaxPitch: number;
+	WalkingFriction: number;
+	WalkingSpeed: number;
+	WalkingAcceleration: number;
+	static Load(ResourceName: string): ArchVisCharMovementComponent;
+	static Find(Outer: UObject, ResourceName: string): ArchVisCharMovementComponent;
+	static GetDefaultObject(): ArchVisCharMovementComponent;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ArchVisCharMovementComponent;
+	static C(Other: UObject | any): ArchVisCharMovementComponent;
 }
 
 declare class AudioCaptureDeviceInfo { 
@@ -12993,37 +12920,6 @@ declare class GeometryCacheStreamerSettings extends DeveloperSettings {
 	static C(Other: UObject | any): GeometryCacheStreamerSettings;
 }
 
-declare type EGooglePADErrorCode = 'AssetPack_NO_ERROR' | 'AssetPack_APP_UNAVAILABLE' | 'AssetPack_UNAVAILABLE' | 'AssetPack_INVALID_REQUEST' | 'AssetPack_DOWNLOAD_NOT_FOUND' | 'AssetPack_API_NOT_AVAILABLE' | 'AssetPack_NETWORK_ERROR' | 'AssetPack_ACCESS_DENIED' | 'AssetPack_INSUFFICIENT_STORAGE' | 'AssetPack_PLAY_STORE_NOT_FOUND' | 'AssetPack_NETWORK_UNRESTRICTED' | 'AssetPack_INTERNAL_ERROR' | 'AssetPack_INITIALIZATION_NEEDED' | 'AssetPack_INITIALIZATION_FAILED' | 'AssetPack_MAX';
-declare var EGooglePADErrorCode : { AssetPack_NO_ERROR:'AssetPack_NO_ERROR',AssetPack_APP_UNAVAILABLE:'AssetPack_APP_UNAVAILABLE',AssetPack_UNAVAILABLE:'AssetPack_UNAVAILABLE',AssetPack_INVALID_REQUEST:'AssetPack_INVALID_REQUEST',AssetPack_DOWNLOAD_NOT_FOUND:'AssetPack_DOWNLOAD_NOT_FOUND',AssetPack_API_NOT_AVAILABLE:'AssetPack_API_NOT_AVAILABLE',AssetPack_NETWORK_ERROR:'AssetPack_NETWORK_ERROR',AssetPack_ACCESS_DENIED:'AssetPack_ACCESS_DENIED',AssetPack_INSUFFICIENT_STORAGE:'AssetPack_INSUFFICIENT_STORAGE',AssetPack_PLAY_STORE_NOT_FOUND:'AssetPack_PLAY_STORE_NOT_FOUND',AssetPack_NETWORK_UNRESTRICTED:'AssetPack_NETWORK_UNRESTRICTED',AssetPack_INTERNAL_ERROR:'AssetPack_INTERNAL_ERROR',AssetPack_INITIALIZATION_NEEDED:'AssetPack_INITIALIZATION_NEEDED',AssetPack_INITIALIZATION_FAILED:'AssetPack_INITIALIZATION_FAILED',AssetPack_MAX:'AssetPack_MAX', };
-declare type EGooglePADStorageMethod = 'AssetPack_STORAGE_FILES' | 'AssetPack_STORAGE_APK' | 'AssetPack_STORAGE_UNKNOWN' | 'AssetPack_STORAGE_NOT_INSTALLED' | 'AssetPack_STORAGE_MAX';
-declare var EGooglePADStorageMethod : { AssetPack_STORAGE_FILES:'AssetPack_STORAGE_FILES',AssetPack_STORAGE_APK:'AssetPack_STORAGE_APK',AssetPack_STORAGE_UNKNOWN:'AssetPack_STORAGE_UNKNOWN',AssetPack_STORAGE_NOT_INSTALLED:'AssetPack_STORAGE_NOT_INSTALLED',AssetPack_STORAGE_MAX:'AssetPack_STORAGE_MAX', };
-declare type EGooglePADCellularDataConfirmStatus = 'AssetPack_CONFIRM_UNKNOWN' | 'AssetPack_CONFIRM_PENDING' | 'AssetPack_CONFIRM_USER_APPROVED' | 'AssetPack_CONFIRM_USER_CANCELED' | 'AssetPack_CONFIRM_MAX';
-declare var EGooglePADCellularDataConfirmStatus : { AssetPack_CONFIRM_UNKNOWN:'AssetPack_CONFIRM_UNKNOWN',AssetPack_CONFIRM_PENDING:'AssetPack_CONFIRM_PENDING',AssetPack_CONFIRM_USER_APPROVED:'AssetPack_CONFIRM_USER_APPROVED',AssetPack_CONFIRM_USER_CANCELED:'AssetPack_CONFIRM_USER_CANCELED',AssetPack_CONFIRM_MAX:'AssetPack_CONFIRM_MAX', };
-declare type EGooglePADDownloadStatus = 'AssetPack_UNKNOWN' | 'AssetPack_DOWNLOAD_PENDING' | 'AssetPack_DOWNLOADING' | 'AssetPack_TRANSFERRING' | 'AssetPack_DOWNLOAD_COMPLETED' | 'AssetPack_DOWNLOAD_FAILED' | 'AssetPack_DOWNLOAD_CANCELED' | 'AssetPack_WAITING_FOR_WIFI' | 'AssetPack_NOT_INSTALLED' | 'AssetPack_INFO_PENDING' | 'AssetPack_INFO_FAILED' | 'AssetPack_REMOVAL_PENDING' | 'AssetPack_REMOVAL_FAILED' | 'AssetPack_MAX';
-declare var EGooglePADDownloadStatus : { AssetPack_UNKNOWN:'AssetPack_UNKNOWN',AssetPack_DOWNLOAD_PENDING:'AssetPack_DOWNLOAD_PENDING',AssetPack_DOWNLOADING:'AssetPack_DOWNLOADING',AssetPack_TRANSFERRING:'AssetPack_TRANSFERRING',AssetPack_DOWNLOAD_COMPLETED:'AssetPack_DOWNLOAD_COMPLETED',AssetPack_DOWNLOAD_FAILED:'AssetPack_DOWNLOAD_FAILED',AssetPack_DOWNLOAD_CANCELED:'AssetPack_DOWNLOAD_CANCELED',AssetPack_WAITING_FOR_WIFI:'AssetPack_WAITING_FOR_WIFI',AssetPack_NOT_INSTALLED:'AssetPack_NOT_INSTALLED',AssetPack_INFO_PENDING:'AssetPack_INFO_PENDING',AssetPack_INFO_FAILED:'AssetPack_INFO_FAILED',AssetPack_REMOVAL_PENDING:'AssetPack_REMOVAL_PENDING',AssetPack_REMOVAL_FAILED:'AssetPack_REMOVAL_FAILED',AssetPack_MAX:'AssetPack_MAX', };
-declare class GooglePADFunctionLibrary extends BlueprintFunctionLibrary { 
-	static Load(ResourceName: string): GooglePADFunctionLibrary;
-	static Find(Outer: UObject, ResourceName: string): GooglePADFunctionLibrary;
-	static GetDefaultObject(): GooglePADFunctionLibrary;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GooglePADFunctionLibrary;
-	static ShowCellularDataConfirmation(): EGooglePADErrorCode;
-	static RequestRemoval(Name: string): EGooglePADErrorCode;
-	static RequestInfo(AssetPacks: string[]): EGooglePADErrorCode;
-	static RequestDownload(AssetPacks: string[]): EGooglePADErrorCode;
-	static ReleaseDownloadState(State: number): void;
-	static ReleaseAssetPackLocation(Location: number): void;
-	static GetTotalBytesToDownload(State: number): number;
-	static GetStorageMethod(Location: number): EGooglePADStorageMethod;
-	static GetShowCellularDataConfirmationStatus(Status?: EGooglePADCellularDataConfirmStatus): {Status: EGooglePADCellularDataConfirmStatus, $: EGooglePADErrorCode};
-	static GetDownloadStatus(State: number): EGooglePADDownloadStatus;
-	static GetDownloadState(Name: string,State?: number): {State: number, $: EGooglePADErrorCode};
-	static GetBytesDownloaded(State: number): number;
-	static GetAssetsPath(Location: number): string;
-	static GetAssetPackLocation(Name: string,Location?: number): {Location: number, $: EGooglePADErrorCode};
-	static CancelDownload(AssetPacks: string[]): EGooglePADErrorCode;
-	static C(Other: UObject | any): GooglePADFunctionLibrary;
-}
-
 declare class GroomActorFactory extends ActorFactory { 
 	static Load(ResourceName: string): GroomActorFactory;
 	static Find(Outer: UObject, ResourceName: string): GroomActorFactory;
@@ -13078,6 +12974,37 @@ declare class ReimportHairStrandsFactory extends HairStrandsFactory {
 	static GetDefaultObject(): ReimportHairStrandsFactory;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ReimportHairStrandsFactory;
 	static C(Other: UObject | any): ReimportHairStrandsFactory;
+}
+
+declare type EGooglePADErrorCode = 'AssetPack_NO_ERROR' | 'AssetPack_APP_UNAVAILABLE' | 'AssetPack_UNAVAILABLE' | 'AssetPack_INVALID_REQUEST' | 'AssetPack_DOWNLOAD_NOT_FOUND' | 'AssetPack_API_NOT_AVAILABLE' | 'AssetPack_NETWORK_ERROR' | 'AssetPack_ACCESS_DENIED' | 'AssetPack_INSUFFICIENT_STORAGE' | 'AssetPack_PLAY_STORE_NOT_FOUND' | 'AssetPack_NETWORK_UNRESTRICTED' | 'AssetPack_INTERNAL_ERROR' | 'AssetPack_INITIALIZATION_NEEDED' | 'AssetPack_INITIALIZATION_FAILED' | 'AssetPack_MAX';
+declare var EGooglePADErrorCode : { AssetPack_NO_ERROR:'AssetPack_NO_ERROR',AssetPack_APP_UNAVAILABLE:'AssetPack_APP_UNAVAILABLE',AssetPack_UNAVAILABLE:'AssetPack_UNAVAILABLE',AssetPack_INVALID_REQUEST:'AssetPack_INVALID_REQUEST',AssetPack_DOWNLOAD_NOT_FOUND:'AssetPack_DOWNLOAD_NOT_FOUND',AssetPack_API_NOT_AVAILABLE:'AssetPack_API_NOT_AVAILABLE',AssetPack_NETWORK_ERROR:'AssetPack_NETWORK_ERROR',AssetPack_ACCESS_DENIED:'AssetPack_ACCESS_DENIED',AssetPack_INSUFFICIENT_STORAGE:'AssetPack_INSUFFICIENT_STORAGE',AssetPack_PLAY_STORE_NOT_FOUND:'AssetPack_PLAY_STORE_NOT_FOUND',AssetPack_NETWORK_UNRESTRICTED:'AssetPack_NETWORK_UNRESTRICTED',AssetPack_INTERNAL_ERROR:'AssetPack_INTERNAL_ERROR',AssetPack_INITIALIZATION_NEEDED:'AssetPack_INITIALIZATION_NEEDED',AssetPack_INITIALIZATION_FAILED:'AssetPack_INITIALIZATION_FAILED',AssetPack_MAX:'AssetPack_MAX', };
+declare type EGooglePADStorageMethod = 'AssetPack_STORAGE_FILES' | 'AssetPack_STORAGE_APK' | 'AssetPack_STORAGE_UNKNOWN' | 'AssetPack_STORAGE_NOT_INSTALLED' | 'AssetPack_STORAGE_MAX';
+declare var EGooglePADStorageMethod : { AssetPack_STORAGE_FILES:'AssetPack_STORAGE_FILES',AssetPack_STORAGE_APK:'AssetPack_STORAGE_APK',AssetPack_STORAGE_UNKNOWN:'AssetPack_STORAGE_UNKNOWN',AssetPack_STORAGE_NOT_INSTALLED:'AssetPack_STORAGE_NOT_INSTALLED',AssetPack_STORAGE_MAX:'AssetPack_STORAGE_MAX', };
+declare type EGooglePADCellularDataConfirmStatus = 'AssetPack_CONFIRM_UNKNOWN' | 'AssetPack_CONFIRM_PENDING' | 'AssetPack_CONFIRM_USER_APPROVED' | 'AssetPack_CONFIRM_USER_CANCELED' | 'AssetPack_CONFIRM_MAX';
+declare var EGooglePADCellularDataConfirmStatus : { AssetPack_CONFIRM_UNKNOWN:'AssetPack_CONFIRM_UNKNOWN',AssetPack_CONFIRM_PENDING:'AssetPack_CONFIRM_PENDING',AssetPack_CONFIRM_USER_APPROVED:'AssetPack_CONFIRM_USER_APPROVED',AssetPack_CONFIRM_USER_CANCELED:'AssetPack_CONFIRM_USER_CANCELED',AssetPack_CONFIRM_MAX:'AssetPack_CONFIRM_MAX', };
+declare type EGooglePADDownloadStatus = 'AssetPack_UNKNOWN' | 'AssetPack_DOWNLOAD_PENDING' | 'AssetPack_DOWNLOADING' | 'AssetPack_TRANSFERRING' | 'AssetPack_DOWNLOAD_COMPLETED' | 'AssetPack_DOWNLOAD_FAILED' | 'AssetPack_DOWNLOAD_CANCELED' | 'AssetPack_WAITING_FOR_WIFI' | 'AssetPack_NOT_INSTALLED' | 'AssetPack_INFO_PENDING' | 'AssetPack_INFO_FAILED' | 'AssetPack_REMOVAL_PENDING' | 'AssetPack_REMOVAL_FAILED' | 'AssetPack_MAX';
+declare var EGooglePADDownloadStatus : { AssetPack_UNKNOWN:'AssetPack_UNKNOWN',AssetPack_DOWNLOAD_PENDING:'AssetPack_DOWNLOAD_PENDING',AssetPack_DOWNLOADING:'AssetPack_DOWNLOADING',AssetPack_TRANSFERRING:'AssetPack_TRANSFERRING',AssetPack_DOWNLOAD_COMPLETED:'AssetPack_DOWNLOAD_COMPLETED',AssetPack_DOWNLOAD_FAILED:'AssetPack_DOWNLOAD_FAILED',AssetPack_DOWNLOAD_CANCELED:'AssetPack_DOWNLOAD_CANCELED',AssetPack_WAITING_FOR_WIFI:'AssetPack_WAITING_FOR_WIFI',AssetPack_NOT_INSTALLED:'AssetPack_NOT_INSTALLED',AssetPack_INFO_PENDING:'AssetPack_INFO_PENDING',AssetPack_INFO_FAILED:'AssetPack_INFO_FAILED',AssetPack_REMOVAL_PENDING:'AssetPack_REMOVAL_PENDING',AssetPack_REMOVAL_FAILED:'AssetPack_REMOVAL_FAILED',AssetPack_MAX:'AssetPack_MAX', };
+declare class GooglePADFunctionLibrary extends BlueprintFunctionLibrary { 
+	static Load(ResourceName: string): GooglePADFunctionLibrary;
+	static Find(Outer: UObject, ResourceName: string): GooglePADFunctionLibrary;
+	static GetDefaultObject(): GooglePADFunctionLibrary;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GooglePADFunctionLibrary;
+	static ShowCellularDataConfirmation(): EGooglePADErrorCode;
+	static RequestRemoval(Name: string): EGooglePADErrorCode;
+	static RequestInfo(AssetPacks: string[]): EGooglePADErrorCode;
+	static RequestDownload(AssetPacks: string[]): EGooglePADErrorCode;
+	static ReleaseDownloadState(State: number): void;
+	static ReleaseAssetPackLocation(Location: number): void;
+	static GetTotalBytesToDownload(State: number): number;
+	static GetStorageMethod(Location: number): EGooglePADStorageMethod;
+	static GetShowCellularDataConfirmationStatus(Status?: EGooglePADCellularDataConfirmStatus): {Status: EGooglePADCellularDataConfirmStatus, $: EGooglePADErrorCode};
+	static GetDownloadStatus(State: number): EGooglePADDownloadStatus;
+	static GetDownloadState(Name: string,State?: number): {State: number, $: EGooglePADErrorCode};
+	static GetBytesDownloaded(State: number): number;
+	static GetAssetsPath(Location: number): string;
+	static GetAssetPackLocation(Name: string,Location?: number): {Location: number, $: EGooglePADErrorCode};
+	static CancelDownload(AssetPacks: string[]): EGooglePADErrorCode;
+	static C(Other: UObject | any): GooglePADFunctionLibrary;
 }
 
 declare class OnDynamicMeshModifiedBP__PythonCallable extends PythonCallableForDelegate { 
@@ -14484,6 +14411,14 @@ declare class SynthesisEditorSettings extends DeveloperSettings {
 	static C(Other: UObject | any): SynthesisEditorSettings;
 }
 
+declare class ContentBrowserAssetDataSource extends ContentBrowserDataSource { 
+	static Load(ResourceName: string): ContentBrowserAssetDataSource;
+	static Find(Outer: UObject, ResourceName: string): ContentBrowserAssetDataSource;
+	static GetDefaultObject(): ContentBrowserAssetDataSource;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ContentBrowserAssetDataSource;
+	static C(Other: UObject | any): ContentBrowserAssetDataSource;
+}
+
 declare class ContentBrowserClassDataSource extends ContentBrowserDataSource { 
 	static Load(ResourceName: string): ContentBrowserClassDataSource;
 	static Find(Outer: UObject, ResourceName: string): ContentBrowserClassDataSource;
@@ -14492,12 +14427,20 @@ declare class ContentBrowserClassDataSource extends ContentBrowserDataSource {
 	static C(Other: UObject | any): ContentBrowserClassDataSource;
 }
 
-declare class ContentBrowserAssetDataSource extends ContentBrowserDataSource { 
-	static Load(ResourceName: string): ContentBrowserAssetDataSource;
-	static Find(Outer: UObject, ResourceName: string): ContentBrowserAssetDataSource;
-	static GetDefaultObject(): ContentBrowserAssetDataSource;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ContentBrowserAssetDataSource;
-	static C(Other: UObject | any): ContentBrowserAssetDataSource;
+declare class InterchangeGraphInspectorPipeline extends InterchangePipelineBase { 
+	static Load(ResourceName: string): InterchangeGraphInspectorPipeline;
+	static Find(Outer: UObject, ResourceName: string): InterchangeGraphInspectorPipeline;
+	static GetDefaultObject(): InterchangeGraphInspectorPipeline;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): InterchangeGraphInspectorPipeline;
+	static C(Other: UObject | any): InterchangeGraphInspectorPipeline;
+}
+
+declare class InterchangePipelineConfigurationGeneric extends InterchangePipelineConfigurationBase { 
+	static Load(ResourceName: string): InterchangePipelineConfigurationGeneric;
+	static Find(Outer: UObject, ResourceName: string): InterchangePipelineConfigurationGeneric;
+	static GetDefaultObject(): InterchangePipelineConfigurationGeneric;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): InterchangePipelineConfigurationGeneric;
+	static C(Other: UObject | any): InterchangePipelineConfigurationGeneric;
 }
 
 declare class InterchangeActorFactoryNode extends InterchangeBaseNode { 
@@ -15249,22 +15192,6 @@ declare class InterchangePipelineMeshesUtilities extends UObject {
 	GetAllMeshGeometry(MeshGeometryUids?: string[]): {MeshGeometryUids: string[]};
 	static CreateInterchangePipelineMeshesUtilities(BaseNodeContainer: InterchangeBaseNodeContainer): InterchangePipelineMeshesUtilities;
 	static C(Other: UObject | any): InterchangePipelineMeshesUtilities;
-}
-
-declare class InterchangeGraphInspectorPipeline extends InterchangePipelineBase { 
-	static Load(ResourceName: string): InterchangeGraphInspectorPipeline;
-	static Find(Outer: UObject, ResourceName: string): InterchangeGraphInspectorPipeline;
-	static GetDefaultObject(): InterchangeGraphInspectorPipeline;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): InterchangeGraphInspectorPipeline;
-	static C(Other: UObject | any): InterchangeGraphInspectorPipeline;
-}
-
-declare class InterchangePipelineConfigurationGeneric extends InterchangePipelineConfigurationBase { 
-	static Load(ResourceName: string): InterchangePipelineConfigurationGeneric;
-	static Find(Outer: UObject, ResourceName: string): InterchangePipelineConfigurationGeneric;
-	static GetDefaultObject(): InterchangePipelineConfigurationGeneric;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): InterchangePipelineConfigurationGeneric;
-	static C(Other: UObject | any): InterchangePipelineConfigurationGeneric;
 }
 
 declare class MegascansSettings extends UObject { 
@@ -17807,13 +17734,5 @@ declare class Viewport0__PythonCallable extends PythonCallableForDelegate {
 	static GetDefaultObject(): Viewport0__PythonCallable;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): Viewport0__PythonCallable;
 	static C(Other: UObject | any): Viewport0__PythonCallable;
-}
-
-declare class ViewportAxis__PythonCallable extends PythonCallableForDelegate { 
-	static Load(ResourceName: string): ViewportAxis__PythonCallable;
-	static Find(Outer: UObject, ResourceName: string): ViewportAxis__PythonCallable;
-	static GetDefaultObject(): ViewportAxis__PythonCallable;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ViewportAxis__PythonCallable;
-	static C(Other: UObject | any): ViewportAxis__PythonCallable;
 }
 

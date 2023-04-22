@@ -2325,7 +2325,7 @@ declare class ScalarParameterValue {
 	AtlasData: ScalarParameterAtlasInstanceData;
 	ParameterInfo: MaterialParameterInfo;
 	ParameterValue: number;
-	ExpressionGuid: Guid;
+	ExpressionGUID: Guid;
 	clone() : ScalarParameterValue;
 	static C(Other: UObject | any): ScalarParameterValue;
 }
@@ -2334,7 +2334,7 @@ declare class VectorParameterValue {
 	ParameterName: string;
 	ParameterInfo: MaterialParameterInfo;
 	ParameterValue: LinearColor;
-	ExpressionGuid: Guid;
+	ExpressionGUID: Guid;
 	clone() : VectorParameterValue;
 	static C(Other: UObject | any): VectorParameterValue;
 }
@@ -2351,7 +2351,7 @@ declare class Vector4d {
 declare class DoubleVectorParameterValue { 
 	ParameterInfo: MaterialParameterInfo;
 	ParameterValue: Vector4d;
-	ExpressionGuid: Guid;
+	ExpressionGUID: Guid;
 	clone() : DoubleVectorParameterValue;
 	static C(Other: UObject | any): DoubleVectorParameterValue;
 }
@@ -2360,7 +2360,7 @@ declare class TextureParameterValue {
 	ParameterName: string;
 	ParameterInfo: MaterialParameterInfo;
 	ParameterValue: Texture;
-	ExpressionGuid: Guid;
+	ExpressionGUID: Guid;
 	clone() : TextureParameterValue;
 	static C(Other: UObject | any): TextureParameterValue;
 }
@@ -2406,7 +2406,7 @@ declare class RuntimeVirtualTexture extends UObject {
 declare class RuntimeVirtualTextureParameterValue { 
 	ParameterInfo: MaterialParameterInfo;
 	ParameterValue: RuntimeVirtualTexture;
-	ExpressionGuid: Guid;
+	ExpressionGUID: Guid;
 	clone() : RuntimeVirtualTextureParameterValue;
 	static C(Other: UObject | any): RuntimeVirtualTextureParameterValue;
 }
@@ -2565,7 +2565,7 @@ declare class FontParameterValue {
 	ParameterInfo: MaterialParameterInfo;
 	FontValue: Font;
 	FontPage: number;
-	ExpressionGuid: Guid;
+	ExpressionGUID: Guid;
 	clone() : FontParameterValue;
 	static C(Other: UObject | any): FontParameterValue;
 }
@@ -2592,7 +2592,7 @@ declare class MaterialInstanceBasePropertyOverrides {
 declare class StaticParameterBase { 
 	ParameterInfo: MaterialParameterInfo;
 	bOverride: boolean;
-	ExpressionGuid: Guid;
+	ExpressionGUID: Guid;
 	clone() : StaticParameterBase;
 	static C(Other: UObject | any): StaticParameterBase;
 }
@@ -2614,7 +2614,7 @@ declare class StaticComponentMaskParameter extends StaticParameterBase {
 
 declare class StaticTerrainLayerWeightParameter { 
 	ParameterInfo: MaterialParameterInfo;
-	ExpressionGuid: Guid;
+	ExpressionGUID: Guid;
 	bOverride: boolean;
 	LayerName: string;
 	WeightmapIndex: number;

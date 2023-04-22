@@ -3,6 +3,14 @@
 /// <reference path="_part_2_ue.d.ts">/>
 /// <reference path="_part_3_ue.d.ts">/>
 /// <reference path="_part_4_ue.d.ts">/>
+declare class ViewportAxis__PythonCallable extends PythonCallableForDelegate { 
+	static Load(ResourceName: string): ViewportAxis__PythonCallable;
+	static Find(Outer: UObject, ResourceName: string): ViewportAxis__PythonCallable;
+	static GetDefaultObject(): ViewportAxis__PythonCallable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ViewportAxis__PythonCallable;
+	static C(Other: UObject | any): ViewportAxis__PythonCallable;
+}
+
 declare class ViewportDelta__PythonCallable extends PythonCallableForDelegate { 
 	static Load(ResourceName: string): ViewportDelta__PythonCallable;
 	static Find(Outer: UObject, ResourceName: string): ViewportDelta__PythonCallable;
