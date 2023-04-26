@@ -5470,7 +5470,7 @@ declare class SkeletalMeshLODGroupSettings {
 }
 
 declare class SkeletalMeshLODSettings extends DataAsset { 
-	MinLod: PerPlatformInt;
+	MinLOD: PerPlatformInt;
 	DisableBelowMinLodStripping: PerPlatformBool;
 	bOverrideLODStreamingSettings: boolean;
 	bSupportLODStreaming: PerPlatformBool;
@@ -6053,7 +6053,7 @@ declare class SkeletalMesh extends StreamableRenderAsset {
 	Materials: SkeletalMaterial[];
 	SkelMirrorTable: BoneMirrorInfo[];
 	LODInfo: SkeletalMeshLODInfo[];
-	MinLod: PerPlatformInt;
+	MinLOD: PerPlatformInt;
 	DisableBelowMinLodStripping: PerPlatformBool;
 	bOverrideLODStreamingSettings: boolean;
 	bSupportLODStreaming: PerPlatformBool;
@@ -9533,7 +9533,7 @@ declare class StaticMesh extends StreamableRenderAsset {
 	Materials: MaterialInterface[];
 	NaniteSettings: MeshNaniteSettings;
 	MinQualityLevelLOD: PerQualityLevelInt;
-	MinLod: PerPlatformInt;
+	MinLOD: PerPlatformInt;
 	StaticMaterials: StaticMaterial[];
 	LightmapUVDensity: number;
 	LightMapResolution: number;
@@ -11009,7 +11009,7 @@ declare var EVertexPaintAxis : { X:'X',Y:'Y',Z:'Z',EVertexPaintAxis_MAX:'EVertex
 declare class StaticMeshComponent extends MeshComponent { 
 	ForcedLodModel: number;
 	PreviousLODLevel: number;
-	MinLod: number;
+	MinLOD: number;
 	SubDivisionStepSize: number;
 	StaticMesh: StaticMesh;
 	WireframeColorOverride: Color;

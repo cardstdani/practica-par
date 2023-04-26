@@ -12228,7 +12228,7 @@ declare class GrassVariety {
 	PlacementJitter: number;
 	StartCullDistance: PerPlatformInt;
 	EndCullDistance: PerPlatformInt;
-	MinLod: number;
+	MinLOD: number;
 	Scaling: EGrassScaling;
 	ScaleX: FloatInterval;
 	ScaleY: FloatInterval;
@@ -18184,7 +18184,7 @@ declare class ComponentSync {
 declare class LODSyncComponent extends ActorComponent { 
 	NumLODs: number;
 	ForcedLOD: number;
-	MinLod: number;
+	MinLOD: number;
 	ComponentsToSync: ComponentSync[];
 	CustomLODMapping: any;
 	CurrentLOD: number;

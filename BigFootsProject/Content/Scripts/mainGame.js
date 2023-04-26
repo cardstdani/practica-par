@@ -5,14 +5,15 @@ var score = [];
 var bigFoots = [];
 var objs = [];
 var objects = {".": [".", 0, empty_C], "a": ["b", 1, a_C], "b": ["c", 5, b_C], "c": ["d", 25, c_C], "d": ["e", 125, d_C], "e": ["e", 625, e_C], "1": ["1", -25, b1_C], "2": ["3", -5, b2_C], "3": ["4", 50, b3_C], "4": ["4", 500, b4_C], "x": ["x", -50, x_C]};
+var scoreText;
 
 main();
 
 function main() {
     let arr = Array(18).fill("a").concat(Array(4).fill("b"), Array(3).fill("c"), Array(2).fill("1"), Array(45).fill("."));
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 14; i++) {
         matrix.push([]);
-        for (let j = 0; j < 6; j++) {
+        for (let j = 0; j < 14; j++) {
             let elem = arr[Math.floor(arr.length * Math.random())];
             matrix[i].push(elem);
             if (elem == "1") {bigFoots.push([[i, j], 0, false]);}
@@ -34,6 +35,24 @@ function main() {
         }
     }
 
+    //Actual
+    let newActor = SpawnActor(a_C);
+    var vector = new Vector();
+    vector.X=0; vector.Y=0; vector.Z=0;
+    newActor.K2_SetActorLocation(vector);
+    objs.push(newActor);
+
+    //Score
+    newActor = SpawnActor(ScoreText_C);
+    var vector = new Vector();
+    vector.X=212990; vector.Y=172450; vector.Z=-4470;
+    newActor.K2_SetActorLocation(vector);
+    vector = new Rotator();
+    vector.Pitch=0; vector.Yaw=90; vector.Roll=0;
+    newActor.K2_SetActorRotation(vector);    
+    scoreText = newActor;
+    scoreText.RootComponent.SetWorldScale3D({X: 4.0, Y: 4.0, Z: 4.0});
+
     updateActual();
     updateUI();
 }
@@ -47,7 +66,7 @@ function clicked(index) {
         updateUI();
         alert("Has perdido, lo lamento😔😔, por favor recarga la página"); return;
     }
-    var coordinates = [Math.floor(index/6), index - 6*Math.floor(index/6)];
+    var coordinates = [Math.floor(index/14), index - 14*Math.floor(index/14)];
     console.log(index, coordinates)
     if (matrix[coordinates[0]][coordinates[1]] != ".") {
         if (actual === "w") {
@@ -206,21 +225,21 @@ function updateBigFoots() {
 }
 
 function updateUI() {
-    var x=1100;
-    var y=600;
+    var x= 212360//1100;
+    var y= 173320//600;
     var sum = 0;
     for (let i = 0; i < matrix.length; i++) {
-        x+=200;
-        y=600;
+        x+=120;
+        y=173320//600;
         for (let j = 0; j < matrix[0].length; j++) {
-            y+=200;
+            y+=120;
             let pos = matrix[0].length*i+j;
             objs[pos].K2_DestroyActor();
             
             let newActor = SpawnActor(objects[matrix[i][j]][2]);
             var vector = new Vector();
-            vector.X=x; vector.Y=y; vector.Z=0;            
-            newActor.K2_SetActorLocation(vector);            
+            vector.X=x; vector.Y=y; vector.Z=-4860;            
+            newActor.K2_SetActorLocation(vector);         
             objs[pos]=newActor;
             sum += objects[matrix[i][j]][1];
             objs[pos].OnTakeAnyDamage.Add(function(DamagedActor, DamageAmount, DamageType, InstigatedBy, DamageCauser){
@@ -228,11 +247,21 @@ function updateUI() {
             });
         }
     }
-    
-    score.push(sum); 
+        
+    scoreText.Score = sum;
 }
 
 function updateActual() {
     let arr = Array(30).fill("a").concat(Array(5).fill("b"), Array(1).fill("c"), Array(2).fill("1"), Array(0).fill("w"));
     actual = arr[Math.floor(arr.length * Math.random())];
+
+    objs[objs.length-1].K2_DestroyActor();
+    let newActor = SpawnActor(objects[actual][2]);
+    var vector = new Vector();
+    vector.X=213850; vector.Y=172460; vector.Z=-4600;
+    newActor.K2_SetActorLocation(vector);
+    vector = new Rotator();
+    vector.Pitch=0; vector.Yaw=0; vector.Roll=90;
+    newActor.K2_SetActorRotation(vector);
+    objs[objs.length-1]=newActor;
 }
