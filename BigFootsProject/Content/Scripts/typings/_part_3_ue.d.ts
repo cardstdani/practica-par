@@ -1,3 +1,338 @@
+declare class MaterialExpressionDBufferTexture extends MaterialExpression { 
+	Coordinates: ExpressionInput;
+	DBufferTextureId: EDBufferTextureId;
+	static Load(ResourceName: string): MaterialExpressionDBufferTexture;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDBufferTexture;
+	static GetDefaultObject(): MaterialExpressionDBufferTexture;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDBufferTexture;
+	static C(Other: UObject | any): MaterialExpressionDBufferTexture;
+}
+
+declare class MaterialExpressionDDX extends MaterialExpression { 
+	Value: ExpressionInput;
+	static Load(ResourceName: string): MaterialExpressionDDX;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDDX;
+	static GetDefaultObject(): MaterialExpressionDDX;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDDX;
+	static C(Other: UObject | any): MaterialExpressionDDX;
+}
+
+declare class MaterialExpressionDDY extends MaterialExpression { 
+	Value: ExpressionInput;
+	static Load(ResourceName: string): MaterialExpressionDDY;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDDY;
+	static GetDefaultObject(): MaterialExpressionDDY;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDDY;
+	static C(Other: UObject | any): MaterialExpressionDDY;
+}
+
+declare class MaterialExpressionDecalDerivative extends MaterialExpression { 
+	static Load(ResourceName: string): MaterialExpressionDecalDerivative;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDecalDerivative;
+	static GetDefaultObject(): MaterialExpressionDecalDerivative;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDecalDerivative;
+	static C(Other: UObject | any): MaterialExpressionDecalDerivative;
+}
+
+declare class MaterialExpressionDecalLifetimeOpacity extends MaterialExpression { 
+	static Load(ResourceName: string): MaterialExpressionDecalLifetimeOpacity;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDecalLifetimeOpacity;
+	static GetDefaultObject(): MaterialExpressionDecalLifetimeOpacity;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDecalLifetimeOpacity;
+	static C(Other: UObject | any): MaterialExpressionDecalLifetimeOpacity;
+}
+
+declare class MaterialExpressionDecalMipmapLevel extends MaterialExpression { 
+	TextureSize: ExpressionInput;
+	ConstWidth: number;
+	ConstHeight: number;
+	static Load(ResourceName: string): MaterialExpressionDecalMipmapLevel;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDecalMipmapLevel;
+	static GetDefaultObject(): MaterialExpressionDecalMipmapLevel;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDecalMipmapLevel;
+	static C(Other: UObject | any): MaterialExpressionDecalMipmapLevel;
+}
+
+declare class MaterialExpressionDeltaTime extends MaterialExpression { 
+	static Load(ResourceName: string): MaterialExpressionDeltaTime;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDeltaTime;
+	static GetDefaultObject(): MaterialExpressionDeltaTime;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDeltaTime;
+	static C(Other: UObject | any): MaterialExpressionDeltaTime;
+}
+
+declare class MaterialExpressionDepthFade extends MaterialExpression { 
+	InOpacity: ExpressionInput;
+	FadeDistance: ExpressionInput;
+	OpacityDefault: number;
+	FadeDistanceDefault: number;
+	static Load(ResourceName: string): MaterialExpressionDepthFade;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDepthFade;
+	static GetDefaultObject(): MaterialExpressionDepthFade;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDepthFade;
+	static C(Other: UObject | any): MaterialExpressionDepthFade;
+}
+
+declare type EDepthOfFieldFunctionValue = 'TDOF_NearAndFarMask' | 'TDOF_NearMask' | 'TDOF_FarMask' | 'TDOF_CircleOfConfusionRadius' | 'TDOF_MAX';
+declare var EDepthOfFieldFunctionValue : { TDOF_NearAndFarMask:'TDOF_NearAndFarMask',TDOF_NearMask:'TDOF_NearMask',TDOF_FarMask:'TDOF_FarMask',TDOF_CircleOfConfusionRadius:'TDOF_CircleOfConfusionRadius',TDOF_MAX:'TDOF_MAX', };
+declare class MaterialExpressionDepthOfFieldFunction extends MaterialExpression { 
+	FunctionValue: EDepthOfFieldFunctionValue;
+	Depth: ExpressionInput;
+	static Load(ResourceName: string): MaterialExpressionDepthOfFieldFunction;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDepthOfFieldFunction;
+	static GetDefaultObject(): MaterialExpressionDepthOfFieldFunction;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDepthOfFieldFunction;
+	static C(Other: UObject | any): MaterialExpressionDepthOfFieldFunction;
+}
+
+declare class MaterialExpressionDeriveNormalZ extends MaterialExpression { 
+	InXY: ExpressionInput;
+	static Load(ResourceName: string): MaterialExpressionDeriveNormalZ;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDeriveNormalZ;
+	static GetDefaultObject(): MaterialExpressionDeriveNormalZ;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDeriveNormalZ;
+	static C(Other: UObject | any): MaterialExpressionDeriveNormalZ;
+}
+
+declare class MaterialExpressionDesaturation extends MaterialExpression { 
+	Input: ExpressionInput;
+	Fraction: ExpressionInput;
+	LuminanceFactors: LinearColor;
+	static Load(ResourceName: string): MaterialExpressionDesaturation;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDesaturation;
+	static GetDefaultObject(): MaterialExpressionDesaturation;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDesaturation;
+	static C(Other: UObject | any): MaterialExpressionDesaturation;
+}
+
+declare class MaterialExpressionDistance extends MaterialExpression { 
+	A: ExpressionInput;
+	B: ExpressionInput;
+	static Load(ResourceName: string): MaterialExpressionDistance;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDistance;
+	static GetDefaultObject(): MaterialExpressionDistance;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDistance;
+	static C(Other: UObject | any): MaterialExpressionDistance;
+}
+
+declare class MaterialExpressionDistanceCullFade extends MaterialExpression { 
+	static Load(ResourceName: string): MaterialExpressionDistanceCullFade;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDistanceCullFade;
+	static GetDefaultObject(): MaterialExpressionDistanceCullFade;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDistanceCullFade;
+	static C(Other: UObject | any): MaterialExpressionDistanceCullFade;
+}
+
+declare class MaterialExpressionDistanceFieldGradient extends MaterialExpression { 
+	position: ExpressionInput;
+	static Load(ResourceName: string): MaterialExpressionDistanceFieldGradient;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDistanceFieldGradient;
+	static GetDefaultObject(): MaterialExpressionDistanceFieldGradient;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDistanceFieldGradient;
+	static C(Other: UObject | any): MaterialExpressionDistanceFieldGradient;
+}
+
+declare class MaterialExpressionDistanceFieldsRenderingSwitch extends MaterialExpression { 
+	No: ExpressionInput;
+	Yes: ExpressionInput;
+	static Load(ResourceName: string): MaterialExpressionDistanceFieldsRenderingSwitch;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDistanceFieldsRenderingSwitch;
+	static GetDefaultObject(): MaterialExpressionDistanceFieldsRenderingSwitch;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDistanceFieldsRenderingSwitch;
+	static C(Other: UObject | any): MaterialExpressionDistanceFieldsRenderingSwitch;
+}
+
+declare class MaterialExpressionDistanceToNearestSurface extends MaterialExpression { 
+	position: ExpressionInput;
+	static Load(ResourceName: string): MaterialExpressionDistanceToNearestSurface;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDistanceToNearestSurface;
+	static GetDefaultObject(): MaterialExpressionDistanceToNearestSurface;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDistanceToNearestSurface;
+	static C(Other: UObject | any): MaterialExpressionDistanceToNearestSurface;
+}
+
+declare class MaterialExpressionDivide extends MaterialExpression { 
+	A: ExpressionInput;
+	B: ExpressionInput;
+	ConstA: number;
+	ConstB: number;
+	static Load(ResourceName: string): MaterialExpressionDivide;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDivide;
+	static GetDefaultObject(): MaterialExpressionDivide;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDivide;
+	static C(Other: UObject | any): MaterialExpressionDivide;
+}
+
+declare class MaterialExpressionDotProduct extends MaterialExpression { 
+	A: ExpressionInput;
+	B: ExpressionInput;
+	static Load(ResourceName: string): MaterialExpressionDotProduct;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDotProduct;
+	static GetDefaultObject(): MaterialExpressionDotProduct;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDotProduct;
+	static C(Other: UObject | any): MaterialExpressionDotProduct;
+}
+
+declare class MaterialExpressionDoubleVectorParameter extends MaterialExpressionParameter { 
+	DefaultValue: Vector4d;
+	static Load(ResourceName: string): MaterialExpressionDoubleVectorParameter;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDoubleVectorParameter;
+	static GetDefaultObject(): MaterialExpressionDoubleVectorParameter;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDoubleVectorParameter;
+	static C(Other: UObject | any): MaterialExpressionDoubleVectorParameter;
+}
+
+declare class MaterialExpressionDynamicParameter extends MaterialExpression { 
+	ParamNames: string[];
+	DefaultValue: LinearColor;
+	ParameterIndex: any;
+	static Load(ResourceName: string): MaterialExpressionDynamicParameter;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDynamicParameter;
+	static GetDefaultObject(): MaterialExpressionDynamicParameter;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDynamicParameter;
+	static C(Other: UObject | any): MaterialExpressionDynamicParameter;
+}
+
+declare class MaterialExpressionEyeAdaptation extends MaterialExpression { 
+	static Load(ResourceName: string): MaterialExpressionEyeAdaptation;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionEyeAdaptation;
+	static GetDefaultObject(): MaterialExpressionEyeAdaptation;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionEyeAdaptation;
+	static C(Other: UObject | any): MaterialExpressionEyeAdaptation;
+}
+
+declare class MaterialExpressionEyeAdaptationInverse extends MaterialExpression { 
+	LightValueInput: ExpressionInput;
+	AlphaInput: ExpressionInput;
+	static Load(ResourceName: string): MaterialExpressionEyeAdaptationInverse;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionEyeAdaptationInverse;
+	static GetDefaultObject(): MaterialExpressionEyeAdaptationInverse;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionEyeAdaptationInverse;
+	static C(Other: UObject | any): MaterialExpressionEyeAdaptationInverse;
+}
+
+declare class MaterialExpressionFeatureLevelSwitch extends MaterialExpression { 
+	Default: ExpressionInput;
+	Inputs: ExpressionInput;
+	static Load(ResourceName: string): MaterialExpressionFeatureLevelSwitch;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionFeatureLevelSwitch;
+	static GetDefaultObject(): MaterialExpressionFeatureLevelSwitch;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionFeatureLevelSwitch;
+	static C(Other: UObject | any): MaterialExpressionFeatureLevelSwitch;
+}
+
+declare class MaterialExpressionFloor extends MaterialExpression { 
+	Input: ExpressionInput;
+	static Load(ResourceName: string): MaterialExpressionFloor;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionFloor;
+	static GetDefaultObject(): MaterialExpressionFloor;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionFloor;
+	static C(Other: UObject | any): MaterialExpressionFloor;
+}
+
+declare class MaterialExpressionFmod extends MaterialExpression { 
+	A: ExpressionInput;
+	B: ExpressionInput;
+	static Load(ResourceName: string): MaterialExpressionFmod;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionFmod;
+	static GetDefaultObject(): MaterialExpressionFmod;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionFmod;
+	static C(Other: UObject | any): MaterialExpressionFmod;
+}
+
+declare class MaterialExpressionFontSample extends MaterialExpression { 
+	Font: Font;
+	FontTexturePage: number;
+	static Load(ResourceName: string): MaterialExpressionFontSample;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionFontSample;
+	static GetDefaultObject(): MaterialExpressionFontSample;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionFontSample;
+	static C(Other: UObject | any): MaterialExpressionFontSample;
+}
+
+declare class MaterialExpressionFontSampleParameter extends MaterialExpressionFontSample { 
+	ParameterName: string;
+	ExpressionGuid: Guid;
+	Group: string;
+	SortPriority: number;
+	static Load(ResourceName: string): MaterialExpressionFontSampleParameter;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionFontSampleParameter;
+	static GetDefaultObject(): MaterialExpressionFontSampleParameter;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionFontSampleParameter;
+	static C(Other: UObject | any): MaterialExpressionFontSampleParameter;
+}
+
+declare class MaterialExpressionForLoop extends MaterialExpression { 
+	LoopBody: ExpressionExecOutput;
+	Completed: ExpressionExecOutput;
+	StartIndex: ExpressionInput;
+	EndIndex: ExpressionInput;
+	IndexStep: ExpressionInput;
+	static Load(ResourceName: string): MaterialExpressionForLoop;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionForLoop;
+	static GetDefaultObject(): MaterialExpressionForLoop;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionForLoop;
+	static C(Other: UObject | any): MaterialExpressionForLoop;
+}
+
+declare class MaterialExpressionFrac extends MaterialExpression { 
+	Input: ExpressionInput;
+	static Load(ResourceName: string): MaterialExpressionFrac;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionFrac;
+	static GetDefaultObject(): MaterialExpressionFrac;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionFrac;
+	static C(Other: UObject | any): MaterialExpressionFrac;
+}
+
+declare class MaterialExpressionFresnel extends MaterialExpression { 
+	ExponentIn: ExpressionInput;
+	Exponent: number;
+	BaseReflectFractionIn: ExpressionInput;
+	BaseReflectFraction: number;
+	Normal: ExpressionInput;
+	static Load(ResourceName: string): MaterialExpressionFresnel;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionFresnel;
+	static GetDefaultObject(): MaterialExpressionFresnel;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionFresnel;
+	static C(Other: UObject | any): MaterialExpressionFresnel;
+}
+
+declare class MaterialExpressionGenericConstant extends MaterialExpression { 
+	static Load(ResourceName: string): MaterialExpressionGenericConstant;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionGenericConstant;
+	static GetDefaultObject(): MaterialExpressionGenericConstant;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionGenericConstant;
+	static C(Other: UObject | any): MaterialExpressionGenericConstant;
+}
+
+declare class MaterialExpressionConstantDouble extends MaterialExpressionGenericConstant { 
+	Value: any;
+	static Load(ResourceName: string): MaterialExpressionConstantDouble;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionConstantDouble;
+	static GetDefaultObject(): MaterialExpressionConstantDouble;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionConstantDouble;
+	static C(Other: UObject | any): MaterialExpressionConstantDouble;
+}
+
+declare class MaterialExpressionGetLocal extends MaterialExpression { 
+	LocalName: string;
+	static Load(ResourceName: string): MaterialExpressionGetLocal;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionGetLocal;
+	static GetDefaultObject(): MaterialExpressionGetLocal;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionGetLocal;
+	static C(Other: UObject | any): MaterialExpressionGetLocal;
+}
+
+declare class MaterialExpressionGetMaterialAttributes extends MaterialExpression { 
+	MaterialAttributes: MaterialAttributesInput;
+	AttributeGetTypes: Guid[];
+	static Load(ResourceName: string): MaterialExpressionGetMaterialAttributes;
+	static Find(Outer: UObject, ResourceName: string): MaterialExpressionGetMaterialAttributes;
+	static GetDefaultObject(): MaterialExpressionGetMaterialAttributes;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionGetMaterialAttributes;
+	static C(Other: UObject | any): MaterialExpressionGetMaterialAttributes;
+}
+
 declare class MaterialExpressionGIReplace extends MaterialExpression { 
 	Default: ExpressionInput;
 	StaticIndirect: ExpressionInput;
@@ -6464,6 +6799,162 @@ declare class AnimationModifierSettings extends DeveloperSettings {
 	static C(Other: UObject | any): AnimationModifierSettings;
 }
 
+declare class OpenColorIOBlueprintLibrary extends BlueprintFunctionLibrary { 
+	static Load(ResourceName: string): OpenColorIOBlueprintLibrary;
+	static Find(Outer: UObject, ResourceName: string): OpenColorIOBlueprintLibrary;
+	static GetDefaultObject(): OpenColorIOBlueprintLibrary;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OpenColorIOBlueprintLibrary;
+	static ApplyColorSpaceTransform(WorldContextObject: UObject,ConversionSettings: OpenColorIOColorConversionSettings,InputTexture: Texture,OutputRenderTarget: TextureRenderTarget2D): boolean;
+	static C(Other: UObject | any): OpenColorIOBlueprintLibrary;
+}
+
+declare class SceneViewExtensionIsActiveFunctor { 
+	clone() : SceneViewExtensionIsActiveFunctor;
+	static C(Other: UObject | any): SceneViewExtensionIsActiveFunctor;
+}
+
+declare class OpenColorIODisplayConfiguration { 
+	bIsEnabled: boolean;
+	ColorConfiguration: OpenColorIOColorConversionSettings;
+	clone() : OpenColorIODisplayConfiguration;
+	static C(Other: UObject | any): OpenColorIODisplayConfiguration;
+}
+
+declare class OpenColorIODisplayExtensionWrapper extends UObject { 
+	static Load(ResourceName: string): OpenColorIODisplayExtensionWrapper;
+	static Find(Outer: UObject, ResourceName: string): OpenColorIODisplayExtensionWrapper;
+	static GetDefaultObject(): OpenColorIODisplayExtensionWrapper;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OpenColorIODisplayExtensionWrapper;
+	SetSceneExtensionIsActiveFunctions(IsActiveFunctions: SceneViewExtensionIsActiveFunctor[]): void;
+	SetSceneExtensionIsActiveFunction(IsActiveFunction: SceneViewExtensionIsActiveFunctor): void;
+	SetOpenColorIOConfiguration(InDisplayConfiguration: OpenColorIODisplayConfiguration): void;
+	RemoveSceneExtension(): void;
+	static CreateOpenColorIODisplayExtension(InDisplayConfiguration: OpenColorIODisplayConfiguration,IsActiveFunction: SceneViewExtensionIsActiveFunctor): OpenColorIODisplayExtensionWrapper;
+	static C(Other: UObject | any): OpenColorIODisplayExtensionWrapper;
+}
+
+declare type EClothMassMode = 'UniformMass' | 'TotalMass' | 'Density' | 'MaxClothMassMode' | 'EClothMassMode_MAX';
+declare var EClothMassMode : { UniformMass:'UniformMass',TotalMass:'TotalMass',Density:'Density',MaxClothMassMode:'MaxClothMassMode',EClothMassMode_MAX:'EClothMassMode_MAX', };
+declare class ChaosClothWeightedValue { 
+	Low: number;
+	High: number;
+	clone() : ChaosClothWeightedValue;
+	static C(Other: UObject | any): ChaosClothWeightedValue;
+}
+
+declare type EChaosClothTetherMode = 'FastTetherFastLength' | 'AccurateTetherFastLength' | 'AccurateTetherAccurateLength' | 'MaxChaosClothTetherMode' | 'EChaosClothTetherMode_MAX';
+declare var EChaosClothTetherMode : { FastTetherFastLength:'FastTetherFastLength',AccurateTetherFastLength:'AccurateTetherFastLength',AccurateTetherAccurateLength:'AccurateTetherAccurateLength',MaxChaosClothTetherMode:'MaxChaosClothTetherMode',EChaosClothTetherMode_MAX:'EChaosClothTetherMode_MAX', };
+declare class ChaosClothConfig extends ClothConfigCommon { 
+	MassMode: EClothMassMode;
+	UniformMass: number;
+	TotalMass: number;
+	Density: number;
+	MinPerParticleMass: number;
+	EdgeStiffnessWeighted: ChaosClothWeightedValue;
+	BendingStiffnessWeighted: ChaosClothWeightedValue;
+	bUseBendingElements: boolean;
+	AreaStiffnessWeighted: ChaosClothWeightedValue;
+	VolumeStiffness: number;
+	TetherStiffness: ChaosClothWeightedValue;
+	TetherScale: ChaosClothWeightedValue;
+	bUseGeodesicDistance: boolean;
+	ShapeTargetStiffness: number;
+	CollisionThickness: number;
+	FrictionCoefficient: number;
+	bUseCCD: boolean;
+	bUseSelfCollisions: boolean;
+	SelfCollisionThickness: number;
+	bUseLegacyBackstop: boolean;
+	DampingCoefficient: number;
+	LocalDampingCoefficient: number;
+	bUsePointBasedWindModel: boolean;
+	Drag: ChaosClothWeightedValue;
+	Lift: ChaosClothWeightedValue;
+	bUseGravityOverride: boolean;
+	GravityScale: number;
+	Gravity: Vector;
+	AnimDriveStiffness: ChaosClothWeightedValue;
+	AnimDriveDamping: ChaosClothWeightedValue;
+	LinearVelocityScale: Vector;
+	AngularVelocityScale: number;
+	FictitiousAngularScale: number;
+	bUseTetrahedralConstraints: boolean;
+	bUseThinShellVolumeConstraints: boolean;
+	bUseContinuousCollisionDetection: boolean;
+	EdgeStiffness: number;
+	BendingStiffness: number;
+	AreaStiffness: number;
+	TetherMode: EChaosClothTetherMode;
+	LimitScale: number;
+	DragCoefficient: number;
+	LiftCoefficient: number;
+	AnimDriveSpringStiffness: number;
+	StrainLimitingStiffness: number;
+	static Load(ResourceName: string): ChaosClothConfig;
+	static Find(Outer: UObject, ResourceName: string): ChaosClothConfig;
+	static GetDefaultObject(): ChaosClothConfig;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ChaosClothConfig;
+	static C(Other: UObject | any): ChaosClothConfig;
+}
+
+declare class ChaosClothSharedSimConfig extends ClothSharedConfigCommon { 
+	IterationCount: number;
+	MaxIterationCount: number;
+	SubdivisionCount: number;
+	SelfCollisionThickness: number;
+	CollisionThickness: number;
+	bUseDampingOverride: boolean;
+	Damping: number;
+	bUseGravityOverride: boolean;
+	GravityScale: number;
+	Gravity: Vector;
+	bUseLocalSpaceSimulation: boolean;
+	bUseXPBDConstraints: boolean;
+	static Load(ResourceName: string): ChaosClothSharedSimConfig;
+	static Find(Outer: UObject, ResourceName: string): ChaosClothSharedSimConfig;
+	static GetDefaultObject(): ChaosClothSharedSimConfig;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ChaosClothSharedSimConfig;
+	static C(Other: UObject | any): ChaosClothSharedSimConfig;
+}
+
+declare class ChaosClothingSimulationFactory extends ClothingSimulationFactory { 
+	static Load(ResourceName: string): ChaosClothingSimulationFactory;
+	static Find(Outer: UObject, ResourceName: string): ChaosClothingSimulationFactory;
+	static GetDefaultObject(): ChaosClothingSimulationFactory;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ChaosClothingSimulationFactory;
+	static C(Other: UObject | any): ChaosClothingSimulationFactory;
+}
+
+declare class ChaosClothingInteractor extends ClothingInteractor { 
+	static Load(ResourceName: string): ChaosClothingInteractor;
+	static Find(Outer: UObject, ResourceName: string): ChaosClothingInteractor;
+	static GetDefaultObject(): ChaosClothingInteractor;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ChaosClothingInteractor;
+	SetWind(Drag: Vector2D,Lift: Vector2D,AirDensity: number,WindVelocity: Vector): void;
+	SetVelocityScale(LinearVelocityScale: Vector,AngularVelocityScale: number,FictitiousAngularScale: number): void;
+	SetMaterialLinear(EdgeStiffness: number,BendingStiffness: number,AreaStiffness: number): void;
+	SetMaterial(EdgeStiffness: Vector2D,BendingStiffness: Vector2D,AreaStiffness: Vector2D): void;
+	SetLongRangeAttachmentLinear(TetherStiffness: number,TetherScale: number): void;
+	SetLongRangeAttachment(TetherStiffness: Vector2D,TetherScale: Vector2D): void;
+	SetGravity(GravityScale: number,bIsGravityOverridden: boolean,GravityOverride: Vector): void;
+	SetDamping(DampingCoefficient: number): void;
+	SetCollision(CollisionThickness: number,FrictionCoefficient: number,bUseCCD: boolean,SelfCollisionThickness: number): void;
+	SetBackstop(bEnabled: boolean): void;
+	SetAnimDriveLinear(AnimDriveStiffness: number): void;
+	SetAnimDrive(AnimDriveStiffness: Vector2D,AnimDriveDamping: Vector2D): void;
+	SetAerodynamics(DragCoefficient: number,LiftCoefficient: number,WindVelocity: Vector): void;
+	ResetAndTeleport(bReset: boolean,bTeleport: boolean): void;
+	static C(Other: UObject | any): ChaosClothingInteractor;
+}
+
+declare class ChaosClothingSimulationInteractor extends ClothingSimulationInteractor { 
+	static Load(ResourceName: string): ChaosClothingSimulationInteractor;
+	static Find(Outer: UObject, ResourceName: string): ChaosClothingSimulationInteractor;
+	static GetDefaultObject(): ChaosClothingSimulationInteractor;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ChaosClothingSimulationInteractor;
+	static C(Other: UObject | any): ChaosClothingSimulationInteractor;
+}
+
 declare class VariantDependency { 
 	VariantSet: VariantSet;
 	Variant: Variant;
@@ -7313,128 +7804,6 @@ declare class DatasmithStaticMeshTemplate extends DatasmithObjectTemplate {
 	static GetDefaultObject(): DatasmithStaticMeshTemplate;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): DatasmithStaticMeshTemplate;
 	static C(Other: UObject | any): DatasmithStaticMeshTemplate;
-}
-
-declare type EClothMassMode = 'UniformMass' | 'TotalMass' | 'Density' | 'MaxClothMassMode' | 'EClothMassMode_MAX';
-declare var EClothMassMode : { UniformMass:'UniformMass',TotalMass:'TotalMass',Density:'Density',MaxClothMassMode:'MaxClothMassMode',EClothMassMode_MAX:'EClothMassMode_MAX', };
-declare class ChaosClothWeightedValue { 
-	Low: number;
-	High: number;
-	clone() : ChaosClothWeightedValue;
-	static C(Other: UObject | any): ChaosClothWeightedValue;
-}
-
-declare type EChaosClothTetherMode = 'FastTetherFastLength' | 'AccurateTetherFastLength' | 'AccurateTetherAccurateLength' | 'MaxChaosClothTetherMode' | 'EChaosClothTetherMode_MAX';
-declare var EChaosClothTetherMode : { FastTetherFastLength:'FastTetherFastLength',AccurateTetherFastLength:'AccurateTetherFastLength',AccurateTetherAccurateLength:'AccurateTetherAccurateLength',MaxChaosClothTetherMode:'MaxChaosClothTetherMode',EChaosClothTetherMode_MAX:'EChaosClothTetherMode_MAX', };
-declare class ChaosClothConfig extends ClothConfigCommon { 
-	MassMode: EClothMassMode;
-	UniformMass: number;
-	TotalMass: number;
-	Density: number;
-	MinPerParticleMass: number;
-	EdgeStiffnessWeighted: ChaosClothWeightedValue;
-	BendingStiffnessWeighted: ChaosClothWeightedValue;
-	bUseBendingElements: boolean;
-	AreaStiffnessWeighted: ChaosClothWeightedValue;
-	VolumeStiffness: number;
-	TetherStiffness: ChaosClothWeightedValue;
-	TetherScale: ChaosClothWeightedValue;
-	bUseGeodesicDistance: boolean;
-	ShapeTargetStiffness: number;
-	CollisionThickness: number;
-	FrictionCoefficient: number;
-	bUseCCD: boolean;
-	bUseSelfCollisions: boolean;
-	SelfCollisionThickness: number;
-	bUseLegacyBackstop: boolean;
-	DampingCoefficient: number;
-	LocalDampingCoefficient: number;
-	bUsePointBasedWindModel: boolean;
-	Drag: ChaosClothWeightedValue;
-	Lift: ChaosClothWeightedValue;
-	bUseGravityOverride: boolean;
-	GravityScale: number;
-	Gravity: Vector;
-	AnimDriveStiffness: ChaosClothWeightedValue;
-	AnimDriveDamping: ChaosClothWeightedValue;
-	LinearVelocityScale: Vector;
-	AngularVelocityScale: number;
-	FictitiousAngularScale: number;
-	bUseTetrahedralConstraints: boolean;
-	bUseThinShellVolumeConstraints: boolean;
-	bUseContinuousCollisionDetection: boolean;
-	EdgeStiffness: number;
-	BendingStiffness: number;
-	AreaStiffness: number;
-	TetherMode: EChaosClothTetherMode;
-	LimitScale: number;
-	DragCoefficient: number;
-	LiftCoefficient: number;
-	AnimDriveSpringStiffness: number;
-	StrainLimitingStiffness: number;
-	static Load(ResourceName: string): ChaosClothConfig;
-	static Find(Outer: UObject, ResourceName: string): ChaosClothConfig;
-	static GetDefaultObject(): ChaosClothConfig;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ChaosClothConfig;
-	static C(Other: UObject | any): ChaosClothConfig;
-}
-
-declare class ChaosClothSharedSimConfig extends ClothSharedConfigCommon { 
-	IterationCount: number;
-	MaxIterationCount: number;
-	SubdivisionCount: number;
-	SelfCollisionThickness: number;
-	CollisionThickness: number;
-	bUseDampingOverride: boolean;
-	Damping: number;
-	bUseGravityOverride: boolean;
-	GravityScale: number;
-	Gravity: Vector;
-	bUseLocalSpaceSimulation: boolean;
-	bUseXPBDConstraints: boolean;
-	static Load(ResourceName: string): ChaosClothSharedSimConfig;
-	static Find(Outer: UObject, ResourceName: string): ChaosClothSharedSimConfig;
-	static GetDefaultObject(): ChaosClothSharedSimConfig;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ChaosClothSharedSimConfig;
-	static C(Other: UObject | any): ChaosClothSharedSimConfig;
-}
-
-declare class ChaosClothingSimulationFactory extends ClothingSimulationFactory { 
-	static Load(ResourceName: string): ChaosClothingSimulationFactory;
-	static Find(Outer: UObject, ResourceName: string): ChaosClothingSimulationFactory;
-	static GetDefaultObject(): ChaosClothingSimulationFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ChaosClothingSimulationFactory;
-	static C(Other: UObject | any): ChaosClothingSimulationFactory;
-}
-
-declare class ChaosClothingInteractor extends ClothingInteractor { 
-	static Load(ResourceName: string): ChaosClothingInteractor;
-	static Find(Outer: UObject, ResourceName: string): ChaosClothingInteractor;
-	static GetDefaultObject(): ChaosClothingInteractor;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ChaosClothingInteractor;
-	SetWind(Drag: Vector2D,Lift: Vector2D,AirDensity: number,WindVelocity: Vector): void;
-	SetVelocityScale(LinearVelocityScale: Vector,AngularVelocityScale: number,FictitiousAngularScale: number): void;
-	SetMaterialLinear(EdgeStiffness: number,BendingStiffness: number,AreaStiffness: number): void;
-	SetMaterial(EdgeStiffness: Vector2D,BendingStiffness: Vector2D,AreaStiffness: Vector2D): void;
-	SetLongRangeAttachmentLinear(TetherStiffness: number,TetherScale: number): void;
-	SetLongRangeAttachment(TetherStiffness: Vector2D,TetherScale: Vector2D): void;
-	SetGravity(GravityScale: number,bIsGravityOverridden: boolean,GravityOverride: Vector): void;
-	SetDamping(DampingCoefficient: number): void;
-	SetCollision(CollisionThickness: number,FrictionCoefficient: number,bUseCCD: boolean,SelfCollisionThickness: number): void;
-	SetBackstop(bEnabled: boolean): void;
-	SetAnimDriveLinear(AnimDriveStiffness: number): void;
-	SetAnimDrive(AnimDriveStiffness: Vector2D,AnimDriveDamping: Vector2D): void;
-	SetAerodynamics(DragCoefficient: number,LiftCoefficient: number,WindVelocity: Vector): void;
-	ResetAndTeleport(bReset: boolean,bTeleport: boolean): void;
-	static C(Other: UObject | any): ChaosClothingInteractor;
-}
-
-declare class ChaosClothingSimulationInteractor extends ClothingSimulationInteractor { 
-	static Load(ResourceName: string): ChaosClothingSimulationInteractor;
-	static Find(Outer: UObject, ResourceName: string): ChaosClothingSimulationInteractor;
-	static GetDefaultObject(): ChaosClothingSimulationInteractor;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ChaosClothingSimulationInteractor;
-	static C(Other: UObject | any): ChaosClothingSimulationInteractor;
 }
 
 declare class WmfMediaSettings extends UObject { 
@@ -13092,6 +13461,170 @@ declare class WaveOscillatorCameraShakePattern extends SimpleCameraShakePattern 
 	static C(Other: UObject | any): WaveOscillatorCameraShakePattern;
 }
 
+declare class OpenColorIOConfigurationFactoryNew extends Factory { 
+	static Load(ResourceName: string): OpenColorIOConfigurationFactoryNew;
+	static Find(Outer: UObject, ResourceName: string): OpenColorIOConfigurationFactoryNew;
+	static GetDefaultObject(): OpenColorIOConfigurationFactoryNew;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OpenColorIOConfigurationFactoryNew;
+	static C(Other: UObject | any): OpenColorIOConfigurationFactoryNew;
+}
+
+declare class PerViewportDisplaySettingPair { 
+	ViewportIdentifier: string;
+	DisplayConfiguration: OpenColorIODisplayConfiguration;
+	clone() : PerViewportDisplaySettingPair;
+	static C(Other: UObject | any): PerViewportDisplaySettingPair;
+}
+
+declare class OpenColorIOLevelViewportSettings extends UObject { 
+	ViewportsSettings: PerViewportDisplaySettingPair[];
+	static Load(ResourceName: string): OpenColorIOLevelViewportSettings;
+	static Find(Outer: UObject, ResourceName: string): OpenColorIOLevelViewportSettings;
+	static GetDefaultObject(): OpenColorIOLevelViewportSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OpenColorIOLevelViewportSettings;
+	static C(Other: UObject | any): OpenColorIOLevelViewportSettings;
+}
+
+declare class SignificanceManager extends UObject { 
+	SignificanceManagerClassName: SoftClassPath;
+	static Load(ResourceName: string): SignificanceManager;
+	static Find(Outer: UObject, ResourceName: string): SignificanceManager;
+	static GetDefaultObject(): SignificanceManager;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SignificanceManager;
+	static C(Other: UObject | any): SignificanceManager;
+}
+
+declare class AnimationSharingStateProcessor extends UObject { 
+	AnimationStateEnum: Enum;
+	static Load(ResourceName: string): AnimationSharingStateProcessor;
+	static Find(Outer: UObject, ResourceName: string): AnimationSharingStateProcessor;
+	static GetDefaultObject(): AnimationSharingStateProcessor;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimationSharingStateProcessor;
+	ProcessActorState(OutState?: number,InActor?: Actor,CurrentState?: number,OnDemandState?: number,bShouldProcess?: boolean): {OutState: number, bShouldProcess: boolean};
+	GetAnimationStateEnum(): Enum;
+	static C(Other: UObject | any): AnimationSharingStateProcessor;
+}
+
+declare class AnimSharingInstance extends UObject { 
+	RegisteredActors: Actor[];
+	StateProcessor: AnimationSharingStateProcessor;
+	UsedAnimationSequences: AnimSequence[];
+	StateEnum: Enum;
+	SharingActor: Actor;
+	static Load(ResourceName: string): AnimSharingInstance;
+	static Find(Outer: UObject, ResourceName: string): AnimSharingInstance;
+	static GetDefaultObject(): AnimSharingInstance;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimSharingInstance;
+	static C(Other: UObject | any): AnimSharingInstance;
+}
+
+declare class AnimSharingStateInstance extends AnimInstance { 
+	AnimationToPlay: AnimSequence;
+	PermutationTimeOffset: number;
+	PlayRate: number;
+	bStateBool: boolean;
+	Instance: AnimSharingInstance;
+	static Load(ResourceName: string): AnimSharingStateInstance;
+	static Find(Outer: UObject, ResourceName: string): AnimSharingStateInstance;
+	static GetDefaultObject(): AnimSharingStateInstance;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimSharingStateInstance;
+	GetInstancedActors(Actors?: Actor[]): {Actors: Actor[]};
+	static C(Other: UObject | any): AnimSharingStateInstance;
+}
+
+declare class AnimSharingTransitionInstance extends AnimInstance { 
+	FromComponent: any;
+	ToComponent: any;
+	BlendTime: number;
+	bBlendBool: boolean;
+	static Load(ResourceName: string): AnimSharingTransitionInstance;
+	static Find(Outer: UObject, ResourceName: string): AnimSharingTransitionInstance;
+	static GetDefaultObject(): AnimSharingTransitionInstance;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimSharingTransitionInstance;
+	static C(Other: UObject | any): AnimSharingTransitionInstance;
+}
+
+declare class AnimSharingAdditiveInstance extends AnimInstance { 
+	BaseComponent: any;
+	AdditiveAnimation: any;
+	Alpha: number;
+	bStateBool: boolean;
+	static Load(ResourceName: string): AnimSharingAdditiveInstance;
+	static Find(Outer: UObject, ResourceName: string): AnimSharingAdditiveInstance;
+	static GetDefaultObject(): AnimSharingAdditiveInstance;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimSharingAdditiveInstance;
+	static C(Other: UObject | any): AnimSharingAdditiveInstance;
+}
+
+declare class AnimationSetup { 
+	AnimSequence: AnimSequence;
+	AnimBlueprint: UnrealEngineClass;
+	NumRandomizedInstances: PerPlatformInt;
+	Enabled: PerPlatformBool;
+	clone() : AnimationSetup;
+	static C(Other: UObject | any): AnimationSetup;
+}
+
+declare class AnimationStateEntry { 
+	State: number;
+	AnimationSetups: AnimationSetup[];
+	bOnDemand: boolean;
+	bAdditive: boolean;
+	BlendTime: number;
+	bReturnToPreviousState: boolean;
+	bSetNextState: boolean;
+	NextState: number;
+	MaximumNumberOfConcurrentInstances: PerPlatformInt;
+	WiggleTimePercentage: number;
+	bRequiresCurves: boolean;
+	clone() : AnimationStateEntry;
+	static C(Other: UObject | any): AnimationStateEntry;
+}
+
+declare class PerSkeletonAnimationSharingSetup { 
+	Skeleton: Skeleton;
+	SkeletalMesh: SkeletalMesh;
+	BlendAnimBlueprint: UnrealEngineClass;
+	AdditiveAnimBlueprint: UnrealEngineClass;
+	StateProcessorClass: UnrealEngineClass;
+	AnimationStates: AnimationStateEntry[];
+	clone() : PerSkeletonAnimationSharingSetup;
+	static C(Other: UObject | any): PerSkeletonAnimationSharingSetup;
+}
+
+declare class AnimationSharingScalability { 
+	UseBlendTransitions: PerPlatformBool;
+	BlendSignificanceValue: PerPlatformFloat;
+	MaximumNumberConcurrentBlends: PerPlatformInt;
+	TickSignificanceValue: PerPlatformFloat;
+	clone() : AnimationSharingScalability;
+	static C(Other: UObject | any): AnimationSharingScalability;
+}
+
+declare class AnimationSharingSetup extends UObject { 
+	SkeletonSetups: PerSkeletonAnimationSharingSetup[];
+	ScalabilitySettings: AnimationSharingScalability;
+	static Load(ResourceName: string): AnimationSharingSetup;
+	static Find(Outer: UObject, ResourceName: string): AnimationSharingSetup;
+	static GetDefaultObject(): AnimationSharingSetup;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimationSharingSetup;
+	static C(Other: UObject | any): AnimationSharingSetup;
+}
+
+declare class AnimationSharingManager extends UObject { 
+	Skeletons: Skeleton[];
+	PerSkeletonData: AnimSharingInstance[];
+	static Load(ResourceName: string): AnimationSharingManager;
+	static Find(Outer: UObject, ResourceName: string): AnimationSharingManager;
+	static GetDefaultObject(): AnimationSharingManager;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimationSharingManager;
+	RegisterActorWithSkeletonBP(InActor: Actor,SharingSkeleton: Skeleton): void;
+	static GetAnimationSharingManager(WorldContextObject: UObject): AnimationSharingManager;
+	static CreateAnimationSharingManager(WorldContextObject: UObject,Setup: AnimationSharingSetup): boolean;
+	static AnimationSharingEnabled(): boolean;
+	static C(Other: UObject | any): AnimationSharingManager;
+}
+
 declare class RigVMMemoryStorageGeneratorClass extends Class { 
 	static Load(ResourceName: string): RigVMMemoryStorageGeneratorClass;
 	static Find(Outer: UObject, ResourceName: string): RigVMMemoryStorageGeneratorClass;
@@ -13458,154 +13991,6 @@ declare class FKControlRig extends ControlRig {
 	static GetDefaultObject(): FKControlRig;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FKControlRig;
 	static C(Other: UObject | any): FKControlRig;
-}
-
-declare class ControlRigIOSettings { 
-	bUpdatePose: boolean;
-	bUpdateCurves: boolean;
-	clone() : ControlRigIOSettings;
-	static C(Other: UObject | any): ControlRigIOSettings;
-}
-
-declare class AnimNode_ControlRigBase extends AnimNode_CustomProperty { 
-	Source: PoseLink;
-	bResetInputPoseToInitial: boolean;
-	bTransferInputPose: boolean;
-	bTransferInputCurves: boolean;
-	bTransferPoseInGlobalSpace: boolean;
-	InputBonesToTransfer: BoneReference[];
-	NodeMappingContainer: any;
-	InputSettings: ControlRigIOSettings;
-	OutputSettings: ControlRigIOSettings;
-	bExecute: boolean;
-	clone() : AnimNode_ControlRigBase;
-	static C(Other: UObject | any): AnimNode_ControlRigBase;
-}
-
-declare class AnimNode_ControlRig extends AnimNode_ControlRigBase { 
-	ControlRigClass: UnrealEngineClass;
-	ControlRig: ControlRig;
-	Alpha: number;
-	AlphaInputType: EAnimAlphaInputType;
-	bAlphaBoolEnabled: boolean;
-	bSetRefPoseFromSkeleton: boolean;
-	AlphaScaleBias: InputScaleBias;
-	AlphaBoolBlend: InputAlphaBoolBlend;
-	AlphaCurveName: string;
-	AlphaScaleBiasClamp: InputScaleBiasClamp;
-	InputMapping: any;
-	OutputMapping: any;
-	LODThreshold: number;
-	clone() : AnimNode_ControlRig;
-	static C(Other: UObject | any): AnimNode_ControlRig;
-}
-
-declare class AnimGraphNode_ControlRig extends AnimGraphNode_CustomProperty { 
-	UNode: AnimNode_ControlRig;
-	static Load(ResourceName: string): AnimGraphNode_ControlRig;
-	static Find(Outer: UObject, ResourceName: string): AnimGraphNode_ControlRig;
-	static GetDefaultObject(): AnimGraphNode_ControlRig;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimGraphNode_ControlRig;
-	static C(Other: UObject | any): AnimGraphNode_ControlRig;
-}
-
-declare class ControlRigGraphNode extends EdGraphNode { 
-	ModelNodePath: string;
-	CachedModelNode: RigVMNode;
-	CachedModelPins: any;
-	PropertyName: string;
-	StructPath: string;
-	PinType: EdGraphPinType;
-	ParameterType: number;
-	ExpandedPins: string[];
-	static Load(ResourceName: string): ControlRigGraphNode;
-	static Find(Outer: UObject, ResourceName: string): ControlRigGraphNode;
-	static GetDefaultObject(): ControlRigGraphNode;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ControlRigGraphNode;
-	static C(Other: UObject | any): ControlRigGraphNode;
-}
-
-declare class ControlRigGraphSchema extends EdGraphSchema { 
-	static Load(ResourceName: string): ControlRigGraphSchema;
-	static Find(Outer: UObject, ResourceName: string): ControlRigGraphSchema;
-	static GetDefaultObject(): ControlRigGraphSchema;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ControlRigGraphSchema;
-	static C(Other: UObject | any): ControlRigGraphSchema;
-}
-
-declare class EdGraphNode_Reference extends EdGraphNode { 
-	static Load(ResourceName: string): EdGraphNode_Reference;
-	static Find(Outer: UObject, ResourceName: string): EdGraphNode_Reference;
-	static GetDefaultObject(): EdGraphNode_Reference;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): EdGraphNode_Reference;
-	static C(Other: UObject | any): EdGraphNode_Reference;
-}
-
-declare class EdGraph_ReferenceViewer extends EdGraph { 
-	static Load(ResourceName: string): EdGraph_ReferenceViewer;
-	static Find(Outer: UObject, ResourceName: string): EdGraph_ReferenceViewer;
-	static GetDefaultObject(): EdGraph_ReferenceViewer;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): EdGraph_ReferenceViewer;
-	static C(Other: UObject | any): EdGraph_ReferenceViewer;
-}
-
-declare class ReferenceViewerSchema extends EdGraphSchema { 
-	static Load(ResourceName: string): ReferenceViewerSchema;
-	static Find(Outer: UObject, ResourceName: string): ReferenceViewerSchema;
-	static GetDefaultObject(): ReferenceViewerSchema;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ReferenceViewerSchema;
-	static C(Other: UObject | any): ReferenceViewerSchema;
-}
-
-declare class UndoHistorySettings extends UObject { 
-	bShowTransactionDetails: boolean;
-	static Load(ResourceName: string): UndoHistorySettings;
-	static Find(Outer: UObject, ResourceName: string): UndoHistorySettings;
-	static GetDefaultObject(): UndoHistorySettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): UndoHistorySettings;
-	static C(Other: UObject | any): UndoHistorySettings;
-}
-
-declare class LevelAssetEditor extends AssetEditor { 
-	static Load(ResourceName: string): LevelAssetEditor;
-	static Find(Outer: UObject, ResourceName: string): LevelAssetEditor;
-	static GetDefaultObject(): LevelAssetEditor;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): LevelAssetEditor;
-	static C(Other: UObject | any): LevelAssetEditor;
-}
-
-declare class PixelInspectorView extends UObject { 
-	FinalColor: LinearColor;
-	SceneColor: LinearColor;
-	PreExposure: number;
-	Luminance: number;
-	HdrColor: LinearColor;
-	Normal: Vector;
-	PerObjectGBufferData: number;
-	Metallic: number;
-	Specular: number;
-	Roughness: number;
-	MaterialShadingModel: EMaterialShadingModel;
-	SelectiveOutputMask: number;
-	BaseColor: LinearColor;
-	IndirectIrradiance: number;
-	AmbientOcclusion: number;
-	SubsurfaceColor: LinearColor;
-	SubsurfaceProfile: Vector;
-	Opacity: number;
-	ClearCoat: number;
-	ClearCoatRoughness: number;
-	WorldNormal: Vector;
-	Backlit: number;
-	Cloth: number;
-	EyeTangent: Vector;
-	IrisMask: number;
-	IrisDistance: number;
-	static Load(ResourceName: string): PixelInspectorView;
-	static Find(Outer: UObject, ResourceName: string): PixelInspectorView;
-	static GetDefaultObject(): PixelInspectorView;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PixelInspectorView;
-	static C(Other: UObject | any): PixelInspectorView;
 }
 
 declare type ERetargetRotationMode = 'Interpolated' | 'OneToOne' | 'OneToOneReversed' | 'None' | 'ERetargetRotationMode_MAX';
@@ -14181,144 +14566,199 @@ declare class AnimGraphNode_RetargetPoseFromMesh extends AnimGraphNode_Base {
 	static C(Other: UObject | any): AnimGraphNode_RetargetPoseFromMesh;
 }
 
-declare class SignificanceManager extends UObject { 
-	SignificanceManagerClassName: SoftClassPath;
-	static Load(ResourceName: string): SignificanceManager;
-	static Find(Outer: UObject, ResourceName: string): SignificanceManager;
-	static GetDefaultObject(): SignificanceManager;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SignificanceManager;
-	static C(Other: UObject | any): SignificanceManager;
+declare class ControlRigIOSettings { 
+	bUpdatePose: boolean;
+	bUpdateCurves: boolean;
+	clone() : ControlRigIOSettings;
+	static C(Other: UObject | any): ControlRigIOSettings;
 }
 
-declare class AnimationSharingStateProcessor extends UObject { 
-	AnimationStateEnum: Enum;
-	static Load(ResourceName: string): AnimationSharingStateProcessor;
-	static Find(Outer: UObject, ResourceName: string): AnimationSharingStateProcessor;
-	static GetDefaultObject(): AnimationSharingStateProcessor;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimationSharingStateProcessor;
-	ProcessActorState(OutState?: number,InActor?: Actor,CurrentState?: number,OnDemandState?: number,bShouldProcess?: boolean): {OutState: number, bShouldProcess: boolean};
-	GetAnimationStateEnum(): Enum;
-	static C(Other: UObject | any): AnimationSharingStateProcessor;
+declare class AnimNode_ControlRigBase extends AnimNode_CustomProperty { 
+	Source: PoseLink;
+	bResetInputPoseToInitial: boolean;
+	bTransferInputPose: boolean;
+	bTransferInputCurves: boolean;
+	bTransferPoseInGlobalSpace: boolean;
+	InputBonesToTransfer: BoneReference[];
+	NodeMappingContainer: any;
+	InputSettings: ControlRigIOSettings;
+	OutputSettings: ControlRigIOSettings;
+	bExecute: boolean;
+	clone() : AnimNode_ControlRigBase;
+	static C(Other: UObject | any): AnimNode_ControlRigBase;
 }
 
-declare class AnimSharingInstance extends UObject { 
-	RegisteredActors: Actor[];
-	StateProcessor: AnimationSharingStateProcessor;
-	UsedAnimationSequences: AnimSequence[];
-	StateEnum: Enum;
-	SharingActor: Actor;
-	static Load(ResourceName: string): AnimSharingInstance;
-	static Find(Outer: UObject, ResourceName: string): AnimSharingInstance;
-	static GetDefaultObject(): AnimSharingInstance;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimSharingInstance;
-	static C(Other: UObject | any): AnimSharingInstance;
-}
-
-declare class AnimSharingStateInstance extends AnimInstance { 
-	AnimationToPlay: AnimSequence;
-	PermutationTimeOffset: number;
-	PlayRate: number;
-	bStateBool: boolean;
-	Instance: AnimSharingInstance;
-	static Load(ResourceName: string): AnimSharingStateInstance;
-	static Find(Outer: UObject, ResourceName: string): AnimSharingStateInstance;
-	static GetDefaultObject(): AnimSharingStateInstance;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimSharingStateInstance;
-	GetInstancedActors(Actors?: Actor[]): {Actors: Actor[]};
-	static C(Other: UObject | any): AnimSharingStateInstance;
-}
-
-declare class AnimSharingTransitionInstance extends AnimInstance { 
-	FromComponent: any;
-	ToComponent: any;
-	BlendTime: number;
-	bBlendBool: boolean;
-	static Load(ResourceName: string): AnimSharingTransitionInstance;
-	static Find(Outer: UObject, ResourceName: string): AnimSharingTransitionInstance;
-	static GetDefaultObject(): AnimSharingTransitionInstance;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimSharingTransitionInstance;
-	static C(Other: UObject | any): AnimSharingTransitionInstance;
-}
-
-declare class AnimSharingAdditiveInstance extends AnimInstance { 
-	BaseComponent: any;
-	AdditiveAnimation: any;
+declare class AnimNode_ControlRig extends AnimNode_ControlRigBase { 
+	ControlRigClass: UnrealEngineClass;
+	ControlRig: ControlRig;
 	Alpha: number;
-	bStateBool: boolean;
-	static Load(ResourceName: string): AnimSharingAdditiveInstance;
-	static Find(Outer: UObject, ResourceName: string): AnimSharingAdditiveInstance;
-	static GetDefaultObject(): AnimSharingAdditiveInstance;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimSharingAdditiveInstance;
-	static C(Other: UObject | any): AnimSharingAdditiveInstance;
+	AlphaInputType: EAnimAlphaInputType;
+	bAlphaBoolEnabled: boolean;
+	bSetRefPoseFromSkeleton: boolean;
+	AlphaScaleBias: InputScaleBias;
+	AlphaBoolBlend: InputAlphaBoolBlend;
+	AlphaCurveName: string;
+	AlphaScaleBiasClamp: InputScaleBiasClamp;
+	InputMapping: any;
+	OutputMapping: any;
+	LODThreshold: number;
+	clone() : AnimNode_ControlRig;
+	static C(Other: UObject | any): AnimNode_ControlRig;
 }
 
-declare class AnimationSetup { 
-	AnimSequence: AnimSequence;
-	AnimBlueprint: UnrealEngineClass;
-	NumRandomizedInstances: PerPlatformInt;
-	Enabled: PerPlatformBool;
-	clone() : AnimationSetup;
-	static C(Other: UObject | any): AnimationSetup;
+declare class AnimGraphNode_ControlRig extends AnimGraphNode_CustomProperty { 
+	UNode: AnimNode_ControlRig;
+	static Load(ResourceName: string): AnimGraphNode_ControlRig;
+	static Find(Outer: UObject, ResourceName: string): AnimGraphNode_ControlRig;
+	static GetDefaultObject(): AnimGraphNode_ControlRig;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimGraphNode_ControlRig;
+	static C(Other: UObject | any): AnimGraphNode_ControlRig;
 }
 
-declare class AnimationStateEntry { 
-	State: number;
-	AnimationSetups: AnimationSetup[];
-	bOnDemand: boolean;
-	bAdditive: boolean;
-	BlendTime: number;
-	bReturnToPreviousState: boolean;
-	bSetNextState: boolean;
-	NextState: number;
-	MaximumNumberOfConcurrentInstances: PerPlatformInt;
-	WiggleTimePercentage: number;
-	bRequiresCurves: boolean;
-	clone() : AnimationStateEntry;
-	static C(Other: UObject | any): AnimationStateEntry;
+declare class ControlRigGraphNode extends EdGraphNode { 
+	ModelNodePath: string;
+	CachedModelNode: RigVMNode;
+	CachedModelPins: any;
+	PropertyName: string;
+	StructPath: string;
+	PinType: EdGraphPinType;
+	ParameterType: number;
+	ExpandedPins: string[];
+	static Load(ResourceName: string): ControlRigGraphNode;
+	static Find(Outer: UObject, ResourceName: string): ControlRigGraphNode;
+	static GetDefaultObject(): ControlRigGraphNode;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ControlRigGraphNode;
+	static C(Other: UObject | any): ControlRigGraphNode;
 }
 
-declare class PerSkeletonAnimationSharingSetup { 
-	Skeleton: Skeleton;
-	SkeletalMesh: SkeletalMesh;
-	BlendAnimBlueprint: UnrealEngineClass;
-	AdditiveAnimBlueprint: UnrealEngineClass;
-	StateProcessorClass: UnrealEngineClass;
-	AnimationStates: AnimationStateEntry[];
-	clone() : PerSkeletonAnimationSharingSetup;
-	static C(Other: UObject | any): PerSkeletonAnimationSharingSetup;
+declare class ControlRigGraphSchema extends EdGraphSchema { 
+	static Load(ResourceName: string): ControlRigGraphSchema;
+	static Find(Outer: UObject, ResourceName: string): ControlRigGraphSchema;
+	static GetDefaultObject(): ControlRigGraphSchema;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ControlRigGraphSchema;
+	static C(Other: UObject | any): ControlRigGraphSchema;
 }
 
-declare class AnimationSharingScalability { 
-	UseBlendTransitions: PerPlatformBool;
-	BlendSignificanceValue: PerPlatformFloat;
-	MaximumNumberConcurrentBlends: PerPlatformInt;
-	TickSignificanceValue: PerPlatformFloat;
-	clone() : AnimationSharingScalability;
-	static C(Other: UObject | any): AnimationSharingScalability;
+declare class EdGraphNode_Reference extends EdGraphNode { 
+	static Load(ResourceName: string): EdGraphNode_Reference;
+	static Find(Outer: UObject, ResourceName: string): EdGraphNode_Reference;
+	static GetDefaultObject(): EdGraphNode_Reference;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): EdGraphNode_Reference;
+	static C(Other: UObject | any): EdGraphNode_Reference;
 }
 
-declare class AnimationSharingSetup extends UObject { 
-	SkeletonSetups: PerSkeletonAnimationSharingSetup[];
-	ScalabilitySettings: AnimationSharingScalability;
-	static Load(ResourceName: string): AnimationSharingSetup;
-	static Find(Outer: UObject, ResourceName: string): AnimationSharingSetup;
-	static GetDefaultObject(): AnimationSharingSetup;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimationSharingSetup;
-	static C(Other: UObject | any): AnimationSharingSetup;
+declare class EdGraph_ReferenceViewer extends EdGraph { 
+	static Load(ResourceName: string): EdGraph_ReferenceViewer;
+	static Find(Outer: UObject, ResourceName: string): EdGraph_ReferenceViewer;
+	static GetDefaultObject(): EdGraph_ReferenceViewer;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): EdGraph_ReferenceViewer;
+	static C(Other: UObject | any): EdGraph_ReferenceViewer;
 }
 
-declare class AnimationSharingManager extends UObject { 
-	Skeletons: Skeleton[];
-	PerSkeletonData: AnimSharingInstance[];
-	static Load(ResourceName: string): AnimationSharingManager;
-	static Find(Outer: UObject, ResourceName: string): AnimationSharingManager;
-	static GetDefaultObject(): AnimationSharingManager;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimationSharingManager;
-	RegisterActorWithSkeletonBP(InActor: Actor,SharingSkeleton: Skeleton): void;
-	static GetAnimationSharingManager(WorldContextObject: UObject): AnimationSharingManager;
-	static CreateAnimationSharingManager(WorldContextObject: UObject,Setup: AnimationSharingSetup): boolean;
-	static AnimationSharingEnabled(): boolean;
-	static C(Other: UObject | any): AnimationSharingManager;
+declare class ReferenceViewerSchema extends EdGraphSchema { 
+	static Load(ResourceName: string): ReferenceViewerSchema;
+	static Find(Outer: UObject, ResourceName: string): ReferenceViewerSchema;
+	static GetDefaultObject(): ReferenceViewerSchema;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ReferenceViewerSchema;
+	static C(Other: UObject | any): ReferenceViewerSchema;
+}
+
+declare class UndoHistorySettings extends UObject { 
+	bShowTransactionDetails: boolean;
+	static Load(ResourceName: string): UndoHistorySettings;
+	static Find(Outer: UObject, ResourceName: string): UndoHistorySettings;
+	static GetDefaultObject(): UndoHistorySettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): UndoHistorySettings;
+	static C(Other: UObject | any): UndoHistorySettings;
+}
+
+declare class LevelAssetEditor extends AssetEditor { 
+	static Load(ResourceName: string): LevelAssetEditor;
+	static Find(Outer: UObject, ResourceName: string): LevelAssetEditor;
+	static GetDefaultObject(): LevelAssetEditor;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): LevelAssetEditor;
+	static C(Other: UObject | any): LevelAssetEditor;
+}
+
+declare class PixelInspectorView extends UObject { 
+	FinalColor: LinearColor;
+	SceneColor: LinearColor;
+	PreExposure: number;
+	Luminance: number;
+	HdrColor: LinearColor;
+	Normal: Vector;
+	PerObjectGBufferData: number;
+	Metallic: number;
+	Specular: number;
+	Roughness: number;
+	MaterialShadingModel: EMaterialShadingModel;
+	SelectiveOutputMask: number;
+	BaseColor: LinearColor;
+	IndirectIrradiance: number;
+	AmbientOcclusion: number;
+	SubsurfaceColor: LinearColor;
+	SubsurfaceProfile: Vector;
+	Opacity: number;
+	ClearCoat: number;
+	ClearCoatRoughness: number;
+	WorldNormal: Vector;
+	Backlit: number;
+	Cloth: number;
+	EyeTangent: Vector;
+	IrisMask: number;
+	IrisDistance: number;
+	static Load(ResourceName: string): PixelInspectorView;
+	static Find(Outer: UObject, ResourceName: string): PixelInspectorView;
+	static GetDefaultObject(): PixelInspectorView;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PixelInspectorView;
+	static C(Other: UObject | any): PixelInspectorView;
+}
+
+declare class K2Node_PropertyAccess extends K2Node { 
+	Path: string[];
+	TextPath: string;
+	ResolvedPinType: EdGraphPinType;
+	GeneratedPropertyName: string;
+	ContextId: string;
+	static Load(ResourceName: string): K2Node_PropertyAccess;
+	static Find(Outer: UObject, ResourceName: string): K2Node_PropertyAccess;
+	static GetDefaultObject(): K2Node_PropertyAccess;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): K2Node_PropertyAccess;
+	static C(Other: UObject | any): K2Node_PropertyAccess;
+}
+
+declare class FilterData { 
+	Name: string;
+	AllowlistedNames: string[];
+	clone() : FilterData;
+	static C(Other: UObject | any): FilterData;
+}
+
+declare class LocalFilterPresetContainer extends UObject { 
+	UserPresets: FilterData[];
+	static Load(ResourceName: string): LocalFilterPresetContainer;
+	static Find(Outer: UObject, ResourceName: string): LocalFilterPresetContainer;
+	static GetDefaultObject(): LocalFilterPresetContainer;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): LocalFilterPresetContainer;
+	static C(Other: UObject | any): LocalFilterPresetContainer;
+}
+
+declare class SharedFilterPresetContainer extends UObject { 
+	SharedPresets: FilterData[];
+	static Load(ResourceName: string): SharedFilterPresetContainer;
+	static Find(Outer: UObject, ResourceName: string): SharedFilterPresetContainer;
+	static GetDefaultObject(): SharedFilterPresetContainer;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SharedFilterPresetContainer;
+	static C(Other: UObject | any): SharedFilterPresetContainer;
+}
+
+declare class EngineFilterPresetContainer extends UObject { 
+	EnginePresets: FilterData[];
+	static Load(ResourceName: string): EngineFilterPresetContainer;
+	static Find(Outer: UObject, ResourceName: string): EngineFilterPresetContainer;
+	static GetDefaultObject(): EngineFilterPresetContainer;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): EngineFilterPresetContainer;
+	static C(Other: UObject | any): EngineFilterPresetContainer;
 }
 
 declare class EditorUtilityObject extends UObject { 
@@ -14835,53 +15275,6 @@ declare class FacialAnimationBulkImporterSettings extends UObject {
 	static GetDefaultObject(): FacialAnimationBulkImporterSettings;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): FacialAnimationBulkImporterSettings;
 	static C(Other: UObject | any): FacialAnimationBulkImporterSettings;
-}
-
-declare class K2Node_PropertyAccess extends K2Node { 
-	Path: string[];
-	TextPath: string;
-	ResolvedPinType: EdGraphPinType;
-	GeneratedPropertyName: string;
-	ContextId: string;
-	static Load(ResourceName: string): K2Node_PropertyAccess;
-	static Find(Outer: UObject, ResourceName: string): K2Node_PropertyAccess;
-	static GetDefaultObject(): K2Node_PropertyAccess;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): K2Node_PropertyAccess;
-	static C(Other: UObject | any): K2Node_PropertyAccess;
-}
-
-declare class FilterData { 
-	Name: string;
-	AllowlistedNames: string[];
-	clone() : FilterData;
-	static C(Other: UObject | any): FilterData;
-}
-
-declare class LocalFilterPresetContainer extends UObject { 
-	UserPresets: FilterData[];
-	static Load(ResourceName: string): LocalFilterPresetContainer;
-	static Find(Outer: UObject, ResourceName: string): LocalFilterPresetContainer;
-	static GetDefaultObject(): LocalFilterPresetContainer;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): LocalFilterPresetContainer;
-	static C(Other: UObject | any): LocalFilterPresetContainer;
-}
-
-declare class SharedFilterPresetContainer extends UObject { 
-	SharedPresets: FilterData[];
-	static Load(ResourceName: string): SharedFilterPresetContainer;
-	static Find(Outer: UObject, ResourceName: string): SharedFilterPresetContainer;
-	static GetDefaultObject(): SharedFilterPresetContainer;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SharedFilterPresetContainer;
-	static C(Other: UObject | any): SharedFilterPresetContainer;
-}
-
-declare class EngineFilterPresetContainer extends UObject { 
-	EnginePresets: FilterData[];
-	static Load(ResourceName: string): EngineFilterPresetContainer;
-	static Find(Outer: UObject, ResourceName: string): EngineFilterPresetContainer;
-	static GetDefaultObject(): EngineFilterPresetContainer;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): EngineFilterPresetContainer;
-	static C(Other: UObject | any): EngineFilterPresetContainer;
 }
 
 declare class ContentBrowserFileDataSource extends ContentBrowserDataSource { 
@@ -18547,387 +18940,5 @@ declare class NiagaraScratchPadViewModel extends UObject {
 	static GetDefaultObject(): NiagaraScratchPadViewModel;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraScratchPadViewModel;
 	static C(Other: UObject | any): NiagaraScratchPadViewModel;
-}
-
-declare class NiagaraScriptFactoryNew extends Factory { 
-	static Load(ResourceName: string): NiagaraScriptFactoryNew;
-	static Find(Outer: UObject, ResourceName: string): NiagaraScriptFactoryNew;
-	static GetDefaultObject(): NiagaraScriptFactoryNew;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraScriptFactoryNew;
-	static C(Other: UObject | any): NiagaraScriptFactoryNew;
-}
-
-declare class NiagaraModuleScriptFactory extends NiagaraScriptFactoryNew { 
-	static Load(ResourceName: string): NiagaraModuleScriptFactory;
-	static Find(Outer: UObject, ResourceName: string): NiagaraModuleScriptFactory;
-	static GetDefaultObject(): NiagaraModuleScriptFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraModuleScriptFactory;
-	static C(Other: UObject | any): NiagaraModuleScriptFactory;
-}
-
-declare class NiagaraFunctionScriptFactory extends NiagaraScriptFactoryNew { 
-	static Load(ResourceName: string): NiagaraFunctionScriptFactory;
-	static Find(Outer: UObject, ResourceName: string): NiagaraFunctionScriptFactory;
-	static GetDefaultObject(): NiagaraFunctionScriptFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraFunctionScriptFactory;
-	static C(Other: UObject | any): NiagaraFunctionScriptFactory;
-}
-
-declare class NiagaraDynamicInputScriptFactory extends NiagaraScriptFactoryNew { 
-	static Load(ResourceName: string): NiagaraDynamicInputScriptFactory;
-	static Find(Outer: UObject, ResourceName: string): NiagaraDynamicInputScriptFactory;
-	static GetDefaultObject(): NiagaraDynamicInputScriptFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraDynamicInputScriptFactory;
-	static C(Other: UObject | any): NiagaraDynamicInputScriptFactory;
-}
-
-declare class NiagaraScriptSource extends NiagaraScriptSourceBase { 
-	NodeGraph: NiagaraGraph;
-	static Load(ResourceName: string): NiagaraScriptSource;
-	static Find(Outer: UObject, ResourceName: string): NiagaraScriptSource;
-	static GetDefaultObject(): NiagaraScriptSource;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraScriptSource;
-	static C(Other: UObject | any): NiagaraScriptSource;
-}
-
-declare class NiagaraScripStatsViewModelSettings extends UObject { 
-	EnabledPlatforms: number[];
-	static Load(ResourceName: string): NiagaraScripStatsViewModelSettings;
-	static Find(Outer: UObject, ResourceName: string): NiagaraScripStatsViewModelSettings;
-	static GetDefaultObject(): NiagaraScripStatsViewModelSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraScripStatsViewModelSettings;
-	static C(Other: UObject | any): NiagaraScripStatsViewModelSettings;
-}
-
-declare class NiagaraSequence extends MovieSceneSequence { 
-	MovieScene: MovieScene;
-	static Load(ResourceName: string): NiagaraSequence;
-	static Find(Outer: UObject, ResourceName: string): NiagaraSequence;
-	static GetDefaultObject(): NiagaraSequence;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraSequence;
-	static C(Other: UObject | any): NiagaraSequence;
-}
-
-declare class NiagaraSequencerTrackFilter extends SequencerTrackFilterExtension { 
-	static Load(ResourceName: string): NiagaraSequencerTrackFilter;
-	static Find(Outer: UObject, ResourceName: string): NiagaraSequencerTrackFilter;
-	static GetDefaultObject(): NiagaraSequencerTrackFilter;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraSequencerTrackFilter;
-	static C(Other: UObject | any): NiagaraSequencerTrackFilter;
-}
-
-declare class NiagaraStackErrorItem extends NiagaraStackEntry { 
-	static Load(ResourceName: string): NiagaraStackErrorItem;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackErrorItem;
-	static GetDefaultObject(): NiagaraStackErrorItem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackErrorItem;
-	static C(Other: UObject | any): NiagaraStackErrorItem;
-}
-
-declare class NiagaraStackEntry extends UObject { 
-	StackEditorData: NiagaraStackEditorData;
-	Children: NiagaraStackEntry[];
-	ErrorChildren: NiagaraStackErrorItem[];
-	static Load(ResourceName: string): NiagaraStackEntry;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackEntry;
-	static GetDefaultObject(): NiagaraStackEntry;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackEntry;
-	static C(Other: UObject | any): NiagaraStackEntry;
-}
-
-declare class NiagaraStackItemGroupFooter extends NiagaraStackEntry { 
-	static Load(ResourceName: string): NiagaraStackItemGroupFooter;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackItemGroupFooter;
-	static GetDefaultObject(): NiagaraStackItemGroupFooter;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackItemGroupFooter;
-	static C(Other: UObject | any): NiagaraStackItemGroupFooter;
-}
-
-declare class NiagaraStackItemGroup extends NiagaraStackEntry { 
-	GroupFooter: NiagaraStackItemGroupFooter;
-	static Load(ResourceName: string): NiagaraStackItemGroup;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackItemGroup;
-	static GetDefaultObject(): NiagaraStackItemGroup;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackItemGroup;
-	static C(Other: UObject | any): NiagaraStackItemGroup;
-}
-
-declare class NiagaraStackItemFooter extends NiagaraStackEntry { 
-	static Load(ResourceName: string): NiagaraStackItemFooter;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackItemFooter;
-	static GetDefaultObject(): NiagaraStackItemFooter;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackItemFooter;
-	static C(Other: UObject | any): NiagaraStackItemFooter;
-}
-
-declare class NiagaraStackItem extends NiagaraStackEntry { 
-	ItemFooter: NiagaraStackItemFooter;
-	static Load(ResourceName: string): NiagaraStackItem;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackItem;
-	static GetDefaultObject(): NiagaraStackItem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackItem;
-	static C(Other: UObject | any): NiagaraStackItem;
-}
-
-declare class NiagaraStackItemContent extends NiagaraStackEntry { 
-	static Load(ResourceName: string): NiagaraStackItemContent;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackItemContent;
-	static GetDefaultObject(): NiagaraStackItemContent;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackItemContent;
-	static C(Other: UObject | any): NiagaraStackItemContent;
-}
-
-declare class NiagaraStackObject extends NiagaraStackItemContent { 
-	static Load(ResourceName: string): NiagaraStackObject;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackObject;
-	static GetDefaultObject(): NiagaraStackObject;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackObject;
-	static C(Other: UObject | any): NiagaraStackObject;
-}
-
-declare class NiagaraStackEmitterPropertiesItem extends NiagaraStackItem { 
-	EmitterObject: NiagaraStackObject;
-	static Load(ResourceName: string): NiagaraStackEmitterPropertiesItem;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackEmitterPropertiesItem;
-	static GetDefaultObject(): NiagaraStackEmitterPropertiesItem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackEmitterPropertiesItem;
-	static C(Other: UObject | any): NiagaraStackEmitterPropertiesItem;
-}
-
-declare class NiagaraStackEmitterPropertiesGroup extends NiagaraStackItemGroup { 
-	PropertiesItem: NiagaraStackEmitterPropertiesItem;
-	static Load(ResourceName: string): NiagaraStackEmitterPropertiesGroup;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackEmitterPropertiesGroup;
-	static GetDefaultObject(): NiagaraStackEmitterPropertiesGroup;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackEmitterPropertiesGroup;
-	static C(Other: UObject | any): NiagaraStackEmitterPropertiesGroup;
-}
-
-declare class NiagaraStackFunctionInputCollectionBase extends NiagaraStackItemContent { 
-	static Load(ResourceName: string): NiagaraStackFunctionInputCollectionBase;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackFunctionInputCollectionBase;
-	static GetDefaultObject(): NiagaraStackFunctionInputCollectionBase;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackFunctionInputCollectionBase;
-	static C(Other: UObject | any): NiagaraStackFunctionInputCollectionBase;
-}
-
-declare class NiagaraStackSummaryViewObject extends NiagaraStackFunctionInputCollectionBase { 
-	static Load(ResourceName: string): NiagaraStackSummaryViewObject;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackSummaryViewObject;
-	static GetDefaultObject(): NiagaraStackSummaryViewObject;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackSummaryViewObject;
-	static C(Other: UObject | any): NiagaraStackSummaryViewObject;
-}
-
-declare class NiagaraStackEmitterSummaryItem extends NiagaraStackItem { 
-	FilteredObject: NiagaraStackSummaryViewObject;
-	SummaryEditorData: NiagaraStackObject;
-	static Load(ResourceName: string): NiagaraStackEmitterSummaryItem;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackEmitterSummaryItem;
-	static GetDefaultObject(): NiagaraStackEmitterSummaryItem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackEmitterSummaryItem;
-	static C(Other: UObject | any): NiagaraStackEmitterSummaryItem;
-}
-
-declare class NiagaraStackEmitterSummaryGroup extends NiagaraStackItemGroup { 
-	SummaryItem: NiagaraStackEmitterSummaryItem;
-	static Load(ResourceName: string): NiagaraStackEmitterSummaryGroup;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackEmitterSummaryGroup;
-	static GetDefaultObject(): NiagaraStackEmitterSummaryGroup;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackEmitterSummaryGroup;
-	static C(Other: UObject | any): NiagaraStackEmitterSummaryGroup;
-}
-
-declare class NiagaraStackSummaryViewCollapseButton extends NiagaraStackEntry { 
-	static Load(ResourceName: string): NiagaraStackSummaryViewCollapseButton;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackSummaryViewCollapseButton;
-	static GetDefaultObject(): NiagaraStackSummaryViewCollapseButton;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackSummaryViewCollapseButton;
-	static C(Other: UObject | any): NiagaraStackSummaryViewCollapseButton;
-}
-
-declare class NiagaraStackSpacer extends NiagaraStackEntry { 
-	static Load(ResourceName: string): NiagaraStackSpacer;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackSpacer;
-	static GetDefaultObject(): NiagaraStackSpacer;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackSpacer;
-	static C(Other: UObject | any): NiagaraStackSpacer;
-}
-
-declare class NiagaraStackErrorItemLongDescription extends NiagaraStackEntry { 
-	static Load(ResourceName: string): NiagaraStackErrorItemLongDescription;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackErrorItemLongDescription;
-	static GetDefaultObject(): NiagaraStackErrorItemLongDescription;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackErrorItemLongDescription;
-	static C(Other: UObject | any): NiagaraStackErrorItemLongDescription;
-}
-
-declare class NiagaraStackErrorItemFix extends NiagaraStackEntry { 
-	static Load(ResourceName: string): NiagaraStackErrorItemFix;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackErrorItemFix;
-	static GetDefaultObject(): NiagaraStackErrorItemFix;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackErrorItemFix;
-	static C(Other: UObject | any): NiagaraStackErrorItemFix;
-}
-
-declare class NiagaraStackErrorItemDismiss extends NiagaraStackErrorItemFix { 
-	static Load(ResourceName: string): NiagaraStackErrorItemDismiss;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackErrorItemDismiss;
-	static GetDefaultObject(): NiagaraStackErrorItemDismiss;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackErrorItemDismiss;
-	static C(Other: UObject | any): NiagaraStackErrorItemDismiss;
-}
-
-declare class NiagaraStackEventHandlerPropertiesItem extends NiagaraStackItem { 
-	EmitterObject: NiagaraStackObject;
-	static Load(ResourceName: string): NiagaraStackEventHandlerPropertiesItem;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackEventHandlerPropertiesItem;
-	static GetDefaultObject(): NiagaraStackEventHandlerPropertiesItem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackEventHandlerPropertiesItem;
-	static C(Other: UObject | any): NiagaraStackEventHandlerPropertiesItem;
-}
-
-declare class NiagaraStackScriptItemGroup extends NiagaraStackItemGroup { 
-	static Load(ResourceName: string): NiagaraStackScriptItemGroup;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackScriptItemGroup;
-	static GetDefaultObject(): NiagaraStackScriptItemGroup;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackScriptItemGroup;
-	static C(Other: UObject | any): NiagaraStackScriptItemGroup;
-}
-
-declare class NiagaraStackEventScriptItemGroup extends NiagaraStackScriptItemGroup { 
-	EventHandlerProperties: NiagaraStackEventHandlerPropertiesItem;
-	static Load(ResourceName: string): NiagaraStackEventScriptItemGroup;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackEventScriptItemGroup;
-	static GetDefaultObject(): NiagaraStackEventScriptItemGroup;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackEventScriptItemGroup;
-	static C(Other: UObject | any): NiagaraStackEventScriptItemGroup;
-}
-
-declare class NiagaraStackFilteredObject extends NiagaraStackFunctionInputCollectionBase { 
-	static Load(ResourceName: string): NiagaraStackFilteredObject;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackFilteredObject;
-	static GetDefaultObject(): NiagaraStackFilteredObject;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackFilteredObject;
-	static C(Other: UObject | any): NiagaraStackFilteredObject;
-}
-
-declare class NiagaraStackFunctionInput extends NiagaraStackItemContent { 
-	static Load(ResourceName: string): NiagaraStackFunctionInput;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackFunctionInput;
-	static GetDefaultObject(): NiagaraStackFunctionInput;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackFunctionInput;
-	static C(Other: UObject | any): NiagaraStackFunctionInput;
-}
-
-declare class NiagaraStackFunctionInputCollection extends NiagaraStackFunctionInputCollectionBase { 
-	static Load(ResourceName: string): NiagaraStackFunctionInputCollection;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackFunctionInputCollection;
-	static GetDefaultObject(): NiagaraStackFunctionInputCollection;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackFunctionInputCollection;
-	static C(Other: UObject | any): NiagaraStackFunctionInputCollection;
-}
-
-declare class NiagaraStackInputCategory extends NiagaraStackItemContent { 
-	CategorySpacer: NiagaraStackSpacer;
-	static Load(ResourceName: string): NiagaraStackInputCategory;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackInputCategory;
-	static GetDefaultObject(): NiagaraStackInputCategory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackInputCategory;
-	static C(Other: UObject | any): NiagaraStackInputCategory;
-}
-
-declare class NiagaraStackItemTextContent extends NiagaraStackItemContent { 
-	static Load(ResourceName: string): NiagaraStackItemTextContent;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackItemTextContent;
-	static GetDefaultObject(): NiagaraStackItemTextContent;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackItemTextContent;
-	static C(Other: UObject | any): NiagaraStackItemTextContent;
-}
-
-declare class NiagaraStackModuleItemLinkedInputCollection extends NiagaraStackEntry { 
-	static Load(ResourceName: string): NiagaraStackModuleItemLinkedInputCollection;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackModuleItemLinkedInputCollection;
-	static GetDefaultObject(): NiagaraStackModuleItemLinkedInputCollection;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackModuleItemLinkedInputCollection;
-	static C(Other: UObject | any): NiagaraStackModuleItemLinkedInputCollection;
-}
-
-declare class NiagaraStackModuleItemOutputCollection extends NiagaraStackEntry { 
-	static Load(ResourceName: string): NiagaraStackModuleItemOutputCollection;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackModuleItemOutputCollection;
-	static GetDefaultObject(): NiagaraStackModuleItemOutputCollection;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackModuleItemOutputCollection;
-	static C(Other: UObject | any): NiagaraStackModuleItemOutputCollection;
-}
-
-declare class NiagaraStackModuleItem extends NiagaraStackItem { 
-	LinkedInputCollection: NiagaraStackModuleItemLinkedInputCollection;
-	InputCollection: NiagaraStackFunctionInputCollection;
-	OutputCollection: NiagaraStackModuleItemOutputCollection;
-	static Load(ResourceName: string): NiagaraStackModuleItem;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackModuleItem;
-	static GetDefaultObject(): NiagaraStackModuleItem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackModuleItem;
-	static C(Other: UObject | any): NiagaraStackModuleItem;
-}
-
-declare class NiagaraStackModuleItemOutput extends NiagaraStackEntry { 
-	static Load(ResourceName: string): NiagaraStackModuleItemOutput;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackModuleItemOutput;
-	static GetDefaultObject(): NiagaraStackModuleItemOutput;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackModuleItemOutput;
-	static C(Other: UObject | any): NiagaraStackModuleItemOutput;
-}
-
-declare class NiagaraStackParameterStoreEntry extends NiagaraStackItemContent { 
-	ValueObjectEntry: NiagaraStackObject;
-	static Load(ResourceName: string): NiagaraStackParameterStoreEntry;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackParameterStoreEntry;
-	static GetDefaultObject(): NiagaraStackParameterStoreEntry;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackParameterStoreEntry;
-	static C(Other: UObject | any): NiagaraStackParameterStoreEntry;
-}
-
-declare class NiagaraStackPropertyRow extends NiagaraStackItemContent { 
-	CategorySpacer: NiagaraStackSpacer;
-	static Load(ResourceName: string): NiagaraStackPropertyRow;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackPropertyRow;
-	static GetDefaultObject(): NiagaraStackPropertyRow;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackPropertyRow;
-	static C(Other: UObject | any): NiagaraStackPropertyRow;
-}
-
-declare class NiagaraStackRendererItem extends NiagaraStackItem { 
-	RendererObject: NiagaraStackObject;
-	static Load(ResourceName: string): NiagaraStackRendererItem;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackRendererItem;
-	static GetDefaultObject(): NiagaraStackRendererItem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackRendererItem;
-	static C(Other: UObject | any): NiagaraStackRendererItem;
-}
-
-declare class NiagaraStackRenderItemGroup extends NiagaraStackItemGroup { 
-	static Load(ResourceName: string): NiagaraStackRenderItemGroup;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackRenderItemGroup;
-	static GetDefaultObject(): NiagaraStackRenderItemGroup;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackRenderItemGroup;
-	static C(Other: UObject | any): NiagaraStackRenderItemGroup;
-}
-
-declare class NiagaraStackSystemPropertiesGroup extends NiagaraStackItemGroup { 
-	static Load(ResourceName: string): NiagaraStackSystemPropertiesGroup;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackSystemPropertiesGroup;
-	static GetDefaultObject(): NiagaraStackSystemPropertiesGroup;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackSystemPropertiesGroup;
-	static C(Other: UObject | any): NiagaraStackSystemPropertiesGroup;
-}
-
-declare class NiagaraStackSystemUserParametersGroup extends NiagaraStackItemGroup { 
-	static Load(ResourceName: string): NiagaraStackSystemUserParametersGroup;
-	static Find(Outer: UObject, ResourceName: string): NiagaraStackSystemUserParametersGroup;
-	static GetDefaultObject(): NiagaraStackSystemUserParametersGroup;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): NiagaraStackSystemUserParametersGroup;
-	static C(Other: UObject | any): NiagaraStackSystemUserParametersGroup;
 }
 

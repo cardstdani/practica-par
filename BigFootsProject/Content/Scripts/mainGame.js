@@ -11,26 +11,18 @@ main();
 
 function main() {
     let arr = Array(18).fill("a").concat(Array(4).fill("b"), Array(3).fill("c"), Array(2).fill("1"), Array(45).fill("."));
-    for (let i = 0; i < 14; i++) {
+    for (let i = 0; i < 12; i++) {
         matrix.push([]);
-        for (let j = 0; j < 14; j++) {
+        for (let j = 0; j < 12; j++) {
             let elem = arr[Math.floor(arr.length * Math.random())];
             matrix[i].push(elem);
             if (elem == "1") {bigFoots.push([[i, j], 0, false]);}
         }
     }
 
-    var x=1100;
-    var y=600;
     for (let i = 0; i < matrix.length; i++) {
-        x+=200;
-        y=600;
         for (let j = 0; j < matrix[0].length; j++) {
-            y+=200;
             let newActor = SpawnActor(objects[matrix[i][j]][2]);
-            var vector = new Vector();
-            vector.X=x; vector.Y=y; vector.Z=0;
-            newActor.K2_SetActorLocation(vector);
             objs.push(newActor);
         }
     }
@@ -61,12 +53,13 @@ function SpawnActor(actor) {
     return new actor(GWorld);
 }
 
-function clicked(index) {
-    if (!matrix.some(x => x.includes("."))) {
-        updateUI();
-        alert("Has perdido, lo lamento😔😔, por favor recarga la página"); return;
+function clicked(index) { 
+    if (!matrix.some(x => x.includes(".")) && actual !== "w") {
+        GWorld.GetPlayerCharacter(0)["LoseGame"]();
+        return;
     }
-    var coordinates = [Math.floor(index/14), index - 14*Math.floor(index/14)];
+
+    var coordinates = [Math.floor(index/12), index - 12*Math.floor(index/12)];
     console.log(index, coordinates)
     if (matrix[coordinates[0]][coordinates[1]] != ".") {
         if (actual === "w") {
@@ -83,7 +76,7 @@ function clicked(index) {
     updateActual();
     bigFoots = bigFoots.map(i => [i[0], i[1] + 1, i[2]]);
     turn += 1;
-    updateUI();
+    updateUI();    
 }
 
 function hint() {
@@ -252,11 +245,11 @@ function updateUI() {
 }
 
 function updateActual() {
-    let arr = Array(30).fill("a").concat(Array(5).fill("b"), Array(1).fill("c"), Array(2).fill("1"), Array(0).fill("w"));
+    let arr = Array(30).fill("a").concat(Array(5).fill("b"), Array(1).fill("c"), Array(2).fill("1"), Array(5).fill("w"));
     actual = arr[Math.floor(arr.length * Math.random())];
 
     objs[objs.length-1].K2_DestroyActor();
-    let newActor = SpawnActor(objects[actual][2]);
+    let newActor = actual === "w" ? SpawnActor(empty_C) : SpawnActor(objects[actual][2]);
     var vector = new Vector();
     vector.X=213850; vector.Y=172460; vector.Z=-4600;
     newActor.K2_SetActorLocation(vector);

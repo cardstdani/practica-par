@@ -1,3 +1,389 @@
+declare class AnimationStateGraph extends AnimationGraph { 
+	MyResultNode: AnimGraphNode_StateResult;
+	static Load(ResourceName: string): AnimationStateGraph;
+	static Find(Outer: UObject, ResourceName: string): AnimationStateGraph;
+	static GetDefaultObject(): AnimationStateGraph;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimationStateGraph;
+	static C(Other: UObject | any): AnimationStateGraph;
+}
+
+declare class AnimationStateGraphSchema extends AnimationGraphSchema { 
+	static Load(ResourceName: string): AnimationStateGraphSchema;
+	static Find(Outer: UObject, ResourceName: string): AnimationStateGraphSchema;
+	static GetDefaultObject(): AnimationStateGraphSchema;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimationStateGraphSchema;
+	static C(Other: UObject | any): AnimationStateGraphSchema;
+}
+
+declare class AnimStateEntryNode extends EdGraphNode { 
+	static Load(ResourceName: string): AnimStateEntryNode;
+	static Find(Outer: UObject, ResourceName: string): AnimStateEntryNode;
+	static GetDefaultObject(): AnimStateEntryNode;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimStateEntryNode;
+	static C(Other: UObject | any): AnimStateEntryNode;
+}
+
+declare class AnimGraphNode_StateMachineBase extends AnimGraphNode_Base { 
+	EditorStateMachineGraph: AnimationStateMachineGraph;
+	static Load(ResourceName: string): AnimGraphNode_StateMachineBase;
+	static Find(Outer: UObject, ResourceName: string): AnimGraphNode_StateMachineBase;
+	static GetDefaultObject(): AnimGraphNode_StateMachineBase;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimGraphNode_StateMachineBase;
+	static C(Other: UObject | any): AnimGraphNode_StateMachineBase;
+}
+
+declare class AnimationStateMachineGraph extends EdGraph { 
+	EntryNode: AnimStateEntryNode;
+	OwnerAnimGraphNode: AnimGraphNode_StateMachineBase;
+	static Load(ResourceName: string): AnimationStateMachineGraph;
+	static Find(Outer: UObject, ResourceName: string): AnimationStateMachineGraph;
+	static GetDefaultObject(): AnimationStateMachineGraph;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimationStateMachineGraph;
+	static C(Other: UObject | any): AnimationStateMachineGraph;
+}
+
+declare class AnimationStateMachineSchema extends EdGraphSchema { 
+	static Load(ResourceName: string): AnimationStateMachineSchema;
+	static Find(Outer: UObject, ResourceName: string): AnimationStateMachineSchema;
+	static GetDefaultObject(): AnimationStateMachineSchema;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimationStateMachineSchema;
+	static C(Other: UObject | any): AnimationStateMachineSchema;
+}
+
+declare class AnimNode_TransitionResult extends AnimNode_Base { 
+	bCanEnterTransition: boolean;
+	clone() : AnimNode_TransitionResult;
+	static C(Other: UObject | any): AnimNode_TransitionResult;
+}
+
+declare class AnimGraphNode_TransitionResult extends AnimGraphNode_Base { 
+	UNode: AnimNode_TransitionResult;
+	static Load(ResourceName: string): AnimGraphNode_TransitionResult;
+	static Find(Outer: UObject, ResourceName: string): AnimGraphNode_TransitionResult;
+	static GetDefaultObject(): AnimGraphNode_TransitionResult;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimGraphNode_TransitionResult;
+	static C(Other: UObject | any): AnimGraphNode_TransitionResult;
+}
+
+declare class AnimationTransitionGraph extends AnimationGraph { 
+	MyResultNode: AnimGraphNode_TransitionResult;
+	static Load(ResourceName: string): AnimationTransitionGraph;
+	static Find(Outer: UObject, ResourceName: string): AnimationTransitionGraph;
+	static GetDefaultObject(): AnimationTransitionGraph;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimationTransitionGraph;
+	static C(Other: UObject | any): AnimationTransitionGraph;
+}
+
+declare class AnimationTransitionSchema extends EdGraphSchema_K2 { 
+	static Load(ResourceName: string): AnimationTransitionSchema;
+	static Find(Outer: UObject, ResourceName: string): AnimationTransitionSchema;
+	static GetDefaultObject(): AnimationTransitionSchema;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimationTransitionSchema;
+	static C(Other: UObject | any): AnimationTransitionSchema;
+}
+
+declare class AnimBlueprintExtension extends BlueprintExtension { 
+	static Load(ResourceName: string): AnimBlueprintExtension;
+	static Find(Outer: UObject, ResourceName: string): AnimBlueprintExtension;
+	static GetDefaultObject(): AnimBlueprintExtension;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimBlueprintExtension;
+	static C(Other: UObject | any): AnimBlueprintExtension;
+}
+
+declare class AnimBlueprintExtension_Attributes extends AnimBlueprintExtension { 
+	static Load(ResourceName: string): AnimBlueprintExtension_Attributes;
+	static Find(Outer: UObject, ResourceName: string): AnimBlueprintExtension_Attributes;
+	static GetDefaultObject(): AnimBlueprintExtension_Attributes;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimBlueprintExtension_Attributes;
+	static C(Other: UObject | any): AnimBlueprintExtension_Attributes;
+}
+
+declare class AnimSubsystem { 
+	clone() : AnimSubsystem;
+	static C(Other: UObject | any): AnimSubsystem;
+}
+
+declare type EPostCopyOperation = 'None' | 'LogicalNegateBool' | 'EPostCopyOperation_MAX';
+declare var EPostCopyOperation : { None:'None',LogicalNegateBool:'LogicalNegateBool',EPostCopyOperation_MAX:'EPostCopyOperation_MAX', };
+declare class ExposedValueCopyRecord { 
+	CopyIndex: number;
+	PostCopyOperation: EPostCopyOperation;
+	clone() : ExposedValueCopyRecord;
+	static C(Other: UObject | any): ExposedValueCopyRecord;
+}
+
+declare class ExposedValueHandler { 
+	CopyRecords: ExposedValueCopyRecord[];
+	UFunction: UFunction;
+	BoundFunction: string;
+	clone() : ExposedValueHandler;
+	static C(Other: UObject | any): ExposedValueHandler;
+}
+
+declare class AnimSubsystem_Base extends AnimSubsystem { 
+	ExposedValueHandlers: ExposedValueHandler[];
+	clone() : AnimSubsystem_Base;
+	static C(Other: UObject | any): AnimSubsystem_Base;
+}
+
+declare class AnimBlueprintExtension_Base extends AnimBlueprintExtension { 
+	Subsystem: AnimSubsystem_Base;
+	static Load(ResourceName: string): AnimBlueprintExtension_Base;
+	static Find(Outer: UObject, ResourceName: string): AnimBlueprintExtension_Base;
+	static GetDefaultObject(): AnimBlueprintExtension_Base;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimBlueprintExtension_Base;
+	static C(Other: UObject | any): AnimBlueprintExtension_Base;
+}
+
+declare type EFilterInterpolationType = 'BSIT_Average' | 'BSIT_Linear' | 'BSIT_Cubic' | 'BSIT_EaseInOut' | 'BSIT_ExponentialDecay' | 'BSIT_SpringDamper' | 'BSIT_MAX';
+declare var EFilterInterpolationType : { BSIT_Average:'BSIT_Average',BSIT_Linear:'BSIT_Linear',BSIT_Cubic:'BSIT_Cubic',BSIT_EaseInOut:'BSIT_EaseInOut',BSIT_ExponentialDecay:'BSIT_ExponentialDecay',BSIT_SpringDamper:'BSIT_SpringDamper',BSIT_MAX:'BSIT_MAX', };
+declare class InterpolationParameter { 
+	InterpolationTime: number;
+	DampingRatio: number;
+	MaxSpeed: number;
+	InterpolationType: EFilterInterpolationType;
+	clone() : InterpolationParameter;
+	static C(Other: UObject | any): InterpolationParameter;
+}
+
+declare class AnalysisProperties extends UObject { 
+	UFunction: string;
+	static Load(ResourceName: string): AnalysisProperties;
+	static Find(Outer: UObject, ResourceName: string): AnalysisProperties;
+	static GetDefaultObject(): AnalysisProperties;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnalysisProperties;
+	static C(Other: UObject | any): AnalysisProperties;
+}
+
+declare type ENotifyTriggerMode = 'AllAnimations' | 'HighestWeightedAnimation' | 'None' | 'ENotifyTriggerMode_MAX';
+declare var ENotifyTriggerMode : { AllAnimations:'AllAnimations',HighestWeightedAnimation:'HighestWeightedAnimation',None:'None',ENotifyTriggerMode_MAX:'ENotifyTriggerMode_MAX', };
+declare type EPreferredTriangulationDirection = 'None' | 'Tangential' | 'Radial' | 'EPreferredTriangulationDirection_MAX';
+declare var EPreferredTriangulationDirection : { None:'None',Tangential:'Tangential',Radial:'Radial',EPreferredTriangulationDirection_MAX:'EPreferredTriangulationDirection_MAX', };
+declare class PerBoneInterpolation { 
+	BoneReference: BoneReference;
+	InterpolationSpeedPerSec: number;
+	clone() : PerBoneInterpolation;
+	static C(Other: UObject | any): PerBoneInterpolation;
+}
+
+declare class BlendSample { 
+	Animation: AnimSequence;
+	SampleValue: Vector;
+	RateScale: number;
+	bIsValid: boolean;
+	clone() : BlendSample;
+	static C(Other: UObject | any): BlendSample;
+}
+
+declare class EditorElement { 
+	Indices: number;
+	Weights: number;
+	clone() : EditorElement;
+	static C(Other: UObject | any): EditorElement;
+}
+
+declare class BlendSpaceSegment { 
+	SampleIndices: number;
+	Vertices: number;
+	clone() : BlendSpaceSegment;
+	static C(Other: UObject | any): BlendSpaceSegment;
+}
+
+declare class BlendSpaceTriangleEdgeInfo { 
+	Normal: Vector2D;
+	NeighbourTriangleIndex: number;
+	AdjacentPerimeterTriangleIndices: number;
+	AdjacentPerimeterVertexIndices: number;
+	clone() : BlendSpaceTriangleEdgeInfo;
+	static C(Other: UObject | any): BlendSpaceTriangleEdgeInfo;
+}
+
+declare class BlendSpaceTriangle { 
+	SampleIndices: number;
+	Vertices: Vector2D;
+	EdgeInfo: BlendSpaceTriangleEdgeInfo;
+	clone() : BlendSpaceTriangle;
+	static C(Other: UObject | any): BlendSpaceTriangle;
+}
+
+declare class BlendSpaceData { 
+	Segments: BlendSpaceSegment[];
+	Triangles: BlendSpaceTriangle[];
+	clone() : BlendSpaceData;
+	static C(Other: UObject | any): BlendSpaceData;
+}
+
+declare class BlendParameter { 
+	DisplayName: string;
+	Min: number;
+	Max: number;
+	GridNum: number;
+	bSnapToGrid: boolean;
+	bWrapInput: boolean;
+	clone() : BlendParameter;
+	static C(Other: UObject | any): BlendParameter;
+}
+
+declare type EBlendSpaceAxis = 'BSA_None' | 'BSA_X' | 'BSA_Y' | 'BSA_MAX';
+declare var EBlendSpaceAxis : { BSA_None:'BSA_None',BSA_X:'BSA_X',BSA_Y:'BSA_Y',BSA_MAX:'BSA_MAX', };
+declare class BlendSpace extends AnimationAsset { 
+	bRotationBlendInMeshSpace: boolean;
+	InterpolationParam: InterpolationParameter;
+	AnalysisProperties: AnalysisProperties;
+	TargetWeightInterpolationSpeedPerSec: number;
+	bTargetWeightInterpolationEaseInOut: boolean;
+	PreviewBasePose: AnimSequence;
+	AnimLength: number;
+	NotifyTriggerMode: ENotifyTriggerMode;
+	bInterpolateUsingGrid: boolean;
+	PreferredTriangulationDirection: EPreferredTriangulationDirection;
+	PerBoneBlend: PerBoneInterpolation[];
+	SampleIndexWithMarkers: number;
+	SampleData: BlendSample[];
+	GridSamples: EditorElement[];
+	BlendSpaceData: BlendSpaceData;
+	BlendParameters: BlendParameter;
+	AxisToScaleAnimation: EBlendSpaceAxis;
+	DimensionIndices: number[];
+	static Load(ResourceName: string): BlendSpace;
+	static Find(Outer: UObject, ResourceName: string): BlendSpace;
+	static GetDefaultObject(): BlendSpace;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): BlendSpace;
+	static C(Other: UObject | any): BlendSpace;
+}
+
+declare class AnimSubsystem_BlendSpaceGraph extends AnimSubsystem { 
+	BlendSpaces: BlendSpace[];
+	clone() : AnimSubsystem_BlendSpaceGraph;
+	static C(Other: UObject | any): AnimSubsystem_BlendSpaceGraph;
+}
+
+declare class AnimBlueprintExtension_BlendSpaceGraph extends AnimBlueprintExtension { 
+	Class: UnrealEngineClass;
+	Subsystem: AnimSubsystem_BlendSpaceGraph;
+	static Load(ResourceName: string): AnimBlueprintExtension_BlendSpaceGraph;
+	static Find(Outer: UObject, ResourceName: string): AnimBlueprintExtension_BlendSpaceGraph;
+	static GetDefaultObject(): AnimBlueprintExtension_BlendSpaceGraph;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimBlueprintExtension_BlendSpaceGraph;
+	static C(Other: UObject | any): AnimBlueprintExtension_BlendSpaceGraph;
+}
+
+declare class AnimBlueprintExtension_CachedPose extends AnimBlueprintExtension { 
+	static Load(ResourceName: string): AnimBlueprintExtension_CachedPose;
+	static Find(Outer: UObject, ResourceName: string): AnimBlueprintExtension_CachedPose;
+	static GetDefaultObject(): AnimBlueprintExtension_CachedPose;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimBlueprintExtension_CachedPose;
+	static C(Other: UObject | any): AnimBlueprintExtension_CachedPose;
+}
+
+declare class AnimBlueprintExtension_CallFunction extends AnimBlueprintExtension { 
+	static Load(ResourceName: string): AnimBlueprintExtension_CallFunction;
+	static Find(Outer: UObject, ResourceName: string): AnimBlueprintExtension_CallFunction;
+	static GetDefaultObject(): AnimBlueprintExtension_CallFunction;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimBlueprintExtension_CallFunction;
+	static C(Other: UObject | any): AnimBlueprintExtension_CallFunction;
+}
+
+declare class AnimBlueprintExtension_LinkedAnimGraph extends AnimBlueprintExtension { 
+	static Load(ResourceName: string): AnimBlueprintExtension_LinkedAnimGraph;
+	static Find(Outer: UObject, ResourceName: string): AnimBlueprintExtension_LinkedAnimGraph;
+	static GetDefaultObject(): AnimBlueprintExtension_LinkedAnimGraph;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimBlueprintExtension_LinkedAnimGraph;
+	static C(Other: UObject | any): AnimBlueprintExtension_LinkedAnimGraph;
+}
+
+declare class AnimSubsystemInstance { 
+	clone() : AnimSubsystemInstance;
+	static C(Other: UObject | any): AnimSubsystemInstance;
+}
+
+declare class AnimSubsystemInstance_NodeRelevancy extends AnimSubsystemInstance { 
+	clone() : AnimSubsystemInstance_NodeRelevancy;
+	static C(Other: UObject | any): AnimSubsystemInstance_NodeRelevancy;
+}
+
+declare class AnimBlueprintExtension_NodeRelevancy extends AnimBlueprintExtension { 
+	Subsystem: AnimSubsystemInstance_NodeRelevancy;
+	static Load(ResourceName: string): AnimBlueprintExtension_NodeRelevancy;
+	static Find(Outer: UObject, ResourceName: string): AnimBlueprintExtension_NodeRelevancy;
+	static GetDefaultObject(): AnimBlueprintExtension_NodeRelevancy;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimBlueprintExtension_NodeRelevancy;
+	static C(Other: UObject | any): AnimBlueprintExtension_NodeRelevancy;
+}
+
+declare class PropertyAccessSegment { 
+	Name: string;
+	struct: Struct;
+	Property: any;
+	UFunction: UFunction;
+	ArrayIndex: number;
+	Flags: any;
+	clone() : PropertyAccessSegment;
+	static C(Other: UObject | any): PropertyAccessSegment;
+}
+
+declare class PropertyAccessPath { 
+	PathSegmentStartIndex: number;
+	PathSegmentCount: number;
+	clone() : PropertyAccessPath;
+	static C(Other: UObject | any): PropertyAccessPath;
+}
+
+declare type EPropertyAccessCopyType = 'None' | 'Plain' | 'Complex' | 'Bool' | 'Struct' | 'Object' | 'Name' | 'Array' | 'PromoteBoolToByte' | 'PromoteBoolToInt32' | 'PromoteBoolToInt64' | 'PromoteBoolToFloat' | 'PromoteBoolToDouble' | 'PromoteByteToInt32' | 'PromoteByteToInt64' | 'PromoteByteToFloat' | 'PromoteByteToDouble' | 'PromoteInt32ToInt64' | 'PromoteInt32ToFloat' | 'PromoteInt32ToDouble' | 'PromoteFloatToDouble' | 'DemoteDoubleToFloat' | 'PromoteArrayFloatToDouble' | 'DemoteArrayDoubleToFloat' | 'EPropertyAccessCopyType_MAX';
+declare var EPropertyAccessCopyType : { None:'None',Plain:'Plain',Complex:'Complex',Bool:'Bool',Struct:'Struct',Object:'Object',Name:'Name',Array:'Array',PromoteBoolToByte:'PromoteBoolToByte',PromoteBoolToInt32:'PromoteBoolToInt32',PromoteBoolToInt64:'PromoteBoolToInt64',PromoteBoolToFloat:'PromoteBoolToFloat',PromoteBoolToDouble:'PromoteBoolToDouble',PromoteByteToInt32:'PromoteByteToInt32',PromoteByteToInt64:'PromoteByteToInt64',PromoteByteToFloat:'PromoteByteToFloat',PromoteByteToDouble:'PromoteByteToDouble',PromoteInt32ToInt64:'PromoteInt32ToInt64',PromoteInt32ToFloat:'PromoteInt32ToFloat',PromoteInt32ToDouble:'PromoteInt32ToDouble',PromoteFloatToDouble:'PromoteFloatToDouble',DemoteDoubleToFloat:'DemoteDoubleToFloat',PromoteArrayFloatToDouble:'PromoteArrayFloatToDouble',DemoteArrayDoubleToFloat:'DemoteArrayDoubleToFloat',EPropertyAccessCopyType_MAX:'EPropertyAccessCopyType_MAX', };
+declare class PropertyAccessCopy { 
+	AccessIndex: number;
+	DestAccessStartIndex: number;
+	DestAccessEndIndex: number;
+	Type: EPropertyAccessCopyType;
+	clone() : PropertyAccessCopy;
+	static C(Other: UObject | any): PropertyAccessCopy;
+}
+
+declare class PropertyAccessCopyBatch { 
+	Copies: PropertyAccessCopy[];
+	clone() : PropertyAccessCopyBatch;
+	static C(Other: UObject | any): PropertyAccessCopyBatch;
+}
+
+declare class PropertyAccessIndirectionChain { 
+	Property: any;
+	IndirectionStartIndex: number;
+	IndirectionEndIndex: number;
+	clone() : PropertyAccessIndirectionChain;
+	static C(Other: UObject | any): PropertyAccessIndirectionChain;
+}
+
+declare type EPropertyAccessObjectType = 'None' | 'Object' | 'WeakObject' | 'SoftObject' | 'EPropertyAccessObjectType_MAX';
+declare var EPropertyAccessObjectType : { None:'None',Object:'Object',WeakObject:'WeakObject',SoftObject:'SoftObject',EPropertyAccessObjectType_MAX:'EPropertyAccessObjectType_MAX', };
+declare type EPropertyAccessIndirectionType = 'Offset' | 'Object' | 'Array' | 'ScriptFunction' | 'NativeFunction' | 'EPropertyAccessIndirectionType_MAX';
+declare var EPropertyAccessIndirectionType : { Offset:'Offset',Object:'Object',Array:'Array',ScriptFunction:'ScriptFunction',NativeFunction:'NativeFunction',EPropertyAccessIndirectionType_MAX:'EPropertyAccessIndirectionType_MAX', };
+declare class PropertyAccessIndirection { 
+	Property: any;
+	UFunction: UFunction;
+	ReturnBufferSize: number;
+	ReturnBufferAlignment: number;
+	ArrayIndex: number;
+	Offset: any;
+	ObjectType: EPropertyAccessObjectType;
+	Type: EPropertyAccessIndirectionType;
+	clone() : PropertyAccessIndirection;
+	static C(Other: UObject | any): PropertyAccessIndirection;
+}
+
+declare class PropertyAccessLibrary { 
+	PathSegments: PropertyAccessSegment[];
+	SrcPaths: PropertyAccessPath[];
+	DestPaths: PropertyAccessPath[];
+	CopyBatches: PropertyAccessCopyBatch;
+	CopyBatchArray: PropertyAccessCopyBatch[];
+	SrcAccesses: PropertyAccessIndirectionChain[];
+	DestAccesses: PropertyAccessIndirectionChain[];
+	Indirections: PropertyAccessIndirection[];
+	clone() : PropertyAccessLibrary;
+	static C(Other: UObject | any): PropertyAccessLibrary;
+}
+
 declare class AnimSubsystem_PropertyAccess extends AnimSubsystem { 
 	Library: PropertyAccessLibrary;
 	clone() : AnimSubsystem_PropertyAccess;
@@ -18794,338 +19180,3 @@ declare class MaterialExpressionCustom extends MaterialExpression {
 
 declare type EDBufferTextureId = 'DBT_A' | 'DBT_B' | 'DBT_C' | 'DBT_MAX';
 declare var EDBufferTextureId : { DBT_A:'DBT_A',DBT_B:'DBT_B',DBT_C:'DBT_C',DBT_MAX:'DBT_MAX', };
-declare class MaterialExpressionDBufferTexture extends MaterialExpression { 
-	Coordinates: ExpressionInput;
-	DBufferTextureId: EDBufferTextureId;
-	static Load(ResourceName: string): MaterialExpressionDBufferTexture;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDBufferTexture;
-	static GetDefaultObject(): MaterialExpressionDBufferTexture;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDBufferTexture;
-	static C(Other: UObject | any): MaterialExpressionDBufferTexture;
-}
-
-declare class MaterialExpressionDDX extends MaterialExpression { 
-	Value: ExpressionInput;
-	static Load(ResourceName: string): MaterialExpressionDDX;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDDX;
-	static GetDefaultObject(): MaterialExpressionDDX;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDDX;
-	static C(Other: UObject | any): MaterialExpressionDDX;
-}
-
-declare class MaterialExpressionDDY extends MaterialExpression { 
-	Value: ExpressionInput;
-	static Load(ResourceName: string): MaterialExpressionDDY;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDDY;
-	static GetDefaultObject(): MaterialExpressionDDY;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDDY;
-	static C(Other: UObject | any): MaterialExpressionDDY;
-}
-
-declare class MaterialExpressionDecalDerivative extends MaterialExpression { 
-	static Load(ResourceName: string): MaterialExpressionDecalDerivative;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDecalDerivative;
-	static GetDefaultObject(): MaterialExpressionDecalDerivative;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDecalDerivative;
-	static C(Other: UObject | any): MaterialExpressionDecalDerivative;
-}
-
-declare class MaterialExpressionDecalLifetimeOpacity extends MaterialExpression { 
-	static Load(ResourceName: string): MaterialExpressionDecalLifetimeOpacity;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDecalLifetimeOpacity;
-	static GetDefaultObject(): MaterialExpressionDecalLifetimeOpacity;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDecalLifetimeOpacity;
-	static C(Other: UObject | any): MaterialExpressionDecalLifetimeOpacity;
-}
-
-declare class MaterialExpressionDecalMipmapLevel extends MaterialExpression { 
-	TextureSize: ExpressionInput;
-	ConstWidth: number;
-	ConstHeight: number;
-	static Load(ResourceName: string): MaterialExpressionDecalMipmapLevel;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDecalMipmapLevel;
-	static GetDefaultObject(): MaterialExpressionDecalMipmapLevel;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDecalMipmapLevel;
-	static C(Other: UObject | any): MaterialExpressionDecalMipmapLevel;
-}
-
-declare class MaterialExpressionDeltaTime extends MaterialExpression { 
-	static Load(ResourceName: string): MaterialExpressionDeltaTime;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDeltaTime;
-	static GetDefaultObject(): MaterialExpressionDeltaTime;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDeltaTime;
-	static C(Other: UObject | any): MaterialExpressionDeltaTime;
-}
-
-declare class MaterialExpressionDepthFade extends MaterialExpression { 
-	InOpacity: ExpressionInput;
-	FadeDistance: ExpressionInput;
-	OpacityDefault: number;
-	FadeDistanceDefault: number;
-	static Load(ResourceName: string): MaterialExpressionDepthFade;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDepthFade;
-	static GetDefaultObject(): MaterialExpressionDepthFade;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDepthFade;
-	static C(Other: UObject | any): MaterialExpressionDepthFade;
-}
-
-declare type EDepthOfFieldFunctionValue = 'TDOF_NearAndFarMask' | 'TDOF_NearMask' | 'TDOF_FarMask' | 'TDOF_CircleOfConfusionRadius' | 'TDOF_MAX';
-declare var EDepthOfFieldFunctionValue : { TDOF_NearAndFarMask:'TDOF_NearAndFarMask',TDOF_NearMask:'TDOF_NearMask',TDOF_FarMask:'TDOF_FarMask',TDOF_CircleOfConfusionRadius:'TDOF_CircleOfConfusionRadius',TDOF_MAX:'TDOF_MAX', };
-declare class MaterialExpressionDepthOfFieldFunction extends MaterialExpression { 
-	FunctionValue: EDepthOfFieldFunctionValue;
-	Depth: ExpressionInput;
-	static Load(ResourceName: string): MaterialExpressionDepthOfFieldFunction;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDepthOfFieldFunction;
-	static GetDefaultObject(): MaterialExpressionDepthOfFieldFunction;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDepthOfFieldFunction;
-	static C(Other: UObject | any): MaterialExpressionDepthOfFieldFunction;
-}
-
-declare class MaterialExpressionDeriveNormalZ extends MaterialExpression { 
-	InXY: ExpressionInput;
-	static Load(ResourceName: string): MaterialExpressionDeriveNormalZ;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDeriveNormalZ;
-	static GetDefaultObject(): MaterialExpressionDeriveNormalZ;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDeriveNormalZ;
-	static C(Other: UObject | any): MaterialExpressionDeriveNormalZ;
-}
-
-declare class MaterialExpressionDesaturation extends MaterialExpression { 
-	Input: ExpressionInput;
-	Fraction: ExpressionInput;
-	LuminanceFactors: LinearColor;
-	static Load(ResourceName: string): MaterialExpressionDesaturation;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDesaturation;
-	static GetDefaultObject(): MaterialExpressionDesaturation;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDesaturation;
-	static C(Other: UObject | any): MaterialExpressionDesaturation;
-}
-
-declare class MaterialExpressionDistance extends MaterialExpression { 
-	A: ExpressionInput;
-	B: ExpressionInput;
-	static Load(ResourceName: string): MaterialExpressionDistance;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDistance;
-	static GetDefaultObject(): MaterialExpressionDistance;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDistance;
-	static C(Other: UObject | any): MaterialExpressionDistance;
-}
-
-declare class MaterialExpressionDistanceCullFade extends MaterialExpression { 
-	static Load(ResourceName: string): MaterialExpressionDistanceCullFade;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDistanceCullFade;
-	static GetDefaultObject(): MaterialExpressionDistanceCullFade;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDistanceCullFade;
-	static C(Other: UObject | any): MaterialExpressionDistanceCullFade;
-}
-
-declare class MaterialExpressionDistanceFieldGradient extends MaterialExpression { 
-	position: ExpressionInput;
-	static Load(ResourceName: string): MaterialExpressionDistanceFieldGradient;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDistanceFieldGradient;
-	static GetDefaultObject(): MaterialExpressionDistanceFieldGradient;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDistanceFieldGradient;
-	static C(Other: UObject | any): MaterialExpressionDistanceFieldGradient;
-}
-
-declare class MaterialExpressionDistanceFieldsRenderingSwitch extends MaterialExpression { 
-	No: ExpressionInput;
-	Yes: ExpressionInput;
-	static Load(ResourceName: string): MaterialExpressionDistanceFieldsRenderingSwitch;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDistanceFieldsRenderingSwitch;
-	static GetDefaultObject(): MaterialExpressionDistanceFieldsRenderingSwitch;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDistanceFieldsRenderingSwitch;
-	static C(Other: UObject | any): MaterialExpressionDistanceFieldsRenderingSwitch;
-}
-
-declare class MaterialExpressionDistanceToNearestSurface extends MaterialExpression { 
-	position: ExpressionInput;
-	static Load(ResourceName: string): MaterialExpressionDistanceToNearestSurface;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDistanceToNearestSurface;
-	static GetDefaultObject(): MaterialExpressionDistanceToNearestSurface;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDistanceToNearestSurface;
-	static C(Other: UObject | any): MaterialExpressionDistanceToNearestSurface;
-}
-
-declare class MaterialExpressionDivide extends MaterialExpression { 
-	A: ExpressionInput;
-	B: ExpressionInput;
-	ConstA: number;
-	ConstB: number;
-	static Load(ResourceName: string): MaterialExpressionDivide;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDivide;
-	static GetDefaultObject(): MaterialExpressionDivide;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDivide;
-	static C(Other: UObject | any): MaterialExpressionDivide;
-}
-
-declare class MaterialExpressionDotProduct extends MaterialExpression { 
-	A: ExpressionInput;
-	B: ExpressionInput;
-	static Load(ResourceName: string): MaterialExpressionDotProduct;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDotProduct;
-	static GetDefaultObject(): MaterialExpressionDotProduct;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDotProduct;
-	static C(Other: UObject | any): MaterialExpressionDotProduct;
-}
-
-declare class MaterialExpressionDoubleVectorParameter extends MaterialExpressionParameter { 
-	DefaultValue: Vector4d;
-	static Load(ResourceName: string): MaterialExpressionDoubleVectorParameter;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDoubleVectorParameter;
-	static GetDefaultObject(): MaterialExpressionDoubleVectorParameter;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDoubleVectorParameter;
-	static C(Other: UObject | any): MaterialExpressionDoubleVectorParameter;
-}
-
-declare class MaterialExpressionDynamicParameter extends MaterialExpression { 
-	ParamNames: string[];
-	DefaultValue: LinearColor;
-	ParameterIndex: any;
-	static Load(ResourceName: string): MaterialExpressionDynamicParameter;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionDynamicParameter;
-	static GetDefaultObject(): MaterialExpressionDynamicParameter;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionDynamicParameter;
-	static C(Other: UObject | any): MaterialExpressionDynamicParameter;
-}
-
-declare class MaterialExpressionEyeAdaptation extends MaterialExpression { 
-	static Load(ResourceName: string): MaterialExpressionEyeAdaptation;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionEyeAdaptation;
-	static GetDefaultObject(): MaterialExpressionEyeAdaptation;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionEyeAdaptation;
-	static C(Other: UObject | any): MaterialExpressionEyeAdaptation;
-}
-
-declare class MaterialExpressionEyeAdaptationInverse extends MaterialExpression { 
-	LightValueInput: ExpressionInput;
-	AlphaInput: ExpressionInput;
-	static Load(ResourceName: string): MaterialExpressionEyeAdaptationInverse;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionEyeAdaptationInverse;
-	static GetDefaultObject(): MaterialExpressionEyeAdaptationInverse;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionEyeAdaptationInverse;
-	static C(Other: UObject | any): MaterialExpressionEyeAdaptationInverse;
-}
-
-declare class MaterialExpressionFeatureLevelSwitch extends MaterialExpression { 
-	Default: ExpressionInput;
-	Inputs: ExpressionInput;
-	static Load(ResourceName: string): MaterialExpressionFeatureLevelSwitch;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionFeatureLevelSwitch;
-	static GetDefaultObject(): MaterialExpressionFeatureLevelSwitch;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionFeatureLevelSwitch;
-	static C(Other: UObject | any): MaterialExpressionFeatureLevelSwitch;
-}
-
-declare class MaterialExpressionFloor extends MaterialExpression { 
-	Input: ExpressionInput;
-	static Load(ResourceName: string): MaterialExpressionFloor;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionFloor;
-	static GetDefaultObject(): MaterialExpressionFloor;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionFloor;
-	static C(Other: UObject | any): MaterialExpressionFloor;
-}
-
-declare class MaterialExpressionFmod extends MaterialExpression { 
-	A: ExpressionInput;
-	B: ExpressionInput;
-	static Load(ResourceName: string): MaterialExpressionFmod;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionFmod;
-	static GetDefaultObject(): MaterialExpressionFmod;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionFmod;
-	static C(Other: UObject | any): MaterialExpressionFmod;
-}
-
-declare class MaterialExpressionFontSample extends MaterialExpression { 
-	Font: Font;
-	FontTexturePage: number;
-	static Load(ResourceName: string): MaterialExpressionFontSample;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionFontSample;
-	static GetDefaultObject(): MaterialExpressionFontSample;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionFontSample;
-	static C(Other: UObject | any): MaterialExpressionFontSample;
-}
-
-declare class MaterialExpressionFontSampleParameter extends MaterialExpressionFontSample { 
-	ParameterName: string;
-	ExpressionGuid: Guid;
-	Group: string;
-	SortPriority: number;
-	static Load(ResourceName: string): MaterialExpressionFontSampleParameter;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionFontSampleParameter;
-	static GetDefaultObject(): MaterialExpressionFontSampleParameter;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionFontSampleParameter;
-	static C(Other: UObject | any): MaterialExpressionFontSampleParameter;
-}
-
-declare class MaterialExpressionForLoop extends MaterialExpression { 
-	LoopBody: ExpressionExecOutput;
-	Completed: ExpressionExecOutput;
-	StartIndex: ExpressionInput;
-	EndIndex: ExpressionInput;
-	IndexStep: ExpressionInput;
-	static Load(ResourceName: string): MaterialExpressionForLoop;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionForLoop;
-	static GetDefaultObject(): MaterialExpressionForLoop;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionForLoop;
-	static C(Other: UObject | any): MaterialExpressionForLoop;
-}
-
-declare class MaterialExpressionFrac extends MaterialExpression { 
-	Input: ExpressionInput;
-	static Load(ResourceName: string): MaterialExpressionFrac;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionFrac;
-	static GetDefaultObject(): MaterialExpressionFrac;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionFrac;
-	static C(Other: UObject | any): MaterialExpressionFrac;
-}
-
-declare class MaterialExpressionFresnel extends MaterialExpression { 
-	ExponentIn: ExpressionInput;
-	Exponent: number;
-	BaseReflectFractionIn: ExpressionInput;
-	BaseReflectFraction: number;
-	Normal: ExpressionInput;
-	static Load(ResourceName: string): MaterialExpressionFresnel;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionFresnel;
-	static GetDefaultObject(): MaterialExpressionFresnel;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionFresnel;
-	static C(Other: UObject | any): MaterialExpressionFresnel;
-}
-
-declare class MaterialExpressionGenericConstant extends MaterialExpression { 
-	static Load(ResourceName: string): MaterialExpressionGenericConstant;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionGenericConstant;
-	static GetDefaultObject(): MaterialExpressionGenericConstant;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionGenericConstant;
-	static C(Other: UObject | any): MaterialExpressionGenericConstant;
-}
-
-declare class MaterialExpressionConstantDouble extends MaterialExpressionGenericConstant { 
-	Value: any;
-	static Load(ResourceName: string): MaterialExpressionConstantDouble;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionConstantDouble;
-	static GetDefaultObject(): MaterialExpressionConstantDouble;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionConstantDouble;
-	static C(Other: UObject | any): MaterialExpressionConstantDouble;
-}
-
-declare class MaterialExpressionGetLocal extends MaterialExpression { 
-	LocalName: string;
-	static Load(ResourceName: string): MaterialExpressionGetLocal;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionGetLocal;
-	static GetDefaultObject(): MaterialExpressionGetLocal;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionGetLocal;
-	static C(Other: UObject | any): MaterialExpressionGetLocal;
-}
-
-declare class MaterialExpressionGetMaterialAttributes extends MaterialExpression { 
-	MaterialAttributes: MaterialAttributesInput;
-	AttributeGetTypes: Guid[];
-	static Load(ResourceName: string): MaterialExpressionGetMaterialAttributes;
-	static Find(Outer: UObject, ResourceName: string): MaterialExpressionGetMaterialAttributes;
-	static GetDefaultObject(): MaterialExpressionGetMaterialAttributes;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MaterialExpressionGetMaterialAttributes;
-	static C(Other: UObject | any): MaterialExpressionGetMaterialAttributes;
-}
-
