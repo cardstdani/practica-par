@@ -18274,7 +18274,7 @@ declare class Info extends Actor {
 }
 
 declare class PlayerState extends Info { 
-	Score: number;
+	score: number;
 	PlayerId: number;
 	CompressedPing: number;
 	bShouldUpdateReplicatedPing: boolean;

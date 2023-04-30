@@ -3,6 +3,280 @@
 /// <reference path="_part_2_ue.d.ts">/>
 /// <reference path="_part_3_ue.d.ts">/>
 /// <reference path="_part_4_ue.d.ts">/>
+declare type EJSCheckBoxState = 'Unchecked' | 'Checked' | 'Undetermined' | 'EJSCheckBoxState_MAX';
+declare var EJSCheckBoxState : { Unchecked:'Unchecked',Checked:'Checked',Undetermined:'Undetermined',EJSCheckBoxState_MAX:'EJSCheckBoxState_MAX', };
+declare class JavascriptNotification extends UObject { 
+	text: string;
+	bUseImage: boolean;
+	UImage: SlateBrush;
+	FadeInDuration: number;
+	FadeOutDuration: number;
+	ExpireDuration: number;
+	bUseThrobber: boolean;
+	bUseSuccessFailIcons: boolean;
+	bUseLargeFont: boolean;
+	bFireAndForget: boolean;
+	CheckboxState: EJSCheckBoxState;
+	CheckBoxStateChanged: UnrealEngineDelegate<(State: ECheckBoxState) => void>;
+	CheckBoxText: string;
+	Hyperlink: UnrealEngineDelegate<() => void>;
+	HyperlinkText: string;
+	bAllowThrottleWhenFrameRateIsLow: boolean;
+	static Load(ResourceName: string): JavascriptNotification;
+	static Find(Outer: UObject, ResourceName: string): JavascriptNotification;
+	static GetDefaultObject(): JavascriptNotification;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): JavascriptNotification;
+	Success(): void;
+	SetText(InText: string): void;
+	Reset(): void;
+	Pending(): void;
+	Fire(): void;
+	Fail(): void;
+	Fadeout(): void;
+	static C(Other: UObject | any): JavascriptNotification;
+}
+
+declare class JavascriptOnEditorCommandlet extends Commandlet { 
+	CmdLineTokens: string[];
+	CmdLineSwitches: string[];
+	static Load(ResourceName: string): JavascriptOnEditorCommandlet;
+	static Find(Outer: UObject, ResourceName: string): JavascriptOnEditorCommandlet;
+	static GetDefaultObject(): JavascriptOnEditorCommandlet;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): JavascriptOnEditorCommandlet;
+	GetEngine(): EditorEngine;
+	static C(Other: UObject | any): JavascriptOnEditorCommandlet;
+}
+
+declare type EPropertyAccessResult = 'MultipleValues' | 'Fail' | 'Success' | 'EPropertyAccessResult_MAX';
+declare var EPropertyAccessResult : { MultipleValues:'MultipleValues',Fail:'Fail',Success:'Success',EPropertyAccessResult_MAX:'EPropertyAccessResult_MAX', };
+declare class JavascriptSimpleDelegateWrapper extends UObject { 
+	delegate: UnrealEngineDelegate<() => void>;
+	static Load(ResourceName: string): JavascriptSimpleDelegateWrapper;
+	static Find(Outer: UObject, ResourceName: string): JavascriptSimpleDelegateWrapper;
+	static GetDefaultObject(): JavascriptSimpleDelegateWrapper;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): JavascriptSimpleDelegateWrapper;
+	static C(Other: UObject | any): JavascriptSimpleDelegateWrapper;
+}
+
+declare class JavascriptPropertyHandle { 
+	clone() : JavascriptPropertyHandle;
+	static C(Other: UObject | any): JavascriptPropertyHandle;
+	CreatePropertyNameWidget(NameOverride: string,ToolTipOverride: string,bDisplayResetToDefault: boolean,bHideText: boolean,bHideThumbnail: boolean): JavascriptSlateWidget;
+	CreatePropertyValueWidget(bHideDefaultPropertyButtons: boolean): JavascriptSlateWidget;
+	GeneratePathToProperty(): string;
+	GetChildHandle(Name: string): JavascriptPropertyHandle;
+	GetIndexInArray(): number;
+	GetJavascriptRefValue(OutValue?: JavascriptRef): {OutValue: JavascriptRef, $: EPropertyAccessResult};
+	GetKeyHandle(): JavascriptPropertyHandle;
+	GetMetaData(Key: string): string;
+	GetObjectValue(OutValue?: UObject): {OutValue: UObject, $: EPropertyAccessResult};
+	GetOuterObjects(): UObject[];
+	GetParentHandle(): JavascriptPropertyHandle;
+	GetProperty(): any;
+	GetPropertyName(): string;
+	GetValueAsFormattedString(OutValue?: string): {OutValue: string, $: EPropertyAccessResult};
+	IsArrayProperty(): boolean;
+	IsArrayPropertyWithValueType(): boolean;
+	IsEditConst(): boolean;
+	IsValidHandle(): boolean;
+	SetJavascriptRefValue(InValue: JavascriptRef): EPropertyAccessResult;
+	SetObjectValue(InValue: UObject): EPropertyAccessResult;
+	SetOnPropertyValueChanged(Wrapper: JavascriptSimpleDelegateWrapper): void;
+	SetValueFromFormattedString(InValue: string): EPropertyAccessResult;
+	static CreatePropertyNameWidget(Handle: JavascriptPropertyHandle,NameOverride: string,ToolTipOverride: string,bDisplayResetToDefault: boolean,bHideText: boolean,bHideThumbnail: boolean): JavascriptSlateWidget;
+	static CreatePropertyValueWidget(Handle: JavascriptPropertyHandle,bHideDefaultPropertyButtons: boolean): JavascriptSlateWidget;
+	static GeneratePathToProperty(Handle: JavascriptPropertyHandle): string;
+	static GetChildHandle(Parent: JavascriptPropertyHandle,Name: string): JavascriptPropertyHandle;
+	static GetIndexInArray(Handle: JavascriptPropertyHandle): number;
+	static GetJavascriptRefValue(Handle: JavascriptPropertyHandle,OutValue?: JavascriptRef): {OutValue: JavascriptRef, $: EPropertyAccessResult};
+	static GetKeyHandle(Handle: JavascriptPropertyHandle): JavascriptPropertyHandle;
+	static GetMetaData(Handle: JavascriptPropertyHandle,Key: string): string;
+	static GetObjectValue(Handle: JavascriptPropertyHandle,OutValue?: UObject): {OutValue: UObject, $: EPropertyAccessResult};
+	static GetOuterObjects(Handle: JavascriptPropertyHandle): UObject[];
+	static GetParentHandle(Handle: JavascriptPropertyHandle): JavascriptPropertyHandle;
+	static GetProperty(Handle: JavascriptPropertyHandle): any;
+	static GetPropertyName(Handle: JavascriptPropertyHandle): string;
+	static GetValueAsFormattedString(Handle: JavascriptPropertyHandle,OutValue?: string): {OutValue: string, $: EPropertyAccessResult};
+	static IsArrayProperty(Handle: JavascriptPropertyHandle): boolean;
+	static IsArrayPropertyWithValueType(Handle: JavascriptPropertyHandle): boolean;
+	static IsEditConst(Handle: JavascriptPropertyHandle): boolean;
+	static IsValidHandle(Handle: JavascriptPropertyHandle): boolean;
+	static SetJavascriptRefValue(Handle: JavascriptPropertyHandle,InValue: JavascriptRef): EPropertyAccessResult;
+	static SetObjectValue(Handle: JavascriptPropertyHandle,InValue: UObject): EPropertyAccessResult;
+	static SetOnPropertyValueChanged(Handle: JavascriptPropertyHandle,Wrapper: JavascriptSimpleDelegateWrapper): void;
+	static SetValueFromFormattedString(Handle: JavascriptPropertyHandle,InValue: string): EPropertyAccessResult;
+}
+
+declare class JavascriptDetailWidgetDecl { 
+	clone() : JavascriptDetailWidgetDecl;
+	static C(Other: UObject | any): JavascriptDetailWidgetDecl;
+	SetContent(Widget: JavascriptSlateWidget): void;
+	SetHAlign(InAlignment: EHorizontalAlignment): void;
+	SetMaxDesiredWidth(MaxWidth: number): void;
+	SetMinDesiredWidth(MinWidth: number): void;
+	SetVAlign(InAlignment: EVerticalAlignment): void;
+	static SetContent(Decl: JavascriptDetailWidgetDecl,Widget: JavascriptSlateWidget): void;
+	static SetHAlign(Decl: JavascriptDetailWidgetDecl,InAlignment: EHorizontalAlignment): void;
+	static SetMaxDesiredWidth(Decl: JavascriptDetailWidgetDecl,MaxWidth: number): void;
+	static SetMinDesiredWidth(Decl: JavascriptDetailWidgetDecl,MinWidth: number): void;
+	static SetVAlign(Decl: JavascriptDetailWidgetDecl,InAlignment: EVerticalAlignment): void;
+}
+
+declare class JavascriptDetailWidgetRow { 
+	clone() : JavascriptDetailWidgetRow;
+	static C(Other: UObject | any): JavascriptDetailWidgetRow;
+	NameContent(): JavascriptDetailWidgetDecl;
+	SetFilterString(InFilterString: string): void;
+	ValueContent(): JavascriptDetailWidgetDecl;
+	WholeRowContent(): JavascriptDetailWidgetDecl;
+	static NameContent(Row: JavascriptDetailWidgetRow): JavascriptDetailWidgetDecl;
+	static SetFilterString(Row: JavascriptDetailWidgetRow,InFilterString: string): void;
+	static ValueContent(Row: JavascriptDetailWidgetRow): JavascriptDetailWidgetDecl;
+	static WholeRowContent(Row: JavascriptDetailWidgetRow): JavascriptDetailWidgetDecl;
+}
+
+declare class JavascriptPropertyTypeCustomizationUtils { 
+	clone() : JavascriptPropertyTypeCustomizationUtils;
+	static C(Other: UObject | any): JavascriptPropertyTypeCustomizationUtils;
+	RequestRefresh(bForce: boolean): void;
+	static RequestRefresh(CustomizationUtils: JavascriptPropertyTypeCustomizationUtils,bForce: boolean): void;
+}
+
+declare class JavascriptSimpleGetBoolDelegateWrapper extends UObject { 
+	delegate: UnrealEngineDelegate<() => boolean>;
+	static Load(ResourceName: string): JavascriptSimpleGetBoolDelegateWrapper;
+	static Find(Outer: UObject, ResourceName: string): JavascriptSimpleGetBoolDelegateWrapper;
+	static GetDefaultObject(): JavascriptSimpleGetBoolDelegateWrapper;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): JavascriptSimpleGetBoolDelegateWrapper;
+	static C(Other: UObject | any): JavascriptSimpleGetBoolDelegateWrapper;
+}
+
+declare class JavascriptDetailPropertyRow { 
+	clone() : JavascriptDetailPropertyRow;
+	static C(Other: UObject | any): JavascriptDetailPropertyRow;
+	BindVisibility(Wrapper: JavascriptSimpleGetBoolDelegateWrapper): void;
+	CustomWidget(bShowChildren: boolean): JavascriptDetailWidgetRow;
+	static BindVisibility(Row: JavascriptDetailPropertyRow,Wrapper: JavascriptSimpleGetBoolDelegateWrapper): void;
+	static CustomWidget(Row: JavascriptDetailPropertyRow,bShowChildren: boolean): JavascriptDetailWidgetRow;
+}
+
+declare class JavascriptDetailChildrenBuilder { 
+	clone() : JavascriptDetailChildrenBuilder;
+	static C(Other: UObject | any): JavascriptDetailChildrenBuilder;
+	AddChildContent(SearchString: string): JavascriptDetailWidgetRow;
+	AddChildProperty(PropertyHandle: JavascriptPropertyHandle): JavascriptDetailPropertyRow;
+	AddExternalObjectProperty(Objects?: UObject[],PropertyName?: string,UniqueIdName?: string,bAllowChildrenOverride?: boolean,bCreateCategoryNodesOverride?: boolean): {Objects: UObject[], $: JavascriptDetailPropertyRow};
+	AddExternalObjects(Objects?: UObject[],UniqueIdName?: string): {Objects: UObject[], $: JavascriptDetailPropertyRow};
+	GenerateStructValueWidget(StructPropertyHandle: JavascriptPropertyHandle): JavascriptSlateWidget;
+	static AddChildContent(ChildBuilder: JavascriptDetailChildrenBuilder,SearchString: string): JavascriptDetailWidgetRow;
+	static AddChildProperty(ChildBuilder: JavascriptDetailChildrenBuilder,PropertyHandle: JavascriptPropertyHandle): JavascriptDetailPropertyRow;
+	static AddExternalObjectProperty(ChildBuilder: JavascriptDetailChildrenBuilder,Objects?: UObject[],PropertyName?: string,UniqueIdName?: string,bAllowChildrenOverride?: boolean,bCreateCategoryNodesOverride?: boolean): {Objects: UObject[], $: JavascriptDetailPropertyRow};
+	static AddExternalObjects(ChildBuilder: JavascriptDetailChildrenBuilder,Objects?: UObject[],UniqueIdName?: string): {Objects: UObject[], $: JavascriptDetailPropertyRow};
+	static GenerateStructValueWidget(ChildBuilder: JavascriptDetailChildrenBuilder,StructPropertyHandle: JavascriptPropertyHandle): JavascriptSlateWidget;
+}
+
+declare class JavascriptPropertyCustomization extends UObject { 
+	PropertyTypeName: string;
+	OnDestroy: UnrealEngineDelegate<(ID: number) => void>;
+	OnCustomizeHeader: UnrealEngineDelegate<(Handle: JavascriptPropertyHandle, HeaderRow: JavascriptDetailWidgetRow, Utils: JavascriptPropertyTypeCustomizationUtils, ID: number) => void>;
+	OnCustomizeChildren: UnrealEngineDelegate<(Handle: JavascriptPropertyHandle, ChildBuilder: JavascriptDetailChildrenBuilder, Utils: JavascriptPropertyTypeCustomizationUtils, ID: number) => void>;
+	OnPropertyValueChanged: UnrealEngineMulticastDelegate<() => void>;
+	static Load(ResourceName: string): JavascriptPropertyCustomization;
+	static Find(Outer: UObject, ResourceName: string): JavascriptPropertyCustomization;
+	static GetDefaultObject(): JavascriptPropertyCustomization;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): JavascriptPropertyCustomization;
+	Unregister(): void;
+	Register(): void;
+	static C(Other: UObject | any): JavascriptPropertyCustomization;
+}
+
+declare class JavascriptPropertyCustomizationLibrary extends BlueprintFunctionLibrary { 
+	static Load(ResourceName: string): JavascriptPropertyCustomizationLibrary;
+	static Find(Outer: UObject, ResourceName: string): JavascriptPropertyCustomizationLibrary;
+	static GetDefaultObject(): JavascriptPropertyCustomizationLibrary;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): JavascriptPropertyCustomizationLibrary;
+	static WholeRowContent(Row: JavascriptDetailWidgetRow): JavascriptDetailWidgetDecl;
+	static ValueContent(Row: JavascriptDetailWidgetRow): JavascriptDetailWidgetDecl;
+	static SetValueFromFormattedString(Handle: JavascriptPropertyHandle,InValue: string): EPropertyAccessResult;
+	static SetVAlign(Decl: JavascriptDetailWidgetDecl,InAlignment: EVerticalAlignment): void;
+	static SetOnPropertyValueChanged(Handle: JavascriptPropertyHandle,Wrapper: JavascriptSimpleDelegateWrapper): void;
+	static SetObjectValue(Handle: JavascriptPropertyHandle,InValue: UObject): EPropertyAccessResult;
+	static SetMinDesiredWidth(Decl: JavascriptDetailWidgetDecl,MinWidth: number): void;
+	static SetMaxDesiredWidth(Decl: JavascriptDetailWidgetDecl,MaxWidth: number): void;
+	static SetJavascriptRefValue(Handle: JavascriptPropertyHandle,InValue: JavascriptRef): EPropertyAccessResult;
+	static SetHAlign(Decl: JavascriptDetailWidgetDecl,InAlignment: EHorizontalAlignment): void;
+	static SetFilterString(Row: JavascriptDetailWidgetRow,InFilterString: string): void;
+	static SetContent(Decl: JavascriptDetailWidgetDecl,Widget: JavascriptSlateWidget): void;
+	static RequestRefresh(CustomizationUtils: JavascriptPropertyTypeCustomizationUtils,bForce: boolean): void;
+	static NameContent(Row: JavascriptDetailWidgetRow): JavascriptDetailWidgetDecl;
+	static IsValidHandle(Handle: JavascriptPropertyHandle): boolean;
+	static IsEditConst(Handle: JavascriptPropertyHandle): boolean;
+	static IsArrayPropertyWithValueType(Handle: JavascriptPropertyHandle): boolean;
+	static IsArrayProperty(Handle: JavascriptPropertyHandle): boolean;
+	static GetValueAsFormattedString(Handle: JavascriptPropertyHandle,OutValue?: string): {OutValue: string, $: EPropertyAccessResult};
+	static GetPropertyName(Handle: JavascriptPropertyHandle): string;
+	static GetProperty(Handle: JavascriptPropertyHandle): any;
+	static GetParentHandle(Handle: JavascriptPropertyHandle): JavascriptPropertyHandle;
+	static GetOuterObjects(Handle: JavascriptPropertyHandle): UObject[];
+	static GetObjectValue(Handle: JavascriptPropertyHandle,OutValue?: UObject): {OutValue: UObject, $: EPropertyAccessResult};
+	static GetMetaData(Handle: JavascriptPropertyHandle,Key: string): string;
+	static GetKeyHandle(Handle: JavascriptPropertyHandle): JavascriptPropertyHandle;
+	static GetJavascriptRefValue(Handle: JavascriptPropertyHandle,OutValue?: JavascriptRef): {OutValue: JavascriptRef, $: EPropertyAccessResult};
+	static GetIndexInArray(Handle: JavascriptPropertyHandle): number;
+	static GetChildHandle(Parent: JavascriptPropertyHandle,Name: string): JavascriptPropertyHandle;
+	static GenerateStructValueWidget(ChildBuilder: JavascriptDetailChildrenBuilder,StructPropertyHandle: JavascriptPropertyHandle): JavascriptSlateWidget;
+	static GeneratePathToProperty(Handle: JavascriptPropertyHandle): string;
+	static CustomWidget(Row: JavascriptDetailPropertyRow,bShowChildren: boolean): JavascriptDetailWidgetRow;
+	static CreatePropertyValueWidget(Handle: JavascriptPropertyHandle,bHideDefaultPropertyButtons: boolean): JavascriptSlateWidget;
+	static CreatePropertyNameWidget(Handle: JavascriptPropertyHandle,NameOverride: string,ToolTipOverride: string,bDisplayResetToDefault: boolean,bHideText: boolean,bHideThumbnail: boolean): JavascriptSlateWidget;
+	static BindVisibility(Row: JavascriptDetailPropertyRow,Wrapper: JavascriptSimpleGetBoolDelegateWrapper): void;
+	static AddExternalObjects(ChildBuilder: JavascriptDetailChildrenBuilder,Objects?: UObject[],UniqueIdName?: string): {Objects: UObject[], $: JavascriptDetailPropertyRow};
+	static AddExternalObjectProperty(ChildBuilder: JavascriptDetailChildrenBuilder,Objects?: UObject[],PropertyName?: string,UniqueIdName?: string,bAllowChildrenOverride?: boolean,bCreateCategoryNodesOverride?: boolean): {Objects: UObject[], $: JavascriptDetailPropertyRow};
+	static AddChildProperty(ChildBuilder: JavascriptDetailChildrenBuilder,PropertyHandle: JavascriptPropertyHandle): JavascriptDetailPropertyRow;
+	static AddChildContent(ChildBuilder: JavascriptDetailChildrenBuilder,SearchString: string): JavascriptDetailWidgetRow;
+	static C(Other: UObject | any): JavascriptPropertyCustomizationLibrary;
+}
+
+declare type EPropertyEditorNameAreaSettings = 'HideNameArea' | 'ObjectsUseNameArea' | 'ActorsUseNameArea' | 'ComponentsAndActorsUseNameArea' | 'EPropertyEditorNameAreaSettings_MAX';
+declare var EPropertyEditorNameAreaSettings : { HideNameArea:'HideNameArea',ObjectsUseNameArea:'ObjectsUseNameArea',ActorsUseNameArea:'ActorsUseNameArea',ComponentsAndActorsUseNameArea:'ComponentsAndActorsUseNameArea',EPropertyEditorNameAreaSettings_MAX:'EPropertyEditorNameAreaSettings_MAX', };
+declare class PropertyEditor extends Widget { 
+	OnChange: UnrealEngineMulticastDelegate<(PropertyName: string, MemberPropertyName: string) => void>;
+	bUpdateFromSelection: boolean;
+	bLockable: boolean;
+	bAllowSearch: boolean;
+	bHideSelectionTip: boolean;
+	bReadOnly: boolean;
+	bEnablePropertyPath: boolean;
+	NameAreaSettings: EPropertyEditorNameAreaSettings;
+	ReadOnlyDelegate: UnrealEngineDelegate<() => boolean>;
+	static Load(ResourceName: string): PropertyEditor;
+	static Find(Outer: UObject, ResourceName: string): PropertyEditor;
+	static GetDefaultObject(): PropertyEditor;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PropertyEditor;
+	SetObjects(Objects: UObject[],bForceRefresh: boolean,bOverrideLock: boolean): void;
+	SetObject(UObject: UObject,bForceRefresh: boolean): void;
+	IsPropertyVisible(PropertName: string,ParentPropertyName: string,PropertyPaths: string[]): boolean;
+	IsPropertyReadOnly(PropertyName: string,ParentPropertyName: string,PropertyPaths: string[]): boolean;
+	ForceRefresh(): void;
+	Destruct(): void;
+	Construct(): void;
+	static C(Other: UObject | any): PropertyEditor;
+}
+
+declare class JavascriptPropertyTable extends Widget { 
+	OnGenerateCustomCellWidget: UnrealEngineDelegate<(UObject: UObject, ColumnName: string) => JavascriptSlateWidget>;
+	OnUseCustomCellWidget: UnrealEngineDelegate<(UObject: UObject, ColumnName: string) => boolean>;
+	bUseCustomColumns: boolean;
+	static Load(ResourceName: string): JavascriptPropertyTable;
+	static Find(Outer: UObject, ResourceName: string): JavascriptPropertyTable;
+	static GetDefaultObject(): JavascriptPropertyTable;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): JavascriptPropertyTable;
+	SetEditingObjects(InEditingObjects: UObject[]): void;
+	GetSelectedTableObjects(): UObject[];
+	GetEditingObjects(): UObject[];
+	static C(Other: UObject | any): JavascriptPropertyTable;
+}
+
 declare class JavascriptRawMeshLibrary extends BlueprintFunctionLibrary { 
 	static Load(ResourceName: string): JavascriptRawMeshLibrary;
 	static Find(Outer: UObject, ResourceName: string): JavascriptRawMeshLibrary;
@@ -2202,7 +2476,7 @@ declare class LandscapeFileResolution {
 }
 
 declare class LandscapeImportFileDescriptor { 
-	Coord: IntPoint;
+	coord: IntPoint;
 	FilePath: string;
 	clone() : LandscapeImportFileDescriptor;
 	static C(Other: UObject | any): LandscapeImportFileDescriptor;

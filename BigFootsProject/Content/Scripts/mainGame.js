@@ -11,9 +11,9 @@ main();
 
 function main() {
     let arr = Array(18).fill("a").concat(Array(4).fill("b"), Array(3).fill("c"), Array(2).fill("1"), Array(45).fill("."));
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < 10; i++) {
         matrix.push([]);
-        for (let j = 0; j < 12; j++) {
+        for (let j = 0; j < 10; j++) {
             let elem = arr[Math.floor(arr.length * Math.random())];
             matrix[i].push(elem);
             if (elem == "1") {bigFoots.push([[i, j], 0, false]);}
@@ -59,7 +59,7 @@ function clicked(index) {
         return;
     }
 
-    var coordinates = [Math.floor(index/12), index - 12*Math.floor(index/12)];
+    var coordinates = [Math.floor(index/10), index - 10*Math.floor(index/10)];
     console.log(index, coordinates)
     if (matrix[coordinates[0]][coordinates[1]] != ".") {
         if (actual === "w") {
@@ -218,21 +218,22 @@ function updateBigFoots() {
 }
 
 function updateUI() {
-    var x= 212360//1100;
-    var y= 173320//600;
+    var x= 187890;
+    var y= 247010;
     var sum = 0;
     for (let i = 0; i < matrix.length; i++) {
-        x+=120;
-        y=173320//600;
+        x+=15000;
+        y=247010;
         for (let j = 0; j < matrix[0].length; j++) {
-            y+=120;
+            y+=15000;
             let pos = matrix[0].length*i+j;
             objs[pos].K2_DestroyActor();
             
             let newActor = SpawnActor(objects[matrix[i][j]][2]);
             var vector = new Vector();
-            vector.X=x; vector.Y=y; vector.Z=-4860;            
-            newActor.K2_SetActorLocation(vector);         
+            vector.X=x; vector.Y=y; vector.Z=-2020;            
+            newActor.K2_SetActorLocation(vector); 
+            newActor.RootComponent.SetWorldScale3D({X: 16.0, Y: 16.0, Z: 40.0});        
             objs[pos]=newActor;
             sum += objects[matrix[i][j]][1];
             objs[pos].OnTakeAnyDamage.Add(function(DamagedActor, DamageAmount, DamageType, InstigatedBy, DamageCauser){
@@ -255,6 +256,6 @@ function updateActual() {
     newActor.K2_SetActorLocation(vector);
     vector = new Rotator();
     vector.Pitch=0; vector.Yaw=0; vector.Roll=90;
-    newActor.K2_SetActorRotation(vector);
+    newActor.K2_SetActorRotation(vector);    
     objs[objs.length-1]=newActor;
 }
