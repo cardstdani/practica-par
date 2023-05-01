@@ -2476,7 +2476,7 @@ declare class LandscapeFileResolution {
 }
 
 declare class LandscapeImportFileDescriptor { 
-	coord: IntPoint;
+	Coord: IntPoint;
 	FilePath: string;
 	clone() : LandscapeImportFileDescriptor;
 	static C(Other: UObject | any): LandscapeImportFileDescriptor;

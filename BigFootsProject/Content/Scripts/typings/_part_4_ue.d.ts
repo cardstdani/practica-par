@@ -2566,6 +2566,16 @@ declare class TcpMessagingSettings extends UObject {
 	static C(Other: UObject | any): TcpMessagingSettings;
 }
 
+declare class ImgMediaPlaybackComponent extends ActorComponent { 
+	Width: number;
+	LODBias: number;
+	static Load(ResourceName: string): ImgMediaPlaybackComponent;
+	static Find(Outer: UObject, ResourceName: string): ImgMediaPlaybackComponent;
+	static GetDefaultObject(): ImgMediaPlaybackComponent;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ImgMediaPlaybackComponent;
+	static C(Other: UObject | any): ImgMediaPlaybackComponent;
+}
+
 declare type EUdpMessageFormat = 'None' | 'Json' | 'TaggedProperty' | 'CborPlatformEndianness' | 'CborStandardEndianness' | 'EUdpMessageFormat_MAX';
 declare var EUdpMessageFormat : { None:'None',Json:'Json',TaggedProperty:'TaggedProperty',CborPlatformEndianness:'CborPlatformEndianness',CborStandardEndianness:'CborStandardEndianness',EUdpMessageFormat_MAX:'EUdpMessageFormat_MAX', };
 declare class UdpMessagingSettings extends UObject { 
@@ -2642,16 +2652,6 @@ declare class ActorSequenceComponent extends ActorComponent {
 	static GetDefaultObject(): ActorSequenceComponent;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ActorSequenceComponent;
 	static C(Other: UObject | any): ActorSequenceComponent;
-}
-
-declare class ImgMediaPlaybackComponent extends ActorComponent { 
-	Width: number;
-	LODBias: number;
-	static Load(ResourceName: string): ImgMediaPlaybackComponent;
-	static Find(Outer: UObject, ResourceName: string): ImgMediaPlaybackComponent;
-	static GetDefaultObject(): ImgMediaPlaybackComponent;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ImgMediaPlaybackComponent;
-	static C(Other: UObject | any): ImgMediaPlaybackComponent;
 }
 
 declare class AudioAnalyzerAssetBase extends UObject { 
@@ -3735,6 +3735,30 @@ declare class PaperTiledImporterFactory extends Factory {
 	static C(Other: UObject | any): PaperTiledImporterFactory;
 }
 
+declare type EMotionExtractor_MotionType = 'Translation' | 'Rotation' | 'Scale' | 'TranslationSpeed' | 'RotationSpeed' | 'EMotionExtractor_MAX';
+declare var EMotionExtractor_MotionType : { Translation:'Translation',Rotation:'Rotation',Scale:'Scale',TranslationSpeed:'TranslationSpeed',RotationSpeed:'RotationSpeed',EMotionExtractor_MAX:'EMotionExtractor_MAX', };
+declare type EMotionExtractor_Axis = 'X' | 'Y' | 'Z' | 'XY' | 'XZ' | 'YZ' | 'XYZ' | 'EMotionExtractor_MAX';
+declare var EMotionExtractor_Axis : { X:'X',Y:'Y',Z:'Z',XY:'XY',XZ:'XZ',YZ:'YZ',XYZ:'XYZ',EMotionExtractor_MAX:'EMotionExtractor_MAX', };
+declare type EMotionExtractor_MathOperation = 'None' | 'Addition' | 'Subtraction' | 'Division' | 'Multiplication' | 'EMotionExtractor_MAX';
+declare var EMotionExtractor_MathOperation : { None:'None',Addition:'Addition',Subtraction:'Subtraction',Division:'Division',Multiplication:'Multiplication',EMotionExtractor_MAX:'EMotionExtractor_MAX', };
+declare class MotionExtractorModifier extends AnimationModifier { 
+	BoneName: string;
+	MotionType: EMotionExtractor_MotionType;
+	Axis: EMotionExtractor_Axis;
+	bComponentSpace: boolean;
+	bAbsoluteValue: boolean;
+	MathOperation: EMotionExtractor_MathOperation;
+	Modifier: number;
+	SampleRate: number;
+	bUseCustomCurveName: boolean;
+	CustomCurveName: string;
+	static Load(ResourceName: string): MotionExtractorModifier;
+	static Find(Outer: UObject, ResourceName: string): MotionExtractorModifier;
+	static GetDefaultObject(): MotionExtractorModifier;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MotionExtractorModifier;
+	static C(Other: UObject | any): MotionExtractorModifier;
+}
+
 declare class CachedMotionAnalysisProperties extends CachedAnalysisProperties { 
 	static Load(ResourceName: string): CachedMotionAnalysisProperties;
 	static Find(Outer: UObject, ResourceName: string): CachedMotionAnalysisProperties;
@@ -3776,46 +3800,6 @@ declare class RootMotionAnalysisProperties extends AnalysisProperties {
 	static C(Other: UObject | any): RootMotionAnalysisProperties;
 }
 
-declare type EMotionExtractor_MotionType = 'Translation' | 'Rotation' | 'Scale' | 'TranslationSpeed' | 'RotationSpeed' | 'EMotionExtractor_MAX';
-declare var EMotionExtractor_MotionType : { Translation:'Translation',Rotation:'Rotation',Scale:'Scale',TranslationSpeed:'TranslationSpeed',RotationSpeed:'RotationSpeed',EMotionExtractor_MAX:'EMotionExtractor_MAX', };
-declare type EMotionExtractor_Axis = 'X' | 'Y' | 'Z' | 'XY' | 'XZ' | 'YZ' | 'XYZ' | 'EMotionExtractor_MAX';
-declare var EMotionExtractor_Axis : { X:'X',Y:'Y',Z:'Z',XY:'XY',XZ:'XZ',YZ:'YZ',XYZ:'XYZ',EMotionExtractor_MAX:'EMotionExtractor_MAX', };
-declare type EMotionExtractor_MathOperation = 'None' | 'Addition' | 'Subtraction' | 'Division' | 'Multiplication' | 'EMotionExtractor_MAX';
-declare var EMotionExtractor_MathOperation : { None:'None',Addition:'Addition',Subtraction:'Subtraction',Division:'Division',Multiplication:'Multiplication',EMotionExtractor_MAX:'EMotionExtractor_MAX', };
-declare class MotionExtractorModifier extends AnimationModifier { 
-	BoneName: string;
-	MotionType: EMotionExtractor_MotionType;
-	Axis: EMotionExtractor_Axis;
-	bComponentSpace: boolean;
-	bAbsoluteValue: boolean;
-	MathOperation: EMotionExtractor_MathOperation;
-	Modifier: number;
-	SampleRate: number;
-	bUseCustomCurveName: boolean;
-	CustomCurveName: string;
-	static Load(ResourceName: string): MotionExtractorModifier;
-	static Find(Outer: UObject, ResourceName: string): MotionExtractorModifier;
-	static GetDefaultObject(): MotionExtractorModifier;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MotionExtractorModifier;
-	static C(Other: UObject | any): MotionExtractorModifier;
-}
-
-declare class OodleNetworkTrainerCommandlet extends Commandlet { 
-	bCompressionTest: boolean;
-	bWriteV5Dictionaries: boolean;
-	HashTableSize: number;
-	DictionarySize: number;
-	DictionaryTrials: number;
-	TrialRandomness: number;
-	TrialGenerations: number;
-	bNoTrials: boolean;
-	static Load(ResourceName: string): OodleNetworkTrainerCommandlet;
-	static Find(Outer: UObject, ResourceName: string): OodleNetworkTrainerCommandlet;
-	static GetDefaultObject(): OodleNetworkTrainerCommandlet;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OodleNetworkTrainerCommandlet;
-	static C(Other: UObject | any): OodleNetworkTrainerCommandlet;
-}
-
 declare class AnimationSharingSetupFactory extends Factory { 
 	static Load(ResourceName: string): AnimationSharingSetupFactory;
 	static Find(Outer: UObject, ResourceName: string): AnimationSharingSetupFactory;
@@ -3824,19 +3808,36 @@ declare class AnimationSharingSetupFactory extends Factory {
 	static C(Other: UObject | any): AnimationSharingSetupFactory;
 }
 
-declare class MyPluginStruct { 
-	TestString: string;
-	clone() : MyPluginStruct;
-	static C(Other: UObject | any): MyPluginStruct;
+declare type ECurveEditorFFTFilterType = 'Lowpass' | 'Highpass' | 'ECurveEditorFFTFilterType_MAX';
+declare var ECurveEditorFFTFilterType : { Lowpass:'Lowpass',Highpass:'Highpass',ECurveEditorFFTFilterType_MAX:'ECurveEditorFFTFilterType_MAX', };
+declare type ECurveEditorFFTFilterClass = 'Butterworth' | 'Chebyshev' | 'ECurveEditorFFTFilterClass_MAX';
+declare var ECurveEditorFFTFilterClass : { Butterworth:'Butterworth',Chebyshev:'Chebyshev',ECurveEditorFFTFilterClass_MAX:'ECurveEditorFFTFilterClass_MAX', };
+declare class CurveEditorFFTFilter extends CurveEditorFilterBase { 
+	CutoffFrequency: number;
+	Type: ECurveEditorFFTFilterType;
+	Response: ECurveEditorFFTFilterClass;
+	Order: number;
+	static Load(ResourceName: string): CurveEditorFFTFilter;
+	static Find(Outer: UObject, ResourceName: string): CurveEditorFFTFilter;
+	static GetDefaultObject(): CurveEditorFFTFilter;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): CurveEditorFFTFilter;
+	static C(Other: UObject | any): CurveEditorFFTFilter;
 }
 
-declare class MyPluginObject extends UObject { 
-	MyStruct: MyPluginStruct;
-	static Load(ResourceName: string): MyPluginObject;
-	static Find(Outer: UObject, ResourceName: string): MyPluginObject;
-	static GetDefaultObject(): MyPluginObject;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MyPluginObject;
-	static C(Other: UObject | any): MyPluginObject;
+declare class CurveEditorRetimeAnchor { 
+	ValueInSeconds: any;
+	bIsSelected: boolean;
+	clone() : CurveEditorRetimeAnchor;
+	static C(Other: UObject | any): CurveEditorRetimeAnchor;
+}
+
+declare class CurveEditorRetimeToolData extends UObject { 
+	RetimingAnchors: CurveEditorRetimeAnchor[];
+	static Load(ResourceName: string): CurveEditorRetimeToolData;
+	static Find(Outer: UObject, ResourceName: string): CurveEditorRetimeToolData;
+	static GetDefaultObject(): CurveEditorRetimeToolData;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): CurveEditorRetimeToolData;
+	static C(Other: UObject | any): CurveEditorRetimeToolData;
 }
 
 declare class CryptoKeysCommandlet extends Commandlet { 
@@ -3871,38 +3872,6 @@ declare class CryptoKeysSettings extends UObject {
 	static GetDefaultObject(): CryptoKeysSettings;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): CryptoKeysSettings;
 	static C(Other: UObject | any): CryptoKeysSettings;
-}
-
-declare type ECurveEditorFFTFilterType = 'Lowpass' | 'Highpass' | 'ECurveEditorFFTFilterType_MAX';
-declare var ECurveEditorFFTFilterType : { Lowpass:'Lowpass',Highpass:'Highpass',ECurveEditorFFTFilterType_MAX:'ECurveEditorFFTFilterType_MAX', };
-declare type ECurveEditorFFTFilterClass = 'Butterworth' | 'Chebyshev' | 'ECurveEditorFFTFilterClass_MAX';
-declare var ECurveEditorFFTFilterClass : { Butterworth:'Butterworth',Chebyshev:'Chebyshev',ECurveEditorFFTFilterClass_MAX:'ECurveEditorFFTFilterClass_MAX', };
-declare class CurveEditorFFTFilter extends CurveEditorFilterBase { 
-	CutoffFrequency: number;
-	Type: ECurveEditorFFTFilterType;
-	Response: ECurveEditorFFTFilterClass;
-	Order: number;
-	static Load(ResourceName: string): CurveEditorFFTFilter;
-	static Find(Outer: UObject, ResourceName: string): CurveEditorFFTFilter;
-	static GetDefaultObject(): CurveEditorFFTFilter;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): CurveEditorFFTFilter;
-	static C(Other: UObject | any): CurveEditorFFTFilter;
-}
-
-declare class CurveEditorRetimeAnchor { 
-	ValueInSeconds: any;
-	bIsSelected: boolean;
-	clone() : CurveEditorRetimeAnchor;
-	static C(Other: UObject | any): CurveEditorRetimeAnchor;
-}
-
-declare class CurveEditorRetimeToolData extends UObject { 
-	RetimingAnchors: CurveEditorRetimeAnchor[];
-	static Load(ResourceName: string): CurveEditorRetimeToolData;
-	static Find(Outer: UObject, ResourceName: string): CurveEditorRetimeToolData;
-	static GetDefaultObject(): CurveEditorRetimeToolData;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): CurveEditorRetimeToolData;
-	static C(Other: UObject | any): CurveEditorRetimeToolData;
 }
 
 declare class SkeletalMeshEditorSubsystem extends EditorSubsystem { 
@@ -4212,59 +4181,6 @@ declare class EditorStaticMeshLibrary extends BlueprintFunctionLibrary {
 	static AddSimpleCollisionsWithNotification(StaticMesh: StaticMesh,ShapeType: EScriptCollisionShapeType,bApplyChanges: boolean): number;
 	static AddSimpleCollisions(StaticMesh: StaticMesh,ShapeType: EScriptCollisionShapeType): number;
 	static C(Other: UObject | any): EditorStaticMeshLibrary;
-}
-
-declare class LevelVariantSetsActorFactory extends ActorFactory { 
-	static Load(ResourceName: string): LevelVariantSetsActorFactory;
-	static Find(Outer: UObject, ResourceName: string): LevelVariantSetsActorFactory;
-	static GetDefaultObject(): LevelVariantSetsActorFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): LevelVariantSetsActorFactory;
-	static C(Other: UObject | any): LevelVariantSetsActorFactory;
-}
-
-declare class SwitchActorFactory extends ActorFactory { 
-	static Load(ResourceName: string): SwitchActorFactory;
-	static Find(Outer: UObject, ResourceName: string): SwitchActorFactory;
-	static GetDefaultObject(): SwitchActorFactory;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SwitchActorFactory;
-	static C(Other: UObject | any): SwitchActorFactory;
-}
-
-declare class VariantManagerFactoryNew extends Factory { 
-	static Load(ResourceName: string): VariantManagerFactoryNew;
-	static Find(Outer: UObject, ResourceName: string): VariantManagerFactoryNew;
-	static GetDefaultObject(): VariantManagerFactoryNew;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): VariantManagerFactoryNew;
-	static C(Other: UObject | any): VariantManagerFactoryNew;
-}
-
-declare type EVariantManagerTestEnum = 'None' | 'FirstOption' | 'SecondOption' | 'ThirdOption' | 'EVariantManagerTestEnum_MAX';
-declare var EVariantManagerTestEnum : { None:'None',FirstOption:'FirstOption',SecondOption:'SecondOption',ThirdOption:'ThirdOption',EVariantManagerTestEnum_MAX:'EVariantManagerTestEnum_MAX', };
-declare class VariantManagerTestActor extends Actor { 
-	EnumWithNoDefault: EVariantManagerTestEnum;
-	EnumWithSecondDefault: EVariantManagerTestEnum;
-	CapturedByteProperty: number;
-	CapturedIntProperty: number;
-	CapturedFloatProperty: number;
-	bCapturedBoolProperty: boolean;
-	CapturedObjectProperty: UObject;
-	CapturedInterfaceProperty: any;
-	CapturedNameProperty: string;
-	CapturedStrProperty: string;
-	CapturedTextProperty: string;
-	CapturedRotatorProperty: Rotator;
-	CapturedColorProperty: Color;
-	CapturedLinearColorProperty: LinearColor;
-	CapturedVectorProperty: Vector;
-	CapturedQuatProperty: Quat;
-	CapturedVector4Property: Vector4;
-	CapturedVector2DProperty: Vector2D;
-	CapturedIntPointProperty: IntPoint;
-	CapturedUObjectArrayProperty: UObject[];
-	CapturedVectorArrayProperty: Vector[];
-	static GetDefaultObject(): VariantManagerTestActor;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): VariantManagerTestActor;
-	static C(Other: UObject | any): VariantManagerTestActor;
 }
 
 declare class DynamicMeshGenerator extends UObject { 
@@ -11619,6 +11535,74 @@ declare class HLODBuilderMeshSimplify extends HLODBuilder {
 	static C(Other: UObject | any): HLODBuilderMeshSimplify;
 }
 
+declare class MyPluginStruct { 
+	TestString: string;
+	clone() : MyPluginStruct;
+	static C(Other: UObject | any): MyPluginStruct;
+}
+
+declare class MyPluginObject extends UObject { 
+	MyStruct: MyPluginStruct;
+	static Load(ResourceName: string): MyPluginObject;
+	static Find(Outer: UObject, ResourceName: string): MyPluginObject;
+	static GetDefaultObject(): MyPluginObject;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MyPluginObject;
+	static C(Other: UObject | any): MyPluginObject;
+}
+
+declare class LevelVariantSetsActorFactory extends ActorFactory { 
+	static Load(ResourceName: string): LevelVariantSetsActorFactory;
+	static Find(Outer: UObject, ResourceName: string): LevelVariantSetsActorFactory;
+	static GetDefaultObject(): LevelVariantSetsActorFactory;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): LevelVariantSetsActorFactory;
+	static C(Other: UObject | any): LevelVariantSetsActorFactory;
+}
+
+declare class SwitchActorFactory extends ActorFactory { 
+	static Load(ResourceName: string): SwitchActorFactory;
+	static Find(Outer: UObject, ResourceName: string): SwitchActorFactory;
+	static GetDefaultObject(): SwitchActorFactory;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SwitchActorFactory;
+	static C(Other: UObject | any): SwitchActorFactory;
+}
+
+declare class VariantManagerFactoryNew extends Factory { 
+	static Load(ResourceName: string): VariantManagerFactoryNew;
+	static Find(Outer: UObject, ResourceName: string): VariantManagerFactoryNew;
+	static GetDefaultObject(): VariantManagerFactoryNew;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): VariantManagerFactoryNew;
+	static C(Other: UObject | any): VariantManagerFactoryNew;
+}
+
+declare type EVariantManagerTestEnum = 'None' | 'FirstOption' | 'SecondOption' | 'ThirdOption' | 'EVariantManagerTestEnum_MAX';
+declare var EVariantManagerTestEnum : { None:'None',FirstOption:'FirstOption',SecondOption:'SecondOption',ThirdOption:'ThirdOption',EVariantManagerTestEnum_MAX:'EVariantManagerTestEnum_MAX', };
+declare class VariantManagerTestActor extends Actor { 
+	EnumWithNoDefault: EVariantManagerTestEnum;
+	EnumWithSecondDefault: EVariantManagerTestEnum;
+	CapturedByteProperty: number;
+	CapturedIntProperty: number;
+	CapturedFloatProperty: number;
+	bCapturedBoolProperty: boolean;
+	CapturedObjectProperty: UObject;
+	CapturedInterfaceProperty: any;
+	CapturedNameProperty: string;
+	CapturedStrProperty: string;
+	CapturedTextProperty: string;
+	CapturedRotatorProperty: Rotator;
+	CapturedColorProperty: Color;
+	CapturedLinearColorProperty: LinearColor;
+	CapturedVectorProperty: Vector;
+	CapturedQuatProperty: Quat;
+	CapturedVector4Property: Vector4;
+	CapturedVector2DProperty: Vector2D;
+	CapturedIntPointProperty: IntPoint;
+	CapturedUObjectArrayProperty: UObject[];
+	CapturedVectorArrayProperty: Vector[];
+	static GetDefaultObject(): VariantManagerTestActor;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): VariantManagerTestActor;
+	static C(Other: UObject | any): VariantManagerTestActor;
+}
+
 declare class AutomationUtilsBlueprintLibrary extends BlueprintFunctionLibrary { 
 	static Load(ResourceName: string): AutomationUtilsBlueprintLibrary;
 	static Find(Outer: UObject, ResourceName: string): AutomationUtilsBlueprintLibrary;
@@ -13150,6 +13134,22 @@ declare class MovieSceneGeometryCollectionTrack extends MovieSceneNameableTrack 
 	static GetDefaultObject(): MovieSceneGeometryCollectionTrack;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MovieSceneGeometryCollectionTrack;
 	static C(Other: UObject | any): MovieSceneGeometryCollectionTrack;
+}
+
+declare class OodleNetworkTrainerCommandlet extends Commandlet { 
+	bCompressionTest: boolean;
+	bWriteV5Dictionaries: boolean;
+	HashTableSize: number;
+	DictionarySize: number;
+	DictionaryTrials: number;
+	TrialRandomness: number;
+	TrialGenerations: number;
+	bNoTrials: boolean;
+	static Load(ResourceName: string): OodleNetworkTrainerCommandlet;
+	static Find(Outer: UObject, ResourceName: string): OodleNetworkTrainerCommandlet;
+	static GetDefaultObject(): OodleNetworkTrainerCommandlet;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OodleNetworkTrainerCommandlet;
+	static C(Other: UObject | any): OodleNetworkTrainerCommandlet;
 }
 
 declare type EAlembicSamplingType = 'PerFrame' | 'PerXFrames' | 'PerTimeStep' | 'EAlembicSamplingType_MAX';
@@ -16039,22 +16039,6 @@ declare class ContentBrowserAssetDataSource extends ContentBrowserDataSource {
 	static C(Other: UObject | any): ContentBrowserAssetDataSource;
 }
 
-declare class InterchangeGraphInspectorPipeline extends InterchangePipelineBase { 
-	static Load(ResourceName: string): InterchangeGraphInspectorPipeline;
-	static Find(Outer: UObject, ResourceName: string): InterchangeGraphInspectorPipeline;
-	static GetDefaultObject(): InterchangeGraphInspectorPipeline;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): InterchangeGraphInspectorPipeline;
-	static C(Other: UObject | any): InterchangeGraphInspectorPipeline;
-}
-
-declare class InterchangePipelineConfigurationGeneric extends InterchangePipelineConfigurationBase { 
-	static Load(ResourceName: string): InterchangePipelineConfigurationGeneric;
-	static Find(Outer: UObject, ResourceName: string): InterchangePipelineConfigurationGeneric;
-	static GetDefaultObject(): InterchangePipelineConfigurationGeneric;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): InterchangePipelineConfigurationGeneric;
-	static C(Other: UObject | any): InterchangePipelineConfigurationGeneric;
-}
-
 declare class InterchangeActorFactoryNode extends InterchangeBaseNode { 
 	static Load(ResourceName: string): InterchangeActorFactoryNode;
 	static Find(Outer: UObject, ResourceName: string): InterchangeActorFactoryNode;
@@ -16804,6 +16788,22 @@ declare class InterchangePipelineMeshesUtilities extends UObject {
 	GetAllMeshGeometry(MeshGeometryUids?: string[]): {MeshGeometryUids: string[]};
 	static CreateInterchangePipelineMeshesUtilities(BaseNodeContainer: InterchangeBaseNodeContainer): InterchangePipelineMeshesUtilities;
 	static C(Other: UObject | any): InterchangePipelineMeshesUtilities;
+}
+
+declare class InterchangeGraphInspectorPipeline extends InterchangePipelineBase { 
+	static Load(ResourceName: string): InterchangeGraphInspectorPipeline;
+	static Find(Outer: UObject, ResourceName: string): InterchangeGraphInspectorPipeline;
+	static GetDefaultObject(): InterchangeGraphInspectorPipeline;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): InterchangeGraphInspectorPipeline;
+	static C(Other: UObject | any): InterchangeGraphInspectorPipeline;
+}
+
+declare class InterchangePipelineConfigurationGeneric extends InterchangePipelineConfigurationBase { 
+	static Load(ResourceName: string): InterchangePipelineConfigurationGeneric;
+	static Find(Outer: UObject, ResourceName: string): InterchangePipelineConfigurationGeneric;
+	static GetDefaultObject(): InterchangePipelineConfigurationGeneric;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): InterchangePipelineConfigurationGeneric;
+	static C(Other: UObject | any): InterchangePipelineConfigurationGeneric;
 }
 
 declare class MegascansSettings extends UObject { 

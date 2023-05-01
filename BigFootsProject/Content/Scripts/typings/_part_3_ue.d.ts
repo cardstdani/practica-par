@@ -252,7 +252,7 @@ declare class MaterialExpressionFontSample extends MaterialExpression {
 
 declare class MaterialExpressionFontSampleParameter extends MaterialExpressionFontSample { 
 	ParameterName: string;
-	ExpressionGuid: Guid;
+	ExpressionGUID: Guid;
 	Group: string;
 	SortPriority: number;
 	static Load(ResourceName: string): MaterialExpressionFontSampleParameter;
@@ -1024,7 +1024,7 @@ declare class MaterialExpressionRuntimeVirtualTextureSample extends MaterialExpr
 
 declare class MaterialExpressionRuntimeVirtualTextureSampleParameter extends MaterialExpressionRuntimeVirtualTextureSample { 
 	ParameterName: string;
-	ExpressionGuid: Guid;
+	ExpressionGUID: Guid;
 	Group: string;
 	SortPriority: number;
 	static Load(ResourceName: string): MaterialExpressionRuntimeVirtualTextureSampleParameter;
@@ -12985,9 +12985,9 @@ declare class PaperTileInfo {
 	BreakTile(TileIndex?: number,TileSet?: PaperTileSet,bFlipH?: boolean,bFlipV?: boolean,bFlipD?: boolean): {TileIndex: number, TileSet: PaperTileSet, bFlipH: boolean, bFlipV: boolean, bFlipD: boolean};
 	GetTileTransform(): Transform;
 	GetTileUserData(): string;
-	static BreakTile(tile: PaperTileInfo,TileIndex?: number,TileSet?: PaperTileSet,bFlipH?: boolean,bFlipV?: boolean,bFlipD?: boolean): {TileIndex: number, TileSet: PaperTileSet, bFlipH: boolean, bFlipV: boolean, bFlipD: boolean};
-	static GetTileTransform(tile: PaperTileInfo): Transform;
-	static GetTileUserData(tile: PaperTileInfo): string;
+	static BreakTile(Tile: PaperTileInfo,TileIndex?: number,TileSet?: PaperTileSet,bFlipH?: boolean,bFlipV?: boolean,bFlipD?: boolean): {TileIndex: number, TileSet: PaperTileSet, bFlipH: boolean, bFlipV: boolean, bFlipD: boolean};
+	static GetTileTransform(Tile: PaperTileInfo): Transform;
+	static GetTileUserData(Tile: PaperTileInfo): string;
 	static MakeTile(TileIndex: number,TileSet: PaperTileSet,bFlipH: boolean,bFlipV: boolean,bFlipD: boolean): PaperTileInfo;
 }
 
@@ -13108,9 +13108,9 @@ declare class TileMapBlueprintLibrary extends BlueprintFunctionLibrary {
 	static GetDefaultObject(): TileMapBlueprintLibrary;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TileMapBlueprintLibrary;
 	static MakeTile(TileIndex: number,TileSet: PaperTileSet,bFlipH: boolean,bFlipV: boolean,bFlipD: boolean): PaperTileInfo;
-	static GetTileUserData(tile: PaperTileInfo): string;
-	static GetTileTransform(tile: PaperTileInfo): Transform;
-	static BreakTile(tile: PaperTileInfo,TileIndex?: number,TileSet?: PaperTileSet,bFlipH?: boolean,bFlipV?: boolean,bFlipD?: boolean): {TileIndex: number, TileSet: PaperTileSet, bFlipH: boolean, bFlipV: boolean, bFlipD: boolean};
+	static GetTileUserData(Tile: PaperTileInfo): string;
+	static GetTileTransform(Tile: PaperTileInfo): Transform;
+	static BreakTile(Tile: PaperTileInfo,TileIndex?: number,TileSet?: PaperTileSet,bFlipH?: boolean,bFlipV?: boolean,bFlipD?: boolean): {TileIndex: number, TileSet: PaperTileSet, bFlipH: boolean, bFlipV: boolean, bFlipD: boolean};
 	static C(Other: UObject | any): TileMapBlueprintLibrary;
 }
 
@@ -13173,6 +13173,391 @@ declare class EnvironmentQueryGraphNode_Test extends EnvironmentQueryGraphNode {
 	static GetDefaultObject(): EnvironmentQueryGraphNode_Test;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): EnvironmentQueryGraphNode_Test;
 	static C(Other: UObject | any): EnvironmentQueryGraphNode_Test;
+}
+
+declare class CameraAnimationSequenceSubsystem extends WorldSubsystem { 
+	Linker: MovieSceneEntitySystemLinker;
+	static Load(ResourceName: string): CameraAnimationSequenceSubsystem;
+	static Find(Outer: UObject, ResourceName: string): CameraAnimationSequenceSubsystem;
+	static GetDefaultObject(): CameraAnimationSequenceSubsystem;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): CameraAnimationSequenceSubsystem;
+	static C(Other: UObject | any): CameraAnimationSequenceSubsystem;
+}
+
+declare class SequenceCameraShakeTestUtil extends BlueprintFunctionLibrary { 
+	static Load(ResourceName: string): SequenceCameraShakeTestUtil;
+	static Find(Outer: UObject, ResourceName: string): SequenceCameraShakeTestUtil;
+	static GetDefaultObject(): SequenceCameraShakeTestUtil;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SequenceCameraShakeTestUtil;
+	static GetPostProcessBlendCache(PlayerController: PlayerController,PPIndex: number,OutPPSettings?: PostProcessSettings,OutPPBlendWeight?: number): {OutPPSettings: PostProcessSettings, OutPPBlendWeight: number, $: boolean};
+	static GetLastFrameCameraCachePOV(PlayerController: PlayerController): MinimalViewInfo;
+	static GetCameraCachePOV(PlayerController: PlayerController): MinimalViewInfo;
+	static C(Other: UObject | any): SequenceCameraShakeTestUtil;
+}
+
+declare class TemplateSequencePlayer extends MovieSceneSequencePlayer { 
+	static Load(ResourceName: string): TemplateSequencePlayer;
+	static Find(Outer: UObject, ResourceName: string): TemplateSequencePlayer;
+	static GetDefaultObject(): TemplateSequencePlayer;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TemplateSequencePlayer;
+	static CreateTemplateSequencePlayer(WorldContextObject: UObject,TemplateSequence: TemplateSequence,Settings: MovieSceneSequencePlaybackSettings,OutActor?: TemplateSequenceActor): {OutActor: TemplateSequenceActor, $: TemplateSequencePlayer};
+	static C(Other: UObject | any): TemplateSequencePlayer;
+}
+
+declare class TemplateSequenceBindingOverrideData { 
+	UObject: any;
+	bOverridesDefault: boolean;
+	clone() : TemplateSequenceBindingOverrideData;
+	static C(Other: UObject | any): TemplateSequenceBindingOverrideData;
+}
+
+declare class TemplateSequenceActor extends Actor { 
+	PlaybackSettings: MovieSceneSequencePlaybackSettings;
+	SequencePlayer: TemplateSequencePlayer;
+	TemplateSequence: SoftObjectPath;
+	BindingOverride: TemplateSequenceBindingOverrideData;
+	static GetDefaultObject(): TemplateSequenceActor;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TemplateSequenceActor;
+	SetSequence(InSequence: TemplateSequence): void;
+	SetBinding(Actor: Actor,bOverridesDefault: boolean): void;
+	LoadSequence(): TemplateSequence;
+	GetSequencePlayer(): TemplateSequencePlayer;
+	GetSequence(): TemplateSequence;
+	static C(Other: UObject | any): TemplateSequenceActor;
+}
+
+declare type ETemplateSectionPropertyScaleType = 'FloatProperty' | 'TransformPropertyLocationOnly' | 'TransformPropertyRotationOnly' | 'ETemplateSectionPropertyScaleType_MAX';
+declare var ETemplateSectionPropertyScaleType : { FloatProperty:'FloatProperty',TransformPropertyLocationOnly:'TransformPropertyLocationOnly',TransformPropertyRotationOnly:'TransformPropertyRotationOnly',ETemplateSectionPropertyScaleType_MAX:'ETemplateSectionPropertyScaleType_MAX', };
+declare class TemplateSectionPropertyScale { 
+	ObjectBinding: Guid;
+	PropertyBinding: MovieScenePropertyBinding;
+	PropertyScaleType: ETemplateSectionPropertyScaleType;
+	FloatChannel: MovieSceneFloatChannel;
+	clone() : TemplateSectionPropertyScale;
+	static C(Other: UObject | any): TemplateSectionPropertyScale;
+}
+
+declare class TemplateSequenceSection extends MovieSceneSubSection { 
+	PropertyScales: TemplateSectionPropertyScale[];
+	static Load(ResourceName: string): TemplateSequenceSection;
+	static Find(Outer: UObject, ResourceName: string): TemplateSequenceSection;
+	static GetDefaultObject(): TemplateSequenceSection;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TemplateSequenceSection;
+	static C(Other: UObject | any): TemplateSequenceSection;
+}
+
+declare class TemplateSequenceSystem extends MovieSceneEntitySystem { 
+	static Load(ResourceName: string): TemplateSequenceSystem;
+	static Find(Outer: UObject, ResourceName: string): TemplateSequenceSystem;
+	static GetDefaultObject(): TemplateSequenceSystem;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TemplateSequenceSystem;
+	static C(Other: UObject | any): TemplateSequenceSystem;
+}
+
+declare class TemplateSequencePropertyScalingInstantiatorSystem extends MovieSceneEntitySystem { 
+	static Load(ResourceName: string): TemplateSequencePropertyScalingInstantiatorSystem;
+	static Find(Outer: UObject, ResourceName: string): TemplateSequencePropertyScalingInstantiatorSystem;
+	static GetDefaultObject(): TemplateSequencePropertyScalingInstantiatorSystem;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TemplateSequencePropertyScalingInstantiatorSystem;
+	static C(Other: UObject | any): TemplateSequencePropertyScalingInstantiatorSystem;
+}
+
+declare class TemplateSequencePropertyScalingEvaluatorSystem extends MovieSceneEntitySystem { 
+	static Load(ResourceName: string): TemplateSequencePropertyScalingEvaluatorSystem;
+	static Find(Outer: UObject, ResourceName: string): TemplateSequencePropertyScalingEvaluatorSystem;
+	static GetDefaultObject(): TemplateSequencePropertyScalingEvaluatorSystem;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TemplateSequencePropertyScalingEvaluatorSystem;
+	static C(Other: UObject | any): TemplateSequencePropertyScalingEvaluatorSystem;
+}
+
+declare class TemplateSequenceTrack extends MovieSceneSubTrack { 
+	static Load(ResourceName: string): TemplateSequenceTrack;
+	static Find(Outer: UObject, ResourceName: string): TemplateSequenceTrack;
+	static GetDefaultObject(): TemplateSequenceTrack;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TemplateSequenceTrack;
+	static C(Other: UObject | any): TemplateSequenceTrack;
+}
+
+declare type ECameraAnimationEasingType = 'Linear' | 'Sinusoidal' | 'Quadratic' | 'Cubic' | 'Quartic' | 'Quintic' | 'Exponential' | 'Circular' | 'ECameraAnimationEasingType_MAX';
+declare var ECameraAnimationEasingType : { Linear:'Linear',Sinusoidal:'Sinusoidal',Quadratic:'Quadratic',Cubic:'Cubic',Quartic:'Quartic',Quintic:'Quintic',Exponential:'Exponential',Circular:'Circular',ECameraAnimationEasingType_MAX:'ECameraAnimationEasingType_MAX', };
+declare type ECameraAnimationPlaySpace = 'CameraLocal' | 'World' | 'UserDefined' | 'ECameraAnimationPlaySpace_MAX';
+declare var ECameraAnimationPlaySpace : { CameraLocal:'CameraLocal',World:'World',UserDefined:'UserDefined',ECameraAnimationPlaySpace_MAX:'ECameraAnimationPlaySpace_MAX', };
+declare class CameraAnimationParams { 
+	PlayRate: number;
+	Scale: number;
+	EaseInType: ECameraAnimationEasingType;
+	EaseInDuration: number;
+	EaseOutType: ECameraAnimationEasingType;
+	EaseOutDuration: number;
+	bLoop: boolean;
+	bRandomStartTime: boolean;
+	DurationOverride: number;
+	PlaySpace: ECameraAnimationPlaySpace;
+	UserPlaySpaceRot: Rotator;
+	clone() : CameraAnimationParams;
+	static C(Other: UObject | any): CameraAnimationParams;
+}
+
+declare class CameraAnimationHandle { 
+	clone() : CameraAnimationHandle;
+	static C(Other: UObject | any): CameraAnimationHandle;
+}
+
+declare class ActiveCameraAnimationInfo { 
+	Sequence: CameraAnimationSequence;
+	Params: CameraAnimationParams;
+	Handle: CameraAnimationHandle;
+	Player: CameraAnimationSequencePlayer;
+	CameraStandIn: CameraAnimationSequenceCameraStandIn;
+	EaseInCurrentTime: number;
+	EaseOutCurrentTime: number;
+	bIsEasingIn: boolean;
+	bIsEasingOut: boolean;
+	clone() : ActiveCameraAnimationInfo;
+	static C(Other: UObject | any): ActiveCameraAnimationInfo;
+}
+
+declare class CameraAnimationCameraModifier extends CameraModifier { 
+	ActiveAnimations: ActiveCameraAnimationInfo[];
+	InstanceSerialNumber: any;
+	static Load(ResourceName: string): CameraAnimationCameraModifier;
+	static Find(Outer: UObject, ResourceName: string): CameraAnimationCameraModifier;
+	static GetDefaultObject(): CameraAnimationCameraModifier;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): CameraAnimationCameraModifier;
+	StopCameraAnimation(Handle: CameraAnimationHandle,bImmediate: boolean): void;
+	StopAllCameraAnimationsOf(Sequence: CameraAnimationSequence,bImmediate: boolean): void;
+	StopAllCameraAnimations(bImmediate: boolean): void;
+	PlayCameraAnimation(Sequence: CameraAnimationSequence,Params: CameraAnimationParams): CameraAnimationHandle;
+	IsCameraAnimationActive(Handle: CameraAnimationHandle): boolean;
+	static GetCameraAnimationCameraModifierFromPlayerController(PlayerController: PlayerController): CameraAnimationCameraModifier;
+	static GetCameraAnimationCameraModifierFromID(WorldContextObject: UObject,ControllerId: number): CameraAnimationCameraModifier;
+	static GetCameraAnimationCameraModifier(WorldContextObject: UObject,PlayerIndex: number): CameraAnimationCameraModifier;
+	static C(Other: UObject | any): CameraAnimationCameraModifier;
+}
+
+declare class TestCameraShake extends CameraShakeBase { 
+	static Load(ResourceName: string): TestCameraShake;
+	static Find(Outer: UObject, ResourceName: string): TestCameraShake;
+	static GetDefaultObject(): TestCameraShake;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TestCameraShake;
+	static C(Other: UObject | any): TestCameraShake;
+}
+
+declare class SimpleCameraShakePattern extends CameraShakePattern { 
+	Duration: number;
+	BlendInTime: number;
+	BlendOutTime: number;
+	static Load(ResourceName: string): SimpleCameraShakePattern;
+	static Find(Outer: UObject, ResourceName: string): SimpleCameraShakePattern;
+	static GetDefaultObject(): SimpleCameraShakePattern;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SimpleCameraShakePattern;
+	static C(Other: UObject | any): SimpleCameraShakePattern;
+}
+
+declare class ConstantCameraShakePattern extends SimpleCameraShakePattern { 
+	LocationOffset: Vector;
+	RotationOffset: Rotator;
+	static Load(ResourceName: string): ConstantCameraShakePattern;
+	static Find(Outer: UObject, ResourceName: string): ConstantCameraShakePattern;
+	static GetDefaultObject(): ConstantCameraShakePattern;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ConstantCameraShakePattern;
+	static C(Other: UObject | any): ConstantCameraShakePattern;
+}
+
+declare class CompositeCameraShakePattern extends CameraShakePattern { 
+	ChildPatterns: CameraShakePattern[];
+	static Load(ResourceName: string): CompositeCameraShakePattern;
+	static Find(Outer: UObject, ResourceName: string): CompositeCameraShakePattern;
+	static GetDefaultObject(): CompositeCameraShakePattern;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): CompositeCameraShakePattern;
+	static C(Other: UObject | any): CompositeCameraShakePattern;
+}
+
+declare class DefaultCameraShakeBase extends CameraShakeBase { 
+	static Load(ResourceName: string): DefaultCameraShakeBase;
+	static Find(Outer: UObject, ResourceName: string): DefaultCameraShakeBase;
+	static GetDefaultObject(): DefaultCameraShakeBase;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): DefaultCameraShakeBase;
+	static C(Other: UObject | any): DefaultCameraShakeBase;
+}
+
+declare class MatineeCameraShakePattern extends CameraShakePattern { 
+	static Load(ResourceName: string): MatineeCameraShakePattern;
+	static Find(Outer: UObject, ResourceName: string): MatineeCameraShakePattern;
+	static GetDefaultObject(): MatineeCameraShakePattern;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MatineeCameraShakePattern;
+	static C(Other: UObject | any): MatineeCameraShakePattern;
+}
+
+declare class MovieSceneMatineeCameraShakeEvaluator extends MovieSceneCameraShakeEvaluator { 
+	static Load(ResourceName: string): MovieSceneMatineeCameraShakeEvaluator;
+	static Find(Outer: UObject, ResourceName: string): MovieSceneMatineeCameraShakeEvaluator;
+	static GetDefaultObject(): MovieSceneMatineeCameraShakeEvaluator;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MovieSceneMatineeCameraShakeEvaluator;
+	static C(Other: UObject | any): MovieSceneMatineeCameraShakeEvaluator;
+}
+
+declare class MatineeCameraShakeFunctionLibrary extends BlueprintFunctionLibrary { 
+	static Load(ResourceName: string): MatineeCameraShakeFunctionLibrary;
+	static Find(Outer: UObject, ResourceName: string): MatineeCameraShakeFunctionLibrary;
+	static GetDefaultObject(): MatineeCameraShakeFunctionLibrary;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MatineeCameraShakeFunctionLibrary;
+	static Conv_MatineeCameraShake(CameraShake: CameraShakeBase): MatineeCameraShake;
+	static C(Other: UObject | any): MatineeCameraShakeFunctionLibrary;
+}
+
+declare class PerlinNoiseShaker { 
+	Amplitude: number;
+	Frequency: number;
+	clone() : PerlinNoiseShaker;
+	static C(Other: UObject | any): PerlinNoiseShaker;
+}
+
+declare class PerlinNoiseCameraShakePattern extends SimpleCameraShakePattern { 
+	LocationAmplitudeMultiplier: number;
+	LocationFrequencyMultiplier: number;
+	X: PerlinNoiseShaker;
+	Y: PerlinNoiseShaker;
+	Z: PerlinNoiseShaker;
+	RotationAmplitudeMultiplier: number;
+	RotationFrequencyMultiplier: number;
+	Pitch: PerlinNoiseShaker;
+	Yaw: PerlinNoiseShaker;
+	Roll: PerlinNoiseShaker;
+	FOV: PerlinNoiseShaker;
+	static Load(ResourceName: string): PerlinNoiseCameraShakePattern;
+	static Find(Outer: UObject, ResourceName: string): PerlinNoiseCameraShakePattern;
+	static GetDefaultObject(): PerlinNoiseCameraShakePattern;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PerlinNoiseCameraShakePattern;
+	static C(Other: UObject | any): PerlinNoiseCameraShakePattern;
+}
+
+declare type EInitialWaveOscillatorOffsetType = 'Random' | 'Zero' | 'EInitialWaveOscillatorOffsetType_MAX';
+declare var EInitialWaveOscillatorOffsetType : { Random:'Random',Zero:'Zero',EInitialWaveOscillatorOffsetType_MAX:'EInitialWaveOscillatorOffsetType_MAX', };
+declare class WaveOscillator { 
+	Amplitude: number;
+	Frequency: number;
+	InitialOffsetType: EInitialWaveOscillatorOffsetType;
+	clone() : WaveOscillator;
+	static C(Other: UObject | any): WaveOscillator;
+}
+
+declare class WaveOscillatorCameraShakePattern extends SimpleCameraShakePattern { 
+	LocationAmplitudeMultiplier: number;
+	LocationFrequencyMultiplier: number;
+	X: WaveOscillator;
+	Y: WaveOscillator;
+	Z: WaveOscillator;
+	RotationAmplitudeMultiplier: number;
+	RotationFrequencyMultiplier: number;
+	Pitch: WaveOscillator;
+	Yaw: WaveOscillator;
+	Roll: WaveOscillator;
+	FOV: WaveOscillator;
+	static Load(ResourceName: string): WaveOscillatorCameraShakePattern;
+	static Find(Outer: UObject, ResourceName: string): WaveOscillatorCameraShakePattern;
+	static GetDefaultObject(): WaveOscillatorCameraShakePattern;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): WaveOscillatorCameraShakePattern;
+	static C(Other: UObject | any): WaveOscillatorCameraShakePattern;
+}
+
+declare class EdGraphNode_Reference extends EdGraphNode { 
+	static Load(ResourceName: string): EdGraphNode_Reference;
+	static Find(Outer: UObject, ResourceName: string): EdGraphNode_Reference;
+	static GetDefaultObject(): EdGraphNode_Reference;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): EdGraphNode_Reference;
+	static C(Other: UObject | any): EdGraphNode_Reference;
+}
+
+declare class EdGraph_ReferenceViewer extends EdGraph { 
+	static Load(ResourceName: string): EdGraph_ReferenceViewer;
+	static Find(Outer: UObject, ResourceName: string): EdGraph_ReferenceViewer;
+	static GetDefaultObject(): EdGraph_ReferenceViewer;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): EdGraph_ReferenceViewer;
+	static C(Other: UObject | any): EdGraph_ReferenceViewer;
+}
+
+declare class ReferenceViewerSchema extends EdGraphSchema { 
+	static Load(ResourceName: string): ReferenceViewerSchema;
+	static Find(Outer: UObject, ResourceName: string): ReferenceViewerSchema;
+	static GetDefaultObject(): ReferenceViewerSchema;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ReferenceViewerSchema;
+	static C(Other: UObject | any): ReferenceViewerSchema;
+}
+
+declare class UndoHistorySettings extends UObject { 
+	bShowTransactionDetails: boolean;
+	static Load(ResourceName: string): UndoHistorySettings;
+	static Find(Outer: UObject, ResourceName: string): UndoHistorySettings;
+	static GetDefaultObject(): UndoHistorySettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): UndoHistorySettings;
+	static C(Other: UObject | any): UndoHistorySettings;
+}
+
+declare class LevelAssetEditor extends AssetEditor { 
+	static Load(ResourceName: string): LevelAssetEditor;
+	static Find(Outer: UObject, ResourceName: string): LevelAssetEditor;
+	static GetDefaultObject(): LevelAssetEditor;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): LevelAssetEditor;
+	static C(Other: UObject | any): LevelAssetEditor;
+}
+
+declare class PixelInspectorView extends UObject { 
+	FinalColor: LinearColor;
+	SceneColor: LinearColor;
+	PreExposure: number;
+	Luminance: number;
+	HdrColor: LinearColor;
+	Normal: Vector;
+	PerObjectGBufferData: number;
+	Metallic: number;
+	Specular: number;
+	Roughness: number;
+	MaterialShadingModel: EMaterialShadingModel;
+	SelectiveOutputMask: number;
+	BaseColor: LinearColor;
+	IndirectIrradiance: number;
+	AmbientOcclusion: number;
+	SubsurfaceColor: LinearColor;
+	SubsurfaceProfile: Vector;
+	Opacity: number;
+	ClearCoat: number;
+	ClearCoatRoughness: number;
+	WorldNormal: Vector;
+	Backlit: number;
+	Cloth: number;
+	EyeTangent: Vector;
+	IrisMask: number;
+	IrisDistance: number;
+	static Load(ResourceName: string): PixelInspectorView;
+	static Find(Outer: UObject, ResourceName: string): PixelInspectorView;
+	static GetDefaultObject(): PixelInspectorView;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PixelInspectorView;
+	static C(Other: UObject | any): PixelInspectorView;
+}
+
+declare class OpenColorIOConfigurationFactoryNew extends Factory { 
+	static Load(ResourceName: string): OpenColorIOConfigurationFactoryNew;
+	static Find(Outer: UObject, ResourceName: string): OpenColorIOConfigurationFactoryNew;
+	static GetDefaultObject(): OpenColorIOConfigurationFactoryNew;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OpenColorIOConfigurationFactoryNew;
+	static C(Other: UObject | any): OpenColorIOConfigurationFactoryNew;
+}
+
+declare class PerViewportDisplaySettingPair { 
+	ViewportIdentifier: string;
+	DisplayConfiguration: OpenColorIODisplayConfiguration;
+	clone() : PerViewportDisplaySettingPair;
+	static C(Other: UObject | any): PerViewportDisplaySettingPair;
+}
+
+declare class OpenColorIOLevelViewportSettings extends UObject { 
+	ViewportsSettings: PerViewportDisplaySettingPair[];
+	static Load(ResourceName: string): OpenColorIOLevelViewportSettings;
+	static Find(Outer: UObject, ResourceName: string): OpenColorIOLevelViewportSettings;
+	static GetDefaultObject(): OpenColorIOLevelViewportSettings;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OpenColorIOLevelViewportSettings;
+	static C(Other: UObject | any): OpenColorIOLevelViewportSettings;
 }
 
 declare class RigVMMemoryStorageGeneratorClass extends Class { 
@@ -14189,316 +14574,6 @@ declare class ControlRigGraphSchema extends EdGraphSchema {
 	static C(Other: UObject | any): ControlRigGraphSchema;
 }
 
-declare class CameraAnimationSequenceSubsystem extends WorldSubsystem { 
-	Linker: MovieSceneEntitySystemLinker;
-	static Load(ResourceName: string): CameraAnimationSequenceSubsystem;
-	static Find(Outer: UObject, ResourceName: string): CameraAnimationSequenceSubsystem;
-	static GetDefaultObject(): CameraAnimationSequenceSubsystem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): CameraAnimationSequenceSubsystem;
-	static C(Other: UObject | any): CameraAnimationSequenceSubsystem;
-}
-
-declare class SequenceCameraShakeTestUtil extends BlueprintFunctionLibrary { 
-	static Load(ResourceName: string): SequenceCameraShakeTestUtil;
-	static Find(Outer: UObject, ResourceName: string): SequenceCameraShakeTestUtil;
-	static GetDefaultObject(): SequenceCameraShakeTestUtil;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SequenceCameraShakeTestUtil;
-	static GetPostProcessBlendCache(PlayerController: PlayerController,PPIndex: number,OutPPSettings?: PostProcessSettings,OutPPBlendWeight?: number): {OutPPSettings: PostProcessSettings, OutPPBlendWeight: number, $: boolean};
-	static GetLastFrameCameraCachePOV(PlayerController: PlayerController): MinimalViewInfo;
-	static GetCameraCachePOV(PlayerController: PlayerController): MinimalViewInfo;
-	static C(Other: UObject | any): SequenceCameraShakeTestUtil;
-}
-
-declare class TemplateSequencePlayer extends MovieSceneSequencePlayer { 
-	static Load(ResourceName: string): TemplateSequencePlayer;
-	static Find(Outer: UObject, ResourceName: string): TemplateSequencePlayer;
-	static GetDefaultObject(): TemplateSequencePlayer;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TemplateSequencePlayer;
-	static CreateTemplateSequencePlayer(WorldContextObject: UObject,TemplateSequence: TemplateSequence,Settings: MovieSceneSequencePlaybackSettings,OutActor?: TemplateSequenceActor): {OutActor: TemplateSequenceActor, $: TemplateSequencePlayer};
-	static C(Other: UObject | any): TemplateSequencePlayer;
-}
-
-declare class TemplateSequenceBindingOverrideData { 
-	UObject: any;
-	bOverridesDefault: boolean;
-	clone() : TemplateSequenceBindingOverrideData;
-	static C(Other: UObject | any): TemplateSequenceBindingOverrideData;
-}
-
-declare class TemplateSequenceActor extends Actor { 
-	PlaybackSettings: MovieSceneSequencePlaybackSettings;
-	SequencePlayer: TemplateSequencePlayer;
-	TemplateSequence: SoftObjectPath;
-	BindingOverride: TemplateSequenceBindingOverrideData;
-	static GetDefaultObject(): TemplateSequenceActor;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TemplateSequenceActor;
-	SetSequence(InSequence: TemplateSequence): void;
-	SetBinding(Actor: Actor,bOverridesDefault: boolean): void;
-	LoadSequence(): TemplateSequence;
-	GetSequencePlayer(): TemplateSequencePlayer;
-	GetSequence(): TemplateSequence;
-	static C(Other: UObject | any): TemplateSequenceActor;
-}
-
-declare type ETemplateSectionPropertyScaleType = 'FloatProperty' | 'TransformPropertyLocationOnly' | 'TransformPropertyRotationOnly' | 'ETemplateSectionPropertyScaleType_MAX';
-declare var ETemplateSectionPropertyScaleType : { FloatProperty:'FloatProperty',TransformPropertyLocationOnly:'TransformPropertyLocationOnly',TransformPropertyRotationOnly:'TransformPropertyRotationOnly',ETemplateSectionPropertyScaleType_MAX:'ETemplateSectionPropertyScaleType_MAX', };
-declare class TemplateSectionPropertyScale { 
-	ObjectBinding: Guid;
-	PropertyBinding: MovieScenePropertyBinding;
-	PropertyScaleType: ETemplateSectionPropertyScaleType;
-	FloatChannel: MovieSceneFloatChannel;
-	clone() : TemplateSectionPropertyScale;
-	static C(Other: UObject | any): TemplateSectionPropertyScale;
-}
-
-declare class TemplateSequenceSection extends MovieSceneSubSection { 
-	PropertyScales: TemplateSectionPropertyScale[];
-	static Load(ResourceName: string): TemplateSequenceSection;
-	static Find(Outer: UObject, ResourceName: string): TemplateSequenceSection;
-	static GetDefaultObject(): TemplateSequenceSection;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TemplateSequenceSection;
-	static C(Other: UObject | any): TemplateSequenceSection;
-}
-
-declare class TemplateSequenceSystem extends MovieSceneEntitySystem { 
-	static Load(ResourceName: string): TemplateSequenceSystem;
-	static Find(Outer: UObject, ResourceName: string): TemplateSequenceSystem;
-	static GetDefaultObject(): TemplateSequenceSystem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TemplateSequenceSystem;
-	static C(Other: UObject | any): TemplateSequenceSystem;
-}
-
-declare class TemplateSequencePropertyScalingInstantiatorSystem extends MovieSceneEntitySystem { 
-	static Load(ResourceName: string): TemplateSequencePropertyScalingInstantiatorSystem;
-	static Find(Outer: UObject, ResourceName: string): TemplateSequencePropertyScalingInstantiatorSystem;
-	static GetDefaultObject(): TemplateSequencePropertyScalingInstantiatorSystem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TemplateSequencePropertyScalingInstantiatorSystem;
-	static C(Other: UObject | any): TemplateSequencePropertyScalingInstantiatorSystem;
-}
-
-declare class TemplateSequencePropertyScalingEvaluatorSystem extends MovieSceneEntitySystem { 
-	static Load(ResourceName: string): TemplateSequencePropertyScalingEvaluatorSystem;
-	static Find(Outer: UObject, ResourceName: string): TemplateSequencePropertyScalingEvaluatorSystem;
-	static GetDefaultObject(): TemplateSequencePropertyScalingEvaluatorSystem;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TemplateSequencePropertyScalingEvaluatorSystem;
-	static C(Other: UObject | any): TemplateSequencePropertyScalingEvaluatorSystem;
-}
-
-declare class TemplateSequenceTrack extends MovieSceneSubTrack { 
-	static Load(ResourceName: string): TemplateSequenceTrack;
-	static Find(Outer: UObject, ResourceName: string): TemplateSequenceTrack;
-	static GetDefaultObject(): TemplateSequenceTrack;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TemplateSequenceTrack;
-	static C(Other: UObject | any): TemplateSequenceTrack;
-}
-
-declare type ECameraAnimationEasingType = 'Linear' | 'Sinusoidal' | 'Quadratic' | 'Cubic' | 'Quartic' | 'Quintic' | 'Exponential' | 'Circular' | 'ECameraAnimationEasingType_MAX';
-declare var ECameraAnimationEasingType : { Linear:'Linear',Sinusoidal:'Sinusoidal',Quadratic:'Quadratic',Cubic:'Cubic',Quartic:'Quartic',Quintic:'Quintic',Exponential:'Exponential',Circular:'Circular',ECameraAnimationEasingType_MAX:'ECameraAnimationEasingType_MAX', };
-declare type ECameraAnimationPlaySpace = 'CameraLocal' | 'World' | 'UserDefined' | 'ECameraAnimationPlaySpace_MAX';
-declare var ECameraAnimationPlaySpace : { CameraLocal:'CameraLocal',World:'World',UserDefined:'UserDefined',ECameraAnimationPlaySpace_MAX:'ECameraAnimationPlaySpace_MAX', };
-declare class CameraAnimationParams { 
-	PlayRate: number;
-	Scale: number;
-	EaseInType: ECameraAnimationEasingType;
-	EaseInDuration: number;
-	EaseOutType: ECameraAnimationEasingType;
-	EaseOutDuration: number;
-	bLoop: boolean;
-	bRandomStartTime: boolean;
-	DurationOverride: number;
-	PlaySpace: ECameraAnimationPlaySpace;
-	UserPlaySpaceRot: Rotator;
-	clone() : CameraAnimationParams;
-	static C(Other: UObject | any): CameraAnimationParams;
-}
-
-declare class CameraAnimationHandle { 
-	clone() : CameraAnimationHandle;
-	static C(Other: UObject | any): CameraAnimationHandle;
-}
-
-declare class ActiveCameraAnimationInfo { 
-	Sequence: CameraAnimationSequence;
-	Params: CameraAnimationParams;
-	Handle: CameraAnimationHandle;
-	Player: CameraAnimationSequencePlayer;
-	CameraStandIn: CameraAnimationSequenceCameraStandIn;
-	EaseInCurrentTime: number;
-	EaseOutCurrentTime: number;
-	bIsEasingIn: boolean;
-	bIsEasingOut: boolean;
-	clone() : ActiveCameraAnimationInfo;
-	static C(Other: UObject | any): ActiveCameraAnimationInfo;
-}
-
-declare class CameraAnimationCameraModifier extends CameraModifier { 
-	ActiveAnimations: ActiveCameraAnimationInfo[];
-	InstanceSerialNumber: any;
-	static Load(ResourceName: string): CameraAnimationCameraModifier;
-	static Find(Outer: UObject, ResourceName: string): CameraAnimationCameraModifier;
-	static GetDefaultObject(): CameraAnimationCameraModifier;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): CameraAnimationCameraModifier;
-	StopCameraAnimation(Handle: CameraAnimationHandle,bImmediate: boolean): void;
-	StopAllCameraAnimationsOf(Sequence: CameraAnimationSequence,bImmediate: boolean): void;
-	StopAllCameraAnimations(bImmediate: boolean): void;
-	PlayCameraAnimation(Sequence: CameraAnimationSequence,Params: CameraAnimationParams): CameraAnimationHandle;
-	IsCameraAnimationActive(Handle: CameraAnimationHandle): boolean;
-	static GetCameraAnimationCameraModifierFromPlayerController(PlayerController: PlayerController): CameraAnimationCameraModifier;
-	static GetCameraAnimationCameraModifierFromID(WorldContextObject: UObject,ControllerId: number): CameraAnimationCameraModifier;
-	static GetCameraAnimationCameraModifier(WorldContextObject: UObject,PlayerIndex: number): CameraAnimationCameraModifier;
-	static C(Other: UObject | any): CameraAnimationCameraModifier;
-}
-
-declare class TestCameraShake extends CameraShakeBase { 
-	static Load(ResourceName: string): TestCameraShake;
-	static Find(Outer: UObject, ResourceName: string): TestCameraShake;
-	static GetDefaultObject(): TestCameraShake;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): TestCameraShake;
-	static C(Other: UObject | any): TestCameraShake;
-}
-
-declare class SimpleCameraShakePattern extends CameraShakePattern { 
-	Duration: number;
-	BlendInTime: number;
-	BlendOutTime: number;
-	static Load(ResourceName: string): SimpleCameraShakePattern;
-	static Find(Outer: UObject, ResourceName: string): SimpleCameraShakePattern;
-	static GetDefaultObject(): SimpleCameraShakePattern;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SimpleCameraShakePattern;
-	static C(Other: UObject | any): SimpleCameraShakePattern;
-}
-
-declare class ConstantCameraShakePattern extends SimpleCameraShakePattern { 
-	LocationOffset: Vector;
-	RotationOffset: Rotator;
-	static Load(ResourceName: string): ConstantCameraShakePattern;
-	static Find(Outer: UObject, ResourceName: string): ConstantCameraShakePattern;
-	static GetDefaultObject(): ConstantCameraShakePattern;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ConstantCameraShakePattern;
-	static C(Other: UObject | any): ConstantCameraShakePattern;
-}
-
-declare class CompositeCameraShakePattern extends CameraShakePattern { 
-	ChildPatterns: CameraShakePattern[];
-	static Load(ResourceName: string): CompositeCameraShakePattern;
-	static Find(Outer: UObject, ResourceName: string): CompositeCameraShakePattern;
-	static GetDefaultObject(): CompositeCameraShakePattern;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): CompositeCameraShakePattern;
-	static C(Other: UObject | any): CompositeCameraShakePattern;
-}
-
-declare class DefaultCameraShakeBase extends CameraShakeBase { 
-	static Load(ResourceName: string): DefaultCameraShakeBase;
-	static Find(Outer: UObject, ResourceName: string): DefaultCameraShakeBase;
-	static GetDefaultObject(): DefaultCameraShakeBase;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): DefaultCameraShakeBase;
-	static C(Other: UObject | any): DefaultCameraShakeBase;
-}
-
-declare class MatineeCameraShakePattern extends CameraShakePattern { 
-	static Load(ResourceName: string): MatineeCameraShakePattern;
-	static Find(Outer: UObject, ResourceName: string): MatineeCameraShakePattern;
-	static GetDefaultObject(): MatineeCameraShakePattern;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MatineeCameraShakePattern;
-	static C(Other: UObject | any): MatineeCameraShakePattern;
-}
-
-declare class MovieSceneMatineeCameraShakeEvaluator extends MovieSceneCameraShakeEvaluator { 
-	static Load(ResourceName: string): MovieSceneMatineeCameraShakeEvaluator;
-	static Find(Outer: UObject, ResourceName: string): MovieSceneMatineeCameraShakeEvaluator;
-	static GetDefaultObject(): MovieSceneMatineeCameraShakeEvaluator;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MovieSceneMatineeCameraShakeEvaluator;
-	static C(Other: UObject | any): MovieSceneMatineeCameraShakeEvaluator;
-}
-
-declare class MatineeCameraShakeFunctionLibrary extends BlueprintFunctionLibrary { 
-	static Load(ResourceName: string): MatineeCameraShakeFunctionLibrary;
-	static Find(Outer: UObject, ResourceName: string): MatineeCameraShakeFunctionLibrary;
-	static GetDefaultObject(): MatineeCameraShakeFunctionLibrary;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): MatineeCameraShakeFunctionLibrary;
-	static Conv_MatineeCameraShake(CameraShake: CameraShakeBase): MatineeCameraShake;
-	static C(Other: UObject | any): MatineeCameraShakeFunctionLibrary;
-}
-
-declare class PerlinNoiseShaker { 
-	Amplitude: number;
-	Frequency: number;
-	clone() : PerlinNoiseShaker;
-	static C(Other: UObject | any): PerlinNoiseShaker;
-}
-
-declare class PerlinNoiseCameraShakePattern extends SimpleCameraShakePattern { 
-	LocationAmplitudeMultiplier: number;
-	LocationFrequencyMultiplier: number;
-	X: PerlinNoiseShaker;
-	Y: PerlinNoiseShaker;
-	Z: PerlinNoiseShaker;
-	RotationAmplitudeMultiplier: number;
-	RotationFrequencyMultiplier: number;
-	Pitch: PerlinNoiseShaker;
-	Yaw: PerlinNoiseShaker;
-	Roll: PerlinNoiseShaker;
-	FOV: PerlinNoiseShaker;
-	static Load(ResourceName: string): PerlinNoiseCameraShakePattern;
-	static Find(Outer: UObject, ResourceName: string): PerlinNoiseCameraShakePattern;
-	static GetDefaultObject(): PerlinNoiseCameraShakePattern;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PerlinNoiseCameraShakePattern;
-	static C(Other: UObject | any): PerlinNoiseCameraShakePattern;
-}
-
-declare type EInitialWaveOscillatorOffsetType = 'Random' | 'Zero' | 'EInitialWaveOscillatorOffsetType_MAX';
-declare var EInitialWaveOscillatorOffsetType : { Random:'Random',Zero:'Zero',EInitialWaveOscillatorOffsetType_MAX:'EInitialWaveOscillatorOffsetType_MAX', };
-declare class WaveOscillator { 
-	Amplitude: number;
-	Frequency: number;
-	InitialOffsetType: EInitialWaveOscillatorOffsetType;
-	clone() : WaveOscillator;
-	static C(Other: UObject | any): WaveOscillator;
-}
-
-declare class WaveOscillatorCameraShakePattern extends SimpleCameraShakePattern { 
-	LocationAmplitudeMultiplier: number;
-	LocationFrequencyMultiplier: number;
-	X: WaveOscillator;
-	Y: WaveOscillator;
-	Z: WaveOscillator;
-	RotationAmplitudeMultiplier: number;
-	RotationFrequencyMultiplier: number;
-	Pitch: WaveOscillator;
-	Yaw: WaveOscillator;
-	Roll: WaveOscillator;
-	FOV: WaveOscillator;
-	static Load(ResourceName: string): WaveOscillatorCameraShakePattern;
-	static Find(Outer: UObject, ResourceName: string): WaveOscillatorCameraShakePattern;
-	static GetDefaultObject(): WaveOscillatorCameraShakePattern;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): WaveOscillatorCameraShakePattern;
-	static C(Other: UObject | any): WaveOscillatorCameraShakePattern;
-}
-
-declare class OpenColorIOConfigurationFactoryNew extends Factory { 
-	static Load(ResourceName: string): OpenColorIOConfigurationFactoryNew;
-	static Find(Outer: UObject, ResourceName: string): OpenColorIOConfigurationFactoryNew;
-	static GetDefaultObject(): OpenColorIOConfigurationFactoryNew;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OpenColorIOConfigurationFactoryNew;
-	static C(Other: UObject | any): OpenColorIOConfigurationFactoryNew;
-}
-
-declare class PerViewportDisplaySettingPair { 
-	ViewportIdentifier: string;
-	DisplayConfiguration: OpenColorIODisplayConfiguration;
-	clone() : PerViewportDisplaySettingPair;
-	static C(Other: UObject | any): PerViewportDisplaySettingPair;
-}
-
-declare class OpenColorIOLevelViewportSettings extends UObject { 
-	ViewportsSettings: PerViewportDisplaySettingPair[];
-	static Load(ResourceName: string): OpenColorIOLevelViewportSettings;
-	static Find(Outer: UObject, ResourceName: string): OpenColorIOLevelViewportSettings;
-	static GetDefaultObject(): OpenColorIOLevelViewportSettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OpenColorIOLevelViewportSettings;
-	static C(Other: UObject | any): OpenColorIOLevelViewportSettings;
-}
-
 declare class SignificanceManager extends UObject { 
 	SignificanceManagerClassName: SoftClassPath;
 	static Load(ResourceName: string): SignificanceManager;
@@ -14637,128 +14712,6 @@ declare class AnimationSharingManager extends UObject {
 	static CreateAnimationSharingManager(WorldContextObject: UObject,Setup: AnimationSharingSetup): boolean;
 	static AnimationSharingEnabled(): boolean;
 	static C(Other: UObject | any): AnimationSharingManager;
-}
-
-declare class EdGraphNode_Reference extends EdGraphNode { 
-	static Load(ResourceName: string): EdGraphNode_Reference;
-	static Find(Outer: UObject, ResourceName: string): EdGraphNode_Reference;
-	static GetDefaultObject(): EdGraphNode_Reference;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): EdGraphNode_Reference;
-	static C(Other: UObject | any): EdGraphNode_Reference;
-}
-
-declare class EdGraph_ReferenceViewer extends EdGraph { 
-	static Load(ResourceName: string): EdGraph_ReferenceViewer;
-	static Find(Outer: UObject, ResourceName: string): EdGraph_ReferenceViewer;
-	static GetDefaultObject(): EdGraph_ReferenceViewer;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): EdGraph_ReferenceViewer;
-	static C(Other: UObject | any): EdGraph_ReferenceViewer;
-}
-
-declare class ReferenceViewerSchema extends EdGraphSchema { 
-	static Load(ResourceName: string): ReferenceViewerSchema;
-	static Find(Outer: UObject, ResourceName: string): ReferenceViewerSchema;
-	static GetDefaultObject(): ReferenceViewerSchema;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ReferenceViewerSchema;
-	static C(Other: UObject | any): ReferenceViewerSchema;
-}
-
-declare class UndoHistorySettings extends UObject { 
-	bShowTransactionDetails: boolean;
-	static Load(ResourceName: string): UndoHistorySettings;
-	static Find(Outer: UObject, ResourceName: string): UndoHistorySettings;
-	static GetDefaultObject(): UndoHistorySettings;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): UndoHistorySettings;
-	static C(Other: UObject | any): UndoHistorySettings;
-}
-
-declare class LevelAssetEditor extends AssetEditor { 
-	static Load(ResourceName: string): LevelAssetEditor;
-	static Find(Outer: UObject, ResourceName: string): LevelAssetEditor;
-	static GetDefaultObject(): LevelAssetEditor;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): LevelAssetEditor;
-	static C(Other: UObject | any): LevelAssetEditor;
-}
-
-declare class PixelInspectorView extends UObject { 
-	FinalColor: LinearColor;
-	SceneColor: LinearColor;
-	PreExposure: number;
-	Luminance: number;
-	HdrColor: LinearColor;
-	Normal: Vector;
-	PerObjectGBufferData: number;
-	Metallic: number;
-	Specular: number;
-	Roughness: number;
-	MaterialShadingModel: EMaterialShadingModel;
-	SelectiveOutputMask: number;
-	BaseColor: LinearColor;
-	IndirectIrradiance: number;
-	AmbientOcclusion: number;
-	SubsurfaceColor: LinearColor;
-	SubsurfaceProfile: Vector;
-	Opacity: number;
-	ClearCoat: number;
-	ClearCoatRoughness: number;
-	WorldNormal: Vector;
-	Backlit: number;
-	Cloth: number;
-	EyeTangent: Vector;
-	IrisMask: number;
-	IrisDistance: number;
-	static Load(ResourceName: string): PixelInspectorView;
-	static Find(Outer: UObject, ResourceName: string): PixelInspectorView;
-	static GetDefaultObject(): PixelInspectorView;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): PixelInspectorView;
-	static C(Other: UObject | any): PixelInspectorView;
-}
-
-declare class K2Node_PropertyAccess extends K2Node { 
-	Path: string[];
-	TextPath: string;
-	ResolvedPinType: EdGraphPinType;
-	GeneratedPropertyName: string;
-	ContextId: string;
-	static Load(ResourceName: string): K2Node_PropertyAccess;
-	static Find(Outer: UObject, ResourceName: string): K2Node_PropertyAccess;
-	static GetDefaultObject(): K2Node_PropertyAccess;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): K2Node_PropertyAccess;
-	static C(Other: UObject | any): K2Node_PropertyAccess;
-}
-
-declare class FilterData { 
-	Name: string;
-	AllowlistedNames: string[];
-	clone() : FilterData;
-	static C(Other: UObject | any): FilterData;
-}
-
-declare class LocalFilterPresetContainer extends UObject { 
-	UserPresets: FilterData[];
-	static Load(ResourceName: string): LocalFilterPresetContainer;
-	static Find(Outer: UObject, ResourceName: string): LocalFilterPresetContainer;
-	static GetDefaultObject(): LocalFilterPresetContainer;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): LocalFilterPresetContainer;
-	static C(Other: UObject | any): LocalFilterPresetContainer;
-}
-
-declare class SharedFilterPresetContainer extends UObject { 
-	SharedPresets: FilterData[];
-	static Load(ResourceName: string): SharedFilterPresetContainer;
-	static Find(Outer: UObject, ResourceName: string): SharedFilterPresetContainer;
-	static GetDefaultObject(): SharedFilterPresetContainer;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SharedFilterPresetContainer;
-	static C(Other: UObject | any): SharedFilterPresetContainer;
-}
-
-declare class EngineFilterPresetContainer extends UObject { 
-	EnginePresets: FilterData[];
-	static Load(ResourceName: string): EngineFilterPresetContainer;
-	static Find(Outer: UObject, ResourceName: string): EngineFilterPresetContainer;
-	static GetDefaultObject(): EngineFilterPresetContainer;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): EngineFilterPresetContainer;
-	static C(Other: UObject | any): EngineFilterPresetContainer;
 }
 
 declare class EditorUtilityObject extends UObject { 
@@ -15275,6 +15228,53 @@ declare class GameplayTagsK2Node_SwitchGameplayTagContainer extends K2Node_Switc
 	static GetDefaultObject(): GameplayTagsK2Node_SwitchGameplayTagContainer;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): GameplayTagsK2Node_SwitchGameplayTagContainer;
 	static C(Other: UObject | any): GameplayTagsK2Node_SwitchGameplayTagContainer;
+}
+
+declare class K2Node_PropertyAccess extends K2Node { 
+	Path: string[];
+	TextPath: string;
+	ResolvedPinType: EdGraphPinType;
+	GeneratedPropertyName: string;
+	ContextId: string;
+	static Load(ResourceName: string): K2Node_PropertyAccess;
+	static Find(Outer: UObject, ResourceName: string): K2Node_PropertyAccess;
+	static GetDefaultObject(): K2Node_PropertyAccess;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): K2Node_PropertyAccess;
+	static C(Other: UObject | any): K2Node_PropertyAccess;
+}
+
+declare class FilterData { 
+	Name: string;
+	AllowlistedNames: string[];
+	clone() : FilterData;
+	static C(Other: UObject | any): FilterData;
+}
+
+declare class LocalFilterPresetContainer extends UObject { 
+	UserPresets: FilterData[];
+	static Load(ResourceName: string): LocalFilterPresetContainer;
+	static Find(Outer: UObject, ResourceName: string): LocalFilterPresetContainer;
+	static GetDefaultObject(): LocalFilterPresetContainer;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): LocalFilterPresetContainer;
+	static C(Other: UObject | any): LocalFilterPresetContainer;
+}
+
+declare class SharedFilterPresetContainer extends UObject { 
+	SharedPresets: FilterData[];
+	static Load(ResourceName: string): SharedFilterPresetContainer;
+	static Find(Outer: UObject, ResourceName: string): SharedFilterPresetContainer;
+	static GetDefaultObject(): SharedFilterPresetContainer;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): SharedFilterPresetContainer;
+	static C(Other: UObject | any): SharedFilterPresetContainer;
+}
+
+declare class EngineFilterPresetContainer extends UObject { 
+	EnginePresets: FilterData[];
+	static Load(ResourceName: string): EngineFilterPresetContainer;
+	static Find(Outer: UObject, ResourceName: string): EngineFilterPresetContainer;
+	static GetDefaultObject(): EngineFilterPresetContainer;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): EngineFilterPresetContainer;
+	static C(Other: UObject | any): EngineFilterPresetContainer;
 }
 
 declare type EVehicleAerofoilType = 'Fixed' | 'Wing' | 'Rudder' | 'Elevator' | 'EVehicleAerofoilType_MAX';
