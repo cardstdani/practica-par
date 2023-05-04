@@ -11,9 +11,9 @@ main();
 
 function main() {
     let arr = Array(18).fill("a").concat(Array(4).fill("b"), Array(3).fill("c"), Array(2).fill("1"), Array(45).fill("."));
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 6; i++) {
         matrix.push([]);
-        for (let j = 0; j < 10; j++) {
+        for (let j = 0; j < 6; j++) {
             let elem = arr[Math.floor(arr.length * Math.random())];
             matrix[i].push(elem);
             if (elem == "1") {bigFoots.push([[i, j], 0, false]);}
@@ -59,7 +59,7 @@ function clicked(index) {
         return;
     }
 
-    var coordinates = [Math.floor(index/10), index - 10*Math.floor(index/10)];
+    var coordinates = [Math.floor(index/6), index - 6*Math.floor(index/6)];
     console.log(index, coordinates)
     if (matrix[coordinates[0]][coordinates[1]] != ".") {
         if (actual === "w") {
@@ -218,7 +218,7 @@ function updateBigFoots() {
 }
 
 function updateUI() {
-    var x= 187890;
+    var x= 147890;
     var y= 247010;
     var sum = 0;
     for (let i = 0; i < matrix.length; i++) {
@@ -231,9 +231,15 @@ function updateUI() {
             
             let newActor = SpawnActor(objects[matrix[i][j]][2]);
             var vector = new Vector();
-            vector.X=x; vector.Y=y; vector.Z=-2020;            
+            vector.X=x; vector.Y=y; vector.Z=0;            
             newActor.K2_SetActorLocation(vector); 
-            newActor.RootComponent.SetWorldScale3D({X: 16.0, Y: 16.0, Z: 40.0});        
+            newActor.RootComponent.SetWorldScale3D({X: 16.0, Y: 16.0, Z: 40.0}); 
+            try{
+                newActor.Start();
+            } catch {
+
+            }            
+            
             objs[pos]=newActor;
             sum += objects[matrix[i][j]][1];
             objs[pos].OnTakeAnyDamage.Add(function(DamagedActor, DamageAmount, DamageType, InstigatedBy, DamageCauser){
