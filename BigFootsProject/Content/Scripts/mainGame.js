@@ -6,6 +6,7 @@ var bigFoots = [];
 var objs = [];
 var objects = {".": [".", 0, empty_C], "a": ["b", 1, a_C], "b": ["c", 5, b_C], "c": ["d", 25, c_C], "d": ["e", 125, d_C], "e": ["e", 625, e_C], "1": ["1", -25, b1_C], "2": ["3", -5, b2_C], "3": ["4", 50, b3_C], "4": ["4", 500, b4_C], "x": ["x", -50, x_C]};
 var scoreText;
+var zepelin;
 
 main();
 
@@ -35,15 +36,21 @@ function main() {
     objs.push(newActor);
 
     //Score
-    newActor = SpawnActor(ScoreText_C);
+    scoreText = SpawnActor(ScoreText_C);
     var vector = new Vector();
     vector.X=212990; vector.Y=172450; vector.Z=-4470;
-    newActor.K2_SetActorLocation(vector);
+    scoreText.K2_SetActorLocation(vector);
     vector = new Rotator();
     vector.Pitch=0; vector.Yaw=90; vector.Roll=0;
-    newActor.K2_SetActorRotation(vector);    
-    scoreText = newActor;
+    scoreText.K2_SetActorRotation(vector);    
     scoreText.RootComponent.SetWorldScale3D({X: 4.0, Y: 4.0, Z: 4.0});
+
+    //Zepelin
+    zepelin = SpawnActor(Zepelin_C);
+    var vector = new Vector();
+    vector.X=242770; vector.Y=111780; vector.Z=1500;//-4260;
+    zepelin.K2_SetActorLocation(vector);
+    zepelin.Start();
 
     updateActual();
     updateUI();
@@ -60,7 +67,6 @@ function clicked(index) {
     }
 
     var coordinates = [Math.floor(index/6), index - 6*Math.floor(index/6)];
-    console.log(index, coordinates)
     if (matrix[coordinates[0]][coordinates[1]] != ".") {
         if (actual === "w") {
             matrix[coordinates[0]][coordinates[1]] = ".";
@@ -95,7 +101,6 @@ function hint() {
     }
 
     let tempValues = [-Infinity, [0, 0]];
-    let debugValues = [...Array(matrix.length)].map(() => Array(matrix[0].length).fill(0));
 
     for (let i = 0; i < matrix.length; i++) {
         for (let j = 0; j < matrix[0].length; j++) {
@@ -233,7 +238,7 @@ function updateUI() {
             var vector = new Vector();
             vector.X=x; vector.Y=y; vector.Z=0;            
             newActor.K2_SetActorLocation(vector); 
-            newActor.RootComponent.SetWorldScale3D({X: 16.0, Y: 16.0, Z: 40.0}); 
+            newActor.RootComponent.SetWorldScale3D({X: 16.0, Y: 16.0, Z: 16.0}); 
             try{
                 newActor.Start();
             } catch {
@@ -247,8 +252,12 @@ function updateUI() {
             });
         }
     }
-        
+    
+    var hintResult = hint();
+    zepelin.SetZepelinDestination(objs[hintResult[0]*matrix[0].length + hintResult[1]].GetActorLocation());
+
     scoreText.Score = sum;
+    scoreText.ApplyScore();
 }
 
 function updateActual() {

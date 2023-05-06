@@ -3,6 +3,168 @@
 /// <reference path="_part_2_ue.d.ts">/>
 /// <reference path="_part_3_ue.d.ts">/>
 /// <reference path="_part_4_ue.d.ts">/>
+declare class JavascriptLogSubscriber extends UObject { 
+	OnNewLogMessage: UnrealEngineMulticastDelegate<(Message: string, Type: string, Category: string) => void>;
+	static Load(ResourceName: string): JavascriptLogSubscriber;
+	static Find(Outer: UObject, ResourceName: string): JavascriptLogSubscriber;
+	static GetDefaultObject(): JavascriptLogSubscriber;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): JavascriptLogSubscriber;
+	static C(Other: UObject | any): JavascriptLogSubscriber;
+}
+
+declare class JavascriptMenuLibrary extends BlueprintFunctionLibrary { 
+	static Load(ResourceName: string): JavascriptMenuLibrary;
+	static Find(Outer: UObject, ResourceName: string): JavascriptMenuLibrary;
+	static GetDefaultObject(): JavascriptMenuLibrary;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): JavascriptMenuLibrary;
+	static UI_COMMAND_Function(This: JavascriptBindingContext,Command: JavascriptUICommand,InTextSubNamespace: string): JavascriptUICommandInfo;
+	static RemoveExtension(Extender: JavascriptExtender,Extension: JavascriptExtensionBase): void;
+	static PushCommandList(Builder?: JavascriptMenuBuilder,List?: JavascriptUICommandList): {Builder: JavascriptMenuBuilder};
+	static ProcessCommandBindings_PointerEvent(CommandList: JavascriptUICommandList,InMouseEvent: UPointerEvent): boolean;
+	static ProcessCommandBindings_KeyEvent(CommandList: JavascriptUICommandList,InKeyEvent: KeyEvent): boolean;
+	static PopCommandList(Builder?: JavascriptMenuBuilder): {Builder: JavascriptMenuBuilder};
+	static NewBindingContext(InContextName: string,InContextDesc: string,InContextParent: string,InStyleSetName: string): JavascriptBindingContext;
+	static GenericCommand(What: string): JavascriptUICommandInfo;
+	static EndSection(Builder?: JavascriptMenuBuilder): {Builder: JavascriptMenuBuilder};
+	static Destroy(Context: JavascriptBindingContext): void;
+	static CreateUICommandList(): JavascriptUICommandList;
+	static CreateToolbarBuilder(CommandList: JavascriptUICommandList,Orientation: EOrientation,UFunction: JavascriptFunction): void;
+	static CreateMenuBuilder(CommandList: JavascriptUICommandList,bInShouldCloseWindowAfterMenuSelection: boolean,UFunction: JavascriptFunction): void;
+	static CreateMenuBarBuilder(CommandList: JavascriptUICommandList,UFunction: JavascriptFunction): void;
+	static Combine(Extenders: JavascriptExtender[]): JavascriptExtender;
+	static BeginSection(Builder?: JavascriptMenuBuilder,InExtensionHook?: string,MenuHeadingText?: string): {Builder: JavascriptMenuBuilder};
+	static Apply(Extender: JavascriptExtender,ExtensionHook: string,HookPosition: EJavascriptExtensionHook,MenuBuilder?: JavascriptMenuBuilder): {MenuBuilder: JavascriptMenuBuilder};
+	static AddWidget(Builder?: JavascriptMenuBuilder,Widget?: Widget,Label?: string,bNoIndent?: boolean,InTutorialHighlightName?: string,bSearchable?: boolean): {Builder: JavascriptMenuBuilder};
+	static AddToolBarExtension(Extender: JavascriptExtender,ExtensionHook: string,HookPosition: EJavascriptExtensionHook,CommandList: JavascriptUICommandList,UFunction: JavascriptFunction): JavascriptExtensionBase;
+	static AddToolBarButtonByContext(Builder?: JavascriptMenuBuilder,Context?: JavascriptToolbarButtonContext,EditingObject?: UObject): {Builder: JavascriptMenuBuilder};
+	static AddToolBarButton(Builder?: JavascriptMenuBuilder,CommandInfo?: JavascriptUICommandInfo): {Builder: JavascriptMenuBuilder};
+	static AddSubMenu(Builder?: JavascriptMenuBuilder,Label?: string,Tooltip?: string,bInOpenSubMenuOnClick?: boolean,UFunction?: JavascriptFunction): {Builder: JavascriptMenuBuilder};
+	static AddSeparator(Builder?: JavascriptMenuBuilder): {Builder: JavascriptMenuBuilder};
+	static AddPullDownMenu(MenuBuilder?: JavascriptMenuBuilder,InMenuLabel?: string,InToolTip?: string,InPullDownMenu?: JavascriptFunction,InExtensionHook?: string,InTutorialHighlightName?: string): {MenuBuilder: JavascriptMenuBuilder};
+	static AddMenuExtension(Extender: JavascriptExtender,ExtensionHook: string,HookPosition: EJavascriptExtensionHook,CommandList: JavascriptUICommandList,UFunction: JavascriptFunction): JavascriptExtensionBase;
+	static AddMenuEntry(Builder?: JavascriptMenuBuilder,UObject?: JavascriptMenuContext): {Builder: JavascriptMenuBuilder};
+	static AddMenuByCommands(Builder?: JavascriptMenuBuilder,UICommands?: JavascriptUICommands): {Builder: JavascriptMenuBuilder};
+	static AddMenubarExtension(Extender: JavascriptExtender,ExtensionHook: string,HookPosition: EJavascriptExtensionHook,CommandList: JavascriptUICommandList,UFunction: JavascriptFunction): JavascriptExtensionBase;
+	static AddComboButton(Builder?: JavascriptMenuBuilder,UObject?: JavascriptComboButtonContext,EditingObject?: UObject): {Builder: JavascriptMenuBuilder};
+	static C(Other: UObject | any): JavascriptMenuLibrary;
+}
+
+declare class JavascriptMultiBox extends Widget { 
+	OnHook: UnrealEngineDelegate<(ID: string, Self: JavascriptMultiBox, CurrentBuilder: JavascriptMenuBuilder) => void>;
+	static Load(ResourceName: string): JavascriptMultiBox;
+	static Find(Outer: UObject, ResourceName: string): JavascriptMultiBox;
+	static GetDefaultObject(): JavascriptMultiBox;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): JavascriptMultiBox;
+	static Bind(Builder: JavascriptMenuBuilder): void;
+	AddSubMenu(Builder?: JavascriptMenuBuilder,ID?: string,Label?: string,Tooltip?: string,bInOpenSubMenuOnClick?: boolean): {Builder: JavascriptMenuBuilder};
+	AddPullDownMenu(Builder?: JavascriptMenuBuilder,ID?: string,Label?: string,Tooltip?: string): {Builder: JavascriptMenuBuilder};
+	static C(Other: UObject | any): JavascriptMultiBox;
+}
+
+declare type EJSCheckBoxState = 'Unchecked' | 'Checked' | 'Undetermined' | 'EJSCheckBoxState_MAX';
+declare var EJSCheckBoxState : { Unchecked:'Unchecked',Checked:'Checked',Undetermined:'Undetermined',EJSCheckBoxState_MAX:'EJSCheckBoxState_MAX', };
+declare class JavascriptNotification extends UObject { 
+	text: string;
+	bUseImage: boolean;
+	UImage: SlateBrush;
+	FadeInDuration: number;
+	FadeOutDuration: number;
+	ExpireDuration: number;
+	bUseThrobber: boolean;
+	bUseSuccessFailIcons: boolean;
+	bUseLargeFont: boolean;
+	bFireAndForget: boolean;
+	CheckBoxState: EJSCheckBoxState;
+	CheckBoxStateChanged: UnrealEngineDelegate<(State: ECheckBoxState) => void>;
+	CheckBoxText: string;
+	Hyperlink: UnrealEngineDelegate<() => void>;
+	HyperlinkText: string;
+	bAllowThrottleWhenFrameRateIsLow: boolean;
+	static Load(ResourceName: string): JavascriptNotification;
+	static Find(Outer: UObject, ResourceName: string): JavascriptNotification;
+	static GetDefaultObject(): JavascriptNotification;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): JavascriptNotification;
+	Success(): void;
+	SetText(InText: string): void;
+	Reset(): void;
+	Pending(): void;
+	Fire(): void;
+	Fail(): void;
+	Fadeout(): void;
+	static C(Other: UObject | any): JavascriptNotification;
+}
+
+declare class JavascriptOnEditorCommandlet extends Commandlet { 
+	CmdLineTokens: string[];
+	CmdLineSwitches: string[];
+	static Load(ResourceName: string): JavascriptOnEditorCommandlet;
+	static Find(Outer: UObject, ResourceName: string): JavascriptOnEditorCommandlet;
+	static GetDefaultObject(): JavascriptOnEditorCommandlet;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): JavascriptOnEditorCommandlet;
+	GetEngine(): EditorEngine;
+	static C(Other: UObject | any): JavascriptOnEditorCommandlet;
+}
+
+declare type EPropertyAccessResult = 'MultipleValues' | 'Fail' | 'Success' | 'EPropertyAccessResult_MAX';
+declare var EPropertyAccessResult : { MultipleValues:'MultipleValues',Fail:'Fail',Success:'Success',EPropertyAccessResult_MAX:'EPropertyAccessResult_MAX', };
+declare class JavascriptSimpleDelegateWrapper extends UObject { 
+	delegate: UnrealEngineDelegate<() => void>;
+	static Load(ResourceName: string): JavascriptSimpleDelegateWrapper;
+	static Find(Outer: UObject, ResourceName: string): JavascriptSimpleDelegateWrapper;
+	static GetDefaultObject(): JavascriptSimpleDelegateWrapper;
+	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): JavascriptSimpleDelegateWrapper;
+	static C(Other: UObject | any): JavascriptSimpleDelegateWrapper;
+}
+
+declare class JavascriptPropertyHandle { 
+	clone() : JavascriptPropertyHandle;
+	static C(Other: UObject | any): JavascriptPropertyHandle;
+	CreatePropertyNameWidget(NameOverride: string,ToolTipOverride: string,bDisplayResetToDefault: boolean,bHideText: boolean,bHideThumbnail: boolean): JavascriptSlateWidget;
+	CreatePropertyValueWidget(bHideDefaultPropertyButtons: boolean): JavascriptSlateWidget;
+	GeneratePathToProperty(): string;
+	GetChildHandle(Name: string): JavascriptPropertyHandle;
+	GetIndexInArray(): number;
+	GetJavascriptRefValue(OutValue?: JavascriptRef): {OutValue: JavascriptRef, $: EPropertyAccessResult};
+	GetKeyHandle(): JavascriptPropertyHandle;
+	GetMetaData(Key: string): string;
+	GetObjectValue(OutValue?: UObject): {OutValue: UObject, $: EPropertyAccessResult};
+	GetOuterObjects(): UObject[];
+	GetParentHandle(): JavascriptPropertyHandle;
+	GetProperty(): any;
+	GetPropertyName(): string;
+	GetValueAsFormattedString(OutValue?: string): {OutValue: string, $: EPropertyAccessResult};
+	IsArrayProperty(): boolean;
+	IsArrayPropertyWithValueType(): boolean;
+	IsEditConst(): boolean;
+	IsValidHandle(): boolean;
+	SetJavascriptRefValue(InValue: JavascriptRef): EPropertyAccessResult;
+	SetObjectValue(InValue: UObject): EPropertyAccessResult;
+	SetOnPropertyValueChanged(Wrapper: JavascriptSimpleDelegateWrapper): void;
+	SetValueFromFormattedString(InValue: string): EPropertyAccessResult;
+	static CreatePropertyNameWidget(Handle: JavascriptPropertyHandle,NameOverride: string,ToolTipOverride: string,bDisplayResetToDefault: boolean,bHideText: boolean,bHideThumbnail: boolean): JavascriptSlateWidget;
+	static CreatePropertyValueWidget(Handle: JavascriptPropertyHandle,bHideDefaultPropertyButtons: boolean): JavascriptSlateWidget;
+	static GeneratePathToProperty(Handle: JavascriptPropertyHandle): string;
+	static GetChildHandle(Parent: JavascriptPropertyHandle,Name: string): JavascriptPropertyHandle;
+	static GetIndexInArray(Handle: JavascriptPropertyHandle): number;
+	static GetJavascriptRefValue(Handle: JavascriptPropertyHandle,OutValue?: JavascriptRef): {OutValue: JavascriptRef, $: EPropertyAccessResult};
+	static GetKeyHandle(Handle: JavascriptPropertyHandle): JavascriptPropertyHandle;
+	static GetMetaData(Handle: JavascriptPropertyHandle,Key: string): string;
+	static GetObjectValue(Handle: JavascriptPropertyHandle,OutValue?: UObject): {OutValue: UObject, $: EPropertyAccessResult};
+	static GetOuterObjects(Handle: JavascriptPropertyHandle): UObject[];
+	static GetParentHandle(Handle: JavascriptPropertyHandle): JavascriptPropertyHandle;
+	static GetProperty(Handle: JavascriptPropertyHandle): any;
+	static GetPropertyName(Handle: JavascriptPropertyHandle): string;
+	static GetValueAsFormattedString(Handle: JavascriptPropertyHandle,OutValue?: string): {OutValue: string, $: EPropertyAccessResult};
+	static IsArrayProperty(Handle: JavascriptPropertyHandle): boolean;
+	static IsArrayPropertyWithValueType(Handle: JavascriptPropertyHandle): boolean;
+	static IsEditConst(Handle: JavascriptPropertyHandle): boolean;
+	static IsValidHandle(Handle: JavascriptPropertyHandle): boolean;
+	static SetJavascriptRefValue(Handle: JavascriptPropertyHandle,InValue: JavascriptRef): EPropertyAccessResult;
+	static SetObjectValue(Handle: JavascriptPropertyHandle,InValue: UObject): EPropertyAccessResult;
+	static SetOnPropertyValueChanged(Handle: JavascriptPropertyHandle,Wrapper: JavascriptSimpleDelegateWrapper): void;
+	static SetValueFromFormattedString(Handle: JavascriptPropertyHandle,InValue: string): EPropertyAccessResult;
+}
+
 declare class JavascriptDetailWidgetDecl { 
 	clone() : JavascriptDetailWidgetDecl;
 	static C(Other: UObject | any): JavascriptDetailWidgetDecl;
@@ -1713,70 +1875,6 @@ declare class AnimationBlueprintEditorSettings extends UObject {
 	static GetDefaultObject(): AnimationBlueprintEditorSettings;
 	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AnimationBlueprintEditorSettings;
 	static C(Other: UObject | any): AnimationBlueprintEditorSettings;
-}
-
-declare class AsyncDelayComplete__PythonCallable extends PythonCallableForDelegate { 
-	static Load(ResourceName: string): AsyncDelayComplete__PythonCallable;
-	static Find(Outer: UObject, ResourceName: string): AsyncDelayComplete__PythonCallable;
-	static GetDefaultObject(): AsyncDelayComplete__PythonCallable;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AsyncDelayComplete__PythonCallable;
-	static C(Other: UObject | any): AsyncDelayComplete__PythonCallable;
-}
-
-declare class AsyncEditorWaitForGameWorldEvent__PythonCallable extends PythonCallableForDelegate { 
-	static Load(ResourceName: string): AsyncEditorWaitForGameWorldEvent__PythonCallable;
-	static Find(Outer: UObject, ResourceName: string): AsyncEditorWaitForGameWorldEvent__PythonCallable;
-	static GetDefaultObject(): AsyncEditorWaitForGameWorldEvent__PythonCallable;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): AsyncEditorWaitForGameWorldEvent__PythonCallable;
-	static C(Other: UObject | any): AsyncEditorWaitForGameWorldEvent__PythonCallable;
-}
-
-declare class ForEachActorIteratorSignature__PythonCallable extends PythonCallableForDelegate { 
-	static Load(ResourceName: string): ForEachActorIteratorSignature__PythonCallable;
-	static Find(Outer: UObject, ResourceName: string): ForEachActorIteratorSignature__PythonCallable;
-	static GetDefaultObject(): ForEachActorIteratorSignature__PythonCallable;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ForEachActorIteratorSignature__PythonCallable;
-	static C(Other: UObject | any): ForEachActorIteratorSignature__PythonCallable;
-}
-
-declare class ForEachAssetIteratorSignature__PythonCallable extends PythonCallableForDelegate { 
-	static Load(ResourceName: string): ForEachAssetIteratorSignature__PythonCallable;
-	static Find(Outer: UObject, ResourceName: string): ForEachAssetIteratorSignature__PythonCallable;
-	static GetDefaultObject(): ForEachAssetIteratorSignature__PythonCallable;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): ForEachAssetIteratorSignature__PythonCallable;
-	static C(Other: UObject | any): ForEachAssetIteratorSignature__PythonCallable;
-}
-
-declare class OnAsyncCaptureSceneComplete__PythonCallable extends PythonCallableForDelegate { 
-	static Load(ResourceName: string): OnAsyncCaptureSceneComplete__PythonCallable;
-	static Find(Outer: UObject, ResourceName: string): OnAsyncCaptureSceneComplete__PythonCallable;
-	static GetDefaultObject(): OnAsyncCaptureSceneComplete__PythonCallable;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OnAsyncCaptureSceneComplete__PythonCallable;
-	static C(Other: UObject | any): OnAsyncCaptureSceneComplete__PythonCallable;
-}
-
-declare class OnEditorUtilityPIEEvent__PythonCallable extends PythonCallableForDelegate { 
-	static Load(ResourceName: string): OnEditorUtilityPIEEvent__PythonCallable;
-	static Find(Outer: UObject, ResourceName: string): OnEditorUtilityPIEEvent__PythonCallable;
-	static GetDefaultObject(): OnEditorUtilityPIEEvent__PythonCallable;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OnEditorUtilityPIEEvent__PythonCallable;
-	static C(Other: UObject | any): OnEditorUtilityPIEEvent__PythonCallable;
-}
-
-declare class OnEditorUtilityTaskDynamicDelegate__PythonCallable extends PythonCallableForDelegate { 
-	static Load(ResourceName: string): OnEditorUtilityTaskDynamicDelegate__PythonCallable;
-	static Find(Outer: UObject, ResourceName: string): OnEditorUtilityTaskDynamicDelegate__PythonCallable;
-	static GetDefaultObject(): OnEditorUtilityTaskDynamicDelegate__PythonCallable;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OnEditorUtilityTaskDynamicDelegate__PythonCallable;
-	static C(Other: UObject | any): OnEditorUtilityTaskDynamicDelegate__PythonCallable;
-}
-
-declare class OnExportImageAsyncComplete__PythonCallable extends PythonCallableForDelegate { 
-	static Load(ResourceName: string): OnExportImageAsyncComplete__PythonCallable;
-	static Find(Outer: UObject, ResourceName: string): OnExportImageAsyncComplete__PythonCallable;
-	static GetDefaultObject(): OnExportImageAsyncComplete__PythonCallable;
-	static CreateDefaultSubobject(Name: string, Transient?: boolean, Required?: boolean, Abstract?: boolean): OnExportImageAsyncComplete__PythonCallable;
-	static C(Other: UObject | any): OnExportImageAsyncComplete__PythonCallable;
 }
 
 declare class LocalizationDashboardSettings extends UObject { 

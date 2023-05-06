@@ -18669,7 +18669,7 @@ declare class MaterialExpressionTextureSample extends MaterialExpressionTextureB
 
 declare class MaterialExpressionTextureSampleParameter extends MaterialExpressionTextureSample { 
 	ParameterName: string;
-	ExpressionGUID: Guid;
+	ExpressionGuid: Guid;
 	Group: string;
 	SortPriority: number;
 	ChannelNames: ParameterChannelNames;
@@ -18912,7 +18912,7 @@ declare class MaterialExpressionCeil extends MaterialExpression {
 
 declare class MaterialExpressionParameter extends MaterialExpression { 
 	ParameterName: string;
-	ExpressionGUID: Guid;
+	ExpressionGuid: Guid;
 	Group: string;
 	SortPriority: number;
 	static Load(ResourceName: string): MaterialExpressionParameter;
