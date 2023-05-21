@@ -10,6 +10,8 @@ In contrast, this repo also contains additional implementations in JavaScript to
 
 The most advanced user interface implemented for this project is supported by Unreal Engine 5.0.3. This early version is used due to the compatibility requirements of the Unreal.js plugin, which enables the JavaScript code of the web version to be executed in runtime along with the corresponding C++ code for the Unreal actors and game mechanics. The embedding of JS code seems to be inefficient and complicated for the correct mantainance of the Unreal project. However, having the game rules defined in a single language is a significant advantage in productivity and unity of different implementations.
 
+[![BigFoot Simulator Demo](https://img.youtube.com/vi/4YNKwOmJLVE/0.jpg)](https://www.youtube.com/watch?v=4YNKwOmJLVE)
+
 # Requirements
 
 In order to properly run this project, you will need the following software:
