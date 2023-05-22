@@ -33,6 +33,9 @@ function main() {
     var vector = new Vector();
     vector.X=0; vector.Y=0; vector.Z=0;
     newActor.K2_SetActorLocation(vector);
+    vector = new Rotator();
+    vector.Pitch=0; vector.Yaw=0; vector.Roll=0;
+    newActor.K2_SetActorRotation(vector); 
     objs.push(newActor);
 
     //Score
@@ -48,10 +51,15 @@ function main() {
     //Zepelin
     zepelin = SpawnActor(Zepelin_C);
     var vector = new Vector();
-    vector.X=242770; vector.Y=111780; vector.Z=1500;//-4260;
+    vector.X=242770; vector.Y=111780; vector.Z=-4260;
     zepelin.K2_SetActorLocation(vector);
     zepelin.Start();
 
+    updateActual();
+    updateActual();
+    updateActual();
+    updateActual();
+    updateActual();
     updateActual();
     updateUI();
 }
@@ -236,8 +244,11 @@ function updateUI() {
             
             let newActor = SpawnActor(objects[matrix[i][j]][2]);
             var vector = new Vector();
-            vector.X=x; vector.Y=y; vector.Z=0;            
+            vector.X=x; vector.Y=y; vector.Z=3000;            
             newActor.K2_SetActorLocation(vector); 
+            vector = new Rotator();
+            vector.Pitch=0; vector.Yaw=180; vector.Roll=0;
+            newActor.K2_SetActorRotation(vector);
             newActor.RootComponent.SetWorldScale3D({X: 16.0, Y: 16.0, Z: 16.0}); 
             try{
                 newActor.Start();
@@ -251,13 +262,13 @@ function updateUI() {
                 clicked(objs.indexOf(DamagedActor));
             });
         }
-    }
-    
-    var hintResult = hint();
-    zepelin.SetZepelinDestination(objs[hintResult[0]*matrix[0].length + hintResult[1]].GetActorLocation());
+    }    
 
     scoreText.Score = sum;
     scoreText.ApplyScore();
+
+    var hintResult = hint();
+    zepelin.SetZepelinDestination(objs[hintResult[0]*matrix[0].length + hintResult[1]].GetActorLocation());
 }
 
 function updateActual() {
@@ -267,10 +278,11 @@ function updateActual() {
     objs[objs.length-1].K2_DestroyActor();
     let newActor = actual === "w" ? SpawnActor(empty_C) : SpawnActor(objects[actual][2]);
     var vector = new Vector();
-    vector.X=213850; vector.Y=172460; vector.Z=-4600;
+    vector.X=207080; vector.Y=151510; vector.Z=-3250;
     newActor.K2_SetActorLocation(vector);
     vector = new Rotator();
-    vector.Pitch=0; vector.Yaw=0; vector.Roll=90;
-    newActor.K2_SetActorRotation(vector);    
+    vector.Pitch=0; vector.Yaw=-30; vector.Roll=0;
+    newActor.K2_SetActorRotation(vector);
+    newActor.RootComponent.SetWorldScale3D({X: 16.0, Y: 16.0, Z: 16.0}); 
     objs[objs.length-1]=newActor;
 }
